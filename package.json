@@ -1,0 +1,27 @@
+{
+  "name": "frontend-practise-step-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug -d docs --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jagann92/Frontend-practise-step-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jagann92/Frontend-practise-step-2/issues"
+  },
+  "homepage": "https://github.com/Jagann92/Frontend-practise-step-2#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "pug": "^2.0.4",
+    "sass": "^1.25.0"
+  }
+}

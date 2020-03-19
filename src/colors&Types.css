@@ -13,31 +13,34 @@
 	list-style-type: none;
 }
 .list__elem {}
-.text_bordercolor_dark-shade{
+.text_squarecolor_dark-shade{
 	border-color: #1f2041;
 	border-style: solid;
+	background-color: #1f2041;
 }
-.text_bordercolor_100 {
+.text_opacity_100 {
 }
-.text_bordercolor_75 {
+.text_opacity_75 {
 	opacity: 0.75;
 }
-.text_bordercolor_50 {
+.text_opacity_50 {
 	opacity: 0.5;
 }
-.text_bordercolor_25 {
+.text_opacity_25 {
 	opacity: 0.25;
 }
-.text_bordercolor_5 {
+.text_opacity_5 {
 	opacity: 0.05;;
 }
-.text_bordercolor_purple {
+.text_squarecolor_purple {
 	border-color: #bc9cff;
 	border-style: solid;
+	background-color: #bc9cff;
 }
-.text_bordercolor_green {
+.text_squarecolor_green {
 	border-color: #6fcf97;
 	border-style: solid;
+	background-color: #6fcf97;
 }
 .text{}
 .text_h1 {

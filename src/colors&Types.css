@@ -1,5 +1,25 @@
 @import url('/src/fonts/montserrat.css') all;
 @import url('/src/fonts/quicksand.css') all;
+
+.page {}
+.header{}
+.page__header {}
+.logo{}
+.header__logo {}
+.container{}
+.page__container {}
+.column {}
+.list {}
+.list__elem {}
+.text_bordercolor_dark-shade{}
+.text_bordercolor_100 {}
+.text_bordercolor_75 {}
+.text_bordercolor_50 {}
+.text_bordercolor_25 {}
+.text_bordercolor_5 {}
+.text_bordercolor_purple {}
+.text_bordercolor_green {}
+.text{}
 .text_h1 {
 	font-family: Quicksand;
 	font-style: normal;
@@ -8,3 +28,11 @@
 	line-height: 30px;
 	color:#1f2041
 }
+.text_h2 {}
+.text_h3 {}
+.text_maintext {}
+.text_filled-sqare{}
+.text_color_dark-shade{}
+.text_color_25 {}
+.footer{}
+.page__footer {}

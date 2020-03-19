@@ -1,0 +1,5 @@
+@import url('/src/fonts/montserrat.css') all;
+@import url('/src/fonts/quicksand.css') all;
+.text {
+	font-family: Quicksand;
+}

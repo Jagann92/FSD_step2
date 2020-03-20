@@ -1,22 +1,49 @@
 @import url('/src/fonts/montserrat.css') all;
 @import url('/src/fonts/quicksand.css') all;
 
-.page {}
-.header{}
-.page__header {}
-.logo{}
-.header__logo {}
-.container{}
-.page__container {}
-.column {}
-.list {
-	list-style-type: none;
+.page {
+	width:1440px;
+	height: 900px;
+	padding:5px;
+	background-color: #fff;
+	box-shadow: 0 0 2px #000;
+	margin:0 auto;
 }
-.list__elem {}
+.logo{
+	width: 48px;
+	height: 48px;
+	box-shadow: 0 0 2px #000;
+}
+.page__logo {
+	margin-top: 25px;
+	margin-left: 25px;
+}
+.container{
+	display: flex;
+	width: 1100px;
+	box-shadow: 0 0 2px #000;
+}
+.page__container {
+	justify-content: space-between;
+	margin: 0 auto;
+	margin-top:67px;
+	margin-left:150px;
+}
+.column {
+	width:450px;
+	box-shadow: 0 0 2px #000;
+}
+
+.list__elem {
+	clear:both;
+	margin: 10px;
+	padding: 10px;
+}
 .text_squarecolor_dark-shade{
 	border-color: #1f2041;
 	border-style: solid;
 	background-color: #1f2041;
+	box-shadow: 0 0 2px #000;
 }
 .text_opacity_100 {
 }
@@ -30,7 +57,7 @@
 	opacity: 0.25;
 }
 .text_opacity_5 {
-	opacity: 0.05;;
+	opacity: 0.05;
 }
 .text_squarecolor_purple {
 	border-color: #bc9cff;
@@ -42,7 +69,10 @@
 	border-style: solid;
 	background-color: #6fcf97;
 }
-.text{}
+.text{
+	box-shadow: 0 0 2px #000;
+	padding: 10px;
+}
 .text_h1 {
 	font-family: Quicksand;
 	font-style: normal;
@@ -51,7 +81,13 @@
 	line-height: 30px;
 	color:#1f2041
 }
-.text_h2 {}
+.text_h2 {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 24px;
+}
 .text_h3 {}
 .text_maintext {}
 .text_filled-sqare{
@@ -59,7 +95,14 @@
 	width: 70px;
 	height:70px;
 	border-radius: 6px;
-
+	float:left;
+	margin-right: 30px;
+}
+.text_logo {
+	float:left;
+	width:35px;
+	height:35px;
+	margin:10px;
 }
 .text_color_dark-shade{}
 .text_color_25 {}

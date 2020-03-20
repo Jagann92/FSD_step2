@@ -2,11 +2,11 @@
 @import url('/src/fonts/quicksand.css') all;
 
 .page {
-	min-width:1440px;
-	min-height: 900px;
+	max-width:1440px;
+	max-height: 900px;
 	padding:5px;
 	background-color: #fff;
-	
+	width:1440px;
 	margin:0 auto;
 	padding-bottom: 135px;
 }
@@ -112,7 +112,6 @@
 	line-height: 24px;
 }
 .text_filled-sqare{
-	position: relative;
 	width: 64px;
 	height:64px;
 	border-radius: 6px;

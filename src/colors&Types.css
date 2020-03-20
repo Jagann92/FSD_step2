@@ -72,6 +72,7 @@
 .text{
 	box-shadow: 0 0 2px #000;
 	padding: 10px;
+	color: #1f2041;
 }
 .text_h1 {
 	font-family: Quicksand;
@@ -79,7 +80,6 @@
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 30px;
-	color:#1f2041
 }
 .text_h2 {
 	font-family: Quicksand;
@@ -88,8 +88,21 @@
 	font-size: 19px;
 	line-height: 24px;
 }
-.text_h3 {}
-.text_maintext {}
+.text_h3 {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+}
+.text_maintext {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+}
 .text_filled-sqare{
 	position: relative;
 	width: 70px;
@@ -103,8 +116,10 @@
 	width:35px;
 	height:35px;
 	margin:10px;
+	vertical-align: text-top;
+	text-align: right;
+	margin-right: 30px;;
 }
-.text_color_dark-shade{}
-.text_color_25 {}
-.footer{}
-.page__footer {}
+.text_color_dark-shade{
+	color:#1f2041
+}

@@ -12,6 +12,10 @@
 .header {
   grid-area: header;
 }
+.header__logo {
+  margin-top: 25px;
+  margin-left: 25px;
+}
 .logo {
   width: 48px;
   height: 48px;
@@ -24,40 +28,52 @@
   border-style: solid;
   border-width: 2px;
 }
-.header__logo {
-  margin-top: 25px;
-  margin-left: 25px;
-}
-
 .column {
-  display: grid;
-}
-
-.column_1col {
-  grid-template-columns: 100%;
-}
-
-.page__column-1 {
-  grid-area: column-1;
-}
-
-.page__column-2 {
-  grid-area: column-2;
-}
-
-.column__elem {
   display: flex;
-}
-
-.column__text {
-  display: flex;
+  flex-wrap: wrap;
+  max-width: 280px;
   flex-direction: column;
-  align-content: center;
 }
-.text_squarecolor_dark-shade {
+.page__column-1 {
+  margin-left: 142px;
+  margin-top: 60px;
+}
+.page__column-2 {
+}
+.column_1col {
+}
+.column__elem {
+  max-height: 90px;
+}
+.square {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  float: left;
+  margin-right: 40px;
+}
+.column__title {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+
+.text {
+  color: #1f2041;
+}
+.square_color-darkshade {
+  background-color: #1f2041;
   border-color: #1f2041;
   border-style: solid;
-  background-color: #1f2041;
+}
+.square_color-purple {
+  border-color: #bc9cff;
+  border-style: solid;
+  background-color: #bc9cff;
+}
+.square_color-green {
+  border-color: #6fcf97;
+  border-style: solid;
+  background-color: #6fcf97;
 }
 .opacity_75 {
   opacity: 0.75;
@@ -70,19 +86,6 @@
 }
 .opacity_5 {
   opacity: 0.05;
-}
-.square_color-purple {
-  border-color: #bc9cff;
-  border-style: solid;
-  background-color: #bc9cff;
-}
-.square_color-green {
-  border-color: #6fcf97;
-  border-style: solid;
-  background-color: #6fcf97;
-}
-.text {
-  color: #1f2041;
 }
 .text_h1 {
   font-family: Quicksand;
@@ -113,23 +116,11 @@
   font-size: 14px;
   line-height: 24px;
 }
-.square {
-  width: 64px;
-  height: 64px;
-  border-radius: 6px;
-}
 .text_logo {
-  float: left;
-  width: 35px;
-  height: 35px;
-  margin: 10px;
-  vertical-align: text-top;
-  text-align: right;
-  margin-right: 30px;
-  margin-bottom: 50px;
 }
-.square_color-darkshade {
-  background-color: #1f2041;
-  border-color: #1f2041;
-  border-style: solid;
+
+.column__text {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 19px;
+  margin-top: 5px;
 }

@@ -80,21 +80,21 @@ h6 {
   font-weight: 400;
 }
 /*--------------------*/
-.text_h1 {
+.text_H1 {
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
 }
-.text_h2 {
+.text_H2 {
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
 }
-.text_h3 {
+.text_H3 {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -183,17 +183,17 @@ h6 {
   height: 70px;
   border-radius: 6px;
 }
-.colored-square_darkshade {
+.colored-square_1F2041 {
   background-color: #1f2041;
   border-color: #1f2041;
   border-style: solid;
 }
-.colored-square_purple {
+.colored-square_BC9CFF {
   border-color: #bc9cff;
   border-style: solid;
   background-color: #bc9cff;
 }
-.colored-square_green {
+.colored-square_6FCF97 {
   border-color: #6fcf97;
   border-style: solid;
   background-color: #6fcf97;
@@ -239,15 +239,15 @@ h6 {
     margin: 0 0 40px 0;
   }
 }
-.text_sample_title_h1 {
+.text_sample_title_H1 {
   font-size: 24px;
   line-height: 29px;
 }
-.text_sample_title_h2 {
+.text_sample_title_H2 {
   font-size: 19px;
   line-height: 23px;
 }
-.text_sample_title_h3 {
+.text_sample_title_H3 {
   font-size: 12px;
   line-height: 15px;
 }

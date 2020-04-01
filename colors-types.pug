@@ -5,7 +5,7 @@ mixin color-sample(color, text, opacity)
 		span.text_color-code= '#'+color
 
 mixin type-sample(title,text)
-	.text.text_maintext.text_sample_title.page_opacity_25(class='text_sample_title_'+title)= title
+	.text.text_Body.text_sample_title.page_opacity_25(class='text_sample_title_'+title)= title
 	.text.text_sample_text(class='text_'+title)= text
 
 doctype html
@@ -14,20 +14,20 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initital-scale=1.0")
 		title "UI Kit: Colors&Types"
-		link(rel="stylesheet" href="colors-Types1.css")
+		link(rel="stylesheet" href="colors-types.css")
 
 	body
 		.page
 			img.logo.page__logo(src="/src/img/logo.svg")
 			.container.page__container.container_2column
 				.column.container__column-1
-					+color-sample('1F2041','Dark Shade 100%', '100')
-					+color-sample('1F2041','Dark Shade 75%', '75')
-					+color-sample('1F2041','Dark Shade 50%', '50')
-					+color-sample('1F2041','Dark Shade 25%', '25')
-					+color-sample('1F2041','Dark Shade 5%', '5')
+					+color-sample('1f2041','Dark Shade 100%', '100')
+					+color-sample('1f2041','Dark Shade 75%', '75')
+					+color-sample('1f2041','Dark Shade 50%', '50')
+					+color-sample('1f2041','Dark Shade 25%', '25')
+					+color-sample('1f2041','Dark Shade 5%', '5')
 					+color-sample('BC9CFF','Purple', '100')
-					+color-sample('6FCF97','Green', '100')
+					+color-sample('6fcf97','Green', '100')
 				.column.container__column-2
 					+type-sample('H1','This one is the sub-section or widget title')
 					+type-sample('H2','Next one is the item title inside widgets')

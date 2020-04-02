@@ -1,0 +1,92 @@
+.container {
+	display: grid;
+	grid-template-areas: "column-1 column-2";
+	@media (max-width: 500px) {
+		grid-template-areas:
+			"column-1"
+			"column-2";
+		grid-template-columns: 100%;
+		row-gap: 80px;
+	}
+	grid-template-columns: 27% 38.045%; /*285.997px 402.991px*/
+	column-gap: 38.8%; /*426.983px*/
+
+	&__column-1 {
+		grid-area: column-1;
+		display: flex;
+		flex-direction: column;
+		margin: -16px;
+		padding-top: 10px;
+	}
+	&__column-2 {
+		padding-top: 3px;
+		grid-area: column-2;
+		display: grid;
+		grid-template-columns: 9.181% 90%; /*37px 336px*/
+		column-gap: 7.444%; /*30px*/
+		row-gap: 8.2%; /*50px*/
+		align-content: flex-start;
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+	}
+	&__color-sample {
+		line-height: 29px;
+		position: relative;
+		margin: 5%;
+		padding-left: 110px;
+		@media (max-width: 768px) {
+			padding-left: 80px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			min-width: 70px;
+			min-height: 70px;
+			border-radius: 6px;
+			border-style: solid;
+			left: 0;
+			top: -7.5px;
+			@include fill(#1f2041);
+		}
+		$i: 2;
+		@each $var in 75, 50, 25, 5 {
+			&:nth-child(#{$i})::before {
+				opacity: $var/100;
+			}
+			$i: $i + 1;
+		}
+
+		&:nth-child(6)::before {
+			@include fill(#bc9cff);
+		}
+		&:nth-child(7)::before {
+			@include fill(#6fcf97);
+		}
+	}
+	&__type-sample-title {
+		margin: 0 0 auto auto;
+		opacity: 0.25;
+		@media (max-width: 768px) {
+			margin: 0 auto 5% 0;
+		}
+		&_H1 {
+			@include font(null, null, 24px, 29px);
+		}
+		&_H2 {
+			@include font(null, null, 19px, 23px);
+		}
+		&_H3 {
+			@include font(null, null, 12px, 15px);
+		}
+	}
+	&__type-sample-text {
+		margin: 0 auto auto 0;
+		@media (max-width: 768px) {
+			margin: 0 auto 15% 0;
+		}
+	}
+}

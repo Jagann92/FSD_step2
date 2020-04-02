@@ -13,5 +13,10 @@
 	}
 	&_Body {
 		@include font(Montserrat, 400, 14px, 24px);
+		opacity: 0.75;
+	}
+	&_up-normal {
+		font-weight: 400;
+		text-transform: uppercase;
 	}
 }

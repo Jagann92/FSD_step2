@@ -1,5 +1,5 @@
 .text {
-	color: map-get($color, 1f2041);
+	color: #1f2041;
 
 	&_H1 {
 		@include font(Quicksand, 700, 24px, 30px);
@@ -13,6 +13,7 @@
 	}
 	&_Body {
 		@include font(Montserrat, 400, 14px, 24px);
+		opacity: 0.75;
 	}
 	&_up-normal {
 		font-weight: 400;

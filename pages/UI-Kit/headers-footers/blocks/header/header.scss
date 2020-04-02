@@ -1,0 +1,36 @@
+.header {
+	height: 70px;
+	width: 100vw;
+	position: relative;
+	background-color: white;
+	&__logo {
+		margin: auto auto auto 0;
+	}
+	&__menu {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		grid-template-rows: repeat(6, auto);
+		row-gap: 30px;
+	}
+	&__button-login {
+		position: absolute;
+		top: 50%;
+		right: 20%;
+	}
+	&__button-reg {
+		position: absolute;
+		top: 50%;
+		right: 10%;
+	}
+	&__last-link {
+		position: absolute;
+		top:50%;
+		right: 20%;
+		::before {
+			content: "";
+			border-left: solid 2px #1f2041;
+			padding-left: -30px;
+		}
+	}
+}

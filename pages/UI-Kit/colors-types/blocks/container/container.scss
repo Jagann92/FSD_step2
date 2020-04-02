@@ -1,3 +1,6 @@
+@import "../../../../../library/mixins/fill";
+@import "../../../../../library/mixins/font";
+
 .container {
 	display: grid;
 	grid-template-areas: "column-1 column-2";

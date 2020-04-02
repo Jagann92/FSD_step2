@@ -1,13 +1,8 @@
-@import "/library/nullstyle/nullstyle", "/src/fonts/fonts";
-@import "/library/mixins/fill", "/library/mixins/font";
-
-$page-width: 1440px;
-$page-height: 900px;
-
-
-@import "/library/blocks/text/text";
-@import "/library/blocks/page/page";
+@import "../../../library/nullstyle/nullstyle", "../../../src/fonts/fonts";
+@import "../../../library/mixins/fill", "../../../library/mixins/font";
+@import "../../../library/blocks/text/text";
+@import "../../../library/blocks/page/page";
+@import "blocks/text/text";
 @import "blocks/page/page";
 @import "blocks/container/container";
-@import "blocks/text/text.scss"
 

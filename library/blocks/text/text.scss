@@ -1,0 +1,21 @@
+.text {
+	color: map-get($color, 1f2041);
+
+	&_H1 {
+		@include font(Quicksand, 700, 24px, 30px);
+	}
+	&_H2 {
+		@include font(Quicksand, 700, 19px, 24px);
+	}
+	&_H3 {
+		@include font(Montserrat, 700, 12px, 15px);
+		text-transform: uppercase;
+	}
+	&_Body {
+		@include font(Montserrat, 400, 14px, 24px);
+	}
+	&_up-normal {
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+}

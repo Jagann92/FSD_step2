@@ -1,0 +1,22 @@
+.page {
+	max-width: $page-width;
+	max-height: $page-height;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	&__logo {
+		margin: 30px / $page-width * 100%;
+		margin-right: 0;
+	}
+	&__container {
+		max-width: 73.559%; /*1059.249px*/
+		max-height: 67.777%; /*609.993px*/
+		margin-top: 2.4%; /*34.56px*/
+		margin-left: 10.398%; /*149.731x*/
+		margin-right: 13.263%; /*190.987px*/
+		margin-bottom: 10.069%; /*144.993px*/
+		@media (max-width: 500px) {
+			margin-left: 15%;
+		}
+	}
+}

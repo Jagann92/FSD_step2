@@ -1,0 +1,17 @@
+.button {
+  border-radius: 22px;
+  border: solid 3px;
+  padding: 9px 20px 10px 20px;
+}
+
+.button_white {
+  color: #bc9cff;
+  background-color: white;
+  border: #bc9cff solid;
+}
+
+.button_purple {
+  color: white;
+  background-color: #bc9cff;
+  border: #bc9cff solid;
+}

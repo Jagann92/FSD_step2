@@ -1,5 +1,4 @@
 extends ../../../library/templates/base.pug
-- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
 block title
 	title "UI Kit: Headers&Footers"
 block styles
@@ -10,16 +9,17 @@ block body
 		.container.page__container
 			header.header
 				img.logo.header__logo(src="../../../src/img/logo and title.svg")
-				nav.menu.header__menu
+				nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
+					- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
 					each val in h_menu
 						case val
 							when 'Services'
 								a.menu__elem.menu__elem_spoiler= val
 							default
 								a.menu__elem= val
-				a.button.header__button-login.button_white
-					.text_H3 Login
-				a.button.header__button-reg.button_purple.text_H3  Register
+				.header__buttons
+					a.button.header__button-login.button_white.text_H3 Login
+					a.button.header__button-reg.button_purple.text_H3  Register
 			header.header
 				img.logo.header__logo(src="../../../src/img/logo and title.svg")
 				nav.menu.header__menu
@@ -31,22 +31,12 @@ block body
 								a.menu__elem= val
 				a.header__last-link Cosmin Negoita
 			footer.footer
+				- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Our team', 'Careers', 'Investors', 'Support', 'Docimentation', 'Community', 'Get in Touch']
 				img.logo.footer__logo(src="../../../src/img/logo and title.svg")
 				.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				.menu.footer__menu
-					.menu__title Navigation
-					a.menu__elem About Us
-					a.menu__elem News
-					a.menu__elem Support
-					a.menu__elem Products
-					.menu__title About Us
-					a.menu__elem Our team
-					a.menu__elem Careers
-					a.menu__elem Investors
-					.menu__title Support
-					a.menu__elem Docimentation
-					a.menu__elem Community
-					a.menu__elem Get in Touch
+				nav.menu.footer__menu
+					each val in f_menu
+						a.menu__elem= val
 				.form.form_subscribe.footer__form
 				.footer__copyright
 				.footer__social

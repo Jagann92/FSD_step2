@@ -1,0 +1,8 @@
+.text_Body {
+  opacity: 0.75;
+}
+
+.text_up-normal {
+  font-weight: 400;
+  text-transform: uppercase;
+}

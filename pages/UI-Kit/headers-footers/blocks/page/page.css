@@ -1,0 +1,16 @@
+.page {
+  background-color: #e5e5e5;
+}
+
+.page__container {
+  max-width: 80.55556%;
+  height: 100%;
+  margin-top: 10.41667%;
+  margin-bottom: 9.02778%;
+  margin-left: auto;
+  margin-right: auto;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+}

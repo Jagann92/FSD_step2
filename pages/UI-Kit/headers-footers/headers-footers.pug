@@ -13,6 +13,8 @@ block body
 					- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
 					each val in h_menu
 						case val
+							when 'Home'
+								a.menu__elem.text_bold.text_opacity75= val
 							when 'Services'
 								a.menu__elem.menu__elem_spoiler= val
 							default
@@ -22,14 +24,16 @@ block body
 					a.button.header__button-reg.button_purple.text_H3  Register
 			header.header
 				img.logo.header__logo(src="../../../src/img/logo and title.svg")
-				nav.menu.header__menu
+				nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
 					each val in h_menu
 						case val
+							when 'Home'
+								a.menu__elem.text_bold.text_opacity75= val
 							when 'Services'
 								a.menu__elem.menu__elem_spoiler= val
 							default
 								a.menu__elem= val
-				a.header__last-link Cosmin Negoita
+				a.header__last-link.text.text_Body.text_lh17.text_opacity50 Cosmin Negoita
 			footer.footer
 				- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Our team', 'Careers', 'Investors', 'Support', 'Docimentation', 'Community', 'Get in Touch']
 				img.logo.footer__logo(src="../../../src/img/logo and title.svg")

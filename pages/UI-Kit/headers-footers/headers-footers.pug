@@ -35,17 +35,31 @@ block body
 								a.menu__elem= val
 				a.header__last-link.text.text_Body.text_lh17.text_opacity50 Cosmin Negoita
 			footer.footer
-				- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Our team', 'Careers', 'Investors', 'Support', 'Docimentation', 'Community', 'Get in Touch']
-				img.logo.footer__logo(src="../../../src/img/logo and title.svg")
-				.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				.footer__logoandtext
+					img.logo(src="../../../src/img/logo and title.svg")
+					p.footer__text.text_Body.text_opacity75 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
 				nav.menu.footer__menu
-					each val in f_menu
-						a.menu__elem= val
-				.form.form_subscribe.footer__form
-				.footer__copyright
+					- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Who we are', 'Our team', 'Careers', 'Investors', 'Support', 'Documentation', 'Community', 'Get in Touch']
+					each val, index in f_menu
+						case index
+							when 0
+								a.menu__elem.text_H3= val
+							when 5
+								a.menu__elem.text_H3= val
+							when 10
+								a.menu__elem.text_H3= val
+							default
+								a.menu__elem.text_Body.text_opacity50= val
+				form.form.footer__form
+					.form__title.text_H3 Subscribe to our newsletter
+					p.form__text.text_Body.text_opacity75 Receive our latest news and promotions in your inbox!
+					.form__text-submit
+						input(type='text' placeholder='Your email adress').form__text-input.text_Body
+						input(type='submit' value=' ').form__submit
+			footer.footer__copyright
 				.footer__social
 			footer.footer
 				img.logo.footer__logo(src="../../../src/img/logo and title.svg")
-				.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				p.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				.form.form_subscribe.footer__form
 				.footer__social

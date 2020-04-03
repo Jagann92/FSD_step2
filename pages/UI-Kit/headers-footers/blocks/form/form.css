@@ -1,0 +1,31 @@
+.form__title {
+  max-width: 220px;
+}
+
+.form__text {
+  max-width: 220px;
+}
+
+.form__text-input {
+  width: 260px;
+  height: 44px;
+  border: 2px solid purple;
+}
+
+.form__text-submit {
+  position: relative;
+  max-width: 260px;
+}
+
+.form__submit {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../../src/img/arrow_forward.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  background-color: white;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}

@@ -1,15 +1,38 @@
 .footer {
+	padding-top: 100px;
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	height: 372px;
+	width: 100%;
+	background-color: white;
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	align-items: start;
+	column-gap: 40px;
 	&__logo {
 	}
 	&__text {
+		max-width: 260px;
 	}
 	&__menu {
+		grid-template-columns: repeat(3, max-content);
+		grid-template-rows: repeat(5, max-content);
+		column-gap: 120px;
+		grid-auto-flow: column;
+		row-gap: 20px;
 	}
 	&__form {
+		display: grid;
+		grid-template-rows: repeat(3, max-content);
+		row-gap: 20px;
 	}
 	&__copyright {
 	}
 	&__social {
+	}
+	&__logoandtext {
+		display: grid;
+		grid-template-columns: max-content;
+		justify-items: start;
+		row-gap: 20px;
 	}
 }

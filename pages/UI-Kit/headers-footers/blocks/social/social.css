@@ -1,0 +1,9 @@
+.social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (min-content)[3];
+      grid-template-columns: repeat(3, -webkit-min-content);
+      grid-template-columns: repeat(3, min-content);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}

@@ -2,3 +2,7 @@
   display: -ms-grid;
   display: grid;
 }
+
+.menu__elem {
+  line-height: 17px;
+}

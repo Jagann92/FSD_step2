@@ -1,19 +1,21 @@
 .footer {
-	padding-top: 100px;
+	//padding-top: 100px;
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-	height: 372px;
 	width: 100%;
 	background-color: white;
 	display: grid;
 	grid-template-columns: repeat(3, max-content);
-	align-items: start;
+	grid-template-rows: 372px 70px;
+	align-items: center;
 	column-gap: 40px;
+	row-gap: 0;
 	&__logo {
 	}
 	&__text {
 		max-width: 260px;
 	}
 	&__menu {
+		height: 168px;
 		grid-template-columns: repeat(3, max-content);
 		grid-template-rows: repeat(5, max-content);
 		column-gap: 120px;
@@ -21,15 +23,28 @@
 		row-gap: 20px;
 	}
 	&__form {
+		height: 168px;
+		padding-left: 40px;
 		display: grid;
 		grid-template-rows: repeat(3, max-content);
+		align-items: start;
 		row-gap: 20px;
 	}
 	&__copyright {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		width: 100%;
+		background-color: white;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 	&__social {
 	}
 	&__logoandtext {
+		height: 168px;
 		display: grid;
 		grid-template-columns: max-content;
 		justify-items: start;

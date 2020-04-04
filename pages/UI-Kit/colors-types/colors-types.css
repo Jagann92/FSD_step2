@@ -155,16 +155,49 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
 }
 
+.text_bold {
+  font-weight: 700;
+}
+
+.text_lh17 {
+  line-height: 17px;
+}
+
+.text_lh18 {
+  line-height: 18px;
+}
+
+.text_opacity100 {
+  opacity: 1;
+}
+
+.text_opacity75 {
+  opacity: 0.75;
+}
+
+.text_opacity50 {
+  opacity: 0.5;
+}
+
+.text_opacity25 {
+  opacity: 0.25;
+}
+
+.text_opacity5 {
+  opacity: 0.5;
+}
+
 .page {
   max-width: 1440px;
   max-height: 900px;
   width: 100%;
   height: 100%;
   margin: auto;
-  padding: 0.5px;
+  padding: 0.1px;
 }
 
 .page__logo {
+  float: left;
   margin: 2.08333%;
   margin-right: 0;
 }

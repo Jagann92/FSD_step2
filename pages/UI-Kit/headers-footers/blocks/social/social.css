@@ -6,4 +6,7 @@
       grid-template-columns: repeat(3, min-content);
   -webkit-column-gap: 20px;
           column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

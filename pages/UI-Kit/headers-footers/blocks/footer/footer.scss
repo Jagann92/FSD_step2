@@ -4,15 +4,23 @@
 	width: 100%;
 	background-color: white;
 	display: grid;
-	grid-template-columns: repeat(3, max-content);
-	grid-template-rows: 372px 70px;
-	align-items: center;
-	column-gap: 40px;
-	row-gap: 0;
+	&_full {
+		grid-template-columns: repeat(3, max-content);
+		grid-template-rows: 372px 70px;
+		align-items: center;
+		column-gap: 40px;
+		row-gap: 0;
+	}
+	&_min {
+		height: 367px;
+		grid-template-rows: repeat(2, min-content);
+		justify-content: center;
+		align-content: center;
+		row-gap: 20px;
+	}
 	&__logo {
 	}
 	&__text {
-		max-width: 260px;
 	}
 	&__menu {
 		height: 168px;
@@ -44,10 +52,17 @@
 	&__social {
 	}
 	&__logoandtext {
-		height: 168px;
 		display: grid;
-		grid-template-columns: max-content;
-		justify-items: start;
 		row-gap: 20px;
+		&_start {
+			justify-items: start;
+			grid-template-columns: 260px;
+			height: 168px;
+		}
+		&_center {
+			justify-items: center;
+			grid-template-columns: 560px;
+			text-align: center;
+		}
 	}
 }

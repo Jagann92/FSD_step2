@@ -10,31 +10,31 @@ block body
 			.wrapper
 				header.header
 					img.logo.header__logo(src="../../../src/img/logo and title.svg")
-					nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
+					nav.menu.header__menu.text.text_Body.text_lh17
 						- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
 						each val in h_menu
 							case val
 								when 'Home'
 									a.menu__elem.text_bold.text_opacity75= val
 								when 'Services'
-									a.menu__elem.menu__elem_spoiler= val
+									a.menu__elem.text_opacity50.menu__elem_spoiler= val
 								default
-									a.menu__elem= val
+									a.menu__elem.text_opacity50= val
 					.header__buttons
 						a.button.header__button-login.button_white.text_H3 Login
 						a.button.header__button-reg.button_purple.text_H3  Register
 			.wrapper
 				header.header
 					img.logo.header__logo(src="../../../src/img/logo and title.svg")
-					nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
+					nav.menu.header__menu.text.text_Body.text_lh17
 						each val in h_menu
 							case val
 								when 'Home'
 									a.menu__elem.text_bold.text_opacity75= val
 								when 'Services'
-									a.menu__elem.menu__elem_spoiler= val
+									a.menu__elem.text_opacity50.menu__elem_spoiler= val
 								default
-									a.menu__elem= val
+									a.menu__elem.text_opacity50= val
 					a.header__last-link.text.text_Body.text_lh17.text_opacity50 Cosmin Negoita
 			.wrapper
 				footer.footer.footer_full

@@ -6,3 +6,22 @@
 .menu__elem {
   line-height: 17px;
 }
+
+.menu__elem_spoiler {
+  padding-right: 20px;
+  position: relative;
+}
+
+.menu__elem_spoiler::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 21px;
+  background-image: url("../../../src/img/spoiler.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  background-color: white;
+  right: -4px;
+  top: -2px;
+}

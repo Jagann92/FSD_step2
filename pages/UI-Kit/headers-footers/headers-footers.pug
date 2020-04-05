@@ -7,66 +7,70 @@ block body
 	.page
 		img.logo.page__logo(src="../../../src/img/logo.svg")
 		.container.page__container
-			header.header
-				img.logo.header__logo(src="../../../src/img/logo and title.svg")
-				nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
-					- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
-					each val in h_menu
-						case val
-							when 'Home'
-								a.menu__elem.text_bold.text_opacity75= val
-							when 'Services'
-								a.menu__elem.menu__elem_spoiler= val
-							default
-								a.menu__elem= val
-				.header__buttons
-					a.button.header__button-login.button_white.text_H3 Login
-					a.button.header__button-reg.button_purple.text_H3  Register
-			header.header
-				img.logo.header__logo(src="../../../src/img/logo and title.svg")
-				nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
-					each val in h_menu
-						case val
-							when 'Home'
-								a.menu__elem.text_bold.text_opacity75= val
-							when 'Services'
-								a.menu__elem.menu__elem_spoiler= val
-							default
-								a.menu__elem= val
-				a.header__last-link.text.text_Body.text_lh17.text_opacity50 Cosmin Negoita
-			footer.footer.footer_full
-				.footer__logoandtext.footer__logoandtext_start
-					img.logo(src="../../../src/img/logo and title.svg")
-					p.footer__text.text_Body.text_opacity75 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-				nav.menu.footer__menu
-					- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Who we are', 'Our team', 'Careers', 'Investors', 'Support', 'Documentation', 'Community', 'Get in Touch']
-					each val, index in f_menu
-						case index
-							when 0
-								a.menu__elem.text_H3= val
-							when 5
-								a.menu__elem.text_H3= val
-							when 10
-								a.menu__elem.text_H3= val
-							default
-								a.menu__elem.text_Body.text_opacity50= val
-				form.form.footer__form
-					.form__title.text_H3 Subscribe to our newsletter
-					p.form__text.text_Body.text_opacity75 Receive our latest news and promotions in your inbox!
-					.form__text-submit
-						input(type='text' placeholder='Your email adress').form__text-input.text_Body
-						input(type='submit' value=' ').form__submit
-				.footer__copyright 
-					p.text_Body.text_opacity75 Copyright © 2018 Toxin UI Kit. All rights reserved.
+			.wrapper
+				header.header
+					img.logo.header__logo(src="../../../src/img/logo and title.svg")
+					nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
+						- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
+						each val in h_menu
+							case val
+								when 'Home'
+									a.menu__elem.text_bold.text_opacity75= val
+								when 'Services'
+									a.menu__elem.menu__elem_spoiler= val
+								default
+									a.menu__elem= val
+					.header__buttons
+						a.button.header__button-login.button_white.text_H3 Login
+						a.button.header__button-reg.button_purple.text_H3  Register
+			.wrapper
+				header.header
+					img.logo.header__logo(src="../../../src/img/logo and title.svg")
+					nav.menu.header__menu.text.text_Body.text_lh17.text_opacity50
+						each val in h_menu
+							case val
+								when 'Home'
+									a.menu__elem.text_bold.text_opacity75= val
+								when 'Services'
+									a.menu__elem.menu__elem_spoiler= val
+								default
+									a.menu__elem= val
+					a.header__last-link.text.text_Body.text_lh17.text_opacity50 Cosmin Negoita
+			.wrapper
+				footer.footer.footer_full
+					.footer__logoandtext.footer__logoandtext_start
+						img.logo(src="../../../src/img/logo and title.svg")
+						p.footer__text.text_Body.text_opacity75 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+					nav.menu.footer__menu
+						- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Who we are', 'Our team', 'Careers', 'Investors', 'Support', 'Documentation', 'Community', 'Get in Touch']
+						each val, index in f_menu
+							case index
+								when 0
+									a.menu__elem.text_H3= val
+								when 5
+									a.menu__elem.text_H3= val
+								when 10
+									a.menu__elem.text_H3= val
+								default
+									a.menu__elem.text_Body.text_opacity50= val
+					form.form.footer__form
+						.form__title.text_H3 Subscribe to our newsletter
+						p.form__text.text_Body.text_opacity75 Receive our latest news and promotions in your inbox!
+						.form__text-submit
+							input(type='text' placeholder='Your email adress').form__text-input.text_Body
+							input(type='submit' value=' ').form__submit
+					.footer__copyright 
+						p.text_Body.text_opacity75 Copyright © 2018 Toxin UI Kit. All rights reserved.
+						.social
+							img(src="../../../src/img/twitter.svg")
+							img(src="../../../src/img/facebook.svg")
+							img(src="../../../src/img/instagram.svg")
+			.wrapper
+				footer.footer.footer_min
+					.footer__logoandtext.footer__logoandtext_center
+						img.logo(src="../../../src/img/logo and title.svg")
+						p.footer__text.text_Body.text_opacity75 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
 					.social
 						img(src="../../../src/img/twitter.svg")
 						img(src="../../../src/img/facebook.svg")
 						img(src="../../../src/img/instagram.svg")
-			footer.footer.footer_min
-				.footer__logoandtext.footer__logoandtext_center
-					img.logo(src="../../../src/img/logo and title.svg")
-					p.footer__text.text_Body.text_opacity75 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-				.social
-					img(src="../../../src/img/twitter.svg")
-					img(src="../../../src/img/facebook.svg")
-					img(src="../../../src/img/instagram.svg")

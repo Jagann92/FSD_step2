@@ -1,5 +1,5 @@
 @import "../../../../../library/mixins/fill";
-@import "../../../../../library/mixins/font";
+@import "../../../../../library/mixins/text";
 
 .container {
 	display: grid;
@@ -37,10 +37,15 @@
 		}
 	}
 	&__color-sample {
+		@include text_H2;
 		line-height: 29px;
 		position: relative;
 		margin: 5%;
 		padding-left: 110px;
+		&_code {
+			text-transform: uppercase;
+			font-weight: 400;
+		}
 		@media (max-width: 768px) {
 			padding-left: 80px;
 		}
@@ -70,20 +75,26 @@
 			@include fill(#6fcf97);
 		}
 	}
+
+	&_H1 {
+		@include text_H1;
+	}
+	&_H2 {
+		@include text_H2;
+	}
+	&_H3 {
+		@include text_H3;
+	}
+	&_Body {
+		@include text_Body;
+	}
 	&__type-sample-title {
+		font-family: Montserrat;
 		margin: 0 0 auto auto;
 		opacity: 0.25;
+		font-weight: 400;
 		@media (max-width: 768px) {
 			margin: 0 auto 5% 0;
-		}
-		&_H1 {
-			@include font(null, null, 24px, 29px);
-		}
-		&_H2 {
-			@include font(null, null, 19px, 23px);
-		}
-		&_H3 {
-			@include font(null, null, 12px, 15px);
 		}
 	}
 	&__type-sample-text {

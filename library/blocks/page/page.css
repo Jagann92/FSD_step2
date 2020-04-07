@@ -1,6 +1,10 @@
 .page {
+  max-width: 1440px;
+  width: 100%;
   margin: auto;
   padding: 0.1px;
+  background-color: white;
+  color: #1f2041;
 }
 
 .page__logo {

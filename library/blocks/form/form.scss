@@ -1,9 +1,12 @@
+@import "../../../library/mixins/text";
 .form {
 	&__title {
 		max-width: 220px;
+		@include text_H3;
 	}
 	&__text {
 		max-width: 220px;
+		@include text_Body;
 	}
 	&__text-input {
 		padding: 15px;
@@ -12,6 +15,8 @@
 		border: 1px solid rgba(31, 32, 65, 0.25);
 		box-sizing: border-box;
 		border-radius: 4px;
+		@include text_Body;
+		opacity: 0.25;
 	}
 	&__text-submit {
 		position: relative;

@@ -5,71 +5,71 @@ block styles
 	link(rel="stylesheet" href="headers-footers.css")
 block body
 	.page
-		img.logo.page__logo(src="../../../src/img/logo.svg")
-		.container.page__container
-			.wrapper
-				header.header
-					img.logo.header__logo(src="../../../src/img/logo and title.svg")
-					nav.menu.header__menu.text.text_Body.text_lh17
+		img.page__logo(src="../../../src/img/logo.svg")
+		.page__container
+			.header
+				header.header__wrapper
+					img.header__logo(src="../../../src/img/logo and title.svg")
+					nav.menu.header__menu
 						- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
 						each val in h_menu
 							case val
 								when 'Home'
-									a.menu__elem.text_bold.text_opacity75= val
+									a.menu__elem.menu__elem_current= val
 								when 'Services'
-									a.menu__elem.text_opacity50.menu__elem_spoiler= val
+									a.menu__elem.menu__elem_spoiler= val
 								default
-									a.menu__elem.text_opacity50= val
+									a.menu__elem= val
 					.header__buttons
-						a.button.header__button-login.button_white.text_H3 Login
-						a.button.header__button-reg.button_purple.text_H3  Register
-			.wrapper
-				header.header
-					img.logo.header__logo(src="../../../src/img/logo and title.svg")
-					nav.menu.header__menu.text.text_Body.text_lh17
+						a.button.header__button-login.button_white Login
+						a.button.header__button-reg.button_purple Register
+			.header
+				header.header__wrapper
+					img.header__logo(src="../../../src/img/logo and title.svg")
+					nav.menu.header__menu
 						each val in h_menu
 							case val
 								when 'Home'
-									a.menu__elem.text_bold.text_opacity75= val
+									a.menu__elem.menu__elem_current= val
 								when 'Services'
-									a.menu__elem.text_opacity50.menu__elem_spoiler= val
+									a.menu__elem.menu__elem_spoiler= val
 								default
-									a.menu__elem.text_opacity50= val
-					a.header__last-link.text.text_Body.text_lh17.text_opacity50 Cosmin Negoita
-			.wrapper
-				footer.footer.footer_full
+									a.menu__elem= val
+					a.header__link Cosmin Negoita
+			.footer
+				footer.footer__wrapper.footer_full
 					.footer__logoandtext.footer__logoandtext_start
-						img.logo(src="../../../src/img/logo and title.svg")
-						p.footer__text.text_Body.text_opacity75 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+						img(src="../../../src/img/logo and title.svg")
+						p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
 					nav.menu.footer__menu
 						- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Who we are', 'Our team', 'Careers', 'Investors', 'Support', 'Documentation', 'Community', 'Get in Touch']
 						each val, index in f_menu
 							case index
 								when 0
-									a.menu__elem.text_H3= val
+									a.menu__elem.menu__elem_title= val
 								when 5
-									a.menu__elem.text_H3= val
+									a.menu__elem.menu__elem_title= val
 								when 10
-									a.menu__elem.text_H3= val
+									a.menu__elem.menu__elem_title= val
 								default
-									a.menu__elem.text_Body.text_opacity50= val
+									a.menu__elem= val
 					form.form.footer__form
-						.form__title.text_H3 Subscribe to our newsletter
-						p.form__text.text_Body.text_opacity75 Receive our latest news and promotions in your inbox!
+						.form__title Subscribe to our newsletter
+						p.form__text Receive our latest news and promotions in your inbox!
 						.form__text-submit
 							input(type='text' placeholder='Your email adress').form__text-input.text_Body
 							input(type='submit' value=' ').form__submit
 					.footer__copyright 
-						p.text_Body.text_opacity75 Copyright © 2018 Toxin UI Kit. All rights reserved.
+						p Copyright © 2018 Toxin UI Kit. All rights reserved.
 						.social
 							img(src="../../../src/img/twitter.svg")
 							img(src="../../../src/img/facebook.svg")
 							img(src="../../../src/img/instagram.svg")
-			.wrapper
-				footer.footer.footer_min
+			.footer
+				footer.footer__wrapper.footer_min
 					.footer__logoandtext.footer__logoandtext_center
-						img.logo(src="../../../src/img/logo and title.svg")
-						p.footer__text.text_Body.text_opacity75 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+						img(src="../../../src/img/logo and title.svg")
+						p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
 					.social
 						img(src="../../../src/img/twitter.svg")
 						img(src="../../../src/img/facebook.svg")

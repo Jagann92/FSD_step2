@@ -4,7 +4,29 @@
 }
 
 .menu__elem {
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.75;
   line-height: 17px;
+  opacity: 0.5;
+}
+
+.menu__elem_current {
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.menu__elem_title {
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  opacity: 1;
 }
 
 .menu__elem_spoiler {

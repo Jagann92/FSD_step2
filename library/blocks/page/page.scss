@@ -1,6 +1,11 @@
 .page {
+	max-width: 1440px;
+	width: 100%;
 	margin: auto;
 	padding: 0.1px;
+	background-color: white;
+	color: #1f2041;
+
 	&__logo {
 		float: left;
 		margin: 30px / 1440px * 100%;

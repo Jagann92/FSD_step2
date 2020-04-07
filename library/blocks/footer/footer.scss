@@ -1,12 +1,19 @@
+@import "../../../library/mixins/text";
 .footer {
+	width: 100%;
 	background-color: white;
-	display: grid;
-	max-width: 1160px/1440px * 100%;
-	margin-left: auto;
-	margin-right: auto;
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	&__wrapper {
+		background-color: white;
+		display: grid;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	&_full {
 		grid-template-columns: repeat(3, max-content);
 		grid-template-rows: 372px 70px;
+		justify-content: center;
 		align-items: center;
 		column-gap: 40px;
 		row-gap: 0;
@@ -18,9 +25,8 @@
 		align-content: center;
 		row-gap: 20px;
 	}
-	&__logo {
-	}
 	&__text {
+		@include text_Body;
 	}
 	&__menu {
 		height: 168px;
@@ -48,8 +54,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-	&__social {
+		@include text_Body;
 	}
 	&__logoandtext {
 		display: grid;

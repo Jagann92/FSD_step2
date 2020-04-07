@@ -1,9 +1,21 @@
 .form__title {
   max-width: 220px;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
 }
 
 .form__text {
   max-width: 220px;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.75;
 }
 
 .form__text-input {
@@ -14,6 +26,13 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.75;
+  opacity: 0.25;
 }
 
 .form__text-submit {

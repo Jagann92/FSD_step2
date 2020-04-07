@@ -1,16 +1,14 @@
 .page {
 	background-color: #e5e5e5;
-	max-width: 1440px;
-	max-height: 900px;
-	width: 100%;
+	max-height: 1350px;
 	height: 100%;
 
 	&__container {
-		height: 100%;
-		margin-top: 150px/1440px * 100%;
-		margin-bottom: 130px/1440px * 100%;
+		display: grid;
+		margin-top: 150px/1350px * 100%;
+		margin-bottom: 130px/1350px * 100%;
 		grid-template-columns: 100%;
 		grid-template-rows: repeat(4, min-content);
-		row-gap: 40px/900px * 100%;
+		row-gap: 40px;
 	}
 }

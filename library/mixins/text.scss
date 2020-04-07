@@ -1,0 +1,21 @@
+@mixin font($family, $weight, $size, $line) {
+	color: #1f2041;
+	font-family: $family;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $line;
+}
+@mixin text_H1 {
+	@include font(Quicksand, 700, 24px, 30px);
+}
+@mixin text_H2 {
+	@include font(Quicksand, 700, 19px, 24px);
+}
+@mixin text_H3 {
+	@include font(Montserrat, 700, 12px, 15px);
+	text-transform: uppercase;
+}
+@mixin text_Body {
+	@include font(Montserrat, 400, 14px, 24px);
+	opacity: 0.75;
+}

@@ -21,8 +21,8 @@ block body
 								default
 									a.menu__elem= val
 					.header__buttons
-						a.button.header__button-login.button_white Login
-						a.button.header__button-reg.button_purple Register
+						button.button.header__button-login.button_white Login
+						button.button.header__button-reg.button_purple Register
 			.header
 				header.header__wrapper
 					img.header__logo(src="../../../src/img/logo and title.svg")
@@ -56,9 +56,9 @@ block body
 					form.form.footer__form
 						.form__title Subscribe to our newsletter
 						p.form__text Receive our latest news and promotions in your inbox!
-						.form__text-submit
-							input(type='text' placeholder='Your email adress').form__text-input.text_Body
-							input(type='image' src='../../../src/img/arrow_forward.svg' width= 20px height= 20px).form__submit
+						.form__text-submit.input
+							input(type='email' placeholder='Your email adress').input__textfield
+							input(type='image' src='../../../src/img/arrow_forward.svg').input__submit
 					.footer__copyright 
 						p Copyright © 2018 Toxin UI Kit. All rights reserved.
 						.social

@@ -1,0 +1,194 @@
+extends ../../../library/templates/base.pug
+block title
+	title "UI Kit: Form elements"
+block styles
+	link(rel="stylesheet" href="form-elements.css")
+block body
+	.page
+		img.page__logo(src="../../../src/img/logo.svg")
+		.page__container
+			.grid-block
+				.input
+					span.input__title text field
+					label.input__label.input__label_end Default
+					input.input__textfield(type="email" placeholder="Email")
+				.input
+					span.input__title text field
+					label.input__label.input__label_end Hover/Focus
+					input.input__textfield.input_focus(type="text" placeholder="This sis a pretty awesome")
+				.input
+					span.input__title dropdown
+					label.input__label.input__label_end Default
+					select.input__dropdown(placeholder="Сколько гостей")
+				.input
+					span.input__title Masked text field
+					label.input__label.input__label_end Default
+					input.input__textfield(type="date" placeholder="ДД.ММ.ГГГГ")
+				.input
+					span.input__title date dropdown
+					select.input__dropdown(placeholder="ДД.ММ.ГГГГ")
+				.input
+					span.input__title date dropdown
+					select.input__dropdown(placeholder="19.08.2019")
+				.input
+					span.input__title filter date dropdown
+					select.input__dropdown(placeholder="19 авг - 23 авг")
+				.input
+					span.input__title subscription text field
+					input(type='email' placeholder='Email').input__textfield
+					input(type='image' src='../../../src/img/arrow_forward.svg').input__submit
+			.grid-block
+				.input
+					span.input__title checkbox buttons
+					input.input__checkbox(type="checkbox")
+					label.input__label Можно курить
+					input.input__checkbox(type="checkbox" checked)
+					label.input__label Можно с питомцами
+					input.input__checkbox(type="checkbox" checked)
+					label.input__label Можно пригласить гостей (до 10 человек)
+				.input
+					span.input__title radio buttons
+					input.input__radio(type="radio" checked)
+					label.input__label Мужчина
+					input.input__radio(type="radio")
+					label.input__label Женщина
+				.input
+					span.input__title toggle
+					input.input__checkbox.input__checkbox_toogle(type="checkbox" checked)
+					label.input__label Получать спецпредложения
+					input.input__checkbox.input__checkbox_toogle(type="checkbox" checked)
+					label.input__label Получать спецпредложения
+
+				.input
+					span.input__title like button
+					button.button.button_like-button.button_unliked
+					button.button.button_like-button.button_liked
+				.input
+					span.input__title rate button
+					button.button.button_rate-button.button_4star
+					button.button.button_rate-button.button_5star
+			.grid-block
+				.input
+					span.input__title range slider
+					label.input__label.input__label_end 5000Р-10 000р
+					input.input__range(type="range" checked)
+				.input
+					span.input__title buttons
+					button.button.button_purple Click Me
+					button.button.button_purple.button_locked Click Me
+					button.button.button_white Click Me
+					button.button.button_white.button_locked Click Me
+					button.button.button_text Click Me
+					button.button.button_text_gray Click Me
+					button.button.button_purple.button_arrowed Перейти к оплате
+				.input
+					span.input__title Pagination
+					.pagination
+						a.pagination__elem.pagination__elem_current 1
+						a.pagination__elem.pagination__elem_current 2
+						a.pagination__elem.pagination__elem_current 3
+						a.pagination__elem.pagination__elem_current ...
+						a.pagination__elem.pagination__elem_current 15
+						button.button.button_next-page
+			.grid-block
+				.input
+					span.input__title dropdown
+					label.input__label.input__label_end Default
+					select.input__dropdown(placeholder="2 спальни, 2 кровати...")
+				.input
+					span.input__title dropdown
+					label.input__label.input__label_end Expanded
+					select.input__dropdown.input__dropdown_expanded(placeholder="2 спальни, 2 кровати...")
+						span.input__title Спальни
+						option.input__select
+						span.input__title Кровати
+						option.input__select
+						span.input__title Ванные комнаты
+						option.input__select
+				.input
+					details.details
+						summary.input__title expandable checkbox list
+						ul
+							li
+								input.input__checkbox(type="checkbox")
+								label.input__label Завтрак
+							li
+								input.input__checkbox(type="checkbox" checked)
+								label.input__label Письменный стол
+							li
+								input.input__checkbox(type="checkbox" checked)
+								label.input__label Стул для кормления
+							li
+								input.input__checkbox(type="checkbox" checked)
+								label.input__label Кроватка
+							li
+								input.input__checkbox(type="checkbox")
+								label.input__label Телевизор
+							li
+								input.input__checkbox(type="checkbox")
+								label.input__label Шампунь
+							li
+								input.input__checkbox(type="checkbox")
+								label.input__label Телевизор
+							li
+								input.input__checkbox(type="checkbox")
+								label.input__label Шампунь
+				.input
+					details(open).details
+						summary.input__title expandable checkbox list
+						ul
+				.feature
+					img.feature__logo
+					.feature__title Комфорт
+					.feature__text Шумопоглощающие стены
+				.feature
+					img.feature__logo
+					.feature__title Удобство
+					.feature__text Окно в каждой из спален
+			.grid-block
+				.input
+					span.input__title dropdown
+					label.input__label.input__label_end Expanded
+					select.input__dropdown.input__dropdown_expanded(placeholder="Сколько гостей")
+						span.input__title Взрослые
+						option.input__select
+						span.input__title Дети
+						option.input__select
+						span.input__title Младенцы
+						option.input__select
+						button.button.button_text Применить
+				.input
+					span.input__title rich checkbox buttons
+					input.input__checkbox(type="checkbox")
+					label.input__label.input__label_rich Широкий коридор
+						br
+						span.input__label.input__label_small Ширина коридоров в номере не менее 91см.
+					input.input__checkbox(type="checkbox")
+					label.input__label.input__label_rich Помощник для инвалидов
+						br
+						span.input__label.input__label_small На 1 этаже вас встретит специалист и проводит до номера.
+				.review
+					img.review__foto
+					span.review__person
+					span.review__date
+					p.review__text
+					button.button.button_like.button_liked
+			.grid-block
+				.input
+					span.input__title dropdown
+					label.input__label.input__label_end Expanded
+					select.input__dropdown.input__dropdown_expanded(placeholder="3 гостя")
+						span.input__title Взрослые
+						option.input__select
+						span.input__title Дети
+						option.input__select
+						span.input__title Младенцы
+						option.input__select
+						button.button.button_text_gray Очистить
+						button.button.button_text Применить
+				.input
+					span.input__title Bullet list
+					ul.list
+						li.list__elem Нельзя с питомцами
+						li.list__elem Без вечеринок и меропритий
+						li.list__elem Врем яприбытия - после 13:00, а выезд до 12:00

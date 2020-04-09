@@ -17,5 +17,4 @@
 }
 @mixin text_Body {
 	@include font(Montserrat, 400, 14px, 24px);
-	opacity: 0.75;
 }

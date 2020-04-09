@@ -1,110 +1,164 @@
 @import "../../../library/nullstyle/nullstyle";
 @import "../../../src/fonts/fonts";
 @import "../../../library/blocks/page/page";
-@import "blocks/page/page";
 @import "../../../library/blocks/button/button";
-@import "../../../library/blocks/header/header";
-@import "../../../library/blocks/footer/footer";
-@import "../../../library/blocks/menu/menu";
 @import "../../../library/blocks/form/form";
-@import "../../../library/blocks/social/social";
+@import "../../../library/mixins/text";
 .page {
-}
-.page__logo {
-}
-.page__container {
+	min-height: 1853px;
+	height: 100%;
+	&__container {
+		display: grid;
+		margin: 140px/1350px * 100%;
+		margin-bottom: 130px/1350px * 100%;
+		grid-template-columns: 32fr 26fr 32fr;
+		column-gap: 13fr;
+		grid-template-rows: repeat(2, max-content);
+		row-gap: 100px;
+	}
 }
 .grid-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: -40px;
+	width: 100%;
 }
+
 .input {
-}
-.input__title {
-}
-.input__label {
-}
-.input__label_end {
-}
-.input__textfield {
-}
-.input_focus {
-}
-.input__dropdown {
-}
-.input__submit {
-}
-.input__checkbox {
-}
-.input__radio {
-}
-.input__checkbox_toogle {
+	width: 100%;
+	margin: 40px;
+	&_mar20 {
+		margin-bottom: -20px;
+	}
+	&__title {
+		@include text_H3;
+		text-align: left;
+	}
+	&__label {
+		@include text_H3;
+		font-weight: 400;
+		opacity: 0.5;
+	}
+	&__label_end {
+		float: right;
+		padding-right: 5px;
+	}
+	&__textfield {
+		max-width: 320px;
+		width: 100%;
+		height: 44px;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		@include text_Body;
+		padding-left: 15px;
+		&::placeholder {
+			@include text_Body;
+			color: rgba(31, 32, 65, 0.25);
+		}
+	}
+
+	&_focus {
+		border-color: rgba(31, 32, 65, 0.5);
+		&::placeholder {
+			color: rgba(31, 32, 65, 0.5);
+		}
+	}
+	&__dropdown {
+		max-width: 320px;
+		width: 100%;
+		height: 44px;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		@include text_Body;
+		padding-left: 15px;
+		&::placeholder {
+			@include text_Body;
+			color: rgba(31, 32, 65, 0.25);
+		}
+	}
+	&__option {
+		max-width: 320px;
+		width: 100%;
+	}
+	&__submit {
+	}
+	&__checkbox {
+	}
+	&__radio {
+	}
+	&__checkbox_toogle {
+	}
+	&__range {
+	}
+	&__dropdown_expanded {
+	}
+	&__select {
+	}
+	&__label_rich {
+	}
+	&__label_small {
+	}
 }
 .button {
-}
-.button_like-button {
-}
-.button_unliked {
-}
-.button_liked {
-}
-.button_rate-button {
-}
-.button_4star {
-}
-.button_5star {
-}
-.input__range {
-}
-.button_purple {
-}
-.button_locked {
-}
-.button_white {
-}
-.button_text {
-}
-.button_text_gray {
-}
-.button_arrowed {
+	&_like-button {
+	}
+	&_unliked {
+	}
+	&_liked {
+	}
+	&_rate-button {
+	}
+	&_4star {
+	}
+	&_5star {
+	}
+	&_purple {
+	}
+	&_locked {
+	}
+	&_white {
+	}
+	&_text {
+	}
+	&_text_gray {
+	}
+	&_arrowed {
+	}
+	&_next-page {
+	}
 }
 .pagination {
+	&__elem {
+	}
+	&__elem_current {
+	}
 }
-.pagination__elem {
-}
-.pagination__elem_current {
-}
-.button_next-page {
-}
-.input__dropdown_expanded {
-}
-.input__select {
-}
+
 .details {
 }
 .feature {
-}
-.feature__logo {
-}
-.feature__title {
-}
-.feature__text {
-}
-.input__label_rich {
-}
-.input__label_small {
+	&__logo {
+	}
+	&__title {
+	}
+	&__text {
+	}
 }
 .review {
+	&__foto {
+	}
+	&__person {
+	}
+	&__date {
+	}
+	&__text {
+	}
 }
-.review__foto {
-}
-.review__person {
-}
-.review__date {
-}
-.review__text {
-}
-.button_like {
-}
+
 .list {
-}
-.list__elem {
+	&__elem {
+	}
 }

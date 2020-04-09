@@ -8,18 +8,19 @@ block body
 		img.page__logo(src="../../../src/img/logo.svg")
 		.page__container
 			.grid-block
-				.input
+				.input.input_mar20
 					span.input__title text field
 					label.input__label.input__label_end Default
-					input.input__textfield(type="email" placeholder="Email")
-				.input
+					input.input__textfield(type="text" placeholder="Email")
+				.input.input_mar20
 					span.input__title text field
 					label.input__label.input__label_end Hover/Focus
-					input.input__textfield.input_focus(type="text" placeholder="This sis a pretty awesome")
-				.input
+					input.input__textfield.input_focus(type="text" placeholder="This is a pretty awesome")
+				.input.input_mar20
 					span.input__title dropdown
 					label.input__label.input__label_end Default
 					select.input__dropdown(placeholder="Сколько гостей")
+						option.input__option 500
 				.input
 					span.input__title Masked text field
 					label.input__label.input__label_end Default

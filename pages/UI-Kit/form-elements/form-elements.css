@@ -178,6 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .form__text-submit {
@@ -195,10 +196,10 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   margin: 10.37037%;
   margin-bottom: 9.62963%;
-  -ms-grid-columns: 32fr 26fr 32fr;
-      grid-template-columns: 32fr 26fr 32fr;
-  -webkit-column-gap: 13fr;
-          column-gap: 13fr;
+  -ms-grid-columns: 320px 260px 320px;
+      grid-template-columns: 320px 260px 320px;
+  -webkit-column-gap: 130px;
+          column-gap: 130px;
   -ms-grid-rows: (max-content)[2];
       grid-template-rows: repeat(2, -webkit-max-content);
       grid-template-rows: repeat(2, max-content);
@@ -209,24 +210,32 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: -40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
 .input {
+  position: relative;
   width: 100%;
-  margin: 40px;
+  margin-bottom: 40px;
+}
+
+.input_inline {
+  display: inline-block;
+  max-width: 150px;
+  width: 100%;
+}
+
+.input_inline:first-of-type {
+  margin-right: 20px;
 }
 
 .input_mar20 {
-  margin-bottom: -20px;
+  margin-bottom: 20px;
 }
 
 .input__title {
@@ -268,6 +277,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   padding-left: 15px;
 }
 
@@ -277,6 +287,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
 }
 
@@ -286,6 +297,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
 }
 
@@ -295,6 +307,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
 }
 
@@ -304,7 +317,29 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
+}
+
+.input__date {
+  max-width: 150px;
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  padding-left: 15px;
+}
+
+.input__date_filter {
+  max-width: 260px;
 }
 
 .input_focus {
@@ -312,19 +347,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .input_focus::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .input_focus:-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .input_focus::-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .input_focus::placeholder {
-  color: rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .input__dropdown {
@@ -340,46 +375,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   padding-left: 15px;
-}
-
-.input__dropdown::-webkit-input-placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.input__dropdown:-ms-input-placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.input__dropdown::-ms-input-placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.input__dropdown::placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.25);
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .input__option {
   max-width: 320px;
   width: 100%;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.input__submit {
+  width: 20px;
+  height: 20px;
+  /*background-image: url("../../../src/img/arrow_forward.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: auto;
+		background-color: white;
+		*/
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
 }

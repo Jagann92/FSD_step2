@@ -29,7 +29,7 @@ block body
 					.input.input_inline
 						span.input__title date dropdown
 						input.input__date(type="date")
-				
+
 					.input.input_inline
 						span.input__title date dropdown
 						input.input__date(type="date" value="2019-08-19")
@@ -43,24 +43,34 @@ block body
 			.grid-block
 				.input
 					span.input__title checkbox buttons
-					input.input__checkbox(type="checkbox")
-					label.input__label Можно курить
-					input.input__checkbox(type="checkbox" checked)
-					label.input__label Можно с питомцами
-					input.input__checkbox(type="checkbox" checked)
-					label.input__label Можно пригласить гостей (до 10 человек)
+					ul
+						li.input_line
+							input.input__checkbox(id ="c1" type="checkbox")
+							label.input__value(for="c1") Можно курить
+						li.input_line
+							input.input__checkbox(id="c2" type="checkbox" checked)
+							label.input__value(for="c2") Можно с питомцами
+						li.input_line
+							input.input__checkbox(id="c3" type="checkbox" checked)
+							label.input__value(for="c3") Можно пригласить гостей (до 10 человек)
 				.input
 					span.input__title radio buttons
-					input.input__radio(type="radio" checked)
-					label.input__label Мужчина
-					input.input__radio(type="radio")
-					label.input__label Женщина
+					div
+						.input_inline
+							input.input__radio(name="gender" id="r1" type="radio" checked)
+							label.input__value(for="r1") Мужчина
+						.input_inline
+							input.input__radio(name="gender" id="r2" type="radio")
+							label.input__value(for="r2") Женщина
 				.input
 					span.input__title toggle
-					input.input__checkbox.input__checkbox_toogle(type="checkbox" checked)
-					label.input__label Получать спецпредложения
-					input.input__checkbox.input__checkbox_toogle(type="checkbox" checked)
-					label.input__label Получать спецпредложения
+					ul
+						li.input_line
+							input.input__switch(id="sw1" type="checkbox" checked)
+							label.input__value(for="sw1") Получать спецпредложения
+						li.input_line
+							input.input__switch(id="sw2" type="checkbox" checked)
+							label.input__value(for="sw2") Получать спецпредложения
 
 				.input
 					span.input__title like button

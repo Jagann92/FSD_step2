@@ -329,6 +329,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .container__type-sample-title {

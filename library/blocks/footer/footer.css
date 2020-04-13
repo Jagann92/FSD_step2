@@ -50,6 +50,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer__menu {
@@ -103,6 +104,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer__logoandtext {

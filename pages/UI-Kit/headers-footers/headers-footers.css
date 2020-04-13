@@ -235,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   line-height: 17px;
   opacity: 0.5;
 }
@@ -300,6 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer__menu {
@@ -353,6 +355,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer__logoandtext {
@@ -386,6 +389,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   line-height: 17px;
   opacity: 0.5;
 }
@@ -441,6 +445,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .form__text-submit {
@@ -474,6 +479,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   opacity: 0.25;
 }
 

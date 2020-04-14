@@ -82,8 +82,17 @@ block body
 							.button__like-count.button_liked 12
 				.input
 					span.input__title.input__title_m-b-16 rate button
-					button.button.button_rate-button.button_4star
-					button.button.button_rate-button.button_5star
+					.input__stars
+						input.input__star-input(id="star-4" type="radio" name="reviewStars")
+						label.material-icons.input__star-label(for="star-4")
+						input.input__star-input(id="star-3" type="radio" name="reviewStars")
+						label.material-icons.input__star-label(for="star-3")
+						input.input__star-input(id="star-2" type="radio" name="reviewStars")
+						label.material-icons.input__star-label(for="star-2")
+						input.input__star-input(id="star-1" type="radio" name="reviewStars")
+						label.material-icons.input__star-label(for="star-1")
+						input.input__star-input(id="star-0" type="radio" name="reviewStars")
+						label.material-icons.input__star-label(for="star-0")
 			.grid-block
 				.input
 					span.input__title range slider

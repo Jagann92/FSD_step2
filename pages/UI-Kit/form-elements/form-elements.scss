@@ -22,18 +22,17 @@
 }
 .grid-block {
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	justify-items: flex-start;
 	flex-wrap: wrap;
 	width: 100%;
-	@include shadow();
 }
 
 .input {
 	position: relative;
 	width: 100%;
 	margin-bottom: 40px;
-	@include shadow();
 	&_inline {
 		display: inline-block;
 		max-width: 150px;
@@ -50,7 +49,12 @@
 	}
 	&__title {
 		@include text_H3;
+		display: inline-block;
 		text-align: left;
+		margin-bottom: 5px;
+		&_m-b16 {
+			margin-bottom: 16px;
+		}
 	}
 	&__label {
 		@include text_H3;
@@ -122,12 +126,6 @@
 		color: rgba(31, 32, 65, 0.5);
 		line-height: 18px;
 	}
-	&__checkbox {
-	}
-	&__radio {
-	}
-	&__checkbox_toogle {
-	}
 	&__range {
 	}
 	&__dropdown_expanded {
@@ -139,8 +137,59 @@
 	&__label_small {
 	}
 }
+.heart {
+	position: relative;
+	width: 10px;
+	height: 9px;
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		left: 5px;
+		top: 0;
+		width: 5px;
+		height: 8px;
+		background: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		-moz-border-radius: 50px 50px 0 0;
+		border-radius: 50px 50px 0 0;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-transform-origin: 0 100%;
+		-moz-transform-origin: 0 100%;
+		-ms-transform-origin: 0 100%;
+		-o-transform-origin: 0 100%;
+		transform-origin: 0 100%;
+	}
+	&:after {
+		left: 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transform-origin: 100% 100%;
+		-moz-transform-origin: 100% 100%;
+		-ms-transform-origin: 100% 100%;
+		-o-transform-origin: 100% 100%;
+		transform-origin: 100% 100%;
+	}
+}
 .button {
 	&_like-button {
+		width: 40px;
+		height: 20px;
+		border-radius: 10px;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		background-color: #fff;
+		margin-right: 10px;
+	}
+	&__heart {
+	}
+	&__count {
 	}
 	&_unliked {
 	}
@@ -192,11 +241,6 @@
 	&__date {
 	}
 	&__text {
-	}
-}
-
-.list {
-	&__elem {
 	}
 }
 

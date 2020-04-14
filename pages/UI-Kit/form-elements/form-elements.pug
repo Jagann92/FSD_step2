@@ -42,7 +42,7 @@ block body
 					input(type='image' src='../../../src/img/arrow_forward.svg').input__submit
 			.grid-block
 				.input
-					span.input__title checkbox buttons
+					span.input__title.input__title_m-b-16 checkbox buttons
 					ul
 						li.input_line
 							input.input__checkbox(id ="c1" type="checkbox")
@@ -54,7 +54,7 @@ block body
 							input.input__checkbox(id="c3" type="checkbox" checked)
 							label.input__value(for="c3") Можно пригласить гостей (до 10 человек)
 				.input
-					span.input__title radio buttons
+					span.input__title.input__title_m-b-16 radio buttons
 					div
 						.input_inline
 							input.input__radio(name="gender" id="r1" type="radio" checked)
@@ -63,7 +63,7 @@ block body
 							input.input__radio(name="gender" id="r2" type="radio")
 							label.input__value(for="r2") Женщина
 				.input
-					span.input__title toggle
+					span.input__title.input__title_m-b-16 toggle
 					ul
 						li.input_line
 							input.input__switch(id="sw1" type="checkbox" checked)
@@ -71,13 +71,17 @@ block body
 						li.input_line
 							input.input__switch(id="sw2" type="checkbox" checked)
 							label.input__value(for="sw2") Получать спецпредложения
-
 				.input
-					span.input__title like button
-					button.button.button_like-button.button_unliked
-					button.button.button_like-button.button_liked
+					span.input__title.input__title_m-b-16 like button
+					div
+						button.button.button_like-button
+							.heart.button__heart
+							.button__count
+						button.button.button_like-button.button_liked
+							.heart.button__heart
+							.button__count
 				.input
-					span.input__title rate button
+					span.input__title.input__title_m-b-16 rate button
 					button.button.button_rate-button.button_4star
 					button.button.button_rate-button.button_5star
 			.grid-block

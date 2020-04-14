@@ -121,6 +121,37 @@ h1, h2, h3, h4, h5, h6 {
   src: local("Open Sans"), url("../../../src/fonts/OpenSans-Bold.svg") format("svg"), url("../../../src/fonts/opensansbold.woff") format("woff"), url("../../../src/fonts/opensansbold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../../../src/fonts/MaterialIcons-Regular.woff2") format("svg"), url("../../../src/fonts/MaterialIcons-Regular.woff") format("woff"), url("../../../src/fonts/MaterialIcons-Regular.ttf") format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
 /* -------------- */
 .page {
   max-width: 1440px;
@@ -422,37 +453,47 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 18px;
 }
 
-.heart {
-  position: relative;
-  width: 10px;
-  height: 9px;
-}
+/*.heart {
+	position: relative;
+	width: 10px;
+	height: 9px;
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		left: 5px;
+		top: 0;
+		width: 5px;
+		height: 8px;
+		background: #bc9cff;
+		-moz-border-radius: 50px 50px 0 0;
+		border-radius: 50px 50px 0 0;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-transform-origin: 0 100%;
+		-moz-transform-origin: 0 100%;
+		-ms-transform-origin: 0 100%;
+		-o-transform-origin: 0 100%;
+		transform-origin: 0 100%;
+	}
 
-.heart:before, .heart:after {
-  position: absolute;
-  content: "";
-  left: 5px;
-  top: 0;
-  width: 5px;
-  height: 8px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 50px 50px 0 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-}
-
-.heart:after {
-  left: 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-}
-
+	&:after {
+		left: 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transform-origin: 100% 100%;
+		-moz-transform-origin: 100% 100%;
+		-ms-transform-origin: 100% 100%;
+		-o-transform-origin: 100% 100%;
+		transform-origin: 100% 100%;
+	}
+}*/
 .button_like-button {
   width: 40px;
   height: 20px;

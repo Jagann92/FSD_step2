@@ -137,7 +137,7 @@
 	&__label_small {
 	}
 }
-.heart {
+/*.heart {
 	position: relative;
 	width: 10px;
 	height: 9px;
@@ -149,8 +149,7 @@
 		top: 0;
 		width: 5px;
 		height: 8px;
-		background: #fff;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		background: #bc9cff;
 		-moz-border-radius: 50px 50px 0 0;
 		border-radius: 50px 50px 0 0;
 		-webkit-transform: rotate(-45deg);
@@ -164,6 +163,7 @@
 		-o-transform-origin: 0 100%;
 		transform-origin: 0 100%;
 	}
+
 	&:after {
 		left: 0;
 		-webkit-transform: rotate(45deg);
@@ -177,7 +177,7 @@
 		-o-transform-origin: 100% 100%;
 		transform-origin: 100% 100%;
 	}
-}
+}*/
 .button {
 	&_like-button {
 		width: 40px;

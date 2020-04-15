@@ -453,45 +453,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 18px;
 }
 
-.button_like-button {
-  width: 40px;
-  height: 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  background-color: #fff;
-  margin-right: 10px;
-  position: relative;
-}
-
-.button__heart {
-  position: absolute;
-  font-size: 10px;
-  line-height: 9px;
-  top: 25%;
-  left: 12.5%;
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.button__like-count {
-  position: absolute;
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  color: rgba(31, 32, 65, 0.25);
-  font-size: 10px;
-  line-height: 12px;
-  top: 3px;
-  left: 22px;
-}
-
-.button_liked {
-  color: #bc9cff;
-  border-color: #bc9cff;
-}
-
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   .input__checkbox,
   .input__radio,

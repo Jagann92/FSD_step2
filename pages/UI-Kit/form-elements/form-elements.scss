@@ -139,42 +139,6 @@
 }
 
 .button {
-	&_like-button {
-		width: 40px;
-		height: 20px;
-		border-radius: 10px;
-		border: 1px solid rgba(31, 32, 65, 0.25);
-		background-color: #fff;
-		margin-right: 10px;
-		position: relative;
-	}
-	&__heart {
-		position: absolute;
-		font-size: 10px;
-		line-height: 9px;
-		top: 25%;
-		left: 12.5%;
-		color: rgba(31, 32, 65, 0.25);
-	}
-	&__like-count {
-		position: absolute;
-		@include text_Body;
-		color: rgba(31, 32, 65, 0.25);
-		font-size: 10px;
-		line-height: 12px;
-		top: 3px;
-		left: 22px;
-	}
-	&_liked {
-		color: #bc9cff;
-		border-color: #bc9cff;
-	}
-	&_rate-button {
-	}
-	&_4star {
-	}
-	&_5star {
-	}
 	&_purple {
 	}
 	&_locked {

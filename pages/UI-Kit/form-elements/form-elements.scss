@@ -376,3 +376,50 @@
 .input__star-input:hover ~ .input__star-label::before {
 	content: "star";
 }
+.input__like {
+	position: relative;
+}
+.input__like-input {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+.input__like-count {
+	@include text_Body;
+	position: absolute;
+	color: inherit;
+	font-size: 10px;
+	line-height: 12px;
+	top: 3px;
+	left: 22px;
+}
+.input__like-label {
+	width: 40px;
+	height: 20px;
+	border-radius: 10px;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	background-color: #fff;
+	position: relative;
+	color: rgba(31, 32, 65, 0.25);
+	&:before {
+		content: "favorite_border";
+		font-size: 10px;
+		line-height: 9px;
+		cursor: pointer;
+		position: absolute;
+		top: 27%;
+		left: 12.5%;
+	}
+}
+
+.input__like-input:hover ~ .input__like-label,
+.input__like-input:checked ~ .input__like-label {
+	color: #bc9cff;
+	border-color: #bc9cff;
+	transition: all 0.3s linear 1ms;
+}
+.input__like-input:checked ~ .input__like-label::before {
+	content: "favorite";
+	transition: all 0.3s linear 1ms;
+}

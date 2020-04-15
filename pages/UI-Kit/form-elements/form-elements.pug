@@ -73,13 +73,16 @@ block body
 							label.input__value(for="sw2") Получать спецпредложения
 				.input
 					span.input__title.input__title_m-b-16 like button
-					div
-						button.button.button_like-button
-							i.material-icons.button__heart &#xe87e;
-							.button__like-count 2
-						button.button.button_like-button.button_liked
-							i.material-icons.button__heart.button_liked &#xe87d;
-							.button__like-count.button_liked 12
+					br
+					.input__like.input_inline
+						input.input__like-input(id="like-1" type="checkbox")
+						label.material-icons.input__like-label(for="like-1")
+							span.input__like-count 2
+					.input__like.input_inline
+						input.input__like-input(id="like-2" type="checkbox" checked)
+						label.material-icons.input__like-label(for="like-2")
+							span.input__like-count 12
+
 				.input
 					span.input__title.input__title_m-b-16 rate button
 					br

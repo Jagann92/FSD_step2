@@ -646,20 +646,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .input__stars {
   position: relative;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  float: left;
 }
 
 .input__star-input {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   position: absolute;
   top: 0;
   z-index: 0;
-}
-
-.input__star-label {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .input__star-label:before {
@@ -669,14 +670,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 20px;
   height: 24px;
   width: 24px;
-  float: right;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
 }
 
-.input__star-label:before:checked {
+.input__star-input:checked ~ .input__star-label::before,
+.input__star-input:hover ~ .input__star-label::before {
   content: "star";
-  height: 40px;
-  width: 40px;
 }

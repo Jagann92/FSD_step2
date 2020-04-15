@@ -351,32 +351,28 @@
 }
 .input__stars {
 	position: relative;
-	display: inline-block;
+	display: flex;
+	flex-direction: row-reverse;
+	float: left;
 }
 .input__star-input {
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 	opacity: 0;
 	position: absolute;
 	top: 0;
 	z-index: 0;
 }
 .input__star-label {
-	@include shadow();
-}
-.input__star-label:before {
-	content: "star_border";
-	color: #bc9cff;
-	font-size: 24px;
-	line-height: 20px;
-	height: 24px;
-	width: 24px;
-	float: right;
-	cursor: pointer;
-	position: relative;
-	z-index: 1;
-	&:checked {
-		content: "star";
-		height: 40px;
-		width: 40px;
+	&:before {
+		content: "star_border";
+		color: #bc9cff;
+		font-size: 24px;
+		line-height: 20px;
+		height: 24px;
+		width: 24px;
+		cursor: pointer;
 	}
+}
+.input__star-input:checked ~ .input__star-label::before,
+.input__star-input:hover ~ .input__star-label::before {
+	content: "star";
 }

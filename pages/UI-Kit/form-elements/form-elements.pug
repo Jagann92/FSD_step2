@@ -2,10 +2,9 @@ extends ../../../library/templates/base.pug
 block title
 	title "UI Kit: Form elements"
 block styles
-	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css")
+	link(rel="stylesheet" href="../../../library/plugins/ionrangeSlider/css/ion.rangeSlider.css")
 	link(rel="stylesheet" href="form-elements.css")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js")
 
 block body
 	.page
@@ -237,4 +236,5 @@ block body
 						li.list__elem Нельзя с питомцами
 						li.list__elem Без вечеринок и меропритий
 						li.list__elem Врем яприбытия - после 13:00, а выезд до 12:00
-	script(src="form-elements.js")
+		script(src="../../../library/plugins/ionRangeSlider/js/ion.rangeSlider.min.js")
+		script(src="form-elements.js")

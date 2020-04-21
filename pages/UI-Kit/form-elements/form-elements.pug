@@ -111,28 +111,32 @@ block body
 						input.input__star-input(id="star-1" type="radio" name="reviewStars-2")
 						label.material-icons.input__star-label(for="star-1")
 			.grid-block
-				.input
+				.input.input__range
 					span.input__title range slider
 					label.input__label.input__label_end 5000Р-10 000р
 					input(type="text" name="my_range" value="").js-range-slider
 				.input
 					span.input__title buttons
+					br
 					button.button.button_purple Click Me
 					button.button.button_purple.button_locked Click Me
 					button.button.button_white Click Me
 					button.button.button_white.button_locked Click Me
+					br
 					button.button.button_text Click Me
-					button.button.button_text_gray Click Me
-					button.button.button_purple.button_arrowed Перейти к оплате
+					button.button.button_text.button_text_disabled Click Me
+					button.button.button_purple.button_wide.button_arrowed Перейти к оплате
+						span.material-icons.arrow arrow_forward
 				.input
 					span.input__title Pagination
 					.pagination
 						a.pagination__elem.pagination__elem_current 1
-						a.pagination__elem.pagination__elem_current 2
-						a.pagination__elem.pagination__elem_current 3
-						a.pagination__elem.pagination__elem_current ...
-						a.pagination__elem.pagination__elem_current 15
-						button.button.button_next-page
+						a.pagination__elem 2
+						a.pagination__elem 3
+						a.pagination__elem ...
+						a.pagination__elem 15
+						a.pagination__elem.material-icons.pagination__arrow arrow_forward
+						span.pagination__text 1 – 12 из 100+ вариантов аренды
 			.grid-block
 				.input
 					span.input__title dropdown

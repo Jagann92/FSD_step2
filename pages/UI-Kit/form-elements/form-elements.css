@@ -453,6 +453,112 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 18px;
 }
 
+.input__range {
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-right: 20px;
+  margin-bottom: 30px;
+  width: 99px;
+  height: 44px;
+  padding: 0;
+}
+
+.button_locked {
+  opacity: 0.5;
+}
+
+.button_text {
+  color: #bc9cff;
+  border: none;
+  background: none;
+  width: auto;
+  height: auto;
+}
+
+.button_text_disabled {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.button_wide {
+  width: 100%;
+}
+
+.button_arrowed {
+  position: relative;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+
+.pagination {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (min-content)[6];
+      grid-template-columns: repeat(6, -webkit-min-content);
+      grid-template-columns: repeat(6, min-content);
+  row-gap: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.pagination__elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination__text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.pagination__elem_current {
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pagination__arrow {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#66d2ea));
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+  color: #fff;
+}
+
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   .input__checkbox,
   .input__radio,

@@ -4,8 +4,8 @@
 .irs--round {
     @name: irs;
 
-    @top: 31.5px;
-    @bottom: 21px;
+    @top: 15px;
+    // @bottom: 21px;
     @line_height: 4px;
     @handle_width: 15px;
     @handle_height: 15px;
@@ -52,12 +52,12 @@
 
     .@{name}-shadow {
         height: 4px;
-        bottom: @bottom;
+        //bottom: @bottom;
         background-color: fade(@line_color, 50%);
     }
 
     .@{name}-handle {
-        top: 26px;
+        top: @top - @handle_height/3;
         width: @handle_width;
         height: @handle_height;
         border: 2px solid @handle_color_1;

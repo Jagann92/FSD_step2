@@ -139,28 +139,34 @@ block body
 			.grid-block
 				.input
 					span.input__title dropdown
-					.iqdropdown
-						p.iqdropdown-selection
+					span.input__label.input__label_end Default
+					.iqdropdown.beds
+						p.iqdropdown-selection(data-selection-text="спальня" data-text-plural="спальни")
 						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="item1")
+							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
 								div
 									p.iqdropdown-item Спальни
-							.iqdropdown-menu-option(data-id="item2")
+							.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
 								div
 									p.iqdropdown-item Кровати
-							.iqdropdown-menu-option(data-id="item3")
+							.iqdropdown-menu-option(data-id="bathrooms")
 								div
 									p.iqdropdown-item Ванные комнаты
 				.input
 					span.input__title dropdown
-					label.input__label.input__label_end Expanded
-					select.input__dropdown.input__dropdown_expanded(placeholder="2 спальни, 2 кровати...")
-						span.input__title Спальни
-						option.input__select
-						span.input__title Кровати
-						option.input__select
-						span.input__title Ванные комнаты
-						option.input__select
+					span.input__label.input__label_end Expanded
+					.iqdropdown.beds.menu-open
+						p.iqdropdown-selection(data-selection-text="спальня" data-text-plural="спальни")
+						.iqdropdown-menu
+							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
+								div
+									p.iqdropdown-item Спальни
+							.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
+								div
+									p.iqdropdown-item Кровати
+							.iqdropdown-menu-option(data-id="bathrooms")
+								div
+									p.iqdropdown-item Ванные комнаты
 				.input
 					details.details
 						summary.input__title expandable checkbox list
@@ -250,5 +256,5 @@ block body
 						li.list__elem Без вечеринок и меропритий
 						li.list__elem Врем яприбытия - после 13:00, а выезд до 12:00
 		script(src="../../../library/plugins/ionRangeSlider/js/ion.rangeSlider.min.js")
-		script(src="../../../library/plugins/item-quantity-dropdown/item-quantity-dropdown.min.js")
+		script(src="../../../library/plugins/item-quantity-dropdown/js/item-quantity-dropdown.min.js")
 		script(src="form-elements.js")

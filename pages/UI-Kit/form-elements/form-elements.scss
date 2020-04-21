@@ -4,7 +4,7 @@
 @import "../../../library/blocks/button/button";
 @import "../../../library/blocks/form/form";
 @import "../../../library/mixins/text";
-@import "../../../library/plugins/item-quantity-dropdown/item-quantity-dropdown.min";
+@import "../../../library/plugins/item-quantity-dropdown/css/item-quantity-dropdown.min";
 @import "../../../library/plugins/ionrangeSlider/css/irs";
 
 @mixin shadow {
@@ -155,13 +155,17 @@
         margin-bottom: 20px;
     }
 
-    &__dropdown_expanded {}
+    &__dropdown_expanded {
+    }
 
-    &__select {}
+    &__select {
+    }
 
-    &__label_rich {}
+    &__label_rich {
+    }
 
-    &__label_small {}
+    &__label_small {
+    }
 }
 
 .button {
@@ -171,13 +175,15 @@
     height: 44px;
     padding: 0;
 
-    &_purple {}
+    &_purple {
+    }
 
     &_locked {
         opacity: 0.5;
     }
 
-    &_white {}
+    &_white {
+    }
 
     &_text {
         color: #bc9cff;
@@ -199,7 +205,8 @@
         position: relative;
     }
 
-    &_next-page {}
+    &_next-page {
+    }
 }
 
 .arrow {
@@ -247,28 +254,36 @@
     }
 }
 
-.details {}
+.details {
+    margin-top: 150px;
+}
 
 .feature {
-    &__logo {}
+    &__logo {
+    }
 
-    &__title {}
+    &__title {
+    }
 
-    &__text {}
+    &__text {
+    }
 }
 
 .review {
-    &__foto {}
+    &__foto {
+    }
 
-    &__person {}
+    &__person {
+    }
 
-    &__date {}
+    &__date {
+    }
 
-    &__text {}
+    &__text {
+    }
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-
     .input__checkbox,
     .input__radio,
     .input__switch {
@@ -320,7 +335,7 @@
                 --bc: var(--border);
             }
 
-            &+label {
+            & + label {
                 cursor: not-allowed;
             }
         }
@@ -337,7 +352,7 @@
             }
         }
 
-        &+label {
+        & + label {
             max-width: 192px;
             display: inline-block;
             vertical-align: top;
@@ -371,7 +386,7 @@
         width: 38px;
         border-radius: 11px;
 
-        &+label {
+        & + label {
             max-width: 210px;
         }
 
@@ -445,8 +460,8 @@
     }
 }
 
-.input__star-input:checked~.input__star-label::before,
-.input__star-input:hover~.input__star-label::before {
+.input__star-input:checked ~ .input__star-label::before,
+.input__star-input:hover ~ .input__star-label::before {
     content: "star";
 }
 
@@ -491,14 +506,14 @@
     }
 }
 
-.input__like-input:hover~.input__like-label,
-.input__like-input:checked~.input__like-label {
+.input__like-input:hover ~ .input__like-label,
+.input__like-input:checked ~ .input__like-label {
     color: #bc9cff;
     border-color: #bc9cff;
     transition: all 0.3s linear 1ms;
 }
 
-.input__like-input:checked~.input__like-label::before {
+.input__like-input:checked ~ .input__like-label::before {
     content: "favorite";
     transition: all 0.3s linear 1ms;
 }

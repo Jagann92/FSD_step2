@@ -10,3 +10,6 @@ $(".js-range-slider").ionRangeSlider({
 	hide_min_max: true,
 	skin: "round"
 });
+$(document).ready(() => {
+	$('.iqdropdown').iqDropdown({});
+});

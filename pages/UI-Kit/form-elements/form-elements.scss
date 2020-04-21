@@ -4,6 +4,8 @@
 @import "../../../library/blocks/button/button";
 @import "../../../library/blocks/form/form";
 @import "../../../library/mixins/text";
+@import "../../../library/plugins/item-quantity-dropdown/item-quantity-dropdown.min";
+@import "../../../library/plugins/ionrangeSlider/css/irs";
 
 @mixin shadow {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
@@ -153,17 +155,13 @@
         margin-bottom: 20px;
     }
 
-    &__dropdown_expanded {
-    }
+    &__dropdown_expanded {}
 
-    &__select {
-    }
+    &__select {}
 
-    &__label_rich {
-    }
+    &__label_rich {}
 
-    &__label_small {
-    }
+    &__label_small {}
 }
 
 .button {
@@ -172,15 +170,14 @@
     width: 99px;
     height: 44px;
     padding: 0;
-    &_purple {
-    }
+
+    &_purple {}
 
     &_locked {
         opacity: 0.5;
     }
 
-    &_white {
-    }
+    &_white {}
 
     &_text {
         color: #bc9cff;
@@ -193,16 +190,18 @@
     &_text_disabled {
         color: rgba(31, 32, 65, 0.5);
     }
+
     &_wide {
         width: 100%;
     }
+
     &_arrowed {
         position: relative;
     }
 
-    &_next-page {
-    }
+    &_next-page {}
 }
+
 .arrow {
     width: 20px;
     height: 20px;
@@ -210,6 +209,7 @@
     right: 12px;
     bottom: 12px;
 }
+
 .pagination {
     display: grid;
     grid-template-columns: repeat(6, min-content);
@@ -219,6 +219,7 @@
     font-size: 12px;
     line-height: 15px;
     color: rgba(31, 32, 65, 0.5);
+
     &__elem {
         display: flex;
         width: 40px;
@@ -226,16 +227,19 @@
         align-items: center;
         justify-content: center;
     }
+
     &__text {
         grid-column: 1/7;
         @include text_Body;
     }
+
     &__elem_current {
         background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
         border-radius: 22px;
         color: #fff;
         font-weight: bold;
     }
+
     &__arrow {
         background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
         border-radius: 22px;
@@ -243,35 +247,28 @@
     }
 }
 
-.details {
-}
+.details {}
 
 .feature {
-    &__logo {
-    }
+    &__logo {}
 
-    &__title {
-    }
+    &__title {}
 
-    &__text {
-    }
+    &__text {}
 }
 
 .review {
-    &__foto {
-    }
+    &__foto {}
 
-    &__person {
-    }
+    &__person {}
 
-    &__date {
-    }
+    &__date {}
 
-    &__text {
-    }
+    &__text {}
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
+
     .input__checkbox,
     .input__radio,
     .input__switch {
@@ -323,7 +320,7 @@
                 --bc: var(--border);
             }
 
-            & + label {
+            &+label {
                 cursor: not-allowed;
             }
         }
@@ -340,7 +337,7 @@
             }
         }
 
-        & + label {
+        &+label {
             max-width: 192px;
             display: inline-block;
             vertical-align: top;
@@ -374,7 +371,7 @@
         width: 38px;
         border-radius: 11px;
 
-        & + label {
+        &+label {
             max-width: 210px;
         }
 
@@ -448,8 +445,8 @@
     }
 }
 
-.input__star-input:checked ~ .input__star-label::before,
-.input__star-input:hover ~ .input__star-label::before {
+.input__star-input:checked~.input__star-label::before,
+.input__star-input:hover~.input__star-label::before {
     content: "star";
 }
 
@@ -494,14 +491,14 @@
     }
 }
 
-.input__like-input:hover ~ .input__like-label,
-.input__like-input:checked ~ .input__like-label {
+.input__like-input:hover~.input__like-label,
+.input__like-input:checked~.input__like-label {
     color: #bc9cff;
     border-color: #bc9cff;
     transition: all 0.3s linear 1ms;
 }
 
-.input__like-input:checked ~ .input__like-label::before {
+.input__like-input:checked~.input__like-label::before {
     content: "favorite";
     transition: all 0.3s linear 1ms;
 }

@@ -16,7 +16,6 @@ $(document).ready(() => {
 		setSelectionText: function (itemCount, totalItems) {
 			const items = Object.keys(itemCount)
 				.map(key => itemCount[key])
-			console.log(items);
 			let bedrooms = "";
 			switch (items[0]) {
 				case 0:
@@ -68,8 +67,34 @@ $(document).ready(() => {
 					baths = items[2] + ' ванных комнат';
 					break;
 			}
-			console.log(bedrooms + beds + baths);
-			return bedrooms + beds + baths;
+			if (totalItems == 0) {
+				return "Выберите удобства";
+			} else {
+				return bedrooms + beds + baths;
+			}
+		}
+	});
+	$('.iqdropdown.people').iqDropdown({
+		minItems: 0,
+		setSelectionText: function (itemCount, totalItems) {
+			let text = '';
+			switch (totalItems) {
+				case 0:
+					text = 'Сколько гостей';
+					break;
+				case 1:
+					text = '1 гость';
+					break;
+				case 2:
+				case 3:
+				case 4:
+					text = totalItems + ' гостя';
+					break;
+				default:
+					text = totalItems + ' гостей';
+					break;
+			}
+			return text;
 		}
 	});
 });

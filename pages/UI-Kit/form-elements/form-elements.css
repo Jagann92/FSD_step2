@@ -1500,11 +1500,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button {
-  margin-right: 20px;
-  margin-bottom: 30px;
   width: 99px;
   height: 44px;
   padding: 0;
+}
+
+.button_demo {
+  margin-right: 20px;
+  margin-bottom: 30px;
 }
 
 .button_locked {
@@ -1519,7 +1522,7 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
-.button_text_disabled {
+.button_text_gray {
   color: rgba(31, 32, 65, 0.5);
 }
 
@@ -1601,8 +1604,188 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.details {
+.dropdown__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 7px 13px 13px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.marginTop150 {
   margin-top: 150px;
+}
+
+.details__checkbox {
+  margin-bottom: 10px;
+}
+
+.details__checkbox:first-of-type {
+  margin-top: 18px;
+}
+
+.details__checkbox:last-of-type {
+  margin-bottom: 0;
+}
+
+summary {
+  display: block;
+  position: relative;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+  content: "keyboard_arrow_down";
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  right: -74px;
+  top: -4px;
+}
+
+details[open].details > summary::after {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+  content: "keyboard_arrow_up";
+}
+
+.feature {
+  position: relative;
+  padding-left: 60px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  max-width: 280px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.feature_smile:before {
+  position: absolute;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+  content: "sentiment_very_satisfied";
+  top: 0;
+  left: 0;
+  font-size: 48px;
+  color: #bc9cff;
+}
+
+.feature_apartment:before {
+  position: absolute;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+  content: "apartment";
+  top: 0;
+  left: 0;
+  font-size: 48px;
+  color: #bc9cff;
+}
+
+.feature__title {
+  display: block;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: bold;
+}
+
+.feature__text {
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {

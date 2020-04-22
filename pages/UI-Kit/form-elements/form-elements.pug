@@ -117,14 +117,14 @@ block body
 				.input
 					span.input__title buttons
 					br
-					button.button.button_purple Click Me
-					button.button.button_purple.button_locked Click Me
-					button.button.button_white Click Me
-					button.button.button_white.button_locked Click Me
+					button.button.button_purple.button_demo Click Me
+					button.button.button_purple.button_locked.button_demo Click Me
+					button.button.button_white.button_demo Click Me
+					button.button.button_white.button_locked.button_demo Click Me
 					br
-					button.button.button_text Click Me
-					button.button.button_text.button_text_disabled Click Me
-					button.button.button_purple.button_wide.button_arrowed Перейти к оплате
+					button.button.button_text.button_demo Click Me
+					button.button.button_text.button_text_gray.button_demo Click Me
+					button.button.button_purple.button_wide.button_arrowed.button_demo Перейти к оплате
 						span.material-icons.arrow arrow_forward
 				.input
 					span.input__title Pagination
@@ -141,7 +141,7 @@ block body
 					span.input__title dropdown
 					span.input__label.input__label_end Default
 					.iqdropdown.beds
-						p.iqdropdown-selection(data-selection-text="спальня" data-text-plural="спальни")
+						p.iqdropdown-selection
 						.iqdropdown-menu
 							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
 								div
@@ -156,7 +156,7 @@ block body
 					span.input__title dropdown
 					span.input__label.input__label_end Expanded
 					.iqdropdown.beds.menu-open
-						p.iqdropdown-selection(data-selection-text="спальня" data-text-plural="спальни")
+						p.iqdropdown-selection
 						.iqdropdown-menu
 							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
 								div
@@ -168,57 +168,84 @@ block body
 								div
 									p.iqdropdown-item Ванные комнаты
 				.input
-					details.details
+					details.details.marginTop150
 						summary.input__title expandable checkbox list
 						ul
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox")
 								label.input__label Завтрак
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox" checked)
 								label.input__label Письменный стол
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox" checked)
 								label.input__label Стул для кормления
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox" checked)
 								label.input__label Кроватка
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox")
 								label.input__label Телевизор
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox")
 								label.input__label Шампунь
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox")
 								label.input__label Телевизор
-							li
+							li.details__checkbox
 								input.input__checkbox(type="checkbox")
 								label.input__label Шампунь
 				.input
 					details(open).details
 						summary.input__title expandable checkbox list
 						ul
-				.feature
-					img.feature__logo
-					.feature__title Комфорт
-					.feature__text Шумопоглощающие стены
-				.feature
-					img.feature__logo
-					.feature__title Удобство
-					.feature__text Окно в каждой из спален
+							li.details__checkbox
+								input.input__checkbox(type="checkbox")
+								label.input__label Завтрак
+							li.details__checkbox
+								input.input__checkbox(type="checkbox" checked)
+								label.input__label Письменный стол
+							li.details__checkbox
+								input.input__checkbox(type="checkbox" checked)
+								label.input__label Стул для кормления
+							li.details__checkbox
+								input.input__checkbox(type="checkbox" checked)
+								label.input__label Кроватка
+							li.details__checkbox
+								input.input__checkbox(type="checkbox")
+								label.input__label Телевизор
+							li.details__checkbox
+								input.input__checkbox(type="checkbox")
+								label.input__label Шампунь
+							li.details__checkbox
+								input.input__checkbox(type="checkbox")
+								label.input__label Телевизор
+							li.details__checkbox
+								input.input__checkbox(type="checkbox")
+								label.input__label Шампунь
+				.feature.feature_smile
+					span.feature__title Комфорт
+					span.feature__text Шумопоглощающие стены
+				.feature.feature_apartment
+					span.feature__title Удобство
+					span.feature__text Окно в каждой из спален
 			.grid-block
 				.input
 					span.input__title dropdown
-					label.input__label.input__label_end Expanded
-					select.input__dropdown.input__dropdown_expanded(placeholder="Сколько гостей")
-						span.input__title Взрослые
-						option.input__select
-						span.input__title Дети
-						option.input__select
-						span.input__title Младенцы
-						option.input__select
-						button.button.button_text Применить
+					.iqdropdown.people
+						p.iqdropdown-selection
+						.iqdropdown-menu
+							.iqdropdown-menu-option(data-id="adults")
+								div
+									p.iqdropdown-item Взрослые
+							.iqdropdown-menu-option(data-id="childs")
+								div
+									p.iqdropdown-item Дети
+							.iqdropdown-menu-option(data-id="babies")
+								div
+									p.iqdropdown-item Младенцы
+							.dropdown__buttons
+								button.button.button_text(data-function="clear") Применить
 				.input
 					span.input__title rich checkbox buttons
 					input.input__checkbox(type="checkbox")
@@ -239,16 +266,21 @@ block body
 
 				.input
 					span.input__title dropdown
-					label.input__label.input__label_end Expanded
-					select.input__dropdown.input__dropdown_expanded(placeholder="3 гостя")
-						span.input__title Взрослые
-						option.input__select
-						span.input__title Дети
-						option.input__select
-						span.input__title Младенцы
-						option.input__select
-						button.button.button_text_gray Очистить
-						button.button.button_text Применить
+					.iqdropdown.people
+						p.iqdropdown-selection
+						.iqdropdown-menu
+							.iqdropdown-menu-option(data-id="adults")
+								div
+									p.iqdropdown-item Взрослые
+							.iqdropdown-menu-option(data-id="childs")
+								div
+									p.iqdropdown-item Дети
+							.iqdropdown-menu-option(data-id="babies")
+								div
+									p.iqdropdown-item Младенцы
+							.dropdown__buttons
+								button.button.button_text(data-function="apply") Применить
+								button.button.button_text.button_text_gray(data-function="clear") Очистить
 				.input
 					span.input__title Bullet list
 					ul.list

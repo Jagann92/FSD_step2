@@ -210,3 +210,33 @@
 .iqdropdown.menu-open .iqdropdown-selection::after {
     content: "keyboard_arrow_up";
 }
+.iqdropdown-control-buttons {
+    display: flex;
+    padding: 20px 7px 13px 13px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.iqdropdown-button-clear {
+    background-color: #fff;
+}
+.iqdropdown-clear-content {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(31, 32, 65, 0.5);
+}
+.iqdropdown-button-apply {
+    background-color: inherit;
+}
+.iqdropdown-apply-content {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #bc9cff;
+}

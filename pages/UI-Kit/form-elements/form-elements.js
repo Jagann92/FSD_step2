@@ -74,8 +74,35 @@ $(document).ready(() => {
 			}
 		}
 	});
-	$('.iqdropdown.people').iqDropdown({
-		minItems: 0,
+	$('.iqdropdown.people.1button').iqDropdown({
+		isApplyBtn: true,
+		applyBtnContent: 'Применить',
+		setSelectionText: function (itemCount, totalItems) {
+			let text = '';
+			switch (totalItems) {
+				case 0:
+					text = 'Сколько гостей';
+					break;
+				case 1:
+					text = '1 гость';
+					break;
+				case 2:
+				case 3:
+				case 4:
+					text = totalItems + ' гостя';
+					break;
+				default:
+					text = totalItems + ' гостей';
+					break;
+			}
+			return text;
+		}
+	});
+	$('.iqdropdown.people.2buttons').iqDropdown({
+		isClearBtn: true,
+		isApplyBtn: true,
+		clearBtnContent: 'Очистить',
+		applyBtnContent: 'Применить',
 		setSelectionText: function (itemCount, totalItems) {
 			let text = '';
 			switch (totalItems) {

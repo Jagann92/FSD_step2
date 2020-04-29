@@ -12,7 +12,8 @@
   -moz-box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
@@ -73,7 +74,12 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: 400;
 }
@@ -2164,4 +2170,30 @@ details[open].details > summary::after {
   content: "favorite";
   -webkit-transition: all 0.3s linear 1ms;
   transition: all 0.3s linear 1ms;
+}
+
+.list {
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.list__elem {
+  position: relative;
+  padding-left: 21px;
+  margin-bottom: 10px;
+}
+
+.list__elem::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 7.5px;
 }

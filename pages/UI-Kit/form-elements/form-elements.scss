@@ -633,3 +633,24 @@ details[open].details>summary::after {
     content: "favorite";
     transition: all 0.3s linear 1ms;
 }
+
+.list {
+    @include text_Body;
+
+    &__elem {
+        position: relative;
+        padding-left: 21px;
+        margin-bottom: 10px;
+
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: rgba(31, 32, 65, 0.25);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 7.5px;
+        }
+    }
+}

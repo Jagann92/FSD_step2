@@ -72,7 +72,7 @@
     &__label {
         @include text_H3;
         font-weight: 400;
-        opacity: 0.5;
+        color: rgba(31, 32, 65, 0.5);
     }
 
     &__label_end {
@@ -155,16 +155,35 @@
         margin-bottom: 20px;
     }
 
-    &__dropdown_expanded {
-    }
+    &__dropdown_expanded {}
 
-    &__select {
-    }
+    &__select {}
 
     &__label_rich {
+        display: flex;
+        @include text_Body;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        text-transform: none;
+        width: 100%;
     }
 
     &__label_small {
+        display: flex;
+        color: rgba(31, 32, 65, 0.5);
+        text-transform: none;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.richCheckbox {
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:first-of-type {
+        margin-top: 16px;
     }
 }
 
@@ -178,15 +197,13 @@
         margin-bottom: 30px;
     }
 
-    &_purple {
-    }
+    &_purple {}
 
     &_locked {
         opacity: 0.5;
     }
 
-    &_white {
-    }
+    &_white {}
 
     &_text {
         color: #bc9cff;
@@ -208,8 +225,7 @@
         position: relative;
     }
 
-    &_next-page {
-    }
+    &_next-page {}
 }
 
 .arrow {
@@ -299,7 +315,7 @@ summary::after {
     top: -4px;
 }
 
-details[open].details > summary::after {
+details[open].details>summary::after {
     @include material-icon;
     content: "keyboard_arrow_up";
 }
@@ -345,20 +361,45 @@ details[open].details > summary::after {
 }
 
 .review {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: 50px 655px;
+    grid-template-rows: repeat(2, max-content);
+    @include text_Body;
+
     &__foto {
+        background-image: url(../../../src/img/avatar.png);
+        width: 48px;
+        height: 48px;
+        background-repeat: no-repeat;
+        background-position: 50% 28%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    }
+
+    &__title {
+        display: flex;
+        height: 48px;
+        flex-direction: column;
+        //padding: 5px 0 5px 0;
+        justify-content: space-evenly;
     }
 
     &__person {
+        font-weight: bold;
     }
 
-    &__date {
+    &__like {
+        justify-self: center;
     }
 
-    &__text {
-    }
+    &__text {}
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
+
     .input__checkbox,
     .input__radio,
     .input__switch {
@@ -410,7 +451,7 @@ details[open].details > summary::after {
                 --bc: var(--border);
             }
 
-            & + label {
+            &+label {
                 cursor: not-allowed;
             }
         }
@@ -427,8 +468,8 @@ details[open].details > summary::after {
             }
         }
 
-        & + label {
-            max-width: 192px;
+        &+label {
+            max-width: 230px;
             display: inline-block;
             vertical-align: top;
             cursor: pointer;
@@ -438,7 +479,7 @@ details[open].details > summary::after {
 
     .input__checkbox {
         &:not(.input__switch) {
-            border-radius: 7px;
+            border-radius: 4px;
 
             &:after {
                 width: 5px;
@@ -461,7 +502,7 @@ details[open].details > summary::after {
         width: 38px;
         border-radius: 11px;
 
-        & + label {
+        &+label {
             max-width: 210px;
         }
 
@@ -535,8 +576,8 @@ details[open].details > summary::after {
     }
 }
 
-.input__star-input:checked ~ .input__star-label::before,
-.input__star-input:hover ~ .input__star-label::before {
+.input__star-input:checked~.input__star-label::before,
+.input__star-input:hover~.input__star-label::before {
     content: "star";
 }
 
@@ -581,14 +622,14 @@ details[open].details > summary::after {
     }
 }
 
-.input__like-input:hover ~ .input__like-label,
-.input__like-input:checked ~ .input__like-label {
+.input__like-input:hover~.input__like-label,
+.input__like-input:checked~.input__like-label {
     color: #bc9cff;
     border-color: #bc9cff;
     transition: all 0.3s linear 1ms;
 }
 
-.input__like-input:checked ~ .input__like-label::before {
+.input__like-input:checked~.input__like-label::before {
     content: "favorite";
     transition: all 0.3s linear 1ms;
 }

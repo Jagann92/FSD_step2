@@ -246,20 +246,26 @@ block body
 									p.iqdropdown-item Младенцы
 				.input
 					span.input__title rich checkbox buttons
-					input.input__checkbox(type="checkbox")
-					label.input__label.input__label_rich Широкий коридор
-						br
-						span.input__label.input__label_small Ширина коридоров в номере не менее 91см.
-					input.input__checkbox(type="checkbox")
-					label.input__label.input__label_rich Помощник для инвалидов
-						br
-						span.input__label.input__label_small На 1 этаже вас встретит специалист и проводит до номера.
+					.richCheckbox
+						input.input__checkbox(type="checkbox")
+						label.input__label.input__label_rich Широкий коридор
+							br
+							span.input__label.input__label_small Ширина коридоров в номере не менее 91см.
+					.richCheckbox
+						input.input__checkbox(type="checkbox")
+						label.input__label.input__label_rich Помощник для инвалидов
+							br
+							span.input__label.input__label_small На 1 этаже вас встретит специалист и проводит до номера.
 				.review
-					img.review__foto
-					span.review__person
-					span.review__date
-					p.review__text
-					button.button.button_like.button_liked
+					.review__foto
+					.review__title
+						span.review__person Мурад Сарафанов
+						span.review__date 5 дней назад
+					.input__like.review__like
+						input.input__like-input(id="like-3" type="checkbox" checked)
+						label.material-icons.input__like-label(for="like-3")
+							span.input__like-count 12
+					p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 			.grid-block
 				.input
 					span.input__title dropdown

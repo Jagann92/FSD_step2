@@ -1388,7 +1388,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 15px;
   text-transform: uppercase;
   font-weight: 400;
-  opacity: 0.5;
+  color: rgba(31, 32, 65, 0.5);
 }
 
 .input__label_end {
@@ -1539,6 +1539,42 @@ h1, h2, h3, h4, h5, h6 {
 
 .input__range {
   margin-bottom: 20px;
+}
+
+.input__label_rich {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: none;
+  width: 100%;
+}
+
+.input__label_small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(31, 32, 65, 0.5);
+  text-transform: none;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.richCheckbox {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.richCheckbox:first-of-type {
+  margin-top: 16px;
 }
 
 .button {
@@ -1830,6 +1866,60 @@ details[open].details > summary::after {
   color: rgba(31, 32, 65, 0.75);
 }
 
+.review {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -ms-grid-columns: 50px 655px;
+      grid-template-columns: 50px 655px;
+  -ms-grid-rows: (max-content)[2];
+      grid-template-rows: repeat(2, -webkit-max-content);
+      grid-template-rows: repeat(2, max-content);
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.review__foto {
+  background-image: url(../../../src/img/avatar.png);
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: 50% 28%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+}
+
+.review__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.review__person {
+  font-weight: bold;
+}
+
+.review__like {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   .input__checkbox,
   .input__radio,
@@ -1916,14 +2006,14 @@ details[open].details > summary::after {
   .input__checkbox + label,
   .input__radio + label,
   .input__switch + label {
-    max-width: 192px;
+    max-width: 230px;
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
     margin-left: 10px;
   }
   .input__checkbox:not(.input__switch) {
-    border-radius: 7px;
+    border-radius: 4px;
   }
   .input__checkbox:not(.input__switch):after {
     width: 5px;

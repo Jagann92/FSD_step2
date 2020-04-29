@@ -24,18 +24,20 @@
         grid-template-rows: repeat(2, max-content);
         row-gap: 100px;
     }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }
 
-.grid-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-}
 
-.input {
+
+.element {
     position: relative;
     width: 100%;
     margin-bottom: 40px;
@@ -69,113 +71,117 @@
         }
     }
 
-    &__label {
+    &__subtitle {
         @include text_H3;
         font-weight: 400;
         color: rgba(31, 32, 65, 0.5);
-    }
 
-    &__label_end {
-        float: right;
-        padding-right: 5px;
-    }
-
-    &__textfield {
-        max-width: 320px;
-        width: 100%;
-        height: 44px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-        border-radius: 4px;
-        @include text_Body;
-        padding-left: 15px;
-
-        &::placeholder {
-            @include text_Body;
-            color: rgba(31, 32, 65, 0.25);
+        &_end {
+            float: right;
+            padding-right: 5px;
         }
     }
 
-    &__date {
-        max-width: 150px;
-        width: 100%;
-        height: 44px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-        border-radius: 4px;
+    &__body {}
+
+    &__title {}
+}
+
+.textfield {
+    max-width: 320px;
+    width: 100%;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include text_Body;
+    padding-left: 15px;
+
+    &::placeholder {
         @include text_Body;
-        padding-left: 15px;
-
-        &_filter {
-            max-width: 260px;
-        }
+        color: rgba(31, 32, 65, 0.25);
     }
+}
 
-    &_focus {
-        border-color: rgba(31, 32, 65, 0.5);
+.date {
+    max-width: 150px;
+    width: 100%;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include text_Body;
+    padding-left: 15px;
 
-        &::placeholder {
-            color: rgba(31, 32, 65, 0.75);
-        }
+    &_filter {
+        max-width: 260px;
     }
+}
 
-    &__dropdown {
-        max-width: 320px;
-        width: 100%;
-        height: 44px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-        border-radius: 4px;
-        @include text_Body;
-        padding-left: 15px;
+.focus {
+    border-color: rgba(31, 32, 65, 0.5);
+
+    &::placeholder {
         color: rgba(31, 32, 65, 0.75);
     }
+}
 
-    &__option {
-        max-width: 320px;
-        width: 100%;
-        color: rgba(31, 32, 65, 0.75);
-    }
+.dropdown {
+    max-width: 320px;
+    width: 100%;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include text_Body;
+    padding-left: 15px;
+    color: rgba(31, 32, 65, 0.75);
+}
 
-    &__submit {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        right: 12px;
-        bottom: 12px;
-    }
+.option {
+    max-width: 320px;
+    width: 100%;
+    color: rgba(31, 32, 65, 0.75);
+}
 
-    &__value {
-        @include text_Body;
-        color: rgba(31, 32, 65, 0.5);
-        line-height: 18px;
-    }
+.submit {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+}
 
-    &__range {
-        margin-bottom: 20px;
-    }
+.value {
+    @include text_Body;
+    color: rgba(31, 32, 65, 0.5);
+    line-height: 18px;
+}
 
-    &__dropdown_expanded {}
+.range {
+    margin-bottom: 20px;
+}
 
-    &__select {}
+.dropdown_expanded {}
 
-    &__label_rich {
-        display: flex;
-        @include text_Body;
-        font-size: 14px;
-        line-height: 18px;
-        font-weight: bold;
-        text-transform: none;
-        width: 100%;
-    }
+.select {}
 
-    &__label_small {
-        display: flex;
-        color: rgba(31, 32, 65, 0.5);
-        text-transform: none;
-        font-size: 12px;
-        line-height: 14px;
-    }
+.label_rich {
+    display: flex;
+    @include text_Body;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    text-transform: none;
+    width: 100%;
+}
+
+.label_small {
+    display: flex;
+    color: rgba(31, 32, 65, 0.5);
+    text-transform: none;
+    font-size: 12px;
+    line-height: 14px;
 }
 
 .richCheckbox {
@@ -400,9 +406,9 @@ details[open].details>summary::after {
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
 
-    .input__checkbox,
-    .input__radio,
-    .input__switch {
+    .element__checkbox,
+    .element__radio,
+    .element__switch {
         --active: #fff;
         --active-inner: #bc9cff;
         --active-inner-lg: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
@@ -456,7 +462,7 @@ details[open].details>summary::after {
             }
         }
 
-        &:not(.input__switch) {
+        &:not(.element__switch) {
             width: 20px;
 
             &:after {
@@ -477,8 +483,8 @@ details[open].details>summary::after {
         }
     }
 
-    .input__checkbox {
-        &:not(.input__switch) {
+    .element__checkbox {
+        &:not(.element__switch) {
             border-radius: 4px;
 
             &:after {
@@ -498,7 +504,7 @@ details[open].details>summary::after {
         }
     }
 
-    .input__switch {
+    .element__switch {
         width: 38px;
         border-radius: 11px;
 
@@ -530,7 +536,7 @@ details[open].details>summary::after {
         }
     }
 
-    .input__radio {
+    .element__radio {
         border-radius: 50%;
 
         &:after {
@@ -550,21 +556,21 @@ details[open].details>summary::after {
     }
 }
 
-.input__stars {
+.element__stars {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
     float: left;
 }
 
-.input__star-input {
+.element__star-input {
     opacity: 0;
     position: absolute;
     top: 0;
     z-index: 0;
 }
 
-.input__star-label {
+.element__star-label {
     &:before {
         content: "star_border";
         color: #bc9cff;
@@ -576,23 +582,23 @@ details[open].details>summary::after {
     }
 }
 
-.input__star-input:checked~.input__star-label::before,
-.input__star-input:hover~.input__star-label::before {
+.element__star-input:checked~.element__star-label::before,
+.element__star-input:hover~.element__star-label::before {
     content: "star";
 }
 
-.input__like {
+.element__like {
     position: relative;
 }
 
-.input__like-input {
+.element__like-input {
     opacity: 0;
     position: absolute;
     top: 0;
     z-index: 0;
 }
 
-.input__like-count {
+.element__like-count {
     @include text_Body;
     position: absolute;
     color: inherit;
@@ -602,7 +608,7 @@ details[open].details>summary::after {
     left: 22px;
 }
 
-.input__like-label {
+.element__like-label {
     width: 40px;
     height: 20px;
     border-radius: 10px;
@@ -622,14 +628,14 @@ details[open].details>summary::after {
     }
 }
 
-.input__like-input:hover~.input__like-label,
-.input__like-input:checked~.input__like-label {
+.element__like-input:hover~.element__like-label,
+.element__like-input:checked~.element__like-label {
     color: #bc9cff;
     border-color: #bc9cff;
     transition: all 0.3s linear 1ms;
 }
 
-.input__like-input:checked~.input__like-label::before {
+.element__like-input:checked~.element__like-label::before {
     content: "favorite";
     transition: all 0.3s linear 1ms;
 }

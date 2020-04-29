@@ -1327,7 +1327,7 @@ h6 {
   row-gap: 100px;
 }
 
-.grid-block {
+.page__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1344,13 +1344,13 @@ h6 {
   width: 100%;
 }
 
-.input {
+.element {
   position: relative;
   width: 100%;
   margin-bottom: 40px;
 }
 
-.input_inline {
+.element_inline {
   display: inline-block;
   max-width: 150px;
   width: -webkit-max-content;
@@ -1358,19 +1358,19 @@ h6 {
   width: max-content;
 }
 
-.input_inline:first-of-type {
+.element_inline:first-of-type {
   margin-right: 20px;
 }
 
-.input_line {
+.element_line {
   margin-top: 10px;
 }
 
-.input_mar20 {
+.element_mar20 {
   margin-bottom: 20px;
 }
 
-.input__title {
+.element__title {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 700;
@@ -1382,11 +1382,11 @@ h6 {
   margin-bottom: 5px;
 }
 
-.input__title_m-b16 {
+.element__title_m-b16 {
   margin-bottom: 16px;
 }
 
-.input__label {
+.element__subtitle {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 700;
@@ -1397,12 +1397,12 @@ h6 {
   color: rgba(31, 32, 65, 0.5);
 }
 
-.input__label_end {
+.element__subtitle_end {
   float: right;
   padding-right: 5px;
 }
 
-.input__textfield {
+.textfield {
   max-width: 320px;
   width: 100%;
   height: 44px;
@@ -1419,7 +1419,7 @@ h6 {
   padding-left: 15px;
 }
 
-.input__textfield::-webkit-input-placeholder {
+.textfield::-webkit-input-placeholder {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 400;
@@ -1429,7 +1429,7 @@ h6 {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.input__textfield:-ms-input-placeholder {
+.textfield:-ms-input-placeholder {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 400;
@@ -1439,7 +1439,7 @@ h6 {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.input__textfield::-ms-input-placeholder {
+.textfield::-ms-input-placeholder {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 400;
@@ -1449,7 +1449,7 @@ h6 {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.input__textfield::placeholder {
+.textfield::placeholder {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 400;
@@ -1459,7 +1459,7 @@ h6 {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.input__date {
+.date {
   max-width: 150px;
   width: 100%;
   height: 44px;
@@ -1476,31 +1476,31 @@ h6 {
   padding-left: 15px;
 }
 
-.input__date_filter {
+.date_filter {
   max-width: 260px;
 }
 
-.input_focus {
+.focus {
   border-color: rgba(31, 32, 65, 0.5);
 }
 
-.input_focus::-webkit-input-placeholder {
+.focus::-webkit-input-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.input_focus:-ms-input-placeholder {
+.focus:-ms-input-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.input_focus::-ms-input-placeholder {
+.focus::-ms-input-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.input_focus::placeholder {
+.focus::placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.input__dropdown {
+.dropdown {
   max-width: 320px;
   width: 100%;
   height: 44px;
@@ -1518,13 +1518,13 @@ h6 {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.input__option {
+.option {
   max-width: 320px;
   width: 100%;
   color: rgba(31, 32, 65, 0.75);
 }
 
-.input__submit {
+.submit {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -1532,7 +1532,7 @@ h6 {
   bottom: 12px;
 }
 
-.input__value {
+.value {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 400;
@@ -1543,11 +1543,11 @@ h6 {
   line-height: 18px;
 }
 
-.input__range {
+.range {
   margin-bottom: 20px;
 }
 
-.input__label_rich {
+.label_rich {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1564,7 +1564,7 @@ h6 {
   width: 100%;
 }
 
-.input__label_small {
+.label_small {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1927,9 +1927,9 @@ details[open].details > summary::after {
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-  .input__checkbox,
-  .input__radio,
-  .input__switch {
+  .element__checkbox,
+  .element__radio,
+  .element__switch {
     --active: #fff;
     --active-inner: #bc9cff;
     --active-inner-lg: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
@@ -1954,9 +1954,9 @@ details[open].details > summary::after {
     transition: border-color 0.3s, box-shadow 0.2s;
     transition: border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
   }
-  .input__checkbox:after,
-  .input__radio:after,
-  .input__switch:after {
+  .element__checkbox:after,
+  .element__radio:after,
+  .element__switch:after {
     content: "";
     display: block;
     left: 0;
@@ -1967,61 +1967,61 @@ details[open].details > summary::after {
     transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
     transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
   }
-  .input__checkbox:checked,
-  .input__radio:checked,
-  .input__switch:checked {
+  .element__checkbox:checked,
+  .element__radio:checked,
+  .element__switch:checked {
     --b: var(--active);
     --bc: var(--active-border);
     --d-o: 0.3s;
     --d-t: 0.6s;
     --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
   }
-  .input__checkbox:disabled,
-  .input__radio:disabled,
-  .input__switch:disabled {
+  .element__checkbox:disabled,
+  .element__radio:disabled,
+  .element__switch:disabled {
     --b: var(--disabled);
     cursor: not-allowed;
     opacity: 0.9;
   }
-  .input__checkbox:disabled:checked,
-  .input__radio:disabled:checked,
-  .input__switch:disabled:checked {
+  .element__checkbox:disabled:checked,
+  .element__radio:disabled:checked,
+  .element__switch:disabled:checked {
     --b: var(--disabled-inner);
     --bc: var(--border);
   }
-  .input__checkbox:disabled + label,
-  .input__radio:disabled + label,
-  .input__switch:disabled + label {
+  .element__checkbox:disabled + label,
+  .element__radio:disabled + label,
+  .element__switch:disabled + label {
     cursor: not-allowed;
   }
-  .input__checkbox:not(.input__switch),
-  .input__radio:not(.input__switch),
-  .input__switch:not(.input__switch) {
+  .element__checkbox:not(.element__switch),
+  .element__radio:not(.element__switch),
+  .element__switch:not(.element__switch) {
     width: 20px;
   }
-  .input__checkbox:not(.input__switch):after,
-  .input__radio:not(.input__switch):after,
-  .input__switch:not(.input__switch):after {
+  .element__checkbox:not(.element__switch):after,
+  .element__radio:not(.element__switch):after,
+  .element__switch:not(.element__switch):after {
     opacity: var(--o, 0);
   }
-  .input__checkbox:not(.input__switch):checked,
-  .input__radio:not(.input__switch):checked,
-  .input__switch:not(.input__switch):checked {
+  .element__checkbox:not(.element__switch):checked,
+  .element__radio:not(.element__switch):checked,
+  .element__switch:not(.element__switch):checked {
     --o: 1;
   }
-  .input__checkbox + label,
-  .input__radio + label,
-  .input__switch + label {
+  .element__checkbox + label,
+  .element__radio + label,
+  .element__switch + label {
     max-width: 230px;
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
     margin-left: 10px;
   }
-  .input__checkbox:not(.input__switch) {
+  .element__checkbox:not(.element__switch) {
     border-radius: 4px;
   }
-  .input__checkbox:not(.input__switch):after {
+  .element__checkbox:not(.element__switch):after {
     width: 5px;
     height: 9px;
     border: 2px solid var(--active-inner);
@@ -2032,17 +2032,17 @@ details[open].details > summary::after {
     -webkit-transform: rotate(var(--r, 20deg));
             transform: rotate(var(--r, 20deg));
   }
-  .input__checkbox:not(.input__switch):checked {
+  .element__checkbox:not(.element__switch):checked {
     --r: 43deg;
   }
-  .input__switch {
+  .element__switch {
     width: 38px;
     border-radius: 11px;
   }
-  .input__switch + label {
+  .element__switch + label {
     max-width: 210px;
   }
-  .input__switch:after {
+  .element__switch:after {
     left: 2px;
     top: 1.5px;
     border-radius: 50%;
@@ -2052,17 +2052,17 @@ details[open].details > summary::after {
     -webkit-transform: translateX(var(--x, 0));
             transform: translateX(var(--x, 0));
   }
-  .input__switch:checked {
+  .element__switch:checked {
     --ab: var(--active-inner);
     --x: 17px;
   }
-  .input__switch:disabled:not(:checked):after {
+  .element__switch:disabled:not(:checked):after {
     opacity: 0.6;
   }
-  .input__radio {
+  .element__radio {
     border-radius: 50%;
   }
-  .input__radio:after {
+  .element__radio:after {
     left: -1px;
     top: -1px;
     width: 20px;
@@ -2073,12 +2073,12 @@ details[open].details > summary::after {
     -webkit-transform: scale(var(--s, 0.6));
             transform: scale(var(--s, 0.6));
   }
-  .input__radio:checked {
+  .element__radio:checked {
     --s: 0.6;
   }
 }
 
-.input__stars {
+.element__stars {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2090,14 +2090,14 @@ details[open].details > summary::after {
   float: left;
 }
 
-.input__star-input {
+.element__star-input {
   opacity: 0;
   position: absolute;
   top: 0;
   z-index: 0;
 }
 
-.input__star-label:before {
+.element__star-label:before {
   content: "star_border";
   color: #bc9cff;
   font-size: 24px;
@@ -2107,23 +2107,23 @@ details[open].details > summary::after {
   cursor: pointer;
 }
 
-.input__star-input:checked ~ .input__star-label::before,
-.input__star-input:hover ~ .input__star-label::before {
+.element__star-input:checked ~ .element__star-label::before,
+.element__star-input:hover ~ .element__star-label::before {
   content: "star";
 }
 
-.input__like {
+.element__like {
   position: relative;
 }
 
-.input__like-input {
+.element__like-input {
   opacity: 0;
   position: absolute;
   top: 0;
   z-index: 0;
 }
 
-.input__like-count {
+.element__like-count {
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 400;
@@ -2138,7 +2138,7 @@ details[open].details > summary::after {
   left: 22px;
 }
 
-.input__like-label {
+.element__like-label {
   width: 40px;
   height: 20px;
   border-radius: 10px;
@@ -2148,7 +2148,7 @@ details[open].details > summary::after {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.input__like-label:before {
+.element__like-label:before {
   content: "favorite_border";
   font-size: 10px;
   line-height: 9px;
@@ -2158,15 +2158,15 @@ details[open].details > summary::after {
   left: 12.5%;
 }
 
-.input__like-input:hover ~ .input__like-label,
-.input__like-input:checked ~ .input__like-label {
+.element__like-input:hover ~ .element__like-label,
+.element__like-input:checked ~ .element__like-label {
   color: #bc9cff;
   border-color: #bc9cff;
   -webkit-transition: all 0.3s linear 1ms;
   transition: all 0.3s linear 1ms;
 }
 
-.input__like-input:checked ~ .input__like-label::before {
+.element__like-input:checked ~ .element__like-label::before {
   content: "favorite";
   -webkit-transition: all 0.3s linear 1ms;
   transition: all 0.3s linear 1ms;

@@ -9,113 +9,119 @@ block body
 	.page
 		img.page__logo(src="../../../src/img/logo.svg")
 		.page__container
-			.grid-block
-				.input.input_mar20
-					span.input__title text field
-					label.input__label.input__label_end Default
-					input.input__textfield(type="text" placeholder="Email")
-				.input.input_mar20
-					span.input__title text field
-					label.input__label.input__label_end Hover/Focus
-					input.input__textfield.input_focus(type="text" placeholder="This is a pretty awesome")
-				.input.input_mar20
-					span.input__title dropdown
-					label.input__label.input__label_end Default
-					select.input__dropdown(placeholder="Сколько гостей")
-						option.input__option(value="" disabled selected) Сколько гостей
-				.input
-					span.input__title Masked text field
-					label.input__label.input__label_end Default
-					input.input__textfield(type="text" placeholder="ДД.ММ.ГГГГ")
+			.page__block
+				.element.element_mar20
+					.element__head
+						span.element__title text field
+						span.element__subtitle.element__subtitle_end Default
+					.element__body
+						input.textfield(type="text" placeholder="Email")
+				.element.element_mar20
+					.element__head
+						span.element__title text field
+						span.element__subtitle.element__subtitle_end Hover/Focus
+					.element__body
+						input.textfield.textfield_focus(type="text" placeholder="This is a pretty awesome")
+				.element.element_mar20
+					.element__title
+						span.element__title dropdown
+						span.element__subtitle.element__subtitle_end Default
+					.element__body
+						select.element__dropdown(placeholder="Сколько гостей")
+						option.element__option(value="" disabled selected) Сколько гостей
+				.element
+					span.element__title Masked text field
+					span.element__subtitle.element__subtitle_end Default
+					input.textfield(type="text" placeholder="ДД.ММ.ГГГГ")
 				div
-					.input.input_inline
-						span.input__title date dropdown
-						input.input__date(type="date")
+					.element.element_inline
+						span.element__title date dropdown
+						input.element__date(type="date")
 
-					.input.input_inline
-						span.input__title date dropdown
-						input.input__date(type="date" value="2019-08-19")
-				.input
-					span.input__title filter date dropdown
-					input.input__date.input__date_filter(type="date" value="2019-08-19")
-				.input
-					span.input__title subscription text field
-					input(type='email' placeholder='Email').input__textfield
-					input(type='image' src='../../../src/img/arrow_forward.svg').input__submit
-			.grid-block
-				.input
-					span.input__title.input__title_m-b-16 checkbox buttons
+					.element.element_inline
+						span.element__title date dropdown
+						input.element__date(type="date" value="2019-08-19")
+				.element
+					span.element__title filter date dropdown
+					input.element__date.element__date_filter(type="date" value="2019-08-19")
+				.element
+					span.element__title subscription text field
+					input(type='email' placeholder='Email').textfield
+					input(type='image' src='../../../src/img/arrow_forward.svg').element__submit
+			.page__block
+				.element
+					span.element__title.element__title_m-b-16 checkbox buttons
 					ul
-						li.input_line
-							input.input__checkbox(id ="c1" type="checkbox")
-							label.input__value(for="c1") Можно курить
-						li.input_line
-							input.input__checkbox(id="c2" type="checkbox" checked)
-							label.input__value(for="c2") Можно с питомцами
-						li.input_line
-							input.input__checkbox(id="c3" type="checkbox" checked)
-							label.input__value(for="c3") Можно пригласить гостей (до 10 человек)
-				.input
-					span.input__title.input__title_m-b-16 radio buttons
+						li.element_line
+							input.element__checkbox(id ="c1" type="checkbox")
+							label.element__value(for="c1") Можно курить
+						li.element_line
+							input.element__checkbox(id="c2" type="checkbox" checked)
+							label.element__value(for="c2") Можно с питомцами
+						li.element_line
+							input.element__checkbox(id="c3" type="checkbox" checked)
+							label.element__value(for="c3") Можно пригласить гостей (до 10 человек)
+				.element
+					span.element__title.element__title_m-b-16 radio buttons
 					div
-						.input_inline
-							input.input__radio(name="gender" id="r1" type="radio" checked)
-							label.input__value(for="r1") Мужчина
-						.input_inline
-							input.input__radio(name="gender" id="r2" type="radio")
-							label.input__value(for="r2") Женщина
-				.input
-					span.input__title.input__title_m-b-16 toggle
+						.element_inline
+							input.element__radio(name="gender" id="r1" type="radio" checked)
+							label.element__value(for="r1") Мужчина
+						.element_inline
+							input.element__radio(name="gender" id="r2" type="radio")
+							label.element__value(for="r2") Женщина
+				.element
+					span.element__title.element__title_m-b-16 toggle
 					ul
-						li.input_line
-							input.input__switch(id="sw1" type="checkbox" checked)
-							label.input__value(for="sw1") Получать спецпредложения
-						li.input_line
-							input.input__switch(id="sw2" type="checkbox" checked)
-							label.input__value(for="sw2") Получать спецпредложения
-				.input
-					span.input__title.input__title_m-b-16 like button
+						li.element_line
+							input.element__switch(id="sw1" type="checkbox" checked)
+							label.element__value(for="sw1") Получать спецпредложения
+						li.element_line
+							input.element__switch(id="sw2" type="checkbox" checked)
+							label.element__value(for="sw2") Получать спецпредложения
+				.element
+					span.element__title.element__title_m-b-16 like button
 					br
-					.input__like.input_inline
-						input.input__like-input(id="like-1" type="checkbox")
-						label.material-icons.input__like-label(for="like-1")
-							span.input__like-count 2
-					.input__like.input_inline
-						input.input__like-input(id="like-2" type="checkbox" checked)
-						label.material-icons.input__like-label(for="like-2")
-							span.input__like-count 12
-				.input
-					span.input__title.input__title_m-b-16 rate button
+					.element__like.element_inline
+						input.element__like-input(id="like-1" type="checkbox")
+						label.material-icons.element__like-label(for="like-1")
+							span.element__like-count 2
+					.element__like.element_inline
+						input.element__like-input(id="like-2" type="checkbox" checked)
+						label.material-icons.element__like-label(for="like-2")
+							span.element__like-count 12
+				.element
+					span.element__title.element__title_m-b-16 rate button
 					br
-					.input__stars.input_inline
-						input.input__star-input(id="star-5-1" type="radio" name="reviewStars-1")
-						label.material-icons.input__star-label(for="star-5-1")
-						input.input__star-input(id="star-4-1" type="radio" name="reviewStars-1" checked)
-						label.material-icons.input__star-label(for="star-4-1")
-						input.input__star-input(id="star-3-1" type="radio" name="reviewStars-1")
-						label.material-icons.input__star-label(for="star-3-1")
-						input.input__star-input(id="star-2-1" type="radio" name="reviewStars-1")
-						label.material-icons.input__star-label(for="star-2-1")
-						input.input__star-input(id="star-1-1" type="radio" name="reviewStars-1")
-						label.material-icons.input__star-label(for="star-1-1")
-					.input__stars.input_inline
-						input.input__star-input(id="star-5" type="radio" name="reviewStars-2" checked)
-						label.material-icons.input__star-label(for="star-5")
-						input.input__star-input(id="star-4" type="radio" name="reviewStars-2")
-						label.material-icons.input__star-label(for="star-4")
-						input.input__star-input(id="star-3" type="radio" name="reviewStars-2")
-						label.material-icons.input__star-label(for="star-3")
-						input.input__star-input(id="star-2" type="radio" name="reviewStars-2")
-						label.material-icons.input__star-label(for="star-2")
-						input.input__star-input(id="star-1" type="radio" name="reviewStars-2")
-						label.material-icons.input__star-label(for="star-1")
-			.grid-block
-				.input.input__range
-					span.input__title range slider
-					label.input__label.input__label_end 5000Р-10 000р
+					.element__stars.element_inline
+						input.element__star-input(id="star-5-1" type="radio" name="reviewStars-1")
+						label.material-icons.element__star-label(for="star-5-1")
+						input.element__star-input(id="star-4-1" type="radio" name="reviewStars-1" checked)
+						label.material-icons.element__star-label(for="star-4-1")
+						input.element__star-input(id="star-3-1" type="radio" name="reviewStars-1")
+						label.material-icons.element__star-label(for="star-3-1")
+						input.element__star-input(id="star-2-1" type="radio" name="reviewStars-1")
+						label.material-icons.element__star-label(for="star-2-1")
+						input.element__star-input(id="star-1-1" type="radio" name="reviewStars-1")
+						label.material-icons.element__star-label(for="star-1-1")
+					.element__stars.element_inline
+						input.element__star-input(id="star-5" type="radio" name="reviewStars-2" checked)
+						label.material-icons.element__star-label(for="star-5")
+						input.element__star-input(id="star-4" type="radio" name="reviewStars-2")
+						label.material-icons.element__star-label(for="star-4")
+						input.element__star-input(id="star-3" type="radio" name="reviewStars-2")
+						label.material-icons.element__star-label(for="star-3")
+						input.element__star-input(id="star-2" type="radio" name="reviewStars-2")
+						label.material-icons.element__star-label(for="star-2")
+						input.element__star-input(id="star-1" type="radio" name="reviewStars-2")
+						label.material-icons.element__star-label(for="star-1")
+			.page__block
+				.element.element__range
+					span.element__title range slider
+					span.element__subtitle.element__subtitle_end 5000Р-10 000р
 					input(type="text" name="my_range" value="").js-range-slider
-				.input
-					span.input__title buttons
+				.element
+					span.element__title buttons
 					br
 					button.button.button_purple.button_demo Click Me
 					button.button.button_purple.button_locked.button_demo Click Me
@@ -126,8 +132,8 @@ block body
 					button.button.button_text.button_text_gray.button_demo Click Me
 					button.button.button_purple.button_wide.button_arrowed.button_demo Перейти к оплате
 						span.material-icons.arrow arrow_forward
-				.input
-					span.input__title Pagination
+				.element
+					span.element__title Pagination
 					.pagination
 						a.pagination__elem.pagination__elem_current 1
 						a.pagination__elem 2
@@ -136,10 +142,10 @@ block body
 						a.pagination__elem 15
 						a.pagination__elem.material-icons.pagination__arrow arrow_forward
 						span.pagination__text 1 – 12 из 100+ вариантов аренды
-			.grid-block
-				.input
-					span.input__title dropdown
-					span.input__label.input__label_end Default
+			.page__block
+				.element
+					span.element__title dropdown
+					span.element__subtitle.element__subtitle_end Default
 					.iqdropdown.beds
 						p.iqdropdown-selection
 						.iqdropdown-menu
@@ -152,9 +158,9 @@ block body
 							.iqdropdown-menu-option(data-id="bathrooms")
 								div
 									p.iqdropdown-item Ванные комнаты
-				.input
-					span.input__title dropdown
-					span.input__label.input__label_end Expanded
+				.element
+					span.element__title dropdown
+					span.element__subtitle.element__subtitle_end Expanded
 					.iqdropdown.beds.menu-open
 						p.iqdropdown-selection
 						.iqdropdown-menu
@@ -167,71 +173,71 @@ block body
 							.iqdropdown-menu-option(data-id="bathrooms")
 								div
 									p.iqdropdown-item Ванные комнаты
-				.input
+				.element
 					details.details.marginTop150
-						summary.input__title expandable checkbox list
+						summary.element__title expandable checkbox list
 						ul
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Завтрак
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Завтрак
 							li.details__checkbox
-								input.input__checkbox(type="checkbox" checked)
-								label.input__label Письменный стол
+								input.element__checkbox(type="checkbox" checked)
+								span.element__subtitle Письменный стол
 							li.details__checkbox
-								input.input__checkbox(type="checkbox" checked)
-								label.input__label Стул для кормления
+								input.element__checkbox(type="checkbox" checked)
+								span.element__subtitle Стул для кормления
 							li.details__checkbox
-								input.input__checkbox(type="checkbox" checked)
-								label.input__label Кроватка
+								input.element__checkbox(type="checkbox" checked)
+								span.element__subtitle Кроватка
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Телевизор
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Телевизор
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Шампунь
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Шампунь
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Телевизор
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Телевизор
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Шампунь
-				.input
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Шампунь
+				.element
 					details(open).details
-						summary.input__title expandable checkbox list
+						summary.element__title expandable checkbox list
 						ul
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Завтрак
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Завтрак
 							li.details__checkbox
-								input.input__checkbox(type="checkbox" checked)
-								label.input__label Письменный стол
+								input.element__checkbox(type="checkbox" checked)
+								span.element__subtitle Письменный стол
 							li.details__checkbox
-								input.input__checkbox(type="checkbox" checked)
-								label.input__label Стул для кормления
+								input.element__checkbox(type="checkbox" checked)
+								span.element__subtitle Стул для кормления
 							li.details__checkbox
-								input.input__checkbox(type="checkbox" checked)
-								label.input__label Кроватка
+								input.element__checkbox(type="checkbox" checked)
+								span.element__subtitle Кроватка
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Телевизор
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Телевизор
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Шампунь
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Шампунь
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Телевизор
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Телевизор
 							li.details__checkbox
-								input.input__checkbox(type="checkbox")
-								label.input__label Шампунь
+								input.element__checkbox(type="checkbox")
+								span.element__subtitle Шампунь
 				.feature.feature_smile
 					span.feature__title Комфорт
 					span.feature__text Шумопоглощающие стены
 				.feature.feature_apartment
 					span.feature__title Удобство
 					span.feature__text Окно в каждой из спален
-			.grid-block
-				.input
-					span.input__title dropdown
+			.page__block
+				.element
+					span.element__title dropdown
 					.iqdropdown.people.1button
 						p.iqdropdown-selection
 						.iqdropdown-menu
@@ -244,31 +250,31 @@ block body
 							.iqdropdown-menu-option(data-id="babies")
 								div
 									p.iqdropdown-item Младенцы
-				.input
-					span.input__title rich checkbox buttons
+				.element
+					span.element__title rich checkbox buttons
 					.richCheckbox
-						input.input__checkbox(type="checkbox")
-						label.input__label.input__label_rich Широкий коридор
+						input.element__checkbox(type="checkbox")
+						span.element__subtitle.element__subtitle_rich Широкий коридор
 							br
-							span.input__label.input__label_small Ширина коридоров в номере не менее 91см.
+							span.element__subtitle.element__subtitle_small Ширина коридоров в номере не менее 91см.
 					.richCheckbox
-						input.input__checkbox(type="checkbox")
-						label.input__label.input__label_rich Помощник для инвалидов
+						input.element__checkbox(type="checkbox")
+						span.element__subtitle.element__subtitle_rich Помощник для инвалидов
 							br
-							span.input__label.input__label_small На 1 этаже вас встретит специалист и проводит до номера.
+							span.element__subtitle.element__subtitle_small На 1 этаже вас встретит специалист и проводит до номера.
 				.review
 					.review__foto
 					.review__title
 						span.review__person Мурад Сарафанов
 						span.review__date 5 дней назад
-					.input__like.review__like
-						input.input__like-input(id="like-3" type="checkbox" checked)
-						label.material-icons.input__like-label(for="like-3")
-							span.input__like-count 12
+					.element__like.review__like
+						input.element__like-input(id="like-3" type="checkbox" checked)
+						label.material-icons.element__like-label(for="like-3")
+							span.element__like-count 12
 					p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
-			.grid-block
-				.input
-					span.input__title dropdown
+			.page__block
+				.element
+					span.element__title dropdown
 					.iqdropdown.people.2buttons
 						p.iqdropdown-selection
 						.iqdropdown-menu
@@ -281,8 +287,8 @@ block body
 							.iqdropdown-menu-option(data-id="babies")
 								div
 									p.iqdropdown-item Младенцы
-				.input
-					span.input__title Bullet list
+				.element
+					span.element__title Bullet list
 					ul.list
 						li.list__elem Нельзя с питомцами
 						li.list__elem Без вечеринок и меропритий

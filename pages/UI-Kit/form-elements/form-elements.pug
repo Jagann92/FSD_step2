@@ -49,16 +49,17 @@ block body
 					.element__head
 						span.element__title date dropdown
 					.element__body
-						input.date(type="date")
+						input.date.datepicker-here(type="text" data-clearButton="true" placeholder="ДД.ММ.ГГГГ")
 				.element
 					.element__head
 						span.element__title date dropdown
 					.element__body
-						input.date(type="date" value="2019-08-19")
+						input.date.datepicker-here(type="text" data-clearButton="true" value="19.08.2019")
 				.element
 					.element__head
 						span.element__title filter date dropdown
-					input.date.date_filter(type="date" value="2019-08-19")
+					.element__body
+						input.date.datepicker-here(type="text" data-range="true" data-clearButton="true" data-multiple-dates-separator=" - " value="19 авг - 23 авг")
 				.element
 					.element__head
 						span.element__title subscription text field
@@ -82,12 +83,12 @@ block body
 					.element__head
 						span.element__title.element__title_m-b-16 radio buttons
 					div
-						
-							input.radio(name="gender" id="r1" type="radio" checked)
-							label.element__value(for="r1") Мужчина
-						
-							input.radio(name="gender" id="r2" type="radio")
-							label.element__value(for="r2") Женщина
+
+						input.radio(name="gender" id="r1" type="radio" checked)
+						label.element__value(for="r1") Мужчина
+
+						input.radio(name="gender" id="r2" type="radio")
+						label.element__value(for="r2") Женщина
 				.element
 					.element__head
 						span.element__title.element__title_m-b-16 toggle
@@ -325,4 +326,5 @@ block body
 		script(src="../../../library/plugins/ionRangeSlider/js/ion.rangeSlider.min.js")
 		script(src="../../../library/plugins/item-quantity-dropdown/js/item-quantity-dropdown.min.js")
 		script(src="../../../library/plugins/inputmask/jquery.inputmask.js")
+		script(src="../../../library/plugins/air-datepicker/js/datepicker.js")
 		script(src="form-elements.js")

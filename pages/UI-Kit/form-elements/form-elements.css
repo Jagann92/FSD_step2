@@ -1345,29 +1345,7 @@ h6 {
 }
 
 .element {
-  position: relative;
   width: 100%;
-  margin-bottom: 40px;
-}
-
-.element_inline {
-  display: inline-block;
-  max-width: 150px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.element_inline:first-of-type {
-  margin-right: 20px;
-}
-
-.element_line {
-  margin-top: 10px;
-}
-
-.element_mar20 {
-  margin-bottom: 20px;
 }
 
 .element__title {
@@ -1417,46 +1395,44 @@ h6 {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   padding-left: 15px;
+  color: rgba(31, 32, 65, 0.25);
 }
 
 .textfield::-webkit-input-placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
 }
 
 .textfield:-ms-input-placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
 }
 
 .textfield::-ms-input-placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
 }
 
 .textfield::placeholder {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
   color: rgba(31, 32, 65, 0.25);
+}
+
+.textfield:focus, .textfield:hover, .textfield_focus {
+  border-color: rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus::-webkit-input-placeholder, .textfield:hover::-webkit-input-placeholder, .textfield_focus::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus:-ms-input-placeholder, .textfield:hover:-ms-input-placeholder, .textfield_focus:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus::-ms-input-placeholder, .textfield:hover::-ms-input-placeholder, .textfield_focus::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus::placeholder, .textfield:hover::placeholder, .textfield_focus::placeholder {
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .date {
@@ -1478,26 +1454,6 @@ h6 {
 
 .date_filter {
   max-width: 260px;
-}
-
-.focus {
-  border-color: rgba(31, 32, 65, 0.5);
-}
-
-.focus::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.focus:-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.focus::-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.focus::placeholder {
-  color: rgba(31, 32, 65, 0.75);
 }
 
 .dropdown {

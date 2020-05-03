@@ -38,27 +38,7 @@
 
 
 .element {
-    position: relative;
     width: 100%;
-    margin-bottom: 40px;
-
-    &_inline {
-        display: inline-block;
-        max-width: 150px;
-        width: max-content;
-
-        &:first-of-type {
-            margin-right: 20px;
-        }
-    }
-
-    &_line {
-        margin-top: 10px;
-    }
-
-    &_mar20 {
-        margin-bottom: 20px;
-    }
 
     &__title {
         @include text_H3;
@@ -96,11 +76,23 @@
     border-radius: 4px;
     @include text_Body;
     padding-left: 15px;
+    color: rgba(31, 32, 65, 0.25);
 
     &::placeholder {
-        @include text_Body;
         color: rgba(31, 32, 65, 0.25);
     }
+
+    &:focus,
+    &:hover,
+    &_focus {
+        &::placeholder {
+            color: rgba(31, 32, 65, 0.75);
+        }
+        border-color: rgba(31, 32, 65, 0.5);
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &_masked {}
 }
 
 .date {
@@ -116,14 +108,8 @@
     &_filter {
         max-width: 260px;
     }
-}
 
-.focus {
-    border-color: rgba(31, 32, 65, 0.5);
 
-    &::placeholder {
-        color: rgba(31, 32, 65, 0.75);
-    }
 }
 
 .dropdown {

@@ -55,8 +55,8 @@
 
                 // navigation
                 monthsField: 'monthsShort',
-                prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
-                nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
+                prevHtml: '<span class="material-icons">arrow_back</span>',
+                nextHtml: '<span class="material-icons">arrow_forward</span>',
                 navTitles: {
                     days: 'MM <i>yyyy</i>',
                     months: 'yyyy',

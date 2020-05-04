@@ -201,7 +201,7 @@
             _bindEvents: function () {
                 this.$el.on(this.opts.showEvent + '.adp', this._onShowEvent.bind(this));
                 this.$el.on('mouseup.adp', this._onMouseUpEl.bind(this));
-                this.$el.on('blur.adp', this._onBlur.bind(this));
+                //this.$el.on('blur.adp', this._onBlur.bind(this));
                 this.$el.on('keyup.adp', this._onKeyUpGeneral.bind(this));
                 $(window).on('resize.adp', this._onResize.bind(this));
                 $('body').on('mouseup.adp', this._onMouseUpBody.bind(this));

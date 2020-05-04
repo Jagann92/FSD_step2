@@ -50,19 +50,22 @@ block body
 						span.element__title date dropdown
 					.element__body
 						.date
-							input.date__input.datepicker-here(type="text" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+							input.date__input.datepicker-here(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+							button.date__arrow
 				.element
 					.element__head
 						span.element__title date dropdown
 					.element__body
 						.date
-							input.date__input.datepicker-here(type="text" data-clear-button="true" data-apply-button="true"  value="19.08.2019")
+							input.date__input.datepicker-here(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  value="2019,08,19")
+							label.date__arrow(for="date-2")
 				.element
 					.element__head
 						span.element__title filter date dropdown
 					.element__body
 						.date
-							input.date__input.datepicker-here(type="text" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " value="19 авг - 23 авг")
+							input.date__input.datepicker-here(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " value="19 авг - 23 авг")
+							label.date__arrow(for="date-3")
 				.element
 					.element__head
 						span.element__title subscription text field

@@ -2498,7 +2498,7 @@ h6 {
   position: relative;
 }
 
-.date::after {
+.date__arrow::after {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -2521,12 +2521,15 @@ h6 {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
   content: "keyboard_arrow_down";
-  height: 5px;
   display: inline-block;
-  width: 12px;
   position: absolute;
-  right: 20px;
-  top: 12px;
+  right: 0;
+  top: 0;
+  padding: 10px;
+}
+
+.date_open .date__arrow::after {
+  content: "keyboard_arrow_up";
 }
 
 .date__input {

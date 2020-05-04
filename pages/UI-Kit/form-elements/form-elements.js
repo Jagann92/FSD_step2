@@ -148,3 +148,52 @@ $(document).ready(() => {
 		}
 	});
 });
+var datepickers = document.querySelectorAll('.date');
+datepickers.forEach(function clickListener(element, index) {
+	let calendar = element.querySelector('.datepicker-here');
+	let arrow = element.querySelector('.date__arrow');
+	console.log(arrow);
+	arrow.onclick = function () {
+		if (element.classList.contains('date_open')) {
+			calendar.blur();
+			console.log('blur');
+		} else {
+			calendar.focus();
+			console.log('focus');
+		}
+	}
+	calendar.onfocus = function () {
+		element.classList.add('date_open');
+		console.log('onfocus');
+	}
+	calendar.onblur = function () {
+		element.classList.remove('date_open');
+		console.log('onblur');
+	}
+	/*let arrow = element.querySelector('.date__arrow');
+	let isShow = false;
+	let calendar = $('#date-' + (index + 1)).datepicker({
+		onHide: function (inst, animationCompleted) {
+			element.classList.remove('date_open');
+			if (animationCompleted) {
+				isShow = false;
+			}
+		},
+		onShow: function (inst, animationCompleted) {
+			element.classList.add('date_open');
+			if (animationCompleted) {
+				isShow = true;
+			};
+		},
+	}).data('datepicker');
+	arrow.addEventListener('click', function showHide(e) {
+		e.preventDefault();
+		if (isShow) {
+			calendar.hide();
+			isShow = false;
+		} else {
+			calendar.show();
+			isShow = true;
+		}
+	});*/
+});

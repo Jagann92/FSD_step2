@@ -90,16 +90,15 @@ block body
 				.element
 					.element__head
 						span.element__title radio buttons
-					div
+					.element__body
 						input.radio(name="gender" id="r1" type="radio" checked)
 						label(for="r1") Мужчина
-
 						input.radio(name="gender" id="r2" type="radio")
 						label(for="r2") Женщина
 				.element
 					.element__head
 						span.element__title toggle
-					ul
+					ul.element__body
 						li
 							input.switch(id="sw1" type="checkbox" checked)
 							label(for="sw1") Получать спецпредложения
@@ -109,15 +108,13 @@ block body
 				.element
 					.element__head
 						span.element__title like button
-					br
-					.element__like
-						input.like-input(id="like-1" type="checkbox")
-						label.material-icons.element__like-label(for="like-1")
-							span.element__like-count 2
-					.element__like
-						input.like-input(id="like-2" type="checkbox" checked)
-						label.material-icons.element__like-label(for="like-2")
-							span.element__like-count 12
+					.element__body
+						button.like(id="like-1")
+							span.material-icons.like__heart
+							span.like__count 2
+						button.like(id="like-2").like_liked
+							span.material-icons.like__heart
+							span.like__count 12
 				.element
 					.element__head
 						span.element__title rate button
@@ -302,10 +299,10 @@ block body
 					.review__title
 						span.review__person Мурад Сарафанов
 						span.review__date 5 дней назад
-					.element__like.review__like
+					.like.review__like
 						input.like-input(id="like-3" type="checkbox" checked)
-						label.material-icons.element__like-label(for="like-3")
-							span.element__like-count 12
+						label.material-icons.like-label(for="like-3")
+							span.like-count 12
 					p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 			.page__block
 				.element

@@ -54,7 +54,7 @@
   margin: -2px -1px -1px;
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 44px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   z-index: 99999;
@@ -181,12 +181,12 @@
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
+  height: 44px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -239,11 +239,13 @@
   width: 12px;
   position: absolute;
   right: 20px;
-  top: 12px;
+  top: 10px;
 }
 
 .iqdropdown.menu-open {
   border-color: rgba(31, 32, 65, 0.5);
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
 }
 
 .iqdropdown.menu-open .iqdropdown-selection::after {

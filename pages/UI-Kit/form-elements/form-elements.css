@@ -279,7 +279,7 @@ h6 {
   margin: -2px -1px -1px;
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 44px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   z-index: 99999;
@@ -406,12 +406,12 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
+  height: 44px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -464,11 +464,13 @@ h6 {
   width: 12px;
   position: absolute;
   right: 20px;
-  top: 12px;
+  top: 10px;
 }
 
 .iqdropdown.menu-open {
   border-color: rgba(31, 32, 65, 0.5);
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
 }
 
 .iqdropdown.menu-open .iqdropdown-selection::after {
@@ -2496,6 +2498,17 @@ h6 {
 
 .date {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+}
+
+.date__arrow {
+  -webkit-box-flex: 125;
+      -ms-flex: 125;
+          flex: 125;
+  background: none;
 }
 
 .date__arrow::after {
@@ -2526,6 +2539,7 @@ h6 {
   right: 0;
   top: 0;
   padding: 10px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .date_open .date__arrow::after {
@@ -2533,19 +2547,16 @@ h6 {
 }
 
 .date__input {
-  width: 100%;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
+  -webkit-box-flex: 875;
+      -ms-flex: 875;
+          flex: 875;
+  padding-left: 13px;
   color: #1f2041;
   font-family: Montserrat;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
-  padding-left: 15px;
 }
 
 .date__input::-webkit-input-placeholder {
@@ -2564,8 +2575,15 @@ h6 {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.date__input:focus, .date__input:hover, .date__input_focus {
-  border-color: rgba(31, 32, 65, 0.5);
+.subscribe {
+  position: relative;
+}
+
+.subscribe__arrow {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  color: #bc9cff;
 }
 
 .dropdown {
@@ -2657,6 +2675,13 @@ h6 {
   padding: 0;
 }
 
+.button__arrow {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  color: #fff;
+}
+
 .button_demo {
   margin-right: 20px;
   margin-bottom: 30px;
@@ -2689,9 +2714,7 @@ h6 {
 .arrow {
   width: 20px;
   height: 20px;
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
+  cursor: pointer;
 }
 
 .pagination {

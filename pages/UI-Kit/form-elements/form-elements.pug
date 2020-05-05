@@ -15,7 +15,7 @@ block body
 						span.element__title text field
 						span.element__subtitle.element__subtitle_end Default
 					.element__body
-						input.textfield(type="text" placeholder="Email")
+						input.textfield(type="email" placeholder="Email")
 				.element
 					.element__head
 						span.element__title text field
@@ -27,7 +27,7 @@ block body
 						span.element__title dropdown
 						span.element__subtitle.element__subtitle_end Default
 					.element__body
-						.iqdropdown.people.no-buttons
+						.iqdropdown.people.no-buttons.textfield
 							p.iqdropdown-selection
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="adults")
@@ -49,28 +49,30 @@ block body
 					.element__head
 						span.element__title date dropdown
 					.element__body
-						.date
+						.date.textfield
 							input.date__input.datepicker-here(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
 							button.date__arrow
 				.element
 					.element__head
 						span.element__title date dropdown
 					.element__body
-						.date
-							input.date__input.datepicker-here(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  value="2019,08,19")
-							label.date__arrow(for="date-2")
+						.date.textfield
+							input.date__input.datepicker-here(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+							button.date__arrow
 				.element
 					.element__head
 						span.element__title filter date dropdown
 					.element__body
-						.date
-							input.date__input.datepicker-here(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " value="19 авг - 23 авг")
-							label.date__arrow(for="date-3")
+						.date.textfield
+							input.date__input.datepicker-here(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
+							button.date__arrow
 				.element
 					.element__head
 						span.element__title subscription text field
-					input(type='email' placeholder='Email').textfield
-					input(type='image' src='../../../src/img/arrow_forward.svg').element__submit
+					.element__body
+						.subscribe
+							input(type='email' placeholder='Email').textfield.subscribe__input
+							span.material-icons.arrow.subscribe__arrow arrow_forward
 			.page__block
 				.element
 					.element__head
@@ -160,7 +162,7 @@ block body
 					button.button.button_text.button_demo Click Me
 					button.button.button_text.button_text_gray.button_demo Click Me
 					button.button.button_purple.button_wide.button_arrowed.button_demo Перейти к оплате
-						span.material-icons.arrow arrow_forward
+						span.material-icons.arrow.button__arrow arrow_forward
 				.element
 					.element__head
 						span.element__title Pagination

@@ -3156,8 +3156,8 @@ details[open].details > summary::after {
 }
 
 .switch {
-  width: 38px;
-  border-radius: 11px;
+  width: 40px;
+  border-radius: 10px;
 }
 
 .switch + label {
@@ -3165,18 +3165,18 @@ details[open].details > summary::after {
 }
 
 .switch:after {
-  left: 2px;
-  top: 1.5px;
+  left: 4px;
+  top: 3px;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   background: var(--ab, var(--border));
   -webkit-transform: translateX(var(--x, 0));
           transform: translateX(var(--x, 0));
 }
 
 .switch:checked {
-  --ab: var(--active-inner);
+  --ab: var(--active-inner-lg);
   --x: 17px;
 }
 

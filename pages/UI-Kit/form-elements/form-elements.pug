@@ -13,19 +13,19 @@ block body
 				.element
 					.element__head
 						span.element__title text field
-						span.element__subtitle.element__subtitle_end Default
+						label.details__label.element__subtitle_end Default
 					.element__body
 						input.textfield(type="email" placeholder="Email")
 				.element
 					.element__head
 						span.element__title text field
-						span.element__subtitle.element__subtitle_end Hover/Focus
+						label.details__label.element__subtitle_end Hover/Focus
 					.element__body
 						input.textfield.textfield_focus(type="text" value="This is a pretty awesome" placeholder="Text")
 				.element
 					.element__head
 						span.element__title dropdown
-						span.element__subtitle.element__subtitle_end Default
+						label.details__label.element__subtitle_end Default
 					.element__body
 						.iqdropdown.people.no-buttons.textfield
 							p.iqdropdown-selection
@@ -42,7 +42,7 @@ block body
 				.element
 					.element__head
 						span.element__title Masked text field
-						span.element__subtitle.element__subtitle_end Default
+						label.details__label.element__subtitle_end Default
 					.element__body
 						input.textfield.textfield_masked(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ")
 				.element
@@ -145,7 +145,7 @@ block body
 				.element
 					.element__head
 						span.element__title range slider
-						span.element__subtitle.element__subtitle_end.range__value 5 000Р-10 000р
+						label.details__label.element__subtitle_end.range__value 5 000Р-10 000р
 					.element__body
 						input(type="text" name="my_range" value="").js-range-slider.range
 				.element
@@ -176,91 +176,93 @@ block body
 				.element
 					.element__head
 						span.element__title dropdown
-						span.element__subtitle.element__subtitle_end Default
-					.iqdropdown.beds
-						p.iqdropdown-selection
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
-								div
-									p.iqdropdown-item Спальни
-							.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
-								div
-									p.iqdropdown-item Кровати
-							.iqdropdown-menu-option(data-id="bathrooms")
-								div
-									p.iqdropdown-item Ванные комнаты
+						label.details__label.element__subtitle_end Default
+					.element__body
+						.iqdropdown.beds.textfield
+							p.iqdropdown-selection
+							.iqdropdown-menu
+								.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
+									div
+										p.iqdropdown-item Спальни
+								.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
+									div
+										p.iqdropdown-item Кровати
+								.iqdropdown-menu-option(data-id="bathrooms")
+									div
+										p.iqdropdown-item Ванные комнаты
 				.element
 					.element__head
 						span.element__title dropdown
-						span.element__subtitle.element__subtitle_end Expanded
-					.iqdropdown.beds.menu-open
-						p.iqdropdown-selection
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
-								div
-									p.iqdropdown-item Спальни
-							.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
-								div
-									p.iqdropdown-item Кровати
-							.iqdropdown-menu-option(data-id="bathrooms")
-								div
-									p.iqdropdown-item Ванные комнаты
+						label.details__label.element__subtitle_end Expanded
+					.element__body
+						.iqdropdown.beds.menu-open.textfield
+							p.iqdropdown-selection
+							.iqdropdown-menu
+								.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
+									div
+										p.iqdropdown-item Спальни
+								.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
+									div
+										p.iqdropdown-item Кровати
+								.iqdropdown-menu-option(data-id="bathrooms")
+									div
+										p.iqdropdown-item Ванные комнаты
 				.element
 					details.details.marginTop150
 						summary.element__title expandable checkbox list
 						ul
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Завтрак
+								label.details__label Завтрак
 							li.details__checkbox
 								input.checkbox(type="checkbox" checked)
-								span.element__subtitle Письменный стол
+								label.details__label Письменный стол
 							li.details__checkbox
 								input.checkbox(type="checkbox" checked)
-								span.element__subtitle Стул для кормления
+								label.details__label Стул для кормления
 							li.details__checkbox
 								input.checkbox(type="checkbox" checked)
-								span.element__subtitle Кроватка
+								label.details__label Кроватка
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Телевизор
+								label.details__label Телевизор
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Шампунь
+								label.details__label Шампунь
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Телевизор
+								label.details__label Телевизор
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Шампунь
+								label.details__label Шампунь
 				.element
 					details(open).details
 						summary.element__title expandable checkbox list
 						ul
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Завтрак
+								label.details__label Завтрак
 							li.details__checkbox
 								input.checkbox(type="checkbox" checked)
-								span.element__subtitle Письменный стол
+								label.details__label Письменный стол
 							li.details__checkbox
 								input.checkbox(type="checkbox" checked)
-								span.element__subtitle Стул для кормления
+								label.details__label Стул для кормления
 							li.details__checkbox
 								input.checkbox(type="checkbox" checked)
-								span.element__subtitle Кроватка
+								label.details__label Кроватка
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Телевизор
+								label.details__label Телевизор
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Шампунь
+								label.details__label Шампунь
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Телевизор
+								label.details__label Телевизор
 							li.details__checkbox
 								input.checkbox(type="checkbox")
-								span.element__subtitle Шампунь
+								label.details__label Шампунь
 				.feature.feature_smile
 					span.feature__title Комфорт
 					span.feature__text Шумопоглощающие стены
@@ -288,14 +290,14 @@ block body
 						span.element__title rich checkbox buttons
 					.richCheckbox
 						input.checkbox(type="checkbox")
-						span.element__subtitle.element__subtitle_rich Широкий коридор
+						label.details__label.element__subtitle_rich Широкий коридор
 							br
-							span.element__subtitle.element__subtitle_small Ширина коридоров в номере не менее 91см.
+							label.details__label.element__subtitle_small Ширина коридоров в номере не менее 91см.
 					.richCheckbox
 						input.checkbox(type="checkbox")
-						span.element__subtitle.element__subtitle_rich Помощник для инвалидов
+						label.details__label.element__subtitle_rich Помощник для инвалидов
 							br
-							span.element__subtitle.element__subtitle_small На 1 этаже вас встретит специалист и проводит до номера.
+							label.details__label.element__subtitle_small На 1 этаже вас встретит специалист и проводит до номера.
 				.review
 					.review__foto
 					.review__title

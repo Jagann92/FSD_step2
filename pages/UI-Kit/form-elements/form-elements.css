@@ -2598,7 +2598,7 @@ h6 {
 .switch {
   --active: #fff;
   --active-inner: #bc9cff;
-  --active-inner-lg: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  --active-inner-lg: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
   --active-border: #bc9cff;
   --border: rgba(31, 32, 65, 0.25);
   --border-hover: 1px solid rgba(31, 32, 65, 0.5);
@@ -2692,6 +2692,7 @@ h6 {
   max-width: 230px;
   display: inline-block;
   vertical-align: top;
+  padding-top: 2px;
   cursor: pointer;
   margin-left: 10px;
   color: rgba(31, 32, 65, 0.5);
@@ -2997,81 +2998,6 @@ h6 {
   color: #fff;
 }
 
-.option {
-  max-width: 320px;
-  width: 100%;
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.submit {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-}
-
-.value {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  color: rgba(31, 32, 65, 0.5);
-  line-height: 18px;
-}
-
-.label_rich {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: bold;
-  text-transform: none;
-  width: 100%;
-}
-
-.label_small {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: rgba(31, 32, 65, 0.5);
-  text-transform: none;
-  font-size: 12px;
-  line-height: 14px;
-}
-
-.richCheckbox {
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.richCheckbox:first-of-type {
-  margin-top: 16px;
-}
-
-.dropdown__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px 7px 13px 13px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .marginTop150 {
   margin-top: 150px;
 }
@@ -3150,6 +3076,81 @@ details[open].details > summary::after {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
   content: "keyboard_arrow_up";
+}
+
+.option {
+  max-width: 320px;
+  width: 100%;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.submit {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+
+.value {
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 18px;
+}
+
+.label_rich {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1f2041;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: none;
+  width: 100%;
+}
+
+.label_small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(31, 32, 65, 0.5);
+  text-transform: none;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.richCheckbox {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.richCheckbox:first-of-type {
+  margin-top: 16px;
+}
+
+.dropdown__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 7px 13px 13px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .feature {

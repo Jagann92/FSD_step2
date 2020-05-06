@@ -118,35 +118,36 @@ block body
 				.element
 					.element__head
 						span.element__title rate button
-					br
-					.element__stars
-						input.star-input(id="star-5-1" type="radio" name="reviewStars-1")
-						label.material-icons.element__star-label(for="star-5-1")
-						input.star-input(id="star-4-1" type="radio" name="reviewStars-1" checked)
-						label.material-icons.element__star-label(for="star-4-1")
-						input.star-input(id="star-3-1" type="radio" name="reviewStars-1")
-						label.material-icons.element__star-label(for="star-3-1")
-						input.star-input(id="star-2-1" type="radio" name="reviewStars-1")
-						label.material-icons.element__star-label(for="star-2-1")
-						input.star-input(id="star-1-1" type="radio" name="reviewStars-1")
-						label.material-icons.element__star-label(for="star-1-1")
-					.element__stars
-						input.star-input(id="star-5" type="radio" name="reviewStars-2" checked)
-						label.material-icons.element__star-label(for="star-5")
-						input.star-input(id="star-4" type="radio" name="reviewStars-2")
-						label.material-icons.element__star-label(for="star-4")
-						input.star-input(id="star-3" type="radio" name="reviewStars-2")
-						label.material-icons.element__star-label(for="star-3")
-						input.star-input(id="star-2" type="radio" name="reviewStars-2")
-						label.material-icons.element__star-label(for="star-2")
-						input.star-input(id="star-1" type="radio" name="reviewStars-2")
-						label.material-icons.element__star-label(for="star-1")
+					.element__body
+					.rate
+						input.rate__input(id="star-5-1" type="radio" name="reviewStars-1")
+						label.material-icons.rate__label(for="star-5-1")
+						input.rate__input(id="star-4-1" type="radio" name="reviewStars-1" checked)
+						label.material-icons.rate__label(for="star-4-1")
+						input.rate__input(id="star-3-1" type="radio" name="reviewStars-1")
+						label.material-icons.rate__label(for="star-3-1")
+						input.rate__input(id="star-2-1" type="radio" name="reviewStars-1")
+						label.material-icons.rate__label(for="star-2-1")
+						input.rate__input(id="star-1-1" type="radio" name="reviewStars-1")
+						label.material-icons.rate__label(for="star-1-1")
+					.rate
+						input.rate__input(id="star-5" type="radio" name="reviewStars-2" checked)
+						label.material-icons.rate__label(for="star-5")
+						input.rate__input(id="star-4" type="radio" name="reviewStars-2")
+						label.material-icons.rate__label(for="star-4")
+						input.rate__input(id="star-3" type="radio" name="reviewStars-2")
+						label.material-icons.rate__label(for="star-3")
+						input.rate__input(id="star-2" type="radio" name="reviewStars-2")
+						label.material-icons.rate__label(for="star-2")
+						input.rate__input(id="star-1" type="radio" name="reviewStars-2")
+						label.material-icons.rate__label(for="star-1")
 			.page__block
 				.element.element__range
 					.element__head
 						span.element__title range slider
-						span.element__subtitle.element__subtitle_end 5000Р-10 000р
-					input(type="text" name="my_range" value="").js-range-slider
+						span.element__subtitle.element__subtitle_end.range__value 5 000Р-10 000р
+					.element__body
+						input(type="text" name="my_range" value="").js-range-slider.range
 				.element
 					.element__head
 						span.element__title buttons

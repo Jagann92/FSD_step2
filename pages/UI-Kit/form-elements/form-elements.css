@@ -3248,7 +3248,7 @@ details[open].details > summary::after {
       justify-self: center;
 }
 
-.element__stars {
+.rate {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3260,16 +3260,21 @@ details[open].details > summary::after {
   float: left;
 }
 
-.element__star-input {
+.rate__input {
   opacity: 0;
   position: absolute;
   top: 0;
   z-index: 0;
 }
 
-.element__star-label:before {
+.rate__label:before {
   content: "star_border";
-  color: #bc9cff;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   font-size: 24px;
   line-height: 20px;
   height: 24px;
@@ -3277,8 +3282,8 @@ details[open].details > summary::after {
   cursor: pointer;
 }
 
-.element__star-input:checked ~ .element__star-label::before,
-.element__star-input:hover ~ .element__star-label::before {
+.rate__input:checked ~ .rate__label::before,
+.rate__input:hover ~ .rate__label::before {
   content: "star";
 }
 

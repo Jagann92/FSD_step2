@@ -1,3 +1,10 @@
+function changeRangeValue(data) {
+	let rangeFrom = data.from_pretty;
+	let rangeTo = data.to_pretty;
+	let rangeValue = $(".range__value");
+	rangeValue.text(rangeFrom + '₽ - ' + rangeTo + '₽');
+}
+
 $(".js-range-slider").ionRangeSlider({
 	type: "double",
 	min: 1000,
@@ -5,11 +12,25 @@ $(".js-range-slider").ionRangeSlider({
 	from: 5000,
 	to: 10000,
 	step: 1000,
+	postfix: "₽",
 	grid: false,
 	hide_from_to: true,
 	hide_min_max: true,
-	skin: "round"
+	skin: "round",
+	onStart: function (data) {
+		let rangeFrom = data.from_pretty;
+		let rangeTo = data.to_pretty;
+		let rangeValue = $(".range__value");
+		rangeValue.text(rangeFrom + '₽ - ' + rangeTo + '₽');
+	},
+	onChange: function (data) {
+		let rangeFrom = data.from_pretty;
+		let rangeTo = data.to_pretty;
+		let rangeValue = $(".range__value");
+		rangeValue.text(rangeFrom + '₽ - ' + rangeTo + '₽');
+	},
 });
+
 $(document).ready(() => {
 	$(".textfield_masked").inputmask();
 	$('.iqdropdown.beds').iqDropdown({

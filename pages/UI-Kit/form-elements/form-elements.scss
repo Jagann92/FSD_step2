@@ -359,65 +359,54 @@
     }
 }
 
-.option {
-    max-width: 320px;
-    width: 100%;
-    color: rgba(31, 32, 65, 0.75);
-}
+.rate {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    float: left;
 
-.submit {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
-}
 
-.value {
-    @include text_Body;
-    color: rgba(31, 32, 65, 0.5);
-    line-height: 18px;
+    &__input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+
+    &__label {
+        &:before {
+            content: "star_border";
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+            font-size: 24px;
+            line-height: 20px;
+            height: 24px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
+
+    &__input:checked~&__label::before,
+    &__input:hover~&__label::before {
+        content: "star";
+    }
 }
 
 .range {
-    margin-bottom: 20px;
-}
-
-.dropdown_expanded {}
-
-.select {}
-
-.label_rich {
-    display: flex;
-    @include text_Body;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: bold;
-    text-transform: none;
-    width: 100%;
-}
-
-.label_small {
-    display: flex;
-    color: rgba(31, 32, 65, 0.5);
-    text-transform: none;
-    font-size: 12px;
-    line-height: 14px;
-}
-
-.richCheckbox {
-    margin-bottom: 10px;
-    width: 100%;
-
-    &:first-of-type {
-        margin-top: 16px;
-    }
+    &__value {}
 }
 
 .button {
     width: 99px;
     height: 44px;
-    padding: 0;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 
     &__arrow {
         position: absolute;
@@ -431,13 +420,13 @@
         margin-bottom: 30px;
     }
 
-    &_purple {}
-
-    &_locked {
-        opacity: 0.5;
+    &_white.button_disabled {
+        border-color: rgba(188, 156, 255, 0.5);
     }
 
-    &_white {}
+    &_purple.button_disabled {
+        opacity: 0.5;
+    }
 
     &_text {
         color: #bc9cff;
@@ -458,11 +447,7 @@
     &_arrowed {
         position: relative;
     }
-
-    &_next-page {}
 }
-
-
 
 .pagination {
     display: grid;
@@ -500,6 +485,63 @@
         color: #fff;
     }
 }
+
+.option {
+    max-width: 320px;
+    width: 100%;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.submit {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+}
+
+.value {
+    @include text_Body;
+    color: rgba(31, 32, 65, 0.5);
+    line-height: 18px;
+}
+
+.dropdown_expanded {}
+
+.select {}
+
+.label_rich {
+    display: flex;
+    @include text_Body;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    text-transform: none;
+    width: 100%;
+}
+
+.label_small {
+    display: flex;
+    color: rgba(31, 32, 65, 0.5);
+    text-transform: none;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.richCheckbox {
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:first-of-type {
+        margin-top: 16px;
+    }
+}
+
+
+
+
+
+
 
 .dropdown__buttons {
     display: flex;
@@ -627,42 +669,7 @@ details[open].details>summary::after {
 }
 
 
-.rate {
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    float: left;
 
-
-    &__input {
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        z-index: 0;
-    }
-
-    &__label {
-        &:before {
-            content: "star_border";
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-
-            font-size: 24px;
-            line-height: 20px;
-            height: 24px;
-            width: 24px;
-            cursor: pointer;
-        }
-    }
-
-    &__input:checked~&__label::before,
-    &__input:hover~&__label::before {
-        content: "star";
-    }
-}
 
 
 .list {

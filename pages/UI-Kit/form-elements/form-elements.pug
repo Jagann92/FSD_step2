@@ -142,7 +142,7 @@ block body
 						input.rate__input(id="star-1" type="radio" name="reviewStars-2")
 						label.material-icons.rate__label(for="star-1")
 			.page__block
-				.element.element__range
+				.element
 					.element__head
 						span.element__title range slider
 						span.element__subtitle.element__subtitle_end.range__value 5 000Р-10 000р
@@ -151,15 +151,16 @@ block body
 				.element
 					.element__head
 						span.element__title buttons
-					button.button.button_purple.button_demo Click Me
-					button.button.button_purple.button_locked.button_demo Click Me
-					button.button.button_white.button_demo Click Me
-					button.button.button_white.button_locked.button_demo Click Me
-					br
-					button.button.button_text.button_demo Click Me
-					button.button.button_text.button_text_gray.button_demo Click Me
-					button.button.button_purple.button_wide.button_arrowed.button_demo Перейти к оплате
-						span.material-icons.arrow.button__arrow arrow_forward
+					.element__body
+						button.button.button_purple.button_demo Click Me
+						button.button.button_purple.button_disabled.button_demo Click Me
+						button.button.button_white.button_demo Click Me
+						button.button.button_white.button_disabled.button_demo Click Me
+						br
+						button.button.button_text.button_demo Click Me
+						button.button.button_text.button_text_gray.button_demo Click Me
+						button.button.button_purple.button_wide.button_arrowed.button_demo Перейти к оплате
+							span.material-icons.arrow.button__arrow arrow_forward
 				.element
 					.element__head
 						span.element__title Pagination
@@ -169,7 +170,7 @@ block body
 						a.pagination__elem 3
 						a.pagination__elem ...
 						a.pagination__elem 15
-						a.pagination__elem.material-icons.pagination__arrow arrow_forward
+						a.pagination__elem.material-icons.arrow.pagination__arrow arrow_forward
 						span.pagination__text 1 – 12 из 100+ вариантов аренды
 			.page__block
 				.element

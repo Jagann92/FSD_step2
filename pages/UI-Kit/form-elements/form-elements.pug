@@ -301,34 +301,34 @@ block body
 					.review__title
 						span.review__person Мурад Сарафанов
 						span.review__date 5 дней назад
-					.like.review__like
-						input.like-input(id="like-3" type="checkbox" checked)
-						label.material-icons.like-label(for="like-3")
-							span.like-count 12
+					button.like.like_liked.review__like(id="like-1")
+						span.material-icons.like__heart
+						span.like__count 12
 					p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 			.page__block
 				.element
 					.element__head
 						span.element__title dropdown
-					.iqdropdown.people.2buttons
-						p.iqdropdown-selection
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="adults")
-								div
-									p.iqdropdown-item Взрослые
-							.iqdropdown-menu-option(data-id="childs")
-								div
-									p.iqdropdown-item Дети
-							.iqdropdown-menu-option(data-id="babies")
-								div
-									p.iqdropdown-item Младенцы
+					.element__body
+						.iqdropdown.people.2buttons.textfield
+							p.iqdropdown-selection
+							.iqdropdown-menu
+								.iqdropdown-menu-option(data-id="adults")
+									div
+										p.iqdropdown-item Взрослые
+								.iqdropdown-menu-option(data-id="childs")
+									div
+										p.iqdropdown-item Дети
+								.iqdropdown-menu-option(data-id="babies")
+									div
+										p.iqdropdown-item Младенцы
 				.element
 					.element__head
 						span.element__title Bullet list
 					ul.list
 						li.list__elem Нельзя с питомцами
 						li.list__elem Без вечеринок и меропритий
-						li.list__elem Врем яприбытия - после 13:00, а выезд до 12:00
+						li.list__elem Время прибытия - после 13:00, а выезд до 12:00
 		script(src="../../../library/plugins/ionRangeSlider/js/ion.rangeSlider.min.js")
 		script(src="../../../library/plugins/item-quantity-dropdown/js/item-quantity-dropdown.min.js")
 		script(src="../../../library/plugins/inputmask/jquery.inputmask.js")

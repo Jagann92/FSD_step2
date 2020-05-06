@@ -19,10 +19,11 @@
 
     &__container {
         display: grid;
-        margin: 140px/1350px * 100%;
-        margin-bottom: 130px/1350px * 100%;
-        grid-template-columns: 320px 260px 320px;
-        column-gap: 130px;
+        margin: 141px;
+        margin-top: 142px;
+        margin-bottom: 130px;
+        grid-template-columns: 320px 266px 320px;
+        column-gap: 126px;
         grid-template-rows: repeat(2, max-content);
         row-gap: 100px;
     }
@@ -31,36 +32,61 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-items: flex-start;
         flex-wrap: wrap;
+        justify-items: flex-start;
         width: 100%;
     }
 }
 
 .element {
     width: 100%;
+    margin-bottom: 20px;
+
+    &_short {
+        widows: 83.125%;
+        max-width: 266px;
+        margin-top: 20px;
+    }
+
+    &_inline {
+        display: inline-flex;
+        flex-wrap: wrap;
+        max-width: 150px;
+    }
+
+    & .textfield_masked {
+        margin-bottom: 20px;
+    }
 
     &__title {
         @include text_H3;
         display: inline-block;
         text-align: left;
-        margin-bottom: 5px;
+
     }
 
     &__subtitle {
         @include text_H3;
         font-weight: 400;
         color: rgba(31, 32, 65, 0.5);
-
-        &_end {
-            float: right;
-            padding-right: 5px;
-        }
+        float: right;
+        padding-bottom: 2px;
     }
 
     &__body {}
 
-    &__title {}
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 5px;
+    }
+}
+
+.line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .textfield {
@@ -93,16 +119,22 @@
     }
 }
 
+.datepicker-here {
+    width: 100%;
+}
+
 .date {
     position: relative;
     display: flex;
     padding: 2px;
 
     &__arrow {
-        flex: 125;
+        flex: 12.5;
         background: none;
+        border: none;
 
         &::after {
+
             @include material-icon;
             content: "keyboard_arrow_down";
             display: inline-block;
@@ -119,7 +151,7 @@
     }
 
     &__input {
-        flex: 875;
+        flex: 87.5;
         padding-left: 13px;
         @include text_Body;
 

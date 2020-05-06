@@ -3078,81 +3078,6 @@ details[open].details > summary::after {
   content: "keyboard_arrow_up";
 }
 
-.option {
-  max-width: 320px;
-  width: 100%;
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.submit {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-}
-
-.value {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  color: rgba(31, 32, 65, 0.5);
-  line-height: 18px;
-}
-
-.label_rich {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: bold;
-  text-transform: none;
-  width: 100%;
-}
-
-.label_small {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: rgba(31, 32, 65, 0.5);
-  text-transform: none;
-  font-size: 12px;
-  line-height: 14px;
-}
-
-.richCheckbox {
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.richCheckbox:first-of-type {
-  margin-top: 16px;
-}
-
-.dropdown__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px 7px 13px 13px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .feature {
   position: relative;
   padding-left: 60px;
@@ -3187,10 +3112,15 @@ details[open].details > summary::after {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
   content: "sentiment_very_satisfied";
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   top: 0;
   left: 0;
   font-size: 48px;
-  color: #bc9cff;
 }
 
 .feature_apartment:before {
@@ -3217,10 +3147,15 @@ details[open].details > summary::after {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
   content: "apartment";
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   top: 0;
   left: 0;
   font-size: 48px;
-  color: #bc9cff;
 }
 
 .feature__title {
@@ -3241,6 +3176,43 @@ details[open].details > summary::after {
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
+}
+
+.richCheckbox {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.richCheckbox:first-of-type {
+  margin-top: 16px;
+}
+
+.richCheckbox__label {
+  margin-top: -6px;
+}
+
+.richCheckbox__label::first-line {
+  color: #1f2041;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  vertical-align: top;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 7px 13px 13px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .review {

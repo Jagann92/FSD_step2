@@ -13,19 +13,19 @@ block body
 				.element
 					.element__head
 						span.element__title text field
-						label.details__label.element__subtitle_end Default
+						span.element__subtitle.element__subtitle_end Default
 					.element__body
 						input.textfield(type="email" placeholder="Email")
 				.element
 					.element__head
 						span.element__title text field
-						label.details__label.element__subtitle_end Hover/Focus
+						span.element__subtitle.element__subtitle_end Hover/Focus
 					.element__body
 						input.textfield.textfield_focus(type="text" value="This is a pretty awesome" placeholder="Text")
 				.element
 					.element__head
 						span.element__title dropdown
-						label.details__label.element__subtitle_end Default
+						span.element__subtitle.element__subtitle_end Default
 					.element__body
 						.iqdropdown.people.no-buttons.textfield
 							p.iqdropdown-selection
@@ -42,7 +42,7 @@ block body
 				.element
 					.element__head
 						span.element__title Masked text field
-						label.details__label.element__subtitle_end Default
+						span.element__subtitle.element__subtitle_end Default
 					.element__body
 						input.textfield.textfield_masked(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ")
 				.element
@@ -145,7 +145,7 @@ block body
 				.element
 					.element__head
 						span.element__title range slider
-						label.details__label.element__subtitle_end.range__value 5 000Р-10 000р
+						span.element__subtitle.element__subtitle_end.range__value 5 000Р-10 000р
 					.element__body
 						input(type="text" name="my_range" value="").js-range-slider.range
 				.element
@@ -176,7 +176,7 @@ block body
 				.element
 					.element__head
 						span.element__title dropdown
-						label.details__label.element__subtitle_end Default
+						span.element__subtitle.element__subtitle_end Default
 					.element__body
 						.iqdropdown.beds.textfield
 							p.iqdropdown-selection
@@ -193,7 +193,7 @@ block body
 				.element
 					.element__head
 						span.element__title dropdown
-						label.details__label.element__subtitle_end Expanded
+						span.element__subtitle.element__subtitle_end Expanded
 					.element__body
 						.iqdropdown.beds.menu-open.textfield
 							p.iqdropdown-selection
@@ -273,31 +273,29 @@ block body
 				.element
 					.element__head
 						span.element__title dropdown
-					.iqdropdown.people.1button
-						p.iqdropdown-selection
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="adults")
-								div
-									p.iqdropdown-item Взрослые
-							.iqdropdown-menu-option(data-id="childs")
-								div
-									p.iqdropdown-item Дети
-							.iqdropdown-menu-option(data-id="babies")
-								div
-									p.iqdropdown-item Младенцы
+					.element__body
+						.iqdropdown.people.1button.textfield
+							p.iqdropdown-selection
+							.iqdropdown-menu
+								.iqdropdown-menu-option(data-id="adults")
+									div
+										p.iqdropdown-item Взрослые
+								.iqdropdown-menu-option(data-id="childs")
+									div
+										p.iqdropdown-item Дети
+								.iqdropdown-menu-option(data-id="babies")
+									div
+										p.iqdropdown-item Младенцы
 				.element
 					.element__head
 						span.element__title rich checkbox buttons
-					.richCheckbox
-						input.checkbox(type="checkbox")
-						label.details__label.element__subtitle_rich Широкий коридор
-							br
-							label.details__label.element__subtitle_small Ширина коридоров в номере не менее 91см.
-					.richCheckbox
-						input.checkbox(type="checkbox")
-						label.details__label.element__subtitle_rich Помощник для инвалидов
-							br
-							label.details__label.element__subtitle_small На 1 этаже вас встретит специалист и проводит до номера.
+					.element__body
+						.richCheckbox
+							input.checkbox(type="checkbox")
+							label.richCheckbox__label Широкий коридор<br>Ширина коридоров в номере не менее 91см.
+						.richCheckbox
+							input.checkbox(type="checkbox")
+							label.richCheckbox__label Помощник для инвалидов<br>На 1 этаже вас встретит специалист и проводит до номера.
 				.review
 					.review__foto
 					.review__title

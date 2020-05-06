@@ -528,72 +528,6 @@ details[open].details>summary::after {
     content: "keyboard_arrow_up";
 }
 
-.option {
-    max-width: 320px;
-    width: 100%;
-    color: rgba(31, 32, 65, 0.75);
-}
-
-.submit {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
-}
-
-.value {
-    @include text_Body;
-    color: rgba(31, 32, 65, 0.5);
-    line-height: 18px;
-}
-
-.dropdown_expanded {}
-
-.select {}
-
-.label_rich {
-    display: flex;
-    @include text_Body;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: bold;
-    text-transform: none;
-    width: 100%;
-}
-
-.label_small {
-    display: flex;
-    color: rgba(31, 32, 65, 0.5);
-    text-transform: none;
-    font-size: 12px;
-    line-height: 14px;
-}
-
-.richCheckbox {
-    margin-bottom: 10px;
-    width: 100%;
-
-    &:first-of-type {
-        margin-top: 16px;
-    }
-}
-
-
-
-
-
-
-
-.dropdown__buttons {
-    display: flex;
-    padding: 20px 7px 13px 13px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
-
-
 .feature {
     position: relative;
     padding-left: 60px;
@@ -607,20 +541,28 @@ details[open].details>summary::after {
         position: absolute;
         @include material-icon;
         content: "sentiment_very_satisfied";
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         top: 0;
         left: 0;
         font-size: 48px;
-        color: #bc9cff;
     }
 
     &_apartment:before {
         position: absolute;
         @include material-icon;
         content: "apartment";
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         top: 0;
         left: 0;
         font-size: 48px;
-        color: #bc9cff;
     }
 
     &__title {
@@ -632,6 +574,33 @@ details[open].details>summary::after {
     &__text {
         @include text_Body;
     }
+}
+
+
+.richCheckbox {
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:first-of-type {
+        margin-top: 16px;
+    }
+
+    &__label {
+        margin-top: -6px;
+
+        &::first-line {
+            @include font("Montserrat", bold, 14px, 28px);
+            vertical-align: top;
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
+}
+
+.dropdown__buttons {
+    display: flex;
+    padding: 20px 7px 13px 13px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 
 .review {
@@ -671,10 +640,6 @@ details[open].details>summary::after {
 
     &__text {}
 }
-
-
-
-
 
 .list {
     @include text_Body;

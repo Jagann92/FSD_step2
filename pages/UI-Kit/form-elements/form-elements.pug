@@ -79,33 +79,35 @@ block body
 					.element__head
 						span.element__title checkbox buttons
 					ul.element__body
-						li
-							input.checkbox(id ="c1" type="checkbox")
-							label(for="c1") Можно курить
-						li
-							input.checkbox(id="c2" type="checkbox" checked)
-							label(for="c2") Можно с питомцами
-						li
-							input.checkbox(id="c3" type="checkbox" checked)
-							label(for="c3") Можно пригласить гостей (до 10 человек)
+						li.checkbox
+							input.checkbox__input(id ="c1" type="checkbox")
+							label(for="c1").checkbox__label Можно курить
+						li.checkbox
+							input.checkbox__input(id="c2" type="checkbox" checked)
+							label(for="c2").checkbox__label Можно с питомцами
+						li.checkbox
+							input.checkbox__input(id="c3" type="checkbox" checked)
+							label(for="c3").checkbox__label Можно пригласить гостей (до 10 человек)
 				.element
 					.element__head
 						span.element__title radio buttons
 					.element__body
-						input.radio(name="gender" id="r1" type="radio" checked)
-						label(for="r1") Мужчина
-						input.radio(name="gender" id="r2" type="radio")
-						label(for="r2") Женщина
+						.radio
+							input.radio__input(name="gender" id="r1" type="radio" checked)
+							label(for="r1").radio__label Мужчина
+						.radio
+							input.radio__input(name="gender" id="r2" type="radio")
+							label(for="r2").radio__label Женщина
 				.element
 					.element__head
 						span.element__title toggle
 					ul.element__body
-						li
-							input.switch(id="sw1" type="checkbox" checked)
-							label(for="sw1") Получать спецпредложения
-						li
-							input.switch(id="sw2" type="checkbox" checked)
-							label(for="sw2") Получать спецпредложения
+						li.switch
+							input.switch__input(id="sw1" type="checkbox" checked)
+							label(for="sw1").switch__label Получать спецпредложения
+						li.switch
+							input.switch__input(id="sw2" type="checkbox")
+							label(for="sw2").switch__label Получать спецпредложения
 				.element
 					.element__head
 						span.element__title like button
@@ -120,28 +122,28 @@ block body
 					.element__head
 						span.element__title rate button
 					.element__body
-					.rate
-						input.rate__input(id="star-5-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-5-1")
-						input.rate__input(id="star-4-1" type="radio" name="reviewStars-1" checked)
-						label.material-icons.rate__label(for="star-4-1")
-						input.rate__input(id="star-3-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-3-1")
-						input.rate__input(id="star-2-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-2-1")
-						input.rate__input(id="star-1-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-1-1")
-					.rate
-						input.rate__input(id="star-5" type="radio" name="reviewStars-2" checked)
-						label.material-icons.rate__label(for="star-5")
-						input.rate__input(id="star-4" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-4")
-						input.rate__input(id="star-3" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-3")
-						input.rate__input(id="star-2" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-2")
-						input.rate__input(id="star-1" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-1")
+						.rate
+							input.rate__input(id="star-5-1" type="radio" name="reviewStars-1")
+							label.material-icons.rate__label(for="star-5-1")
+							input.rate__input(id="star-4-1" type="radio" name="reviewStars-1" checked)
+							label.material-icons.rate__label(for="star-4-1")
+							input.rate__input(id="star-3-1" type="radio" name="reviewStars-1")
+							label.material-icons.rate__label(for="star-3-1")
+							input.rate__input(id="star-2-1" type="radio" name="reviewStars-1")
+							label.material-icons.rate__label(for="star-2-1")
+							input.rate__input(id="star-1-1" type="radio" name="reviewStars-1")
+							label.material-icons.rate__label(for="star-1-1")
+						.rate
+							input.rate__input(id="star-5" type="radio" name="reviewStars-2" checked)
+							label.material-icons.rate__label(for="star-5")
+							input.rate__input(id="star-4" type="radio" name="reviewStars-2")
+							label.material-icons.rate__label(for="star-4")
+							input.rate__input(id="star-3" type="radio" name="reviewStars-2")
+							label.material-icons.rate__label(for="star-3")
+							input.rate__input(id="star-2" type="radio" name="reviewStars-2")
+							label.material-icons.rate__label(for="star-2")
+							input.rate__input(id="star-1" type="radio" name="reviewStars-2")
+							label.material-icons.rate__label(for="star-1")
 			.page__block
 				.element
 					.element__head

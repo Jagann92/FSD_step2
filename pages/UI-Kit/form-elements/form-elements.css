@@ -279,12 +279,13 @@ h6 {
   content: "remove";
   display: block;
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 0;
 }
 
 .iqdropdown .icon-increment::after {
   content: "add";
+  top: 0;
 }
 
 .iqdropdown .iqdropdown-menu {
@@ -310,8 +311,12 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 45px;
-  padding: 0 15px;
+  height: 37px;
+  padding: 3.5px 7px 3.5px 15px;
+}
+
+.iqdropdown .iqdropdown-menu-option:last-of-type {
+  margin-bottom: 5px;
 }
 
 .iqdropdown .iqdropdown-menu-option:last-child {
@@ -375,6 +380,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   height: 30px;
+  margin-top: 2px;
 }
 
 .iqdropdown .iqdropdown-item-controls .counter {
@@ -2398,7 +2404,7 @@ h6 {
   -ms-grid-rows: (max-content)[2];
       grid-template-rows: repeat(2, -webkit-max-content);
       grid-template-rows: repeat(2, max-content);
-  row-gap: 100px;
+  row-gap: 75px;
 }
 
 .page__block {
@@ -3168,7 +3174,7 @@ summary::after {
   width: 44px;
   height: 44px;
   position: absolute;
-  right: -74px;
+  right: -12px;
   top: -4px;
 }
 
@@ -3195,6 +3201,10 @@ details[open].details > summary::after {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
   content: "keyboard_arrow_up";
+}
+
+.element > details[open] {
+  margin-top: 30px;
 }
 
 .feature {

@@ -30,7 +30,7 @@
         grid-template-columns: 320px 266px 320px;
         column-gap: 126px;
         grid-template-rows: repeat(2, max-content);
-        row-gap: 100px;
+        row-gap: 75px;
     }
 
     &__block {
@@ -622,7 +622,6 @@ summary {
     display: block;
     position: relative;
 
-
     &::-webkit-details-marker {
         display: none;
     }
@@ -633,7 +632,7 @@ summary {
         width: 44px;
         height: 44px;
         position: absolute;
-        right: -74px;
+        right: -12px;
         top: -4px;
     }
 }
@@ -641,6 +640,10 @@ summary {
 details[open].details>summary::after {
     @include material-icon;
     content: "keyboard_arrow_up";
+}
+
+.element>details[open] {
+    margin-top: 30px;
 }
 
 .feature {

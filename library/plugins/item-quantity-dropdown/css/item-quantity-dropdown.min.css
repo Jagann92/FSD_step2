@@ -36,12 +36,13 @@
   content: "remove";
   display: block;
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 0;
 }
 
 .iqdropdown .icon-increment::after {
   content: "add";
+  top: 0;
 }
 
 .iqdropdown .iqdropdown-menu {
@@ -67,8 +68,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 45px;
-  padding: 0 15px;
+  height: 37px;
+  padding: 3.5px 7px 3.5px 15px;
+}
+
+.iqdropdown .iqdropdown-menu-option:last-of-type {
+  margin-bottom: 5px;
 }
 
 .iqdropdown .iqdropdown-menu-option:last-child {
@@ -132,6 +137,7 @@
   display: -ms-flexbox;
   display: flex;
   height: 30px;
+  margin-top: 2px;
 }
 
 .iqdropdown .iqdropdown-item-controls .counter {

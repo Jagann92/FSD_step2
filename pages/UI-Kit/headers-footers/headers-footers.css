@@ -210,15 +210,13 @@ h6 {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-clip: border-box;
+  background-clip: padding-box;
   border: solid 2px transparent;
   border-radius: 22px;
 }
 
 .button_white::after {
   content: '';
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
   position: absolute;
   top: 0;
   right: 0;
@@ -226,6 +224,7 @@ h6 {
   left: 0;
   z-index: -1;
   margin: -2px;
+  border-radius: inherit;
   background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }

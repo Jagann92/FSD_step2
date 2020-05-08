@@ -1,19 +1,39 @@
 @import "../../../library/mixins/text";
 
+@mixin shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+}
+
 .button {
     @include text_H3;
     border-radius: 22px;
-    border: 2px solid;
 
     &_white {
+        margin: auto;
         color: #bc9cff;
-        background-color: white;
-        border-color: #bc9cff;
+        background: #fff;
+        position: relative;
+        box-sizing: border-box;
+        background-clip: padding-box;
+        border: solid 2px transparent;
+        border-radius: 22px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
     }
 
     &_purple {
         color: white;
-        background-color: #bc9cff;
-        border-color: #bc9cff;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
 }

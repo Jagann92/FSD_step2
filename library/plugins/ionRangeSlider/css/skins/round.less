@@ -6,15 +6,15 @@
 
     @top: 15px;
     // @bottom: 21px;
-    @line_height: 4px;
-    @handle_width: 15px;
-    @handle_height: 15px;
+    @line_height: 5px;
+    @handle_width: 17px;
+    @handle_height: 17px;
 
     @line_color: #fff;
     @line_bg_color: rgba(31, 32, 65, 0.25);
-    @bar_color: #6fcf97;
+    @bar_color: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     @handle_color_1: #fff;
-    @handle_color_2: #6fcf97;
+    @handle_color_2: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     @handle_color_3: #6fcf97;
     @minmax_text_color: #333;
     @minmax_bg_color: rgba(0, 0, 0, 0.1);
@@ -23,12 +23,10 @@
     @grid_color_1: #dedede;
     @grid_color_2: silver;
 
-
-
-    height: 50px;
+    height: 40px;
 
     &.irs-with-grid {
-        height: 65px;
+        height: 55px;
     }
 
     .@{name}-line {
@@ -37,13 +35,13 @@
         background-color: @line_color;
         border: 1px solid;
         border-color: @line_bg_color;
-        border-radius: @line_height;
+        border-radius: @line_height/2;
     }
 
     .@{name}-bar {
         top: @top;
         height: @line_height;
-        background-color: @bar_color;
+        background: @bar_color;
 
         &--single {
             border-radius: @line_height 0 0 @line_height;
@@ -61,7 +59,7 @@
         width: @handle_width;
         height: @handle_height;
         border: 2px solid @handle_color_1;
-        background-color: @handle_color_2;
+        background: @handle_color_2;
         border-radius: @handle_width;
 
         &.state_hover,

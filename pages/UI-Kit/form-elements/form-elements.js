@@ -7,11 +7,11 @@ function changeRangeValue(data) {
 
 $(".js-range-slider").ionRangeSlider({
 	type: "double",
-	min: 1000,
-	max: 15000,
+	min: 400,
+	max: 15500,
 	from: 5000,
 	to: 10000,
-	step: 1000,
+	step: 100,
 	postfix: "₽",
 	grid: false,
 	hide_from_to: true,

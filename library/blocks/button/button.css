@@ -6,17 +6,36 @@
   line-height: 15px;
   text-transform: uppercase;
   border-radius: 22px;
-  border: 2px solid;
 }
 
 .button_white {
+  margin: auto;
   color: #bc9cff;
-  background-color: white;
-  border-color: #bc9cff;
+  background: #fff;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: 22px;
+}
+
+.button_white::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
 .button_purple {
   color: white;
-  background-color: #bc9cff;
-  border-color: #bc9cff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }

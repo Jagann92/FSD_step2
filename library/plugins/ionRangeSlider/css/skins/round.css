@@ -1,36 +1,36 @@
 .irs--round {
-  height: 50px;
+  height: 40px;
 }
 .irs--round.irs-with-grid {
-  height: 65px;
+  height: 55px;
 }
 .irs--round .irs-line {
   top: 15px;
-  height: 4px;
+  height: 5px;
   background-color: #fff;
   border: 1px solid;
   border-color: rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
+  border-radius: 2.5px;
 }
 .irs--round .irs-bar {
   top: 15px;
-  height: 4px;
-  background-color: #6fcf97;
+  height: 5px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 .irs--round .irs-bar--single {
-  border-radius: 4px 0 0 4px;
+  border-radius: 5px 0 0 5px;
 }
 .irs--round .irs-shadow {
   height: 4px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .irs--round .irs-handle {
-  top: 10px;
-  width: 15px;
-  height: 15px;
+  top: 9.33333333px;
+  width: 17px;
+  height: 17px;
   border: 2px solid #fff;
-  background-color: #6fcf97;
-  border-radius: 15px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 17px;
 }
 .irs--round .irs-handle.state_hover,
 .irs--round .irs-handle:hover {
@@ -44,7 +44,7 @@
   top: 0;
   padding: 3px 5px;
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .irs--round .irs-from,
 .irs--round .irs-to,
@@ -55,7 +55,7 @@
   padding: 3px 5px;
   background-color: #6fcf97;
   color: white;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .irs--round .irs-from:before,
 .irs--round .irs-to:before,

@@ -214,71 +214,60 @@ block body
 					details.details.marginTop150
 						summary.element__title expandable checkbox list
 						ul
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Завтрак
-							li.details__checkbox
-								input.checkbox(type="checkbox" checked)
-								label.details__label Письменный стол
-							li.details__checkbox
-								input.checkbox(type="checkbox" checked)
-								label.details__label Стул для кормления
-							li.details__checkbox
-								input.checkbox(type="checkbox" checked)
-								label.details__label Кроватка
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Телевизор
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Шампунь
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Телевизор
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Шампунь
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Завтрак
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Письменный стол
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Стул для кормления
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Кроватка
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Телевизор
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Шампунь
 				.element.element_short
 					details(open).details
 						summary.element__title expandable checkbox list
 						ul
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Завтрак
-							li.details__checkbox
-								input.checkbox(type="checkbox" checked)
-								label.details__label Письменный стол
-							li.details__checkbox
-								input.checkbox(type="checkbox" checked)
-								label.details__label Стул для кормления
-							li.details__checkbox
-								input.checkbox(type="checkbox" checked)
-								label.details__label Кроватка
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Телевизор
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Шампунь
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Телевизор
-							li.details__checkbox
-								input.checkbox(type="checkbox")
-								label.details__label Шампунь
-				.feature.feature_smile.element_short
-					span.feature__title Комфорт
-					span.feature__text Шумопоглощающие стены
-				.feature.feature_apartment.element_short
-					span.feature__title Удобство
-					span.feature__text Окно в каждой из спален
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Завтрак
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Письменный стол
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Стул для кормления
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Кроватка
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Телевизор
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Шампунь
+				.element.element_short
+					.feature.feature_smile
+						span.feature__title Комфорт
+						span.feature__text Шумопоглощающие стены
+					.feature.feature_apartment
+						span.feature__title Удобство
+						span.feature__text Окно в каждой из спален
 			.page__block
-				.element
+				.element.element_large
 					.element__head
 						span.element__title dropdown
 					.element__body
-						.iqdropdown.people.1button.textfield
-							p.iqdropdown-selection
+						.iqdropdown.people.textfield.menu-open
+							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить")
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="adults")
 									div
@@ -289,7 +278,7 @@ block body
 								.iqdropdown-menu-option(data-id="babies")
 									div
 										p.iqdropdown-item Младенцы
-				.element
+				.element.marginTop235
 					.element__head
 						span.element__title rich checkbox buttons
 					.element__body
@@ -313,8 +302,8 @@ block body
 					.element__head
 						span.element__title dropdown
 					.element__body
-						.iqdropdown.people.2buttons.textfield
-							p.iqdropdown-selection
+						.iqdropdown.people.textfield.menu-open
+							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить")
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="adults")
 									div

@@ -505,7 +505,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 7px 13px 13px;
+  padding: 20px 7px 10px 13px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -2424,6 +2424,10 @@ h6 {
   width: 100%;
 }
 
+.marginTop235 {
+  margin-top: 235px;
+}
+
 .element {
   width: 100%;
   margin-bottom: 22px;
@@ -2431,6 +2435,10 @@ h6 {
 
 .element_short {
   max-width: 266px;
+}
+
+.element_large {
+  width: 320px;
 }
 
 .element_margin-top20 {
@@ -3128,7 +3136,7 @@ ul.element__body {
 }
 
 .details__checkbox {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .details__checkbox:first-of-type {
@@ -3204,17 +3212,20 @@ details[open].details > summary::after {
 }
 
 .element > details[open] {
-  margin-top: 30px;
+  margin-top: 28px;
+}
+
+.element > .feature:first-child {
+  margin-top: 75px;
+  margin-bottom: 24px;
 }
 
 .feature {
   position: relative;
-  padding-left: 60px;
+  padding-left: 57px;
   padding-bottom: 17px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-  max-width: 280px;
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .feature_smile:before {
@@ -3275,7 +3286,7 @@ details[open].details > summary::after {
   /* Support for IE. */
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
-  content: "apartment";
+  content: "location_city";
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;

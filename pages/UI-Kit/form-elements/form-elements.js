@@ -34,7 +34,6 @@ $(".js-range-slider").ionRangeSlider({
 $(document).ready(() => {
 	$(".textfield_masked").inputmask();
 	$('.iqdropdown.beds').iqDropdown({
-		minItems: 0,
 		setSelectionText: function (itemCount, totalItems) {
 			const items = Object.keys(itemCount)
 				.map(key => itemCount[key])
@@ -96,57 +95,7 @@ $(document).ready(() => {
 			}
 		}
 	});
-	$('.iqdropdown.people.1button').iqDropdown({
-		isApplyBtn: true,
-		applyBtnContent: 'Применить',
-		setSelectionText: function (itemCount, totalItems) {
-			let text = '';
-			switch (totalItems) {
-				case 0:
-					text = 'Сколько гостей';
-					break;
-				case 1:
-					text = '1 гость';
-					break;
-				case 2:
-				case 3:
-				case 4:
-					text = totalItems + ' гостя';
-					break;
-				default:
-					text = totalItems + ' гостей';
-					break;
-			}
-			return text;
-		}
-	});
-	$('.iqdropdown.people.no-buttons').iqDropdown({
-		setSelectionText: function (itemCount, totalItems) {
-			let text = '';
-			switch (totalItems) {
-				case 0:
-					text = 'Сколько гостей';
-					break;
-				case 1:
-					text = '1 гость';
-					break;
-				case 2:
-				case 3:
-				case 4:
-					text = totalItems + ' гостя';
-					break;
-				default:
-					text = totalItems + ' гостей';
-					break;
-			}
-			return text;
-		}
-	});
-	$('.iqdropdown.people.2buttons').iqDropdown({
-		isClearBtn: true,
-		isApplyBtn: true,
-		clearBtnContent: 'Очистить',
-		applyBtnContent: 'Применить',
+	$('.iqdropdown.people').iqDropdown({
 		setSelectionText: function (itemCount, totalItems) {
 			let text = '';
 			switch (totalItems) {

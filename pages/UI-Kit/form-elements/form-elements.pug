@@ -282,21 +282,26 @@ block body
 					.element__head
 						span.element__title rich checkbox buttons
 					.element__body
-						.richCheckbox
-							input.checkbox(type="checkbox")
-							label.richCheckbox__label Широкий коридор<br>Ширина коридоров в номере не менее 91см.
-						.richCheckbox
-							input.checkbox(type="checkbox")
-							label.richCheckbox__label Помощник для инвалидов<br>На 1 этаже вас встретит специалист и проводит до номера.
-				.review
-					.review__foto
-					.review__title
-						span.review__person Мурад Сарафанов
-						span.review__date 5 дней назад
-					button.like.like_liked.review__like(id="like-1")
-						span.material-icons.like__heart
-						span.like__count 12
-					p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+						.checkbox.checkbox_rich
+							input.checkbox__input(type="checkbox")
+							label.checkbox__label.checkbox__label_rich 
+								span.checkbox__label_rich-title Широкий коридор
+								span.checkbox__label_rich-text Ширина коридоров в номере не менее 91см.
+						.checkbox.checkbox_rich
+							input.checkbox__input(type="checkbox")
+							label.checkbox__label.checkbox__label_rich
+								span.checkbox__label_rich-title Помощник для инвалидов
+								span.checkbox__label_rich-text На 1 этаже вас встретит специалист и проводит до номера.
+				.element.marginTop195
+					.review
+						.review__foto
+						.review__title
+							span.review__person Мурад Сарафанов
+							span.review__date 5 дней назад
+						button.like.like_liked.review__like(id="like-1")
+							span.material-icons.like__heart
+							span.like__count 12
+						p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 			.page__block
 				.element
 					.element__head
@@ -314,7 +319,7 @@ block body
 								.iqdropdown-menu-option(data-id="babies")
 									div
 										p.iqdropdown-item Младенцы
-				.element
+				.element.marginTop235
 					.element__head
 						span.element__title Bullet list
 					ul.list

@@ -99,8 +99,6 @@
         }
 
         & input.radio {
-            //margin-top: 10px;
-
             & label {
                 display: flex;
                 margin-top: 10px;
@@ -222,6 +220,8 @@
 .checkbox,
 .radio,
 .switch {
+    line-height: 18px;
+
     &__input {
         --active: #fff;
         --active-inner: #bc9cff;
@@ -297,18 +297,17 @@
             cursor: pointer;
             margin-left: 10px;
             color: rgba(31, 32, 65, 0.5);
-            line-height: 18px;
         }
     }
 }
 
 ul.element__body {
     margin-top: 16.5px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .checkbox {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 
     &__input {
         &:not(.switch__input) {
@@ -342,7 +341,7 @@ ul.element__body {
 }
 
 .switch {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 
     &__input {
         width: 40px;
@@ -350,6 +349,7 @@ ul.element__body {
 
         &+label {
             max-width: 210px;
+            color: rgba(31, 32, 65, 0.75);
         }
 
         &:after {
@@ -402,7 +402,14 @@ ul.element__body {
 
         &:checked {
             --s: 0.6;
+            color: rgba(31, 32, 65, 0.75);
+
+            &+label {
+                color: rgba(31, 32, 65, 0.75);
+            }
         }
+
+
     }
 }
 
@@ -614,7 +621,6 @@ ul.element__body {
 }
 
 .details__checkbox {
-    margin-bottom: 6px;
 
     &:first-of-type {
         margin-top: 18px;
@@ -654,12 +660,11 @@ details[open].details>summary::after {
 }
 
 .element>.feature:first-child {
-    margin-top: 75px;
+    margin-top: 80px;
     margin-bottom: 24px;
 }
 
 .feature {
-
     position: relative;
     padding-left: 57px;
     padding-bottom: 17px;
@@ -706,21 +711,30 @@ details[open].details>summary::after {
 }
 
 
-.richCheckbox {
-    margin-bottom: 10px;
-    width: 100%;
+.checkbox {
+    &_rich {
+        //margin-bottom: 10px;
+        width: 100%;
 
-    &:first-of-type {
-        margin-top: 16px;
+        &:first-of-type {
+            margin-top: 16px;
+        }
     }
 
     &__label {
-        margin-top: -6px;
+        &_rich {
+            &-title {
+                display: flex;
+                @include font("Montserrat", bold, 14px, 18px);
+                color: rgba(31, 32, 65, 0.75);
+                margin-bottom: 5px;
+            }
 
-        &::first-line {
-            @include font("Montserrat", bold, 14px, 28px);
-            vertical-align: top;
-            color: rgba(31, 32, 65, 0.75);
+            &-text {
+                display: flex;
+                @include font("Montserrat", normal, 12px, 14px);
+                color: rgba(31, 32, 65, 0.5);
+            }
         }
     }
 }
@@ -732,10 +746,14 @@ details[open].details>summary::after {
     justify-content: space-between;
 }
 
+.marginTop195 {
+    margin-top: 202px;
+}
+
 .review {
     display: grid;
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 11px;
+    column-gap: 9px;
     grid-template-columns: 50px 655px;
     grid-template-rows: repeat(2, max-content);
     @include text_Body;
@@ -768,6 +786,10 @@ details[open].details>summary::after {
     }
 
     &__text {}
+}
+
+ul.list {
+    margin-top: 15px;
 }
 
 .list {

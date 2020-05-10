@@ -2679,6 +2679,12 @@ h6 {
   cursor: pointer;
 }
 
+.checkbox,
+.radio,
+.switch {
+  line-height: 18px;
+}
+
 .checkbox__input,
 .radio__input,
 .switch__input {
@@ -2782,16 +2788,15 @@ h6 {
   cursor: pointer;
   margin-left: 10px;
   color: rgba(31, 32, 65, 0.5);
-  line-height: 18px;
 }
 
 ul.element__body {
   margin-top: 16.5px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .checkbox {
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .checkbox__input:not(.switch__input) {
@@ -2826,7 +2831,7 @@ ul.element__body {
 }
 
 .switch {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .switch__input {
@@ -2836,6 +2841,7 @@ ul.element__body {
 
 .switch__input + label {
   max-width: 210px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .switch__input:after {
@@ -2888,6 +2894,11 @@ ul.element__body {
 
 .radio__input:checked {
   --s: 0.6;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.radio__input:checked + label {
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .element__body > .like {
@@ -3135,10 +3146,6 @@ ul.element__body {
   margin-top: 150px;
 }
 
-.details__checkbox {
-  margin-bottom: 6px;
-}
-
 .details__checkbox:first-of-type {
   margin-top: 18px;
 }
@@ -3216,7 +3223,7 @@ details[open].details > summary::after {
 }
 
 .element > .feature:first-child {
-  margin-top: 75px;
+  margin-top: 80px;
   margin-bottom: 24px;
 }
 
@@ -3318,27 +3325,37 @@ details[open].details > summary::after {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.richCheckbox {
-  margin-bottom: 10px;
+.checkbox_rich {
   width: 100%;
 }
 
-.richCheckbox:first-of-type {
+.checkbox_rich:first-of-type {
   margin-top: 16px;
 }
 
-.richCheckbox__label {
-  margin-top: -6px;
-}
-
-.richCheckbox__label::first-line {
+.checkbox__label_rich-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #1f2041;
   font-family: "Montserrat";
   font-weight: bold;
   font-size: 14px;
-  line-height: 28px;
-  vertical-align: top;
+  line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
+  margin-bottom: 5px;
+}
+
+.checkbox__label_rich-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1f2041;
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(31, 32, 65, 0.5);
 }
 
 .dropdown__buttons {
@@ -3355,12 +3372,16 @@ details[open].details > summary::after {
           justify-content: space-between;
 }
 
+.marginTop195 {
+  margin-top: 202px;
+}
+
 .review {
   display: -ms-grid;
   display: grid;
-  row-gap: 10px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  row-gap: 11px;
+  -webkit-column-gap: 9px;
+          column-gap: 9px;
   -ms-grid-columns: 50px 655px;
       grid-template-columns: 50px 655px;
   -ms-grid-rows: (max-content)[2];
@@ -3407,6 +3428,10 @@ details[open].details > summary::after {
 .review__like {
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+ul.list {
+  margin-top: 15px;
 }
 
 .list {

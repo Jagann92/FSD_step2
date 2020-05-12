@@ -199,7 +199,7 @@ block body
 						span.element__subtitle Expanded
 					.element__body
 						.iqdropdown.beds.menu-open.textfield
-							p.iqdropdown-selection
+							p.iqdropdown-selection(data-inline="true")
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
 									div
@@ -210,64 +210,13 @@ block body
 								.iqdropdown-menu-option(data-id="bathrooms")
 									div
 										p.iqdropdown-item Ванные комнаты
-				.element.element_short
-					details.details.marginTop150
-						summary.element__title expandable checkbox list
-						ul
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Завтрак
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Письменный стол
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Стул для кормления
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Кроватка
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Телевизор
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Шампунь
-				.element.element_short
-					details(open).details
-						summary.element__title expandable checkbox list
-						ul
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Завтрак
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Письменный стол
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Стул для кормления
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Кроватка
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Телевизор
-							li.details__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Шампунь
-				.element.element_short
-					.feature.feature_smile
-						span.feature__title Комфорт
-						span.feature__text Шумопоглощающие стены
-					.feature.feature_apartment
-						span.feature__title Удобство
-						span.feature__text Окно в каждой из спален
 			.page__block
 				.element.element_large
 					.element__head
 						span.element__title dropdown
 					.element__body
 						.iqdropdown.people.textfield.menu-open
-							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить")
+							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true")
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="adults")
 									div
@@ -278,7 +227,70 @@ block body
 								.iqdropdown-menu-option(data-id="babies")
 									div
 										p.iqdropdown-item Младенцы
-				.element.marginTop235
+			.page__block
+				.element
+					.element__head
+						span.element__title dropdown
+					.element__body
+						.iqdropdown.people.textfield.menu-open
+							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true")
+							.iqdropdown-menu
+								.iqdropdown-menu-option(data-id="adults")
+									div
+										p.iqdropdown-item Взрослые
+								.iqdropdown-menu-option(data-id="childs")
+									div
+										p.iqdropdown-item Дети
+								.iqdropdown-menu-option(data-id="babies")
+									div
+										p.iqdropdown-item Младенцы
+			.page__block
+				.element.element_short
+						details.details
+							summary.element__title expandable checkbox list
+							ul
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox")
+									label.checkbox__label Завтрак
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox" checked)
+									label.checkbox__label Письменный стол
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox" checked)
+									label.checkbox__label Стул для кормления
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox" checked)
+									label.checkbox__label Кроватка
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox")
+									label.checkbox__label Телевизор
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox")
+									label.checkbox__label Шампунь
+				.element.element_short
+						details(open).details
+							summary.element__title expandable checkbox list
+							ul
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox")
+									label.checkbox__label Завтрак
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox" checked)
+									label.checkbox__label Письменный стол
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox" checked)
+									label.checkbox__label Стул для кормления
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox" checked)
+									label.checkbox__label Кроватка
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox")
+									label.checkbox__label Телевизор
+								li.details__checkbox.checkbox
+									input.checkbox__input(type="checkbox")
+									label.checkbox__label Шампунь
+			.page__block
+				.element
 					.element__head
 						span.element__title rich checkbox buttons
 					.element__body
@@ -292,7 +304,24 @@ block body
 							label.checkbox__label.checkbox__label_rich
 								span.checkbox__label_rich-title Помощник для инвалидов
 								span.checkbox__label_rich-text На 1 этаже вас встретит специалист и проводит до номера.
-				.element.marginTop195
+			.page__block
+				.element
+					.element__head
+						span.element__title Bullet list
+					ul.list
+						li.list__elem Нельзя с питомцами
+						li.list__elem Без вечеринок и меропритий
+						li.list__elem Время прибытия - после 13:00, а выезд до 12:00
+			.page__block
+				.element
+					.feature.feature_smile
+						span.feature__title Комфорт
+						span.feature__text Шумопоглощающие стены
+					.feature.feature_apartment
+						span.feature__title Удобство
+						span.feature__text Окно в каждой из спален
+			.page__block
+				.element
 					.review
 						.review__foto
 						.review__title
@@ -302,30 +331,6 @@ block body
 							span.material-icons.like__heart
 							span.like__count 12
 						p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
-			.page__block
-				.element
-					.element__head
-						span.element__title dropdown
-					.element__body
-						.iqdropdown.people.textfield.menu-open
-							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить")
-							.iqdropdown-menu
-								.iqdropdown-menu-option(data-id="adults")
-									div
-										p.iqdropdown-item Взрослые
-								.iqdropdown-menu-option(data-id="childs")
-									div
-										p.iqdropdown-item Дети
-								.iqdropdown-menu-option(data-id="babies")
-									div
-										p.iqdropdown-item Младенцы
-				.element.marginTop235
-					.element__head
-						span.element__title Bullet list
-					ul.list
-						li.list__elem Нельзя с питомцами
-						li.list__elem Без вечеринок и меропритий
-						li.list__elem Время прибытия - после 13:00, а выезд до 12:00
 		script(src="../../../library/plugins/ionRangeSlider/js/ion.rangeSlider.min.js")
 		script(src="../../../library/plugins/item-quantity-dropdown/js/item-quantity-dropdown.min.js")
 		script(src="../../../library/plugins/inputmask/jquery.inputmask.js")

@@ -29,8 +29,7 @@
         margin-bottom: 130px;
         grid-template-columns: 320px 266px 320px;
         column-gap: 126px;
-        grid-template-rows: repeat(2, max-content);
-        row-gap: 75px;
+        grid-template-rows: repeat(4, max-content);
     }
 
     &__block {
@@ -40,11 +39,19 @@
         flex-wrap: wrap;
         justify-items: flex-start;
         width: 100%;
-    }
-}
 
-.marginTop235 {
-    margin-top: 235px;
+        &:first-child {
+            margin-bottom: 75px;
+        }
+
+        &:nth-child(4) {
+            margin-bottom: 32px;
+        }
+
+        &:nth-child(7) {
+            margin-bottom: 80px;
+        }
+    }
 }
 
 .element {
@@ -353,7 +360,7 @@ ul.element__body {
         }
 
         &:after {
-            left: 4px;
+            left: 3px;
             top: 3px;
             border-radius: 50%;
             width: 12px;
@@ -364,7 +371,7 @@ ul.element__body {
 
         &:checked {
             --ab: var(--active-inner-lg);
-            --x: 17px;
+            --x: 20px;
         }
 
         &:disabled {
@@ -616,10 +623,6 @@ ul.element__body {
     }
 }
 
-.marginTop150 {
-    margin-top: 150px;
-}
-
 .details__checkbox {
 
     &:first-of-type {
@@ -660,7 +663,6 @@ details[open].details>summary::after {
 }
 
 .element>.feature:first-child {
-    margin-top: 80px;
     margin-bottom: 24px;
 }
 
@@ -670,6 +672,7 @@ details[open].details>summary::after {
     padding-bottom: 17px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     width: 100%;
+    max-width: 280px;
 
     &_smile:before {
         position: absolute;
@@ -754,6 +757,7 @@ details[open].details>summary::after {
     display: grid;
     row-gap: 11px;
     column-gap: 9px;
+    padding-top: 10px;
     grid-template-columns: 50px 655px;
     grid-template-rows: repeat(2, max-content);
     @include text_Body;

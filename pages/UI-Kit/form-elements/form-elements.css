@@ -159,166 +159,6 @@ h6 {
 }
 
 /* -------------- */
-/*Обнуление*/
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
-:focus,
-:active {
-  outline: none;
-}
-
-a, a:visited, a:hover {
-  text-decoration: none;
-}
-
-a:focus, a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-textarea {
-  font-family: inherit;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: 400;
-}
-
-/* Шрифты */
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Montserrat"), url("../../../src/fonts/Montserrat-Bold.woff") format("woff"), url("../../../src/fonts/Montserrat-Bold.ttf") format("truetype"), url("../../../src/fonts/Montserrat-Bold.svg") format("svg");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  src: local("Montserrat"), url("../../../src/fonts/Montserrat-Regular.woff") format("woff"), url("../../../src/fonts/Montserrat-Regular.ttf") format("truetype"), url("../../../src/fonts/Montserrat-Regular.svg") format("svg");
-}
-
-@font-face {
-  font-family: "Quicksand";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Quicksand"), url("../../../src/fonts/Quicksand-Bold.woff") format("woff"), url("../../../src/fonts/Quicksand-Bold.ttf") format("truetype"), url("../../../src/fonts/Quicksand-Bold.svg") format("svg");
-}
-
-@font-face {
-  font-family: "Quicksand";
-  font-weight: 400;
-  font-style: normal;
-  src: local("Quicksand"), url("../../../src/fonts/Quicksand-Regular.woff") format("woff"), url("../../../src/fonts/Quicksand-Regular.ttf") format("truetype"), url("../../../src/fonts/Quicksand-Regular.svg") format("svg");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-style: normal;
-  src: local("Open Sans"), url("../../../src/fonts/OpenSans-Regular.svg") format("svg"), url("../../../src/fonts/opensans.woff") format("woff"), url("../../../src/fonts/opensans.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Open Sans"), url("../../../src/fonts/OpenSans-Bold.svg") format("svg"), url("../../../src/fonts/opensansbold.woff") format("woff"), url("../../../src/fonts/opensansbold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../../../src/fonts/MaterialIcons-Regular.woff2") format("svg"), url("../../../src/fonts/MaterialIcons-Regular.woff") format("woff"), url("../../../src/fonts/MaterialIcons-Regular.ttf") format("truetype");
-}
-
-.material-icons {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: "liga";
-          font-feature-settings: "liga";
-}
-
-/* -------------- */
 .page {
   max-width: 1440px;
   width: 100%;
@@ -327,6 +167,8 @@ h6 {
   background-color: white;
   font: 400 14px/24px "Montserrat", sans-serif;
   color: rgba(31, 32, 65, 0.75);
+  position: relative;
+  z-index: 0;
 }
 
 .page__logo {
@@ -336,11 +178,7 @@ h6 {
 }
 
 .button {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   border-radius: 22px;
 }
@@ -367,34 +205,25 @@ h6 {
   z-index: -1;
   margin: -2px;
   border-radius: inherit;
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
 
 .button_purple {
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
 
 .form__title {
   max-width: 220px;
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
 }
 
 .form__text {
   max-width: 220px;
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  font: 400 14px/24px "Montserrat", sans-serif;
 }
 
 .form__text-submit {
@@ -1531,7 +1360,7 @@ h6 {
 
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: rgba(31, 32, 65, 0.5);
 }
 
 .datepicker--cell-day.-other-month-:empty,
@@ -1544,13 +1373,7 @@ h6 {
     Datepicker cells
    ------------------------------------------------- */
 .datepicker--cells {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  text-transform: none;
+  font: 700 12px/15px "Montserrat", sans-serif;
   font-weight: normal;
   color: rgba(31, 32, 65, 0.5);
   display: -ms-flexbox;
@@ -1580,14 +1403,14 @@ h6 {
 }
 
 .datepicker--cell.-focus- {
-  background: #f0f0f0;
+  background: rgba(31, 32, 65, 0.05);
 }
 
 .datepicker--cell.-current- {
   color: #fff;
   font-weight: bold;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#66d2ea));
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   border-radius: 50%;
 }
 
@@ -1596,8 +1419,8 @@ h6 {
 }
 
 .datepicker--cell.-current-.-in-range- {
-  background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#66d2ea));
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   position: relative;
   border-radius: 4px;
 }
@@ -1621,24 +1444,24 @@ h6 {
 }
 
 .datepicker--cell.-in-range-.-focus- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: rgba(31, 32, 65, 0.5);
 }
 
 .datepicker--cell.-disabled- {
   cursor: default;
-  color: #aeaeae;
+  color: rgba(31, 32, 65, 0.25);
 }
 
 .datepicker--cell.-disabled-.-focus- {
-  color: #aeaeae;
+  color: rgba(31, 32, 65, 0.25);
 }
 
 .datepicker--cell.-disabled-.-in-range- {
-  color: #a1a1a1;
+  color: rgba(31, 32, 65, 0.1);
 }
 
 .datepicker--cell.-disabled-.-current-.-focus- {
-  color: #aeaeae;
+  color: rgba(31, 32, 65, 0.25);
 }
 
 .datepicker--cell.-range-from- {
@@ -1649,7 +1472,7 @@ h6 {
 }
 
 .datepicker--cell.-range-from-.-selected-::after {
-  content: ' ';
+  content: " ";
   width: 100%;
   height: 100%;
   border-radius: 50% 0 0 50%;
@@ -1669,7 +1492,7 @@ h6 {
 }
 
 .datepicker--cell.-range-to-.-selected-::after {
-  content: ' ';
+  content: " ";
   width: 100%;
   height: 100%;
   border-radius: 0 50% 50% 0;
@@ -1687,8 +1510,8 @@ h6 {
 
 .datepicker--cell.-selected- {
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 50%;
   border: none;
   font-weight: bold;
@@ -1696,8 +1519,8 @@ h6 {
 
 .datepicker--cell.-selected-.-current- {
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
 
 .datepicker--cell.-selected-.-focus- {
@@ -1718,11 +1541,7 @@ h6 {
 }
 
 .datepicker--day-name {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #bc9cff;
   display: -ms-flexbox;
@@ -1739,7 +1558,7 @@ h6 {
           flex: 1;
   text-align: center;
   text-transform: none;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .datepicker--cell-day {
@@ -1803,7 +1622,7 @@ h6 {
 
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: rgba(31, 32, 65, 0.5);
 }
 
 .datepicker--cell-day.-other-month-:empty,
@@ -1836,12 +1655,7 @@ h6 {
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  font: 400 14px/24px "Montserrat", sans-serif;
   width: 320px;
   position: absolute;
   left: -100000px;
@@ -1884,7 +1698,7 @@ h6 {
 }
 
 .datepicker-inline .datepicker {
-  border-color: #d7d7d7;
+  border-color: rgba(31, 32, 65, 0.25);
   -webkit-box-shadow: none;
           box-shadow: none;
   position: static;
@@ -2025,7 +1839,7 @@ h6 {
 
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: rgba(31, 32, 65, 0.5);
 }
 
 .datepicker--cell-day.-other-month-:empty,
@@ -2077,7 +1891,7 @@ h6 {
 }
 
 .datepicker--nav-action:hover {
-  background: #f0f0f0;
+  background: rgba(31, 32, 65, 0.05);
 }
 
 .datepicker--nav-action.-disabled- {
@@ -2098,12 +1912,7 @@ h6 {
 .datepicker--nav-title {
   border-radius: 4px;
   padding: 0 8px;
-  color: #1f2041;
-  font-family: Quicksand;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
-  font-family: "Open Sans";
+  font: 700 19px/24px "Quicksand", sans-serif;
 }
 
 .datepicker--nav-title i {
@@ -2112,7 +1921,7 @@ h6 {
 }
 
 .datepicker--nav-title:hover {
-  background: #f0f0f0;
+  background: rgba(31, 32, 65, 0.05);
 }
 
 .datepicker--nav-title.-disabled- {
@@ -2131,11 +1940,7 @@ h6 {
 }
 
 .datepicker--button {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
@@ -2205,7 +2010,7 @@ h6 {
 
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: rgba(31, 32, 65, 0.5);
 }
 
 .datepicker--cell-day.-other-month-:empty,
@@ -2284,8 +2089,8 @@ h6 {
 
 .datepicker--time-current-hours:after,
 .datepicker--time-current-minutes:after {
-  content: '';
-  background: #f0f0f0;
+  content: "";
+  background: rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   position: absolute;
   left: -2px;
@@ -2329,7 +2134,7 @@ h6 {
   margin-bottom: 4px;
 }
 
-.datepicker--time-row input[type='range'] {
+.datepicker--time-row input[type="range"] {
   background: none;
   cursor: pointer;
   -ms-flex: 1;
@@ -2341,46 +2146,46 @@ h6 {
   -webkit-appearance: none;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+.datepicker--time-row input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-.datepicker--time-row input[type='range']::-ms-tooltip {
+.datepicker--time-row input[type="range"]::-ms-tooltip {
   display: none;
 }
 
-.datepicker--time-row input[type='range']:hover::-webkit-slider-thumb {
+.datepicker--time-row input[type="range"]:hover::-webkit-slider-thumb {
   border-color: #b8b8b8;
 }
 
-.datepicker--time-row input[type='range']:hover::-moz-range-thumb {
+.datepicker--time-row input[type="range"]:hover::-moz-range-thumb {
   border-color: #b8b8b8;
 }
 
-.datepicker--time-row input[type='range']:hover::-ms-thumb {
+.datepicker--time-row input[type="range"]:hover::-ms-thumb {
   border-color: #b8b8b8;
 }
 
-.datepicker--time-row input[type='range']:focus {
+.datepicker--time-row input[type="range"]:focus {
   outline: none;
 }
 
-.datepicker--time-row input[type='range']:focus::-webkit-slider-thumb {
+.datepicker--time-row input[type="range"]:focus::-webkit-slider-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
 
-.datepicker--time-row input[type='range']:focus::-moz-range-thumb {
+.datepicker--time-row input[type="range"]:focus::-moz-range-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
 
-.datepicker--time-row input[type='range']:focus::-ms-thumb {
+.datepicker--time-row input[type="range"]:focus::-ms-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+.datepicker--time-row input[type="range"]::-webkit-slider-thumb {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 12px;
@@ -2389,11 +2194,11 @@ h6 {
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
-  -webkit-transition: background .2s;
-  transition: background .2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
-.datepicker--time-row input[type='range']::-moz-range-thumb {
+.datepicker--time-row input[type="range"]::-moz-range-thumb {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
@@ -2401,11 +2206,11 @@ h6 {
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
-  -webkit-transition: background .2s;
-  transition: background .2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
-.datepicker--time-row input[type='range']::-ms-thumb {
+.datepicker--time-row input[type="range"]::-ms-thumb {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
@@ -2413,15 +2218,15 @@ h6 {
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
-  -webkit-transition: background .2s;
-  transition: background .2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+.datepicker--time-row input[type="range"]::-webkit-slider-thumb {
   margin-top: -6px;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-runnable-track {
+.datepicker--time-row input[type="range"]::-webkit-slider-runnable-track {
   border: none;
   height: 1px;
   cursor: pointer;
@@ -2429,7 +2234,7 @@ h6 {
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-moz-range-track {
+.datepicker--time-row input[type="range"]::-moz-range-track {
   border: none;
   height: 1px;
   cursor: pointer;
@@ -2437,7 +2242,7 @@ h6 {
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-ms-track {
+.datepicker--time-row input[type="range"]::-ms-track {
   border: none;
   height: 1px;
   cursor: pointer;
@@ -2445,11 +2250,11 @@ h6 {
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-ms-fill-lower {
+.datepicker--time-row input[type="range"]::-ms-fill-lower {
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-ms-fill-upper {
+.datepicker--time-row input[type="range"]::-ms-fill-upper {
   background: transparent;
 }
 
@@ -2470,13 +2275,13 @@ h6 {
 
 .datepicker--time-icon:after,
 .datepicker--time-icon:before {
-  content: '';
+  content: "";
   background: currentColor;
   position: absolute;
 }
 
 .datepicker--time-icon:after {
-  height: .4em;
+  height: 0.4em;
   width: 1px;
   left: calc(50% - 1px);
   top: calc(50% + 1px);
@@ -2485,7 +2290,7 @@ h6 {
 }
 
 .datepicker--time-icon:before {
-  width: .4em;
+  width: 0.4em;
   height: 1px;
   top: calc(50% + 1px);
   left: calc(50% - 1px);
@@ -2529,7 +2334,7 @@ h6 {
 
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: rgba(31, 32, 65, 0.5);
 }
 
 .datepicker--cell-day.-other-month-:empty,
@@ -2542,8 +2347,6 @@ h6 {
   min-height: 1853px;
   background-color: #fff;
   height: 100%;
-  position: relative;
-  z-index: 0;
 }
 
 .page__container {

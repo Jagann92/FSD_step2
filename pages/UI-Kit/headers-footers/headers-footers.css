@@ -167,6 +167,8 @@ h6 {
   background-color: white;
   font: 400 14px/24px "Montserrat", sans-serif;
   color: rgba(31, 32, 65, 0.75);
+  position: relative;
+  z-index: 0;
 }
 
 .page__logo {

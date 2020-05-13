@@ -1,4 +1,6 @@
 @import "../../../library/templates/base";
+@import "../../../library/nullstyle/nullstyle.scss";
+@import "../../../src/fonts/fonts";
 @import "../../../library/blocks/page/page";
 @import "../../../library/blocks/button/button";
 @import "../../../library/blocks/form/form";
@@ -10,8 +12,6 @@
     min-height: 1853px;
     background-color: #fff;
     height: 100%;
-    position: relative;
-    z-index: 0;
 
     &__container {
         display: grid;

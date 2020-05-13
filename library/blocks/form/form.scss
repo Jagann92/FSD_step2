@@ -1,12 +1,13 @@
-@import "../../../library/mixins/text";
+@import "../../../library/templates/base";
 .form {
 	&__title {
 		max-width: 220px;
-		@include text_H3;
+		font: $h3;
+		text-transform: uppercase;
 	}
 	&__text {
 		max-width: 220px;
-		@include text_Body;
+		font: $body;
 	}
 	&__text-submit {
 		position: relative;

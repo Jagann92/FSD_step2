@@ -1,24 +1,18 @@
-@import "../../../library/mixins/text";
+@import "../../../library/templates/base";
 .input {
 	&__textfield {
 		padding: 15px;
 		width: 260px;
 		height: 44px;
-		border: 1px solid rgba(31, 32, 65, 0.25);
+		border: 1px solid $grey25;
 		box-sizing: border-box;
 		border-radius: 4px;
-		@include text_Body;
-		opacity: 0.25;
+		font: $body;
+		color: $grey25;
 	}
 	&__submit {
 		width: 20px;
 		height: 20px;
-		/*background-image: url("../../../src/img/arrow_forward.svg");
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: auto;
-		background-color: white;
-		*/
 		position: absolute;
 		right: 12px;
 		top: 12px;

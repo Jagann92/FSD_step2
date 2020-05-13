@@ -1,18 +1,19 @@
-@import "../../../library/mixins/text";
+@import "../../../library/templates/base";
 .menu {
 	display: grid;
 
 	&__elem {
-		@include text_Body;
+		font: $body;
 		line-height: 17px;
-		opacity: 0.5;
+		color: $grey50;
 		&_current {
 			font-weight: 700;
-			opacity: 0.75;
+			color: $grey75;
 		}
 		&_title {
-			@include text_H3;
-			opacity: 1;
+			font: $h3;
+			text-transform: uppercase;
+			color: $grey;
 		}
 		&_spoiler {
 			padding-right: 20px;

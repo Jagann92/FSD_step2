@@ -1,3 +1,164 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* Шрифты */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Montserrat"), url("../../../src/fonts/Montserrat-Bold.woff") format("woff"), url("../../../src/fonts/Montserrat-Bold.ttf") format("truetype"), url("../../../src/fonts/Montserrat-Bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Montserrat"), url("../../../src/fonts/Montserrat-Regular.woff") format("woff"), url("../../../src/fonts/Montserrat-Regular.ttf") format("truetype"), url("../../../src/fonts/Montserrat-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Quicksand"), url("../../../src/fonts/Quicksand-Bold.woff") format("woff"), url("../../../src/fonts/Quicksand-Bold.ttf") format("truetype"), url("../../../src/fonts/Quicksand-Bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Quicksand"), url("../../../src/fonts/Quicksand-Regular.woff") format("woff"), url("../../../src/fonts/Quicksand-Regular.ttf") format("truetype"), url("../../../src/fonts/Quicksand-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans"), url("../../../src/fonts/OpenSans-Regular.svg") format("svg"), url("../../../src/fonts/opensans.woff") format("woff"), url("../../../src/fonts/opensans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans"), url("../../../src/fonts/OpenSans-Bold.svg") format("svg"), url("../../../src/fonts/opensansbold.woff") format("woff"), url("../../../src/fonts/opensansbold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../../../src/fonts/MaterialIcons-Regular.woff2") format("svg"), url("../../../src/fonts/MaterialIcons-Regular.woff") format("woff"), url("../../../src/fonts/MaterialIcons-Regular.ttf") format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
+/* -------------- */
 .footer {
   width: 100%;
   background-color: white;
@@ -45,12 +206,7 @@
 }
 
 .footer__text {
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  font: 400 14px/24px "Montserrat", sans-serif;
 }
 
 .footer__menu {
@@ -99,12 +255,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #1f2041;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  font: 400 14px/24px "Montserrat", sans-serif;
 }
 
 .footer__logoandtext {

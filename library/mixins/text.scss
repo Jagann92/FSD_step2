@@ -19,3 +19,6 @@
 	@include font(Montserrat, 400, 14px, 24px);
 	color: rgba(31, 32, 65, 0.75);
 }
+@mixin shadow {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+}

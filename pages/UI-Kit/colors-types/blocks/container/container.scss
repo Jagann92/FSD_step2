@@ -1,5 +1,4 @@
-@import "../../../../../library/mixins/fill";
-@import "../../../../../library/mixins/text";
+@import "../../../../../library/templates/base";
 
 .container {
 	display: grid;
@@ -37,7 +36,7 @@
 		}
 	}
 	&__color-sample {
-		@include text_H2;
+		font: $h2;
 		line-height: 29px;
 		position: relative;
 		margin: 5%;
@@ -58,35 +57,32 @@
 			border-style: solid;
 			left: 0;
 			top: -7.5px;
-			@include fill(#1f2041);
+			background-clip: padding-box;
+			border-color: $grey;
+			background-color: $grey;
 		}
 		$i: 2;
-		@each $var in 75, 50, 25, 5 {
+		@each $var in $grey75, $grey50, $grey25, $grey05, $purple, $green {
 			&:nth-child(#{$i})::before {
-				opacity: $var/100;
+				border-color: $var;
+				background-color: $var;
 			}
 			$i: $i + 1;
-		}
-
-		&:nth-child(6)::before {
-			@include fill(#bc9cff);
-		}
-		&:nth-child(7)::before {
-			@include fill(#6fcf97);
 		}
 	}
 
 	&_H1 {
-		@include text_H1;
+		font: $h1;
 	}
 	&_H2 {
-		@include text_H2;
+		font: $h2;
 	}
 	&_H3 {
-		@include text_H3;
+		font: $h3;
+		text-transform: uppercase;
 	}
 	&_Body {
-		@include text_Body;
+		font: $body;
 	}
 	&__type-sample-title {
 		font-family: Montserrat;

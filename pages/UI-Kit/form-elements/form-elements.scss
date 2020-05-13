@@ -1,28 +1,19 @@
-@import "../../../library/nullstyle/nullstyle";
-@import "../../../src/fonts/fonts";
+@import "../../../library/templates/base";
 @import "../../../library/blocks/page/page";
 @import "../../../library/blocks/button/button";
 @import "../../../library/blocks/form/form";
-@import "../../../library/mixins/text";
 @import "../../../library/plugins/item-quantity-dropdown/css/item-quantity-dropdown.min";
 @import "../../../library/plugins/ionrangeSlider/css/irs";
 @import "../../../library/plugins/air-datepicker/css/datepicker";
 
-@mixin shadow {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
-}
-
 .page {
-
     min-height: 1853px;
     background-color: #fff;
     height: 100%;
     position: relative;
     z-index: 0;
-    @include text_Body;
 
     &__container {
-
         display: grid;
         margin: 141px;
         margin-top: 144px;
@@ -85,18 +76,19 @@
     }
 
     &__title {
-        @include text_H3;
+        font: $h3;
+        text-transform: uppercase;
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
         text-align: left;
-
     }
 
     &__subtitle {
-        @include text_H3;
+        font: $h3;
+        text-transform: uppercase;
         font-weight: 400;
-        color: rgba(31, 32, 65, 0.5);
+        color: $grey50;
         float: right;
     }
 
@@ -124,7 +116,6 @@
         margin-top: 10px;
         margin-bottom: 12px;
     }
-
 }
 
 .line {
@@ -137,28 +128,28 @@
     max-width: 320px;
     width: 100%;
     height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $grey25;
     box-sizing: border-box;
     border-radius: 4px;
-    @include text_Body;
+    font: $body;
     padding-left: 15px;
 
     &::placeholder {
-        color: rgba(31, 32, 65, 0.25);
+        color: $grey25;
     }
 
     &:focus,
     &:hover,
     &_focus {
-        border-color: rgba(31, 32, 65, 0.5);
-        color: rgba(31, 32, 65, 0.75);
+        border-color: $grey50;
+        color: $grey75;
     }
 
     &_masked {
-        color: rgba(31, 32, 65, 0.25);
+        color: $grey25;
 
         &:active {
-            color: rgba(31, 32, 65, 0.75);
+            color: $grey75;
         }
     }
 }
@@ -178,7 +169,6 @@
         border: none;
 
         &::after {
-
             @include material-icon;
             content: "keyboard_arrow_down";
             display: inline-block;
@@ -186,7 +176,7 @@
             right: 0;
             top: 0;
             padding: 10px;
-            color: rgba(31, 32, 65, 0.75);
+            color: $grey75;
         }
     }
 
@@ -197,10 +187,10 @@
     &__input {
         flex: 87.5;
         padding-left: 13px;
-        @include text_Body;
+        font: $body;
 
         &::placeholder {
-            color: rgba(31, 32, 65, 0.25);
+            color: $grey25;
         }
     }
 }
@@ -208,13 +198,14 @@
 .subscribe {
     position: relative;
 
-    &__input {}
+    &__input {
+    }
 
     &__arrow {
         position: absolute;
         right: 12px;
         top: 10px;
-        color: #bc9cff;
+        color: $purple;
     }
 }
 
@@ -230,15 +221,6 @@
     line-height: 18px;
 
     &__input {
-        --active: #fff;
-        --active-inner: #bc9cff;
-        --active-inner-lg: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
-        --active-border: #bc9cff;
-        --border: rgba(31, 32, 65, 0.25);
-        --border-hover: 1px solid rgba(31, 32, 65, 0.5);
-        --background: #fff;
-        --disabled: #f6f8ff;
-        --disabled-inner: #e1e6f9;
         -webkit-appearance: none;
         -moz-appearance: none;
         height: 20px;
@@ -247,8 +229,8 @@
         vertical-align: top;
         position: relative;
         cursor: pointer;
-        border: 1px solid var(--bc, var(--border));
-        background: var(--b, var(--background));
+        border: 1px solid $grey25;
+        background: #fff;
         transition: border-color 0.3s, box-shadow 0.2s;
 
         &:after,
@@ -258,28 +240,26 @@
             left: 0;
             top: 0;
             position: absolute;
-            transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+            //@extend: transform 0.3s ease opacity 0.2s;
         }
 
         &:checked {
-            --b: var(--active);
-            --bc: var(--active-border);
-            --d-o: 0.3s;
-            --d-t: 0.6s;
-            --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+            //background: #fff;
+            border: 1px solid $purple;
+            //transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.32, 1.2) opacity 0.3s;
         }
 
         &:disabled {
-            --b: var(--disabled);
+            background: $grey10;
             cursor: not-allowed;
             opacity: 0.9;
 
             &:checked {
-                --b: var(--disabled-inner);
-                --bc: var(--border);
+                background: $grey10;
+                border: 1px solid $grey25;
             }
 
-            &+label {
+            & + label {
                 cursor: not-allowed;
             }
         }
@@ -288,22 +268,24 @@
             width: 20px;
 
             &:after {
-                opacity: var(--o, 0);
+                opacity: 0;
             }
 
             &:checked {
-                --o: 1;
+                &::after {
+                    opacity: 1;
+                }
             }
         }
 
-        &+label {
+        & + label {
             max-width: 230px;
             display: inline-block;
             vertical-align: top;
             padding-top: 2px;
             cursor: pointer;
             margin-left: 10px;
-            color: rgba(31, 32, 65, 0.5);
+            color: $grey50;
         }
     }
 }
@@ -326,22 +308,23 @@ ul.element__body {
                 background: #fff;
                 left: 7px;
                 top: 3px;
-                transform: rotate(var(--r, 20deg));
                 z-index: 1;
             }
 
             &:after {
                 width: 6px;
                 height: 8px;
-                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                background: $gradient;
                 left: 6px;
                 top: 4px;
-                transform: rotate(var(--r, 20deg));
                 z-index: 0;
             }
 
             &:checked {
-                --r: 45deg;
+                &:before,
+                &:after {
+                    transform: rotate(45deg);
+                }
             }
         }
     }
@@ -354,9 +337,9 @@ ul.element__body {
         width: 40px;
         border-radius: 10px;
 
-        &+label {
+        & + label {
             max-width: 210px;
-            color: rgba(31, 32, 65, 0.75);
+            color: $grey75;
         }
 
         &:after {
@@ -365,13 +348,14 @@ ul.element__body {
             border-radius: 50%;
             width: 12px;
             height: 12px;
-            background: var(--ab, var(--border));
-            transform: translateX(var(--x, 0));
+            background: $grey25;
         }
 
         &:checked {
-            --ab: var(--active-inner-lg);
-            --x: 20px;
+            &:after {
+                background: $gradient;
+                transform: translateX(20px);
+            }
         }
 
         &:disabled {
@@ -384,7 +368,7 @@ ul.element__body {
     }
 }
 
-.element__body>.radio {
+.element__body > .radio {
     margin-right: 20px;
     margin-top: 11px;
     margin-bottom: 20px;
@@ -402,27 +386,25 @@ ul.element__body {
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: var(--active-inner-lg);
+            background: $gradient;
             opacity: 0;
-            transform: scale(var(--s, 0.6));
+            transform: scale(0.6);
         }
 
         &:checked {
-            --s: 0.6;
-            color: rgba(31, 32, 65, 0.75);
+            &:after {
+                opacity: 1;
+            }
 
-            &+label {
-                color: rgba(31, 32, 65, 0.75);
+            & + label {
+                color: $grey75;
             }
         }
-
-
     }
 }
 
-.element__body>.like {
+.element__body > .like {
     margin: 10px 10px 20px 0;
-
 }
 
 .like {
@@ -430,15 +412,15 @@ ul.element__body {
     width: 40px;
     height: 20px;
     border-radius: 10px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $grey25;
     background-color: #fff;
-    color: rgba(31, 32, 65, 0.25);
+    color: $grey25;
     align-items: center;
     cursor: pointer;
 
     &_liked {
-        color: #bc9cff;
-        border-color: #bc9cff;
+        color: $purple;
+        border-color: $purple;
 
         & .like__heart:after {
             content: "favorite";
@@ -447,7 +429,7 @@ ul.element__body {
 
     &__count {
         flex: 1;
-        @include text_Body;
+        font: $body;
         color: inherit;
         font-size: 10px;
         line-height: 12px;
@@ -456,8 +438,8 @@ ul.element__body {
 
     &:hover,
     &:focus {
-        color: #bc9cff;
-        border-color: #bc9cff;
+        color: $purple;
+        border-color: $purple;
 
         & .like__heart:after {
             content: "favorite";
@@ -475,7 +457,7 @@ ul.element__body {
     }
 }
 
-.element__body>.rate {
+.element__body > .rate {
     margin-top: 10px;
 
     &:first-of-type {
@@ -488,7 +470,6 @@ ul.element__body {
     display: flex;
     flex-direction: row-reverse;
     float: left;
-
 
     &__input {
         opacity: 0;
@@ -504,7 +485,7 @@ ul.element__body {
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
-            background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            background-image: $gradient;
 
             font-size: 24px;
             line-height: 20px;
@@ -514,14 +495,15 @@ ul.element__body {
         }
     }
 
-    &__input:checked~&__label::before,
-    &__input:hover~&__label::before {
+    &__input:checked ~ &__label::before,
+    &__input:hover ~ &__label::before {
         content: "star";
     }
 }
 
 .range {
-    &__value {}
+    &__value {
+    }
 }
 
 .button {
@@ -555,7 +537,7 @@ ul.element__body {
 
         &.button_hover::after,
         &:hover::after {
-            background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+            background: $gradient50;
         }
     }
 
@@ -565,7 +547,7 @@ ul.element__body {
     }
 
     &_text {
-        color: #bc9cff;
+        color: $purple;
         border: none;
         background: none;
         width: auto;
@@ -573,7 +555,7 @@ ul.element__body {
     }
 
     &_text_gray {
-        color: rgba(31, 32, 65, 0.5);
+        color: $grey50;
     }
 
     &_wide {
@@ -590,10 +572,10 @@ ul.element__body {
     grid-template-columns: repeat(6, min-content);
     row-gap: 9px;
     justify-content: start;
-    @include text_Body;
+    font: $body;
     font-size: 12px;
     line-height: 15px;
-    color: rgba(31, 32, 65, 0.5);
+    color: $grey50;
 
     &__elem {
         display: flex;
@@ -605,26 +587,25 @@ ul.element__body {
 
     &__text {
         grid-column: 1/7;
-        @include text_Body;
+        font: $body;
         padding-left: 5px;
     }
 
     &__elem_current {
-        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        background: $gradient;
         border-radius: 22px;
         color: #fff;
         font-weight: bold;
     }
 
     &__arrow {
-        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+        background: $gradient-green;
         border-radius: 22px;
         color: #fff;
     }
 }
 
 .details__checkbox {
-
     &:first-of-type {
         margin-top: 18px;
     }
@@ -653,16 +634,16 @@ summary {
     }
 }
 
-details[open].details>summary::after {
+details[open].details > summary::after {
     @include material-icon;
     content: "keyboard_arrow_up";
 }
 
-.element>details[open] {
+.element > details[open] {
     margin-top: 28px;
 }
 
-.element>.feature:first-child {
+.element > .feature:first-child {
     margin-bottom: 24px;
 }
 
@@ -670,7 +651,7 @@ details[open].details>summary::after {
     position: relative;
     padding-left: 57px;
     padding-bottom: 17px;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    border-bottom: 1px solid $grey10;
     width: 100%;
     max-width: 280px;
 
@@ -682,7 +663,7 @@ details[open].details>summary::after {
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background-image: $gradient;
         top: 0;
         left: 0;
         font-size: 48px;
@@ -696,7 +677,7 @@ details[open].details>summary::after {
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background-image: $gradient;
         top: 0;
         left: 0;
         font-size: 48px;
@@ -704,15 +685,14 @@ details[open].details>summary::after {
 
     &__title {
         display: block;
-        @include text_Body;
+        font: $body;
         font-weight: bold;
     }
 
     &__text {
-        @include text_Body;
+        font: $body;
     }
 }
-
 
 .checkbox {
     &_rich {
@@ -728,15 +708,19 @@ details[open].details>summary::after {
         &_rich {
             &-title {
                 display: flex;
-                @include font("Montserrat", bold, 14px, 18px);
-                color: rgba(31, 32, 65, 0.75);
+                font: $body;
+                font-weight: 700;
+                line-height: 18px;
+                color: $grey75;
                 margin-bottom: 5px;
             }
 
             &-text {
                 display: flex;
-                @include font("Montserrat", normal, 12px, 14px);
-                color: rgba(31, 32, 65, 0.5);
+                font: $body;
+                font-size: 12px;
+                line-height: 14px;
+                color: $grey50;
             }
         }
     }
@@ -760,7 +744,7 @@ details[open].details>summary::after {
     padding-top: 10px;
     grid-template-columns: 50px 655px;
     grid-template-rows: repeat(2, max-content);
-    @include text_Body;
+    font: $body;
 
     &__foto {
         background-image: url(../../../src/img/avatar.png);
@@ -770,7 +754,7 @@ details[open].details>summary::after {
         background-position: 50% 28%;
         border-radius: 50%;
         border: 2px solid #fff;
-        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+        box-shadow: 0px 10px 20px $grey10;
     }
 
     &__title {
@@ -789,7 +773,8 @@ details[open].details>summary::after {
         justify-self: center;
     }
 
-    &__text {}
+    &__text {
+    }
 }
 
 ul.list {
@@ -797,7 +782,8 @@ ul.list {
 }
 
 .list {
-    @include text_Body;
+    font: $body;
+    color: $grey75;
 
     &__elem {
         position: relative;
@@ -808,7 +794,7 @@ ul.list {
             content: "";
             width: 10px;
             height: 10px;
-            background-color: rgba(31, 32, 65, 0.25);
+            background-color: $grey25;
             border-radius: 50%;
             position: absolute;
             left: 0;

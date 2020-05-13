@@ -1,14 +1,16 @@
+@import "../../../library/templates/base";
 .page {
-	max-width: 1440px;
+	max-width: $width;
 	width: 100%;
 	margin: auto;
 	padding: 0.1px;
 	background-color: white;
-	color: #1f2041;
+	font: $body;
+	color: $grey75;
 
 	&__logo {
 		float: left;
-		margin: 30px / 1440px * 100%;
+		margin: 30px / $width * 100%;
 		margin-right: 0;
 	}
 }

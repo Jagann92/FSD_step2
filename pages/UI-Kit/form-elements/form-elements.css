@@ -36,6 +36,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
@@ -2352,16 +2353,46 @@ h6 {
 .page__container {
   display: -ms-grid;
   display: grid;
-  margin: 141px;
-  margin-top: 144px;
-  margin-bottom: 130px;
-  -ms-grid-columns: 320px 266px 320px;
-      grid-template-columns: 320px 266px 320px;
-  -webkit-column-gap: 126px;
-          column-gap: 126px;
-  -ms-grid-rows: (max-content)[4];
-      grid-template-rows: repeat(4, -webkit-max-content);
-      grid-template-rows: repeat(4, max-content);
+  margin: 9.79167%;
+  margin-top: 10%;
+  margin-bottom: 9.02778%;
+  -ms-grid-columns: 27.63385% 22.97064% 27.63385%;
+      grid-template-columns: 27.63385% 22.97064% 27.63385%;
+  -webkit-column-gap: 10.88083%;
+          column-gap: 10.88083%;
+}
+
+@media (max-width: 992px) {
+  .page__container {
+    margin: 10%;
+    -ms-grid-columns: (40.32258%)[2];
+        grid-template-columns: repeat(2, 40.32258%);
+    -webkit-column-gap: 19.53125%;
+            column-gap: 19.53125%;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page__container {
+    max-width: 320px;
+    margin: 20% auto auto auto;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -webkit-column-gap: normal;
+            column-gap: normal;
+  }
+}
+
+@media (max-width: 350px) {
+  .page__container {
+    max-width: 266px;
+    margin: 20% auto auto auto;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -webkit-column-gap: normal;
+            column-gap: normal;
+  }
 }
 
 .page__block {
@@ -2379,6 +2410,28 @@ h6 {
       flex-wrap: wrap;
   justify-items: flex-start;
   width: 100%;
+}
+
+.page__block:last-child {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+@media (max-width: 992px) {
+  .page__block:last-child {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+
+@media (max-width: 680px) {
+  .page__block:last-child {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
 }
 
 .page__block:first-child {
@@ -2403,7 +2456,13 @@ h6 {
 }
 
 .element_large {
-  width: 320px;
+  width: 120%;
+}
+
+@media (max-width: 350px) {
+  .element_large {
+    width: 100%;
+  }
 }
 
 .element_margin-top20 {
@@ -2483,6 +2542,8 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -2491,6 +2552,7 @@ h6 {
 
 .textfield {
   max-width: 320px;
+  min-width: 140px;
   width: 100%;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -2499,6 +2561,10 @@ h6 {
   border-radius: 4px;
   font: 400 14px/24px "Montserrat", sans-serif;
   padding-left: 15px;
+}
+
+.textfield.iqdropdown {
+  min-width: 210px;
 }
 
 .textfield::-webkit-input-placeholder {
@@ -2630,6 +2696,11 @@ h6 {
 .radio,
 .switch {
   line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .checkbox__input,
@@ -2694,6 +2765,7 @@ h6 {
 .radio__input:not(.switch__input),
 .switch__input:not(.switch__input) {
   width: 20px;
+  min-width: 20px;
 }
 
 .checkbox__input:not(.switch__input):after,
@@ -2763,6 +2835,7 @@ ul.element__body {
 
 .switch__input {
   width: 40px;
+  min-width: 40px;
   border-radius: 10px;
 }
 
@@ -2837,6 +2910,7 @@ ul.element__body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 40px;
+  min-width: 40px;
   height: 20px;
   border-radius: 10px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -2938,6 +3012,7 @@ ul.element__body {
 
 .button {
   width: 99px;
+  min-width: 99px;
   height: 44px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2995,6 +3070,7 @@ ul.element__body {
 
 .button_wide {
   width: 100%;
+  min-width: 200px;
 }
 
 .button_arrowed {
@@ -3277,8 +3353,8 @@ details[open].details > summary::after {
   -webkit-column-gap: 9px;
           column-gap: 9px;
   padding-top: 10px;
-  -ms-grid-columns: 50px 655px;
-      grid-template-columns: 50px 655px;
+  -ms-grid-columns: 1fr 13fr;
+      grid-template-columns: 1fr 13fr;
   -ms-grid-rows: (max-content)[2];
       grid-template-rows: repeat(2, -webkit-max-content);
       grid-template-rows: repeat(2, max-content);
@@ -3287,7 +3363,7 @@ details[open].details > summary::after {
 
 .review__foto {
   background-image: url(../../../src/img/avatar.png);
-  width: 48px;
+  min-width: 48px;
   height: 48px;
   background-repeat: no-repeat;
   background-position: 50% 28%;

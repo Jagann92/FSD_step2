@@ -1,0 +1,11 @@
+.subscribe {
+  position: relative;
+  width: 100%;
+}
+
+.subscribe__arrow {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  color: #bc9cff;
+}

@@ -1,0 +1,15 @@
+@import "../../../library/templates/base";
+
+.subscribe {
+    position: relative;
+    width: 100%;
+
+    &__input {}
+
+    &__arrow {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+        color: $purple;
+    }
+}

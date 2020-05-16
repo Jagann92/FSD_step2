@@ -43,9 +43,9 @@ block body
 					.element__head
 						span.element__title Masked text field
 						span.element__subtitle Default
-					.element__body
+					.element__body.element__masked-textfield
 						input.textfield.textfield_masked(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ")
-				.line
+				.element__line
 					.element.element_inline
 						.element__head
 							span.element__title date dropdown
@@ -60,14 +60,14 @@ block body
 							.date.textfield
 								input.date__input.datepicker-here(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
 								button.date__arrow
-				.element.element_short.element_margin-top20
+				.element.element_short.element__date
 					.element__head
 						span.element__title filter date dropdown
 					.element__body
 						.date.textfield
 							input.date__input.datepicker-here(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
 							button.date__arrow
-				.element.element_short.element_margin-top20
+				.element.element_short.element__subscribe
 					.element__head
 						span.element__title subscription text field
 					.element__body
@@ -79,13 +79,13 @@ block body
 					.element__head
 						span.element__title checkbox buttons
 					ul.element__body
-						li.checkbox
+						li.checkbox.element__checkbox
 							input.checkbox__input(id ="c1" type="checkbox")
 							label(for="c1").checkbox__label Можно курить
-						li.checkbox
+						li.checkbox.element__checkbox
 							input.checkbox__input(id="c2" type="checkbox" checked)
 							label(for="c2").checkbox__label Можно с питомцами
-						li.checkbox
+						li.checkbox.element__checkbox
 							input.checkbox__input(id="c3" type="checkbox" checked)
 							label(for="c3").checkbox__label Можно пригласить гостей (до 10 человек)
 				.element
@@ -102,10 +102,10 @@ block body
 					.element__head
 						span.element__title toggle
 					ul.element__body
-						li.switch
+						li.switch.element__switch
 							input.switch__input(id="sw1" type="checkbox" checked)
 							label(for="sw1").switch__label Получать спецпредложения
-						li.switch
+						li.switch.element__switch
 							input.switch__input(id="sw2" type="checkbox")
 							label(for="sw2").switch__label Получать спецпредложения
 				.element
@@ -154,7 +154,7 @@ block body
 				.element
 					.element__head
 						span.element__title buttons
-					.element__body.element_margin-top15
+					.element__body.element__buttons
 						button.button.button_purple.button_demo Click Me
 						button.button.button_purple.button_hover.button_demo Click Me
 						button.button.button_white.button_demo Click Me
@@ -167,7 +167,7 @@ block body
 				.element
 					.element__head
 						span.element__title Pagination
-					.element__body.pagination
+					.element__body.pagination.element__pagination
 						a.pagination__elem.pagination__elem_current 1
 						a.pagination__elem 2
 						a.pagination__elem 3
@@ -246,49 +246,49 @@ block body
 										p.iqdropdown-item Младенцы
 			.page__block
 				.element.element_short
-						details.details
-							summary.element__title expandable checkbox list
-							ul
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox")
-									label.checkbox__label Завтрак
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox" checked)
-									label.checkbox__label Письменный стол
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox" checked)
-									label.checkbox__label Стул для кормления
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox" checked)
-									label.checkbox__label Кроватка
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox")
-									label.checkbox__label Телевизор
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox")
-									label.checkbox__label Шампунь
+					details.details
+						summary.element__title expandable checkbox list
+						ul
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Завтрак
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Письменный стол
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Стул для кормления
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Кроватка
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Телевизор
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Шампунь
 				.element.element_short
-						details(open).details
-							summary.element__title expandable checkbox list
-							ul
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox")
-									label.checkbox__label Завтрак
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox" checked)
-									label.checkbox__label Письменный стол
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox" checked)
-									label.checkbox__label Стул для кормления
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox" checked)
-									label.checkbox__label Кроватка
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox")
-									label.checkbox__label Телевизор
-								li.details__checkbox.checkbox
-									input.checkbox__input(type="checkbox")
-									label.checkbox__label Шампунь
+					details(open).details
+						summary.element__title expandable checkbox list
+						ul
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Завтрак
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Письменный стол
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Стул для кормления
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked)
+								label.checkbox__label Кроватка
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Телевизор
+							li.details__checkbox.checkbox
+								input.checkbox__input(type="checkbox")
+								label.checkbox__label Шампунь
 			.page__block
 				.element
 					.element__head

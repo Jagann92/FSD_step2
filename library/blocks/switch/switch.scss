@@ -1,0 +1,82 @@
+@import "../../../library/templates/base";
+
+.switch {
+    line-height: 18px;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 20px;
+        outline: none;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid $grey25;
+        background: #fff;
+        transition: border-color 0.3s, box-shadow 0.2s;
+        width: 40px;
+        min-width: 40px;
+        border-radius: 10px;
+
+        &:after,
+        &::before {
+            content: "";
+            display: block;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+
+        &:after {
+            left: 3px;
+            top: 3px;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            background: $grey25;
+        }
+
+        &:checked {
+            border: 1px solid $purple;
+
+            &:after {
+                background: $gradient;
+                transform: translateX(20px);
+            }
+        }
+
+        &:disabled {
+            background: $grey10;
+            cursor: not-allowed;
+            opacity: 0.9;
+
+            &:not(:checked) {
+                &:after {
+                    opacity: 0.6;
+                }
+            }
+
+            &:checked {
+                background: $grey10;
+                border: 1px solid $grey25;
+            }
+
+            &+label {
+                cursor: not-allowed;
+            }
+        }
+
+        &+label {
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 2px;
+            cursor: pointer;
+            margin-left: 10px;
+            max-width: 210px;
+            color: $grey75;
+        }
+    }
+}

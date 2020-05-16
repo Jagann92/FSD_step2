@@ -1,0 +1,32 @@
+@import "../../../library/templates/base";
+
+.textfield {
+    max-width: 320px;
+    min-width: 140px;
+    width: 100%;
+    height: 44px;
+    border: 1px solid $grey25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font: $body;
+    padding-left: 15px;
+
+    &::placeholder {
+        color: $grey25;
+    }
+
+    &:focus,
+    &:hover,
+    &_focus {
+        border-color: $grey50;
+        color: $grey75;
+    }
+
+    &_masked {
+        color: $grey25;
+
+        &:active {
+            color: $grey75;
+        }
+    }
+}

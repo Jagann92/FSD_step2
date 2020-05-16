@@ -1,0 +1,119 @@
+.checkbox {
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.checkbox__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: #fff;
+  -webkit-transition: border-color 0.3s, -webkit-box-shadow 0.2s;
+  transition: border-color 0.3s, -webkit-box-shadow 0.2s;
+  transition: border-color 0.3s, box-shadow 0.2s;
+  transition: border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  border-radius: 4px;
+  width: 20px;
+  min-width: 20px;
+}
+
+.checkbox__input:after, .checkbox__input::before {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.checkbox__input::before {
+  width: 4px;
+  height: 6px;
+  background: #fff;
+  left: 7px;
+  top: 3px;
+  z-index: 1;
+}
+
+.checkbox__input:after {
+  width: 6px;
+  height: 8px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  left: 6px;
+  top: 4px;
+  z-index: 0;
+  opacity: 0;
+}
+
+.checkbox__input:checked {
+  border: 1px solid #bc9cff;
+}
+
+.checkbox__input:checked:before, .checkbox__input:checked:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.checkbox__input:checked::after {
+  opacity: 1;
+}
+
+.checkbox__input:disabled {
+  background: rgba(31, 32, 65, 0.1);
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.checkbox__input:disabled:checked {
+  background: rgba(31, 32, 65, 0.1);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.checkbox__input:disabled + label {
+  cursor: not-allowed;
+}
+
+.checkbox__input + label {
+  max-width: 230px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 2px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.checkbox_rich {
+  width: 100%;
+}
+
+.checkbox__label_rich-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  margin-bottom: 5px;
+}
+
+.checkbox__label_rich-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(31, 32, 65, 0.5);
+}

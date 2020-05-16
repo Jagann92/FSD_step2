@@ -78,7 +78,7 @@ block body
 				.element
 					.element__head
 						span.element__title checkbox buttons
-					ul.element__body
+					ul.element__body.element__list
 						li.checkbox.element__checkbox
 							input.checkbox__input(id ="c1" type="checkbox")
 							label(for="c1").checkbox__label Можно курить
@@ -92,16 +92,16 @@ block body
 					.element__head
 						span.element__title radio buttons
 					.element__body
-						.radio
+						.radio.element__radio
 							input.radio__input(name="gender" id="r1" type="radio" checked)
 							label(for="r1").radio__label Мужчина
-						.radio
+						.radio.element__radio
 							input.radio__input(name="gender" id="r2" type="radio")
 							label(for="r2").radio__label Женщина
 				.element
 					.element__head
 						span.element__title toggle
-					ul.element__body
+					ul.element__body.element__list
 						li.switch.element__switch
 							input.switch__input(id="sw1" type="checkbox" checked)
 							label(for="sw1").switch__label Получать спецпредложения
@@ -112,17 +112,17 @@ block body
 					.element__head
 						span.element__title like button
 					.element__body
-						button.like(id="like-1")
+						button.like.element__like(id="like-1")
 							span.material-icons.like__heart
 							span.like__count 2
-						button.like(id="like-2").like_liked
+						button.like.element__like(id="like-2").like_liked
 							span.material-icons.like__heart
 							span.like__count 12
 				.element
 					.element__head
 						span.element__title rate button
 					.element__body
-						.rate
+						.rate.element__rate
 							input.rate__input(id="star-5-1" type="radio" name="reviewStars-1")
 							label.material-icons.rate__label(for="star-5-1")
 							input.rate__input(id="star-4-1" type="radio" name="reviewStars-1" checked)
@@ -133,7 +133,7 @@ block body
 							label.material-icons.rate__label(for="star-2-1")
 							input.rate__input(id="star-1-1" type="radio" name="reviewStars-1")
 							label.material-icons.rate__label(for="star-1-1")
-						.rate
+						.rate.element__rate
 							input.rate__input(id="star-5" type="radio" name="reviewStars-2" checked)
 							label.material-icons.rate__label(for="star-5")
 							input.rate__input(id="star-4" type="radio" name="reviewStars-2")
@@ -145,12 +145,12 @@ block body
 							input.rate__input(id="star-1" type="radio" name="reviewStars-2")
 							label.material-icons.rate__label(for="star-1")
 			.page__block
-				.element.element_short
+				.element.element_short.range
 					.element__head
 						span.element__title range slider
 						span.element__subtitle.range__value 5 000Р-10 000р
 					.element__body.element__range
-						input(type="text" name="my_range" value="").js-range-slider.range
+						input(type="text" name="my_range" value="").js-range-slider.range__input
 				.element
 					.element__head
 						span.element__title buttons
@@ -161,7 +161,7 @@ block body
 						button.button.button_white.button_hover.button_demo Click Me
 						br
 						button.button.button_text.button_demo Click Me
-						button.button.button_text.button_text_gray.button_demo Click Me
+						button.button.button_text.button_text-grey.button_demo Click Me
 						button.button.button_purple.button_wide.button_arrowed.button_demo Перейти к оплате
 							span.material-icons.arrow.button__arrow arrow_forward
 				.element

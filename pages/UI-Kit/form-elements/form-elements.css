@@ -160,44 +160,6 @@ h6 {
 }
 
 /* -------------- */
-.button {
-  font: 700 12px/15px "Montserrat", sans-serif;
-  text-transform: uppercase;
-  border-radius: 22px;
-}
-
-.button_white {
-  margin: auto;
-  color: #bc9cff;
-  background: #fff;
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-clip: padding-box;
-  border: solid 2px transparent;
-  border-radius: 22px;
-}
-
-.button_white::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -2px;
-  border-radius: inherit;
-  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-}
-
-.button_purple {
-  color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-}
-
 .form__title {
   max-width: 220px;
   font: 700 12px/15px "Montserrat", sans-serif;
@@ -2480,8 +2442,31 @@ h6 {
   margin-bottom: 10px;
 }
 
+.element__radio {
+  margin-right: 20px;
+  margin-top: 11px;
+  margin-bottom: 20px;
+}
+
 .element__switch {
   margin-bottom: 14px;
+}
+
+.element__like {
+  margin: 10px 10px 20px 0;
+}
+
+.element__list {
+  margin-top: 16.5px;
+  margin-bottom: 20px;
+}
+
+.element__rate {
+  margin-top: 10px;
+}
+
+.element__rate:first-of-type {
+  margin-right: 20px;
 }
 
 .element_inline {
@@ -2994,21 +2979,6 @@ h6 {
   color: rgba(31, 32, 65, 0.75);
 }
 
-ul.element__body {
-  margin-top: 16.5px;
-  margin-bottom: 20px;
-}
-
-.element__body > .radio {
-  margin-right: 20px;
-  margin-top: 11px;
-  margin-bottom: 20px;
-}
-
-.element__body > .like {
-  margin: 10px 10px 20px 0;
-}
-
 .like {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3067,14 +3037,6 @@ ul.element__body {
   content: "favorite_outline";
 }
 
-.element__body > .rate {
-  margin-top: 10px;
-}
-
-.element__body > .rate:first-of-type {
-  margin-right: 20px;
-}
-
 .rate {
   position: relative;
   display: -webkit-box;
@@ -3115,6 +3077,9 @@ ul.element__body {
 }
 
 .button {
+  font: 700 12px/15px "Montserrat", sans-serif;
+  text-transform: uppercase;
+  border-radius: 22px;
   width: 99px;
   min-width: 99px;
   height: 44px;
@@ -3129,6 +3094,69 @@ ul.element__body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.button_white {
+  color: #bc9cff;
+  background: #fff;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+}
+
+.button_white::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.button_white:hover::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 0.5)), to(rgba(139, 164, 249, 0.5)));
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+
+.button_purple {
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.button_purple:hover {
+  opacity: 0.5;
+}
+
+.button_text {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #bc9cff;
+  border: none;
+  background: none;
+  width: auto;
+  height: auto;
+}
+
+.button_text-grey {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.button_wide {
+  width: 100%;
+  min-width: 200px;
+}
+
+.button_arrowed {
+  position: relative;
 }
 
 .button__arrow {
@@ -3151,34 +3179,13 @@ ul.element__body {
   margin-bottom: 26px;
 }
 
-.button_white.button_hover::after, .button_white:hover::after {
+.button_white.button_hover::after {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 0.5)), to(rgba(139, 164, 249, 0.5)));
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 }
 
-.button_purple.button_hover, .button_purple:hover {
+.button_purple.button_hover {
   opacity: 0.5;
-}
-
-.button_text {
-  color: #bc9cff;
-  border: none;
-  background: none;
-  width: auto;
-  height: auto;
-}
-
-.button_text_gray {
-  color: rgba(31, 32, 65, 0.5);
-}
-
-.button_wide {
-  width: 100%;
-  min-width: 200px;
-}
-
-.button_arrowed {
-  position: relative;
 }
 
 .pagination {

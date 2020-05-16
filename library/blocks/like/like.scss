@@ -1,0 +1,52 @@
+@import "../../../library/templates/base";
+
+.like {
+    display: inline-flex;
+    width: 40px;
+    min-width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid $grey25;
+    background-color: #fff;
+    color: $grey25;
+    align-items: center;
+    cursor: pointer;
+
+    &_liked {
+        color: $purple;
+        border-color: $purple;
+
+        & .like__heart:after {
+            content: "favorite";
+        }
+    }
+
+    &__count {
+        flex: 1;
+        font: $body;
+        color: inherit;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: left;
+    }
+
+    &:hover,
+    &:focus {
+        color: $purple;
+        border-color: $purple;
+
+        & .like__heart:after {
+            content: "favorite";
+        }
+    }
+
+    &__heart {
+        flex: 1;
+        font-size: 10px;
+        line-height: 9px;
+
+        &::after {
+            content: "favorite_outline";
+        }
+    }
+}

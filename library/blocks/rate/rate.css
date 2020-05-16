@@ -1,0 +1,38 @@
+.rate {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  float: left;
+}
+
+.rate__input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.rate__label:before {
+  content: "star_border";
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  font-size: 24px;
+  line-height: 20px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.rate__input:checked ~ .rate__label::before,
+.rate__input:hover ~ .rate__label::before {
+  content: "star";
+}

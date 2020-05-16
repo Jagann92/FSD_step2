@@ -1,18 +1,24 @@
 @import "../../../library/templates/base";
 
 .button {
-    font: $h3; text-transform:uppercase;
+    font: $h3;
+    text-transform: uppercase;
     border-radius: 22px;
+    width: 99px;
+    min-width: 99px;
+    height: 44px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 
     &_white {
-        margin: auto;
         color: $purple;
         background: #fff;
         position: relative;
         box-sizing: border-box;
         background-clip: padding-box;
         border: solid 2px transparent;
-        border-radius: 22px;
 
         &::after {
             content: '';
@@ -26,10 +32,47 @@
             border-radius: inherit;
             background: $gradient;
         }
+
+        &:hover::after {
+            background: $gradient50;
+        }
     }
 
     &_purple {
         color: white;
         background: $gradient;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &_text {
+        justify-content: flex-start;
+        color: $purple;
+        border: none;
+        background: none;
+        width: auto;
+        height: auto;
+
+        &-grey {
+            color: $grey50;
+        }
+    }
+
+    &_wide {
+        width: 100%;
+        min-width: 200px;
+    }
+
+    &_arrowed {
+        position: relative;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        color: #fff;
     }
 }

@@ -168,11 +168,11 @@ block body
 					.element__head
 						span.element__title Pagination
 					.element__body.pagination.element__pagination
-						a.pagination__elem.pagination__elem_current 1
-						a.pagination__elem 2
-						a.pagination__elem 3
-						a.pagination__elem ...
-						a.pagination__elem 15
+						a.pagination__elem.pagination__elem_current(href="#") 1
+						a.pagination__elem(href="#") 2
+						a.pagination__elem(href="#") 3
+						a.pagination__elem(href="#") ...
+						a.pagination__elem(href="#") 15
 						a.pagination__elem.material-icons.arrow.pagination__arrow arrow_forward
 						span.pagination__text 1 – 12 из 100+ вариантов аренды
 			.page__block
@@ -198,7 +198,7 @@ block body
 						span.element__title dropdown
 						span.element__subtitle Expanded
 					.element__body
-						.iqdropdown.beds.menu-open.textfield
+						.iqdropdown.beds.textfield
 							p.iqdropdown-selection(data-inline="true")
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
@@ -215,7 +215,7 @@ block body
 					.element__head
 						span.element__title dropdown
 					.element__body
-						.iqdropdown.people.textfield.menu-open
+						.iqdropdown.people.textfield
 							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true")
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="adults")
@@ -232,7 +232,7 @@ block body
 					.element__head
 						span.element__title dropdown
 					.element__body
-						.iqdropdown.people.textfield.menu-open
+						.iqdropdown.people.textfield
 							p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true")
 							.iqdropdown-menu
 								.iqdropdown-menu-option(data-id="adults")
@@ -246,47 +246,47 @@ block body
 										p.iqdropdown-item Младенцы
 			.page__block
 				.element.element_short
-					details.details
+					details.expandable-list
 						summary.element__title expandable checkbox list
 						ul
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox")
 								label.checkbox__label Завтрак
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox" checked)
 								label.checkbox__label Письменный стол
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox" checked)
 								label.checkbox__label Стул для кормления
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox" checked)
 								label.checkbox__label Кроватка
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox")
 								label.checkbox__label Телевизор
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox")
 								label.checkbox__label Шампунь
 				.element.element_short
-					details(open).details
+					details(open).expandable-list
 						summary.element__title expandable checkbox list
 						ul
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox")
 								label.checkbox__label Завтрак
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox" checked)
 								label.checkbox__label Письменный стол
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox" checked)
 								label.checkbox__label Стул для кормления
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox" checked)
 								label.checkbox__label Кроватка
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox")
 								label.checkbox__label Телевизор
-							li.details__checkbox.checkbox
+							li.expandable-list__checkbox.checkbox
 								input.checkbox__input(type="checkbox")
 								label.checkbox__label Шампунь
 			.page__block

@@ -78,7 +78,7 @@
         }
 
         &:nth-child(7) {
-            margin-bottom: 80px;
+            margin-bottom: 50px;
         }
     }
 }
@@ -157,6 +157,7 @@
         justify-content: flex-start;
         align-items: flex-end;
         text-align: left;
+        color: $grey;
     }
 
     &__subtitle {
@@ -211,6 +212,8 @@
 
 .checkbox {
     &_rich {
+        margin-top: 10px;
+
         &:first-of-type {
             margin-top: 16px;
         }
@@ -260,95 +263,62 @@
     }
 }
 
-.pagination {
-    display: grid;
-    grid-template-columns: repeat(6, min-content);
-    row-gap: 9px;
-    justify-content: start;
-    font: $body;
-    font-size: 12px;
-    line-height: 15px;
-    color: $grey50;
+@import "../../../library/blocks/pagination/paginaion";
 
-    &__elem {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        align-items: center;
-        justify-content: center;
+.expandable-list {
+    margin-bottom: 28px;
+
+    &__checkbox {
+        margin-bottom: 10px;
+
+        &:first-of-type {
+            margin-top: 18px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
-    &__text {
-        grid-column: 1/7;
-        font: $body;
-        padding-left: 5px;
+    & summary {
+        display: block;
+        position: relative;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            @include material-icon;
+            content: "keyboard_arrow_down";
+            color: $grey50;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            right: 12px;
+            top: -4px;
+        }
     }
 
-    &__elem_current {
-        background: $gradient;
-        border-radius: 22px;
-        color: #fff;
-        font-weight: bold;
-    }
-
-    &__arrow {
-        background: $gradient-green;
-        border-radius: 22px;
-        color: #fff;
-    }
-}
-
-.details__checkbox {
-    margin-bottom: 10px;
-
-    &:first-of-type {
-        margin-top: 18px;
-    }
-
-    &:last-of-type {
-        margin-bottom: 0;
-    }
-}
-
-summary {
-    display: block;
-    position: relative;
-
-    &::-webkit-details-marker {
-        display: none;
-    }
-
-    &::after {
+    &[open]>summary::after {
         @include material-icon;
-        content: "keyboard_arrow_down";
-        width: 44px;
-        height: 44px;
-        position: absolute;
-        right: -12px;
-        top: -4px;
+        content: "keyboard_arrow_up";
     }
 }
 
-details[open].details>summary::after {
-    @include material-icon;
-    content: "keyboard_arrow_up";
-}
 
-.element>details[open] {
-    margin-top: 28px;
-}
 
-.element>.feature:first-child {
-    margin-bottom: 24px;
-}
+
+
 
 .feature {
     position: relative;
     padding-left: 57px;
-    padding-bottom: 17px;
+    padding-bottom: 20px;
     border-bottom: 1px solid $grey10;
     width: 100%;
     max-width: 280px;
+    margin-bottom: 22px;
 
     &_smile:before {
         position: absolute;

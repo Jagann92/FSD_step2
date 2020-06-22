@@ -201,10 +201,23 @@ h6 {
   font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   border-radius: 22px;
+  width: 99px;
+  min-width: 99px;
+  height: 44px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .button_white {
-  margin: auto;
   color: #bc9cff;
   background: #fff;
   position: relative;
@@ -212,7 +225,6 @@ h6 {
           box-sizing: border-box;
   background-clip: padding-box;
   border: solid 2px transparent;
-  border-radius: 22px;
 }
 
 .button_white::after {
@@ -229,10 +241,50 @@ h6 {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
 
+.button_white:hover::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 0.5)), to(rgba(139, 164, 249, 0.5)));
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+
 .button_purple {
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.button_purple:hover {
+  opacity: 0.5;
+}
+
+.button_text {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #bc9cff;
+  border: none;
+  background: none;
+  width: auto;
+  height: auto;
+}
+
+.button_text-grey {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.button_wide {
+  width: 100%;
+  min-width: 200px;
+}
+
+.button_arrowed {
+  position: relative;
+}
+
+.button__arrow {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  color: #fff;
 }
 
 .header {

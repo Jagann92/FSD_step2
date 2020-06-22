@@ -19,10 +19,12 @@
 }
 
 a {
+
     &,
     &:visited,
     &:hover {
         text-decoration: none;
+        //color: inherit;
     }
 
     &:focus,

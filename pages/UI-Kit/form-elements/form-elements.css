@@ -274,6 +274,8 @@ h6 {
 
 .iqdropdown.menu-open .iqdropdown-menu {
   display: block;
+  -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 @media only screen and (max-width: 640px) {
@@ -430,6 +432,8 @@ h6 {
   border-color: rgba(31, 32, 65, 0.5);
   border-radius: 4px 4px 0 0;
   border-bottom: none;
+  -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .iqdropdown.menu-open .iqdropdown-selection::after {
@@ -2404,7 +2408,7 @@ h6 {
 }
 
 .page__block:nth-child(7) {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .element {
@@ -2491,6 +2495,7 @@ h6 {
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: left;
+  color: #1f2041;
 }
 
 .element__subtitle {
@@ -2793,6 +2798,10 @@ h6 {
   font-size: 12px;
   line-height: 14px;
   color: rgba(31, 32, 65, 0.5);
+}
+
+.checkbox_rich {
+  margin-top: 10px;
 }
 
 .checkbox_rich:first-of-type {
@@ -3201,13 +3210,13 @@ h6 {
   font: 400 14px/24px "Montserrat", sans-serif;
   font-size: 12px;
   line-height: 15px;
-  color: rgba(31, 32, 65, 0.5);
 }
 
 .pagination__elem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: rgba(31, 32, 65, 0.5);
   width: 40px;
   height: 40px;
   -webkit-box-align: center;
@@ -3241,28 +3250,32 @@ h6 {
   color: #fff;
 }
 
-.details__checkbox {
+.expandable-list {
+  margin-bottom: 28px;
+}
+
+.expandable-list__checkbox {
   margin-bottom: 10px;
 }
 
-.details__checkbox:first-of-type {
+.expandable-list__checkbox:first-of-type {
   margin-top: 18px;
 }
 
-.details__checkbox:last-of-type {
+.expandable-list__checkbox:last-of-type {
   margin-bottom: 0;
 }
 
-summary {
+.expandable-list summary {
   display: block;
   position: relative;
 }
 
-summary::-webkit-details-marker {
+.expandable-list summary::-webkit-details-marker {
   display: none;
 }
 
-summary::after {
+.expandable-list summary::after {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -3285,14 +3298,15 @@ summary::after {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
   content: "keyboard_arrow_down";
-  width: 44px;
-  height: 44px;
+  color: rgba(31, 32, 65, 0.5);
+  width: 22px;
+  height: 22px;
   position: absolute;
-  right: -12px;
+  right: 12px;
   top: -4px;
 }
 
-details[open].details > summary::after {
+.expandable-list[open] > summary::after {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -3317,21 +3331,14 @@ details[open].details > summary::after {
   content: "keyboard_arrow_up";
 }
 
-.element > details[open] {
-  margin-top: 28px;
-}
-
-.element > .feature:first-child {
-  margin-bottom: 24px;
-}
-
 .feature {
   position: relative;
   padding-left: 57px;
-  padding-bottom: 17px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   width: 100%;
   max-width: 280px;
+  margin-bottom: 22px;
 }
 
 .feature_smile:before {

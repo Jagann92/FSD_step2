@@ -1,0 +1,38 @@
+@import "../../../library/templates/base";
+
+.pagination {
+    display: grid;
+    grid-template-columns: repeat(6, min-content);
+    row-gap: 9px;
+    justify-content: start;
+    font: $body;
+    font-size: 12px;
+    line-height: 15px;
+
+    &__elem {display: flex;
+		color: $grey50;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        grid-column: 1/7;
+        font: $body;
+        padding-left: 5px;
+    }
+
+    &__elem_current {
+        background: $gradient;
+        border-radius: 22px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    &__arrow {
+        background: $gradient-green;
+        border-radius: 22px;
+        color: #fff;
+    }
+}

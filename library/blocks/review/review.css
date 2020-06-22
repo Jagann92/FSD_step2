@@ -1,0 +1,49 @@
+.review {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 11px;
+  -webkit-column-gap: 9px;
+          column-gap: 9px;
+  padding-top: 10px;
+  -ms-grid-columns: 1fr 13fr;
+      grid-template-columns: 1fr 13fr;
+  -ms-grid-rows: (max-content)[2];
+      grid-template-rows: repeat(2, -webkit-max-content);
+      grid-template-rows: repeat(2, max-content);
+  font: 400 14px/24px "Montserrat", sans-serif;
+}
+
+.review__foto {
+  background-image: url(../../../src/img/avatar.png);
+  min-width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: 50% 28%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+}
+
+.review__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.review__person {
+  font-weight: bold;
+}
+
+.review__like {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}

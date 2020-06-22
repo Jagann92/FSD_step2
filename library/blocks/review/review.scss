@@ -1,0 +1,39 @@
+@import "../../../library/templates/base";
+
+.review {
+    display: grid;
+    row-gap: 11px;
+    column-gap: 9px;
+    padding-top: 10px;
+    grid-template-columns: 1fr 13fr;
+    grid-template-rows: repeat(2, max-content);
+    font: $body;
+
+    &__foto {
+        background-image: url(../../../src/img/avatar.png);
+        min-width: 48px;
+        height: 48px;
+        background-repeat: no-repeat;
+        background-position: 50% 28%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0px 10px 20px $grey10;
+    }
+
+    &__title {
+        display: flex;
+        height: 48px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__person {
+        font-weight: bold;
+    }
+
+    &__like {
+        justify-self: center;
+    }
+
+    &__text {}
+}

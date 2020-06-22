@@ -49,6 +49,8 @@
 
     &_text {
         justify-content: flex-start;
+        min-width: 66px;
+        width: min-content;
         color: $purple;
         border: none;
         background: none;

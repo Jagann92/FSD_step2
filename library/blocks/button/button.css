@@ -61,6 +61,10 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  min-width: 66px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   color: #bc9cff;
   border: none;
   background: none;

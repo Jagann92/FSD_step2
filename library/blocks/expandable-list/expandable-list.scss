@@ -1,0 +1,29 @@
+@import "../../../library/templates/base";
+
+.expandable-list {
+
+    & summary {
+        display: block;
+        position: relative;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            @include material-icon;
+            content: "keyboard_arrow_down";
+            color: $grey50;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            right: 12px;
+            top: -4px;
+        }
+    }
+
+    &[open]>summary::after {
+        @include material-icon;
+        content: "keyboard_arrow_up";
+    }
+}

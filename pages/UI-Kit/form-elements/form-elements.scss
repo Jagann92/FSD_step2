@@ -91,6 +91,10 @@
         max-width: 266px;
     }
 
+    &_vshort {
+        max-width: 222px;
+    }
+
     &_large {
         width: 120%;
 
@@ -245,6 +249,10 @@
         }
     }
 
+    &_text {
+        margin-right: 15px;
+    }
+
     &_white {
 
         &.button_demo {
@@ -265,6 +273,8 @@
 
 @import "../../../library/blocks/pagination/paginaion";
 
+@import "../../../library/blocks/expandable-list/expandable-list";
+
 .expandable-list {
     margin-bottom: 28px;
 
@@ -279,159 +289,18 @@
             margin-bottom: 0;
         }
     }
-
-    & summary {
-        display: block;
-        position: relative;
-
-        &::-webkit-details-marker {
-            display: none;
-        }
-
-        &::after {
-            @include material-icon;
-            content: "keyboard_arrow_down";
-            color: $grey50;
-            width: 22px;
-            height: 22px;
-            position: absolute;
-            right: 12px;
-            top: -4px;
-        }
-    }
-
-    &[open]>summary::after {
-        @include material-icon;
-        content: "keyboard_arrow_up";
-    }
 }
 
+@import "../../../library/blocks/feature/feature";
 
+@import "../../../library/blocks/review/review";
 
+@import "../../../library/blocks/bullet-list/bullet-list";
 
-
-
-.feature {
-    position: relative;
-    padding-left: 57px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid $grey10;
-    width: 100%;
-    max-width: 280px;
-    margin-bottom: 22px;
-
-    &_smile:before {
-        position: absolute;
-        @include material-icon;
-        content: "sentiment_very_satisfied";
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-image: $gradient;
-        top: 0;
-        left: 0;
-        font-size: 48px;
-    }
-
-    &_apartment:before {
-        position: absolute;
-        @include material-icon;
-        content: "location_city";
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-image: $gradient;
-        top: 0;
-        left: 0;
-        font-size: 48px;
-    }
-
-    &__title {
-        display: block;
-        font: $body;
-        font-weight: bold;
-    }
-
-    &__text {
-        font: $body;
-    }
-}
-
-
-
-.dropdown__buttons {
-    display: flex;
-    padding: 20px 7px 13px 13px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
-.marginTop195 {
-    margin-top: 202px;
-}
-
-.review {
-    display: grid;
-    row-gap: 11px;
-    column-gap: 9px;
-    padding-top: 10px;
-    grid-template-columns: 1fr 13fr;
-    grid-template-rows: repeat(2, max-content);
-    font: $body;
-
-    &__foto {
-        background-image: url(../../../src/img/avatar.png);
-        min-width: 48px;
-        height: 48px;
-        background-repeat: no-repeat;
-        background-position: 50% 28%;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        box-shadow: 0px 10px 20px $grey10;
-    }
-
-    &__title {
-        display: flex;
-        height: 48px;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    &__person {
-        font-weight: bold;
-    }
-
-    &__like {
-        justify-self: center;
-    }
-
-    &__text {}
-}
-
-ul.list {
+.bullet-list {
     margin-top: 15px;
-}
-
-.list {
-    font: $body;
-    color: $grey75;
 
     &__elem {
-        position: relative;
-        padding-left: 21px;
         margin-bottom: 10px;
-
-        &::before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            background-color: $grey25;
-            border-radius: 50%;
-            position: absolute;
-            left: 0;
-            top: 7.5px;
-        }
     }
 }

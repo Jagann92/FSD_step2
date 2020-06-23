@@ -234,19 +234,15 @@ block body
 										p.iqdropdown-item Младенцы
 			.page__block
 				.element.element_short
-					details.expandable-list
-						summary.element__title expandable checkbox list
-						ul
-							+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec11")
-							+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec12" checked)
-							+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec13" checked)
-							+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec14" checked)
-							+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec15")
-							+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec16")
+					+expandable-list('expandable checkbox list','element__title')
+						+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec11")
+						+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec12" checked)
+						+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec13" checked)
+						+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec14" checked)
+						+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec15")
+						+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec16")
 				.element.element_short
-					details(open).expandable-list
-						summary.element__title expandable checkbox list
-						ul
+					+expandable-list('expandable checkbox list','element__title')(open)
 							+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec21")
 							+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec22" checked)
 							+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec23" checked)

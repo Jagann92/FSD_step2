@@ -29,7 +29,7 @@
 }
 
 .button_white::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -87,7 +87,7 @@
 
 .button__arrow {
   position: absolute;
-  right: 12px;
-  bottom: 12px;
+  right: 14px;
+  bottom: 14px;
   color: #fff;
 }

@@ -7,7 +7,6 @@
 @import "../../../library/plugins/ionrangeSlider/css/irs";
 @import "../../../library/plugins/air-datepicker/css/datepicker";
 
-
 @import "../../../library/blocks/page/page";
 
 .page {
@@ -172,7 +171,8 @@
         float: right;
     }
 
-    &__body {}
+    &__body {
+    }
 
     &__head {
         display: flex;
@@ -239,7 +239,6 @@
 @import "../../../library/blocks/button/button";
 
 .button {
-
     &_demo {
         margin-right: 20px;
         margin-bottom: 30px;
@@ -254,7 +253,6 @@
     }
 
     &_white {
-
         &.button_demo {
             margin-bottom: 26px;
         }

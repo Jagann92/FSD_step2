@@ -72,8 +72,8 @@ block body
 						span.element__title subscription text field
 					.element__body
 						.subscribe
-							input(type='email' placeholder='Email').textfield.subscribe__input
-							span.material-icons.arrow.subscribe__arrow arrow_forward
+							input(type='email' placeholder='Email' id="email1").textfield.subscribe__input
+							+arrow('span')(class='subscribe__arrow')
 			.page__block
 				.element
 					.element__head
@@ -155,15 +155,15 @@ block body
 					.element__head
 						span.element__title buttons
 					.element__body.element__buttons
-						button.button.button_purple.button_demo Click Me
-						button.button.button_purple.button_hover.button_demo Click Me
-						button.button.button_white.button_demo Click Me
-						button.button.button_white.button_hover.button_demo Click Me
+						+button('Click me')(class='button_purple button_demo')
+						+button('Click me')(class='button_purple button_demo button_hover')
+						+button('Click me')(class='button_white button_demo')
+						+button('Click me')(class='button_white button_hover button_demo')
 						br
-						button.button.button_text.button_demo Click Me
-						button.button.button_text.button_text-grey.button_demo Click Me
-						button.button.button_purple.button_wide.button_arrowed.button_demo Перейти к оплате
-							span.material-icons.arrow.button__arrow arrow_forward
+						+button('Click me')(class='button_text button_demo')
+						+button('Click me')(class='button_text button_text-grey button_demo')
+						+button('Перейти к оплате')(class='button_purple  button_wide button_arrowed button_demo')
+							+arrow('span')(class='button__arrow')
 				.element
 					.element__head
 						span.element__title Pagination
@@ -173,7 +173,7 @@ block body
 						a.pagination__elem(href="#") 3
 						a.pagination__elem(href="#") ...
 						a.pagination__elem(href="#") 15
-						a.pagination__elem.material-icons.arrow.pagination__arrow arrow_forward
+						+arrow('a')(class='pagination__elem pagination__arrow')
 						span.pagination__text 1 – 12 из 100+ вариантов аренды
 			.page__block
 				.element.element_short
@@ -308,10 +308,7 @@ block body
 				.element
 					.element__head
 						span.element__title Bullet list
-					ul.bullet-list
-						li.bullet-list__elem Нельзя с питомцами
-						li.bullet-list__elem Без вечеринок и меропритий
-						li.bullet-list__elem Время прибытия - после 13:00, а выезд до 12:00
+					+bullet-list('Нельзя с питомцами', 'Без вечеринок и меропритий', 'Время прибытия - после 13:00, а выезд до 12:00')
 			.page__block
 				.element
 					.feature.feature_smile

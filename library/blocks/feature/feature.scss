@@ -8,11 +8,10 @@
     width: 100%;
     max-width: 280px;
     margin-bottom: 22px;
-
-    &_smile:before {
+    &:before {
         position: absolute;
         @include material-icon;
-        content: "sentiment_very_satisfied";
+        content: "";
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
@@ -22,19 +21,12 @@
         left: 0;
         font-size: 48px;
     }
+    &_smile:before {
+        content: "sentiment_very_satisfied";
+    }
 
     &_apartment:before {
-        position: absolute;
-        @include material-icon;
         content: "location_city";
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-image: $gradient;
-        top: 0;
-        left: 0;
-        font-size: 48px;
     }
 
     &__title {

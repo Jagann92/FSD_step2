@@ -8,7 +8,7 @@
   margin-bottom: 22px;
 }
 
-.feature_smile:before {
+.feature:before {
   position: absolute;
   font-family: "Material Icons";
   font-weight: normal;
@@ -31,7 +31,7 @@
   /* Support for IE. */
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
-  content: "sentiment_very_satisfied";
+  content: "";
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -43,39 +43,12 @@
   font-size: 48px;
 }
 
+.feature_smile:before {
+  content: "sentiment_very_satisfied";
+}
+
 .feature_apartment:before {
-  position: absolute;
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: "liga";
-          font-feature-settings: "liga";
   content: "location_city";
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
-  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  top: 0;
-  left: 0;
-  font-size: 48px;
 }
 
 .feature__title {

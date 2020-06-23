@@ -100,12 +100,8 @@ block body
 					.element__head
 						span.element__title like button
 					.element__body
-						button.like.element__like(id="like-1")
-							span.material-icons.like__heart
-							span.like__count 2
-						button.like.element__like(id="like-2").like_liked
-							span.material-icons.like__heart
-							span.like__count 12
+						+like(2)(id="like-1" class="element__like")
+						+like(12)(id="like-1" class="like_liked element__like")
 				.element
 					.element__head
 						span.element__title rate button

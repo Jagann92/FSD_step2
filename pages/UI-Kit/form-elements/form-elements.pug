@@ -79,15 +79,9 @@ block body
 					.element__head
 						span.element__title checkbox buttons
 					ul.element__body.element__list.element_vshort
-						li.checkbox.element__checkbox
-							input.checkbox__input(id ="c1" type="checkbox")
-							label(for="c1").checkbox__label Можно курить
-						li.checkbox.element__checkbox
-							input.checkbox__input(id="c2" type="checkbox" checked)
-							label(for="c2").checkbox__label Можно с питомцами
-						li.checkbox.element__checkbox
-							input.checkbox__input(id="c3" type="checkbox" checked)
-							label(for="c3").checkbox__label Можно пригласить гостей (до 10 человек)
+						+checkbox('li','Можно курить')(class="element__checkbox" id="c1")
+						+checkbox('li','Можно с питомцами')(class="element__checkbox" id="c2" checked)
+						+checkbox('li','Можно пригласить гостей (до 10 человек)')(class="element__checkbox" id="c3" checked)
 				.element
 					.element__head
 						span.element__title radio buttons
@@ -249,61 +243,29 @@ block body
 					details.expandable-list
 						summary.element__title expandable checkbox list
 						ul
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Завтрак
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Письменный стол
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Стул для кормления
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Кроватка
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Телевизор
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Шампунь
+							+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec11")
+							+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec12" checked)
+							+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec13" checked)
+							+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec14" checked)
+							+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec15")
+							+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec16")
 				.element.element_short
 					details(open).expandable-list
 						summary.element__title expandable checkbox list
 						ul
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Завтрак
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Письменный стол
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Стул для кормления
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox" checked)
-								label.checkbox__label Кроватка
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Телевизор
-							li.expandable-list__checkbox.checkbox
-								input.checkbox__input(type="checkbox")
-								label.checkbox__label Шампунь
+							+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec21")
+							+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec22" checked)
+							+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec23" checked)
+							+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec24" checked)
+							+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec25")
+							+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec26")
 			.page__block
 				.element
 					.element__head
 						span.element__title rich checkbox buttons
 					.element__body
-						.checkbox.checkbox_rich
-							input.checkbox__input(type="checkbox")
-							label.checkbox__label.checkbox__label_rich 
-								span.checkbox__label_rich-title Широкий коридор
-								span.checkbox__label_rich-text Ширина коридоров в номере не менее 91см.
-						.checkbox.checkbox_rich
-							input.checkbox__input(type="checkbox")
-							label.checkbox__label.checkbox__label_rich
-								span.checkbox__label_rich-title Помощник для инвалидов
-								span.checkbox__label_rich-text На 1 этаже вас встретит специалист и проводит до номера.
+						+checkbox('div','Широкий коридор',1,'Ширина коридоров в номере не менее 91см.')(id="rc1")
+						+checkbox('div','Помощник для инвалидов',1,'На 1 этаже вас встретит специалист и проводит до номера.')(id="rc2")
 			.page__block
 				.element
 					.element__head

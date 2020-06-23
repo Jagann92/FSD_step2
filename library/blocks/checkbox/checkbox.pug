@@ -1,0 +1,11 @@
+mixin checkbox(tag='div',label,rich='0',text)
+	if rich>0
+		#{tag}.checkbox.checkbox_rich(class!=attributes.class)
+			input.checkbox__input(type="checkbox" id!=attributes.id checked!=attributes.checked)
+			label.checkbox__label.checkbox__label_rich(for!=attributes.id)
+				span.checkbox__label_rich-title=label
+				span.checkbox__label_rich-text=text
+	else
+		#{tag}.checkbox(class!=attributes.class)
+			input.checkbox__input(type="checkbox" id!=attributes.id checked!=attributes.checked)
+			label.checkbox__label(for!=attributes.id)=label

@@ -50,23 +50,17 @@ block body
 						.element__head
 							span.element__title date dropdown
 						.element__body
-							.date.textfield
-								input.date__input.datepicker-here(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
-								button.date__arrow
+							+date()(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
 					.element.element_inline
 						.element__head
 							span.element__title date dropdown
 						.element__body
-							.date.textfield
-								input.date__input.datepicker-here(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
-								button.date__arrow
+							+date()(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
 				.element.element_short.element__date
 					.element__head
 						span.element__title filter date dropdown
 					.element__body
-						.date.textfield
-							input.date__input.datepicker-here(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
-							button.date__arrow
+						+date()(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
 				.element.element_short.element__subscribe
 					.element__head
 						span.element__title subscription text field

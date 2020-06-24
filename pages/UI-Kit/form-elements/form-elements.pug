@@ -63,9 +63,7 @@ block body
 				.element__head
 					span.element__title subscription text field
 				.element__body
-					.subscribe
-						input(type='email' placeholder='Email' id="email1").textfield.subscribe__input
-						+arrow('span','forward')(class='subscribe__arrow')
+					+subscribe()(id="email1")
 		.page__block
 			.element
 				.element__head

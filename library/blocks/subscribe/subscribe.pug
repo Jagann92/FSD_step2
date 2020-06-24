@@ -1,0 +1,5 @@
+include ../arrow/arrow.pug
+mixin subscribe()
+	.subscribe(class!=attributes.class)
+		input(type='email' placeholder='Email' id!=attributes.id).textfield.subscribe__input
+		+arrow('button','forward')(class='subscribe__arrow')

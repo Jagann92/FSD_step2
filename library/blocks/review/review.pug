@@ -1,0 +1,14 @@
+include ../like/like.pug
+mixin review(name, date, text, count, liked)
+	- var likeClass;
+	if liked
+		- likeClass='like_liked review__like';
+	else
+		- likeClass='review__like';
+	.review&attributes(attributes)
+		.review__foto
+		.review__title
+			span.review__person= name
+			span.review__date= date
+		+like(count)(id=name class=likeClass)
+		p.review__text= text

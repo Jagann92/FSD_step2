@@ -3019,7 +3019,7 @@ h6 {
 }
 
 .like_liked::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;

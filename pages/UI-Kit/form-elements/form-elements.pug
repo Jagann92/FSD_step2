@@ -250,13 +250,7 @@ block body
 				+feature('apartment','Удобство','Окно в каждой из спален')
 		.page__block
 			.element
-				.review
-					.review__foto
-					.review__title
-						span.review__person Мурад Сарафанов
-						span.review__date 5 дней назад
-					+like(12)(id="like-3" class="like_liked review__like")
-					p.review__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+				+review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',12,1)
 	script(src="../../../library/plugins/ionRangeSlider/js/ion.rangeSlider.min.js")
 	script(src="../../../library/plugins/item-quantity-dropdown/js/item-quantity-dropdown.min.js")
 	script(src="../../../library/plugins/inputmask/jquery.inputmask.js")

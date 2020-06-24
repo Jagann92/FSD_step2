@@ -82,12 +82,8 @@ block body
 				.element__head
 					span.element__title toggle
 				ul.element__body.element__list
-					li.switch.element__switch
-						input.switch__input(id="sw1" type="checkbox" checked)
-						label(for="sw1").switch__label Получать спецпредложения
-					li.switch.element__switch
-						input.switch__input(id="sw2" type="checkbox")
-						label(for="sw2").switch__label Получать спецпредложения
+					+switch('li','Получать спецпредложения')(class="element__switch" id="sw1" checked)
+					+switch('li','Получать спецпредложения')(class="element__switch" id="sw2")
 			.element
 				.element__head
 					span.element__title like button

@@ -1,0 +1,4 @@
+mixin radio(text)
+	.radio(class!=attributes.class)
+		input.radio__input(name!=attributes.name id!=attributes.id type="radio" checked!=attributes.checked)
+		label(for!=attributes.id).radio__label= text

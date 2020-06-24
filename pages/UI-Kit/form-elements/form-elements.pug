@@ -65,7 +65,7 @@ block body
 				.element__body
 					.subscribe
 						input(type='email' placeholder='Email' id="email1").textfield.subscribe__input
-						+arrow('span')(class='subscribe__arrow')
+						+arrow('span','forward')(class='subscribe__arrow')
 		.page__block
 			.element
 				.element__head
@@ -145,18 +145,11 @@ block body
 					+button('Click me')(class='button_text button_demo')
 					+button('Click me')(class='button_text button_text-grey button_demo')
 					+button('Перейти к оплате')(class='button_purple  button_wide button_arrowed button_demo')
-						+arrow('span')(class='button__arrow')
+						+arrow('span','forward')(class='button__arrow')
 			.element
 				.element__head
 					span.element__title Pagination
-				.element__body.pagination.element__pagination
-					a.pagination__elem.pagination__elem_current(href="#") 1
-					a.pagination__elem(href="#") 2
-					a.pagination__elem(href="#") 3
-					a.pagination__elem(href="#") ...
-					a.pagination__elem(href="#") 15
-					+arrow('a')(class='pagination__elem pagination__arrow')
-					span.pagination__text 1 – 12 из 100+ вариантов аренды
+				+pagination(1,15,'last','1 – 12 из 100+ вариантов аренды','1','2','3')(class="element__body element__pagination")
 		.page__block
 			.element.element_short
 				.element__head

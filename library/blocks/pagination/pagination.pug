@@ -1,0 +1,26 @@
+include ../arrow/arrow.pug
+mixin pagination(current, last, lastHref="#", text, ...hrefs)
+	- var values;
+	- var classList;
+	- var currentIndex;
+	if current>1
+		if current<last
+			- values=[current-1,current,current+1];
+		else 
+			- values=[current-2,current-1,current];
+	else
+		- current=1;
+		- values=[current,current+1,current+2];
+
+	.pagination&attributes(attributes)
+		each val, index in values
+			if val == current
+				- classList="pagination__elem pagination__elem_current"; 
+				- currentIndex=index;
+			else
+				- classList="pagination__elem"; 
+			a(class=classList href=hrefs[index])= val
+		span.pagination__elem ...
+		a.pagination__elem(href=lastHref)= last
+		+arrow('a','forward')(class='pagination__elem pagination__arrow' href=hrefs[currentIndex+1])
+		span.pagination__text= text

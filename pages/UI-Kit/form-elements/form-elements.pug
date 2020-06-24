@@ -94,28 +94,8 @@ block body
 				.element__head
 					span.element__title rate button
 				.element__body
-					.rate.element__rate
-						input.rate__input(id="star-5-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-5-1")
-						input.rate__input(id="star-4-1" type="radio" name="reviewStars-1" checked)
-						label.material-icons.rate__label(for="star-4-1")
-						input.rate__input(id="star-3-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-3-1")
-						input.rate__input(id="star-2-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-2-1")
-						input.rate__input(id="star-1-1" type="radio" name="reviewStars-1")
-						label.material-icons.rate__label(for="star-1-1")
-					.rate.element__rate
-						input.rate__input(id="star-5" type="radio" name="reviewStars-2" checked)
-						label.material-icons.rate__label(for="star-5")
-						input.rate__input(id="star-4" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-4")
-						input.rate__input(id="star-3" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-3")
-						input.rate__input(id="star-2" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-2")
-						input.rate__input(id="star-1" type="radio" name="reviewStars-2")
-						label.material-icons.rate__label(for="star-1")
+					+rate(4)(class='element_rate' name="stars")
+					+rate(5)(class='element_rate' name="stars2")
 		.page__block
 			.element.element_short.range
 				.element__head

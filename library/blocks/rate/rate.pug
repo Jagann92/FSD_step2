@@ -1,0 +1,8 @@
+mixin rate(checkedID)
+	.rate(class!=attributes.class)
+		each val in [5,4,3,2,1]
+			if val==checkedID
+				input.rate__input(id!=attributes.name+val type="radio" name!=attributes.name checked)
+			else
+				input.rate__input(id!=attributes.name+val type="radio" name!=attributes.name)
+			label.material-icons.rate__label(for!=attributes.name+val)

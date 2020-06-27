@@ -10,31 +10,14 @@ block body
 			.header
 				header.header__wrapper
 					img.header__logo(src="../../../src/img/logo and title.svg")
-					nav.menu.header__menu
-						- var h_menu = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
-						each val in h_menu
-							case val
-								when 'О нас'
-									a.menu__elem.menu__elem_current= val
-								when 'Услуги'
-									a.menu__elem.menu__elem_spoiler= val
-								default
-									a.menu__elem= val
+					+menu('header')
 					.header__buttons
 						+button('Войти','white','normal',0)
 						+button('Зарегистрироваться','purple','wide',0)
 			.header
 				header.header__wrapper
 					img.header__logo(src="../../../src/img/logo and title.svg")
-					nav.menu.header__menu
-						each val in h_menu
-							case val
-								when 'Home'
-									a.menu__elem.menu__elem_current= val
-								when 'Services'
-									a.menu__elem.menu__elem_spoiler= val
-								default
-									a.menu__elem= val
+					+menu('header')
 					a.header__link Юлий Цезарь
 			.footer
 				footer.footer__wrapper.footer_full

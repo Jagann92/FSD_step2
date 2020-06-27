@@ -3,6 +3,27 @@
   display: grid;
 }
 
+.menu__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  background: #fff;
+  border: solid 2px rgba(31, 32, 65, 0.5);
+}
+
+.menu__submenu .menu__elem {
+  margin: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px rgba(31, 32, 65, 0.25);
+}
+
 .menu__elem {
   font: 400 14px/24px "Montserrat", sans-serif;
   line-height: 17px;
@@ -25,16 +46,37 @@
   position: relative;
 }
 
+.menu__elem_spoiler:hover ul.menu__submenu {
+  display: block;
+}
+
 .menu__elem_spoiler::after {
-  content: "";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+  content: "keyboard_arrow_down";
   position: absolute;
-  width: 24px;
-  height: 21px;
-  background-image: url("../../../src/img/spoiler.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto;
-  background-color: white;
-  right: -4px;
-  top: -2px;
+  color: rgba(31, 32, 65, 0.5);
+  width: 22px;
+  height: 22px;
+  right: -2px;
+  top: -3px;
 }

@@ -1,0 +1,46 @@
+mixin menu(pos)
+	if pos=="header"
+		nav.menu.header__menu
+			- var h_menu = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+			each val in h_menu
+				case val
+					when 'О нас'
+						.menu__elem.menu__elem_current
+							a(href='#')= val
+					when 'Услуги'
+						.menu__elem.menu__elem_spoiler
+							a(href='#')= val
+							ul.menu__submenu
+								li.menu__elem
+									a(href='#') Услуга 1
+								li.menu__elem
+									a(href='#') Услуга 2
+								li.menu__elem
+									a(href='#') Услуга 3
+					when 'Соглашения'
+						.menu__elem.menu__elem_spoiler
+							a(href='#')= val
+							ul.menu__submenu
+								li.menu__elem
+									a(href='#') Соглашение 1
+								li.menu__elem
+									a(href='#') Соглашение 2
+								li.menu__elem
+									a(href='#') Соглашение 3
+					default
+						.menu__elem
+							a(href='#')= val
+	else 
+		if pos=='footer'
+			nav.menu.footer__menu
+				- var f_menu = ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги', 'О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы', 'Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
+				each val, index in f_menu
+					case index
+						when 0
+							a.menu__elem.menu__elem_title= val
+						when 5
+							a.menu__elem.menu__elem_title= val
+						when 10
+							a.menu__elem.menu__elem_title= val
+						default
+							a.menu__elem= val

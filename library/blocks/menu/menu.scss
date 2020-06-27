@@ -1,36 +1,63 @@
 @import "../../../library/templates/base";
-.menu {
-	display: grid;
 
-	&__elem {
-		font: $body;
-		line-height: 17px;
-		color: $grey50;
-		&_current {
-			font-weight: 700;
-			color: $grey75;
-		}
-		&_title {
-			font: $h3;
-			text-transform: uppercase;
-			color: $grey;
-		}
-		&_spoiler {
-			padding-right: 20px;
-			position: relative;
-			&::after {
-				content: "";
-				position: absolute;
-				width: 24px;
-				height: 21px;
-				background-image: url("../../../src/img/spoiler.svg");
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: auto;
-				background-color: white;
-				right: -4px;
-				top: -2px;
-			}
-		}
-	}
+.menu {
+    display: grid;
+
+    &__submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: max-content;
+        z-index: 10;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        background: #fff;
+        border: solid 2px $grey50;
+
+        & .menu__elem {
+            margin: 5px;
+            padding-bottom: 5px;
+            border-bottom: solid 1px $grey25;
+        }
+    }
+
+    &__elem {
+        font: $body;
+        line-height: 17px;
+        color: $grey50;
+
+        &_current {
+            font-weight: 700;
+            color: $grey75;
+        }
+
+        &_title {
+            font: $h3;
+            text-transform: uppercase;
+            color: $grey;
+        }
+
+        &_spoiler {
+            padding-right: 20px;
+            position: relative;
+
+            &:hover ul.menu__submenu {
+                display: block;
+            }
+
+            &::after {
+                @include material-icon;
+                content: "keyboard_arrow_down";
+                position: absolute;
+                color: $grey50;
+                width: 22px;
+                height: 22px;
+                right: -2px;
+                top: -3px;
+            }
+        }
+    }
 }

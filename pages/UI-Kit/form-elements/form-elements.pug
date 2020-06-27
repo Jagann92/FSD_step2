@@ -107,15 +107,14 @@ block body
 				.element__head
 					span.element__title buttons
 				.element__body.element__buttons
-					+button('Click me')(class='button_purple button_demo')
-					+button('Click me')(class='button_purple button_demo button_hover')
-					+button('Click me')(class='button_white button_demo')
-					+button('Click me')(class='button_white button_hover button_demo')
+					+button('Click me','purple','normal',0)(class='button_demo')
+					+button('Click me','purple','normal',0)(class='button_demo button_hover')
+					+button('Click me','white','normal',0)(class='button_demo')
+					+button('Click me','white','normal',0)(class='button_hover button_demo')
 					br
-					+button('Click me')(class='button_text button_demo')
-					+button('Click me')(class='button_text button_text-grey button_demo')
-					+button('Перейти к оплате')(class='button_purple  button_wide button_arrowed button_demo')
-						+arrow('span','forward')(class='button__arrow')
+					+button('Click me','text','normal',0)(class='button_demo')
+					+button('Click me','text-grey','normal',0)(class='button_demo')
+					+button('Перейти к оплате','purple','wide',1)(class='button_demo')
 			.element
 				.element__head
 					span.element__title Pagination

@@ -1,4 +1,26 @@
-mixin button(text)
-	button.button(class!=attributes.class)=text
-		if block
-			block
+mixin button(text,type,size,arrowed)
+	- var classList
+	case type
+		when 'purple'
+			-classList='button_purple'
+		when 'white'
+			-classList='button_white'
+		when 'text'
+			-classList='button_text'
+		when 'text-grey'
+			-classList='button_text button_text-grey'
+		default
+			-classList='button_purple'
+	if size=='wide'
+		- classList=classList+ ' button_wide'
+	if arrowed>0
+		- classList=classList+' button_arrowed'
+	if type=="white"
+		button.button(class!=classList+' '+attributes.class)
+			span.button__inner= text
+				if arrowed>0
+					+arrow('span','forward')(class='button__arrow')
+	else
+		button.button(class!=classList+' '+attributes.class)= text
+			if arrowed>0
+				+arrow('span','forward')(class='button__arrow')

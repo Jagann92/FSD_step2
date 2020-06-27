@@ -11,18 +11,18 @@ block body
 				header.header__wrapper
 					img.header__logo(src="../../../src/img/logo and title.svg")
 					nav.menu.header__menu
-						- var h_menu = ['Home' ,'About us', 'Services', 'Careers', 'News', 'Documentation']
+						- var h_menu = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
 						each val in h_menu
 							case val
-								when 'Home'
+								when 'О нас'
 									a.menu__elem.menu__elem_current= val
-								when 'Services'
+								when 'Услуги'
 									a.menu__elem.menu__elem_spoiler= val
 								default
 									a.menu__elem= val
 					.header__buttons
-						button.button.header__button-login.button_white Login
-						button.button.header__button-reg.button_purple Register
+						+button('Войти','white','normal',0)
+						+button('Зарегистрироваться','purple','wide',0)
 			.header
 				header.header__wrapper
 					img.header__logo(src="../../../src/img/logo and title.svg")
@@ -35,14 +35,14 @@ block body
 									a.menu__elem.menu__elem_spoiler= val
 								default
 									a.menu__elem= val
-					a.header__link Cosmin Negoita
+					a.header__link Юлий Цезарь
 			.footer
 				footer.footer__wrapper.footer_full
 					.footer__logoandtext.footer__logoandtext_start
 						img(src="../../../src/img/logo and title.svg")
-						p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+						p.footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 					nav.menu.footer__menu
-						- var f_menu = ['Navigation', 'About us', 'News', 'Support', 'Products', 'About us', 'Who we are', 'Our team', 'Careers', 'Investors', 'Support', 'Documentation', 'Community', 'Get in Touch']
+						- var f_menu = ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги', 'О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы', 'Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
 						each val, index in f_menu
 							case index
 								when 0
@@ -54,13 +54,13 @@ block body
 								default
 									a.menu__elem= val
 					form.form.footer__form
-						.form__title Subscribe to our newsletter
-						p.form__text Receive our latest news and promotions in your inbox!
+						.form__title Подписка
+						p.form__text Получайте специальные предложения и новости сервиса
 						.form__text-submit.input
 							input(type='email' placeholder='Your email adress').input__textfield
 							input(type='image' src='../../../src/img/arrow_forward.svg').input__submit
 					.footer__copyright 
-						p Copyright © 2018 Toxin UI Kit. All rights reserved.
+						p Copyright © 2018 Toxin отель. Все права зачищены.
 						.social
 							img(src="../../../src/img/twitter.svg")
 							img(src="../../../src/img/facebook.svg")
@@ -69,7 +69,7 @@ block body
 				footer.footer__wrapper.footer_min
 					.footer__logoandtext.footer__logoandtext_center
 						img(src="../../../src/img/logo and title.svg")
-						p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+						p.footer__text Copyright © 2018 Toxin отель. Все права зачищены.
 					.social
 						img(src="../../../src/img/twitter.svg")
 						img(src="../../../src/img/facebook.svg")

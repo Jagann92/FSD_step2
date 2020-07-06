@@ -5,6 +5,13 @@
     background-color: white;
     box-shadow: 0px 10px 20px $grey05;
 
+    &__title {
+        max-width: 220px;
+        font: $h3;
+        color: $grey;
+        text-transform: uppercase;
+    }
+
     &__wrapper {
         background-color: white;
         display: grid;
@@ -45,7 +52,8 @@
 
     &__form {
         height: 168px;
-        padding-left: 40px;
+        max-width: 260px;
+        margin-left: 10px;
         display: grid;
         grid-template-rows: repeat(3, max-content);
         align-items: start;

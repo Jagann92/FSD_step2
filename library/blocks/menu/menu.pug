@@ -1,46 +1,63 @@
-mixin menu(pos)
-	if pos=="header"
+mixin menu(type)
+	- 
+		var h_menu = [
+			{type: 'default', text: 'О нас', href:'#'},
+			{type: 'submenu', text:'Услуги', href:'#', submenu: [
+				{text:'Услуга 1', href:'#'},
+				{text:'Услуга 2', href:'#'},
+				{text:'Услуга 3', href: '#'}
+				]},
+			{type: 'default', text:'Вакансии', href:'#'}, 
+			{type: 'default', text:'Новости', href:'#'}, 
+			{type: 'submenu', text:'Соглашения', href:'#',submenu: [
+				{text:'Соглашение 1', href:'#'},
+				{text:'Соглашение 2', href:'#'},
+				{text:'Соглашение 3', href:'#'}
+				]}
+			]
+	- 
+		var f_menu = [
+			{name: 'Навигация', href:'#', submenu: [
+				{text:'О нас', href:'#'},
+				{text:'Новости', href:'#'},
+				{text:'Служба поддержки', href:'#'},
+				{text:'Услуги', href:'#'}
+				]},
+			{name: 'О нас', href:'#', submenu: [
+				{text:'О сервисе', href:'#'},
+				{text:'Наша команда', href:'#'},
+				{text:'Вакансии', href:'#'},
+				{text:'Инвесторы', href:'#'}
+				]},
+			{name: 'Служба поддержки', href:'#', submenu: [
+				{text:'Соглашения', href:'#'},
+				{text:'Сообщества', href:'#'},
+				{text:'Связь с нами', href:'#'}
+				]}
+			]
+	if type=="header"
 		nav.menu.header__menu
-			- var h_menu = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
 			each val in h_menu
-				case val
-					when 'О нас'
+				case val.type
+					when 'current'
 						.menu__elem.menu__elem_current
-							a(href='#')= val
-					when 'Услуги'
+							a(href=val.href)= val.text
+					when 'submenu'
 						.menu__elem.menu__elem_spoiler
-							a(href='#')= val
+							a(href=val.href)= val.text
 							ul.menu__submenu
-								li.menu__elem
-									a(href='#') Услуга 1
-								li.menu__elem
-									a(href='#') Услуга 2
-								li.menu__elem
-									a(href='#') Услуга 3
-					when 'Соглашения'
-						.menu__elem.menu__elem_spoiler
-							a(href='#')= val
-							ul.menu__submenu
-								li.menu__elem
-									a(href='#') Соглашение 1
-								li.menu__elem
-									a(href='#') Соглашение 2
-								li.menu__elem
-									a(href='#') Соглашение 3
+								each point in val.submenu
+									li.menu__elem
+										a(href=point.href)= point.text
 					default
 						.menu__elem
-							a(href='#')= val
+							a(href=val.href)= val.text
 	else 
-		if pos=='footer'
+		if type=='footer'
 			nav.menu.footer__menu
-				- var f_menu = ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги', 'О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы', 'Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
-				each val, index in f_menu
-					case index
-						when 0
-							a.menu__elem.menu__elem_title= val
-						when 5
-							a.menu__elem.menu__elem_title= val
-						when 10
-							a.menu__elem.menu__elem_title= val
-						default
-							a.menu__elem= val
+				each val in f_menu
+					a.menu__elem.menu__elem_title(href=val.href)= val.name
+					ul.menu__f-submenu
+						each point in val.submenu
+							li.menu__elem
+								a(href=point.href)= point.text

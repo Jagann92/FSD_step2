@@ -3,6 +3,10 @@
   display: grid;
 }
 
+.menu__f-submenu .menu__elem {
+  margin-bottom: 20px;
+}
+
 .menu__submenu {
   display: none;
   position: absolute;

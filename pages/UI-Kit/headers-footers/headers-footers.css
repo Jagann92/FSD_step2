@@ -410,9 +410,9 @@ h6 {
   -ms-grid-columns: (max-content)[3];
       grid-template-columns: repeat(3, -webkit-max-content);
       grid-template-columns: repeat(3, max-content);
-  -ms-grid-rows: (max-content)[5];
-      grid-template-rows: repeat(5, -webkit-max-content);
-      grid-template-rows: repeat(5, max-content);
+  -ms-grid-rows: (max-content)[2];
+      grid-template-rows: repeat(2, -webkit-max-content);
+      grid-template-rows: repeat(2, max-content);
   -webkit-column-gap: 120px;
           column-gap: 120px;
   grid-auto-flow: column;
@@ -477,6 +477,10 @@ h6 {
 .menu {
   display: -ms-grid;
   display: grid;
+}
+
+.menu__f-submenu .menu__elem {
+  margin-bottom: 20px;
 }
 
 .menu__submenu {

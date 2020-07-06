@@ -19,6 +19,7 @@
 
 a, a:visited, a:hover {
   text-decoration: none;
+  color: inherit;
 }
 
 a:focus, a:active {

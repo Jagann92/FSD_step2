@@ -1,0 +1,14 @@
+include ../button/button.pug
+include ../menu/menu.pug
+mixin header(type)
+	.header
+		header.header__wrapper
+			img.header__logo(src="../../../src/img/logo and title.svg")
+			+menu('header')
+			case type
+				when '2'
+					a.header__link Юлий Цезарь
+				default
+					.header__buttons
+						+button('Войти','white','normal',0)
+						+button('Зарегистрироваться','purple','wide',0)

@@ -7,18 +7,8 @@ block body
 	.page
 		img.page__logo(src="../../../src/img/logo.svg")
 		.page__container
-			.header
-				header.header__wrapper
-					img.header__logo(src="../../../src/img/logo and title.svg")
-					+menu('header')
-					.header__buttons
-						+button('Войти','white','normal',0)
-						+button('Зарегистрироваться','purple','wide',0)
-			.header
-				header.header__wrapper
-					img.header__logo(src="../../../src/img/logo and title.svg")
-					+menu('header')
-					a.header__link Юлий Цезарь
+			+header('1')
+			+header('2')
 			.footer
 				footer.footer__wrapper.footer_full
 					.footer__logoandtext.footer__logoandtext_start

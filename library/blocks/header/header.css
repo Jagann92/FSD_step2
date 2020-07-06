@@ -16,21 +16,99 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
   max-width: 80.55556%;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media (max-width: 800px) {
+  .header__wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    margin-left: 20px;
+  }
+}
+
 .header__menu {
   -ms-grid-column-align: end;
       justify-self: end;
-  -ms-grid-columns: (max-content)[6];
-      grid-template-columns: repeat(6, -webkit-max-content);
-      grid-template-columns: repeat(6, max-content);
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  justify-items: end;
+}
+
+.header__login {
+  position: relative;
+}
+
+.header__login::after {
+  position: absolute;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+  content: "";
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  top: -18px;
+  left: 0;
+  opacity: 1;
+  font-size: 40px;
+}
+
+@media (max-width: 1118px) {
+  .header__login::after {
+    content: 'logout';
+  }
+  .header__login .header__buttons {
+    display: none;
+  }
+  .header__login:hover .header__buttons,
+  .header__login:active .header__buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    justify-items: center;
+    row-gap: 5px;
+    position: absolute;
+    top: 30px;
+    right: -80px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(31, 32, 65, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .header__login:hover .header__buttons .button,
+  .header__login:active .header__buttons .button {
+    width: 100%;
+  }
 }
 
 .header__buttons {
@@ -46,18 +124,16 @@
 }
 
 .header__link {
-  position: relative;
-  padding-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
   font: 400 14px/24px "Montserrat", sans-serif;
   line-height: 17px;
-  opacity: 0.5;
-}
-
-.header__link::before {
-  position: absolute;
-  content: "";
+  color: rgba(31, 32, 65, 0.5);
   height: 30px;
-  left: 0;
-  top: -6.5px;
   border-left: 1px solid rgba(31, 32, 65, 0.1);
 }

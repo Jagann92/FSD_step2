@@ -1,6 +1,13 @@
 .menu {
   display: -ms-grid;
   display: grid;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-columns: (max-content)[5];
+      grid-template-columns: repeat(5, -webkit-max-content);
+      grid-template-columns: repeat(5, max-content);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .menu__f-submenu .menu__elem {
@@ -18,14 +25,15 @@
   z-index: 10;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  background: #fff;
-  border: solid 2px rgba(31, 32, 65, 0.5);
+  background: rgba(31, 32, 65, 0.1);
+  border-radius: 4px;
 }
 
 .menu__submenu .menu__elem {
   margin: 5px;
   padding-bottom: 5px;
   border-bottom: solid 1px rgba(31, 32, 65, 0.25);
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .menu__elem {

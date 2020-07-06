@@ -4,10 +4,8 @@ block title
 block styles
 	link(rel="stylesheet" href="headers-footers.css")
 block body
-	.page
-		img.page__logo(src="../../../src/img/logo.svg")
-		.page__container
-			+header('1')
-			+header('2')
-			+footer('1')
-			+footer('2')
+	+page()
+		+header('1')
+		+header('2')
+		+footer('1')
+		+footer('2')

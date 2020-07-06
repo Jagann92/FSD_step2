@@ -9,6 +9,7 @@ mixin header(type)
 				when '2'
 					a.header__link Юлий Цезарь
 				default
-					.header__buttons
-						+button('Войти','white','normal',0)
-						+button('Зарегистрироваться','purple','wide',0)
+					.header__login
+						.header__buttons
+							+button('Войти','white','normal',0)
+							+button('Зарегистрироваться','purple','wide',0)

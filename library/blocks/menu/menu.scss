@@ -2,6 +2,10 @@
 
 .menu {
     display: grid;
+    justify-self: end;
+    grid-template-columns: repeat(5, max-content);
+    column-gap: 20px;
+
 
     &__f-submenu {
         & .menu__elem {
@@ -21,13 +25,15 @@
         -moz-transition: 0.5s ease-in-out;
         -o-transition: 0.5s ease-in-out;
         transition: 0.5s ease-in-out;
-        background: #fff;
-        border: solid 2px $grey50;
+        background: $grey10;
+
+        border-radius: 4px;
 
         & .menu__elem {
             margin: 5px;
             padding-bottom: 5px;
             border-bottom: solid 1px $grey25;
+            color: $grey75;
         }
     }
 

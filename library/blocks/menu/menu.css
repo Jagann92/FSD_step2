@@ -27,8 +27,8 @@
 @media (max-width: 767px) {
   .menu__submenu {
     background: none;
-    top: 0;
-    right: 100%;
+    top: 15%;
+    left: -25%;
   }
 }
 
@@ -54,12 +54,18 @@
   position: relative;
 }
 
-.menu__elem_spoiler:hover {
-  padding-bottom: 50px;
+@media (max-width: 767px) {
+  .menu__elem_spoiler:hover {
+    padding-bottom: 90px;
+  }
 }
 
 .menu__elem_spoiler:hover ul.menu__submenu {
   display: block;
+}
+
+.menu__elem_spoiler:hover ul.menu__submenu .menu__elem {
+  font-size: 14px;
 }
 
 .menu__elem_spoiler::after {

@@ -33,8 +33,8 @@
 
         @media (max-width: 767px) {
             background: none;
-            top: 0;
-            left: -150%;
+            top: 20%;
+            left: -25%;
         }
     }
 
@@ -60,10 +60,16 @@
 
 
             &:hover {
-                padding-bottom: 50px;
+                @media (max-width: 767px) {
+                    padding-bottom: 90px;
+                }
 
                 & ul.menu__submenu {
                     display: block;
+
+                    & .menu__elem {
+                        font-size: 14px;
+                    }
                 }
             }
 

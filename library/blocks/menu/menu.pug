@@ -36,6 +36,8 @@ mixin menu(type)
 				]}
 			]
 	if type=="header"
+		.header__burger
+			span
 		nav.menu.header__menu
 			each val in h_menu
 				case val.type

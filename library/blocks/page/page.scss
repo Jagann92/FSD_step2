@@ -1,18 +1,24 @@
 @import "../../../library/templates/base";
-.page {
-	max-width: $width;
-	width: 100%;
-	margin: auto;
-	padding: 0.1px;
-	background-color: white;
-	font: $body;
-	color: $grey75;
-	position: relative;
-	z-index: 0;
 
-	&__logo {
-		float: left;
-		margin: 30px / $width * 100%;
-		margin-right: 0;
-	}
+.page {
+    max-width: $width;
+    width: 100%;
+    margin: auto;
+    padding: 0.1px;
+    background-color: white;
+    font: $body;
+    color: $grey75;
+    position: relative;
+    z-index: 0;
+    background: left 30px top 30px no-repeat url('../../../src/img/logo.svg');
+
+    @media (max-width:767px) {
+        background-image: none;
+    }
+
+    &__logo {
+        float: left;
+        margin: 30px / $width * 100%;
+        margin-right: 0;
+    }
 }

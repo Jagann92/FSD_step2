@@ -133,7 +133,7 @@ h6 {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("/src/fonts/MaterialIcons-Regular.woff2") format("svg"), url("/src/fonts/MaterialIcons-Regular.woff") format("woff"), url("/src/fonts/MaterialIcons-Regular.ttf") format("truetype");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("/src/fonts/MaterialIcons-Regular.svg") format("svg"), url("/src/fonts/MaterialIcons-Regular.woff") format("woff"), url("/src/fonts/MaterialIcons-Regular.ttf") format("truetype");
 }
 
 .material-icons {

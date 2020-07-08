@@ -109,7 +109,7 @@
     display: none;
   }
   .header__login:hover .header__buttons,
-  .header__login:active .header__buttons {
+  .header__login:active .header__buttons, .header__login:focus .header__buttons {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
@@ -127,7 +127,7 @@
     border-radius: 4px;
   }
   .header__login:hover .header__buttons .button,
-  .header__login:active .header__buttons .button {
+  .header__login:active .header__buttons .button, .header__login:focus .header__buttons .button {
     width: 100%;
   }
 }

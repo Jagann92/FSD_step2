@@ -4,6 +4,8 @@
     width: 100%;
     background-color: white;
     box-shadow: 0px 10px 20px $grey05;
+    display: flex;
+    justify-content: space-around;
 
     &__title {
         max-width: 220px;
@@ -16,25 +18,36 @@
         background-color: white;
         display: grid;
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        padding-left: 140px/$width*100%;
+        padding-right: 140px/$width*100%;
     }
 
     &_full {
-        grid-template-columns: repeat(3, max-content);
-        grid-template-rows: 372px 70px;
-        justify-content: center;
-        align-items: center;
-        column-gap: 40px;
-        row-gap: 0;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        grid-template-rows: auto 70px;
+        justify-content: space-between;
+        column-gap: 2.76vw;
+        align-items: start;
+        row-gap: 100px;
+        padding-top: 100px;
+
+        @media (max-width:767px) {
+            justify-items: center;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(4, minmax(min-content, 100%));
+            column-gap: normal;
+            row-gap: 50px;
+            padding-bottom: 100px;
+        }
     }
 
     &_min {
-        height: 367px;
-        grid-template-rows: repeat(2, min-content);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
         justify-content: center;
         align-content: center;
         row-gap: 20px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     &__text {
@@ -42,12 +55,40 @@
     }
 
     &__menu {
-        height: 168px;
-        grid-template-columns: repeat(3, max-content);
-        grid-template-rows: repeat(2, max-content);
-        column-gap: 120px;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        grid-template-rows: repeat(2, auto);
+        justify-content: space-between;
+        column-gap: 4.16vw;
         grid-auto-flow: column;
         row-gap: 20px;
+
+        @media (max-width:550px) {
+            height: auto;
+            grid-template-columns: 100%;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(4, auto);
+
+            & .menu__elem_title {
+                position: relative;
+
+                &::after {
+                    @include material-icon;
+                    content: "keyboard_arrow_down";
+                    position: absolute;
+                    color: $grey50;
+                    width: 22px;
+                    height: 22px;
+                    left: -25px;
+                    top: -5px;
+                }
+
+                &:hover+ul.menu__f-submenu {
+                    display: block;
+                }
+            }
+        }
     }
 
     &__form {
@@ -71,6 +112,13 @@
         justify-content: space-between;
         align-items: center;
         font: $body;
+
+        @media (max-width:767px) {
+            grid-row-start: 4;
+            grid-row-end: auto;
+            grid-column-start: auto;
+            grid-column-end: auto;
+        }
     }
 
     &__logoandtext {
@@ -79,13 +127,19 @@
 
         &_start {
             justify-items: start;
-            grid-template-columns: 260px;
+            grid-template-columns: minmax(min-content, 260px);
             height: 168px;
+
+            @media (max-width:767px) {
+                grid-template-columns: minmax(min-content, max-content);
+                justify-items: center;
+                height: 100%;
+            }
         }
 
         &_center {
             justify-items: center;
-            grid-template-columns: 560px;
+            grid-template-columns: minmax(min-content, max-content);
             text-align: center;
         }
     }

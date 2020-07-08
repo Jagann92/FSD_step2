@@ -1,6 +1,7 @@
 .social {
-	display: grid;
-	grid-template-columns: repeat(3, min-content);
-	column-gap: 20px;
-	justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    column-gap: 20px;
+    justify-content: center;
+    padding: 10px;
 }

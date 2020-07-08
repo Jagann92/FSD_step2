@@ -69,7 +69,7 @@
             }
 
             &:hover .header__buttons,
-            &:active .header__buttons {
+            &:active .header__buttons, &:focus .header__buttons {
                 display: grid;
                 grid-template-columns: auto;
                 justify-items: center;

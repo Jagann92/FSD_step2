@@ -2,6 +2,12 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 550px) {
+  .menu__f-submenu {
+    display: none;
+  }
+}
+
 .menu__submenu {
   display: none;
   position: absolute;
@@ -27,7 +33,7 @@
 @media (max-width: 767px) {
   .menu__submenu {
     background: none;
-    top: 15%;
+    top: 20%;
     left: -25%;
   }
 }

@@ -1,0 +1,11 @@
+extends library/templates/base.pug
+block title
+	title "Проект сайта гостиницы"
+block styles
+	link(rel="stylesheet" href="index.css")
+
+block body
+	+expandable-list('UI-Kit','pagesList')
+		li
+			a(href='pages/UI-Kit/form-elements.html')
+	+expandable-list('UI-Kit','pagesList')

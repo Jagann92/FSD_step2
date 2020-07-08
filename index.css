@@ -225,3 +225,78 @@ h6 {
           font-feature-settings: "liga";
   content: "keyboard_arrow_up";
 }
+
+body {
+  font: 400 14px/24px "Montserrat", sans-serif;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 40vh;
+}
+
+.expandable-list summary {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-items: center;
+  font: 700 24px/30px "Quicksand", sans-serif;
+}
+
+.expandable-list summary::after {
+  right: -20px;
+  top: 5px;
+}
+
+.expandable-list ul {
+  margin-top: 15px;
+}
+
+.expandable-list ul li {
+  margin-bottom: 15px;
+}
+
+.exist {
+  text-decoration: underline;
+}
+
+.null {
+  color: rgba(31, 32, 65, 0.25);
+  cursor: none;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.copyright a {
+  display: block;
+  padding-left: 5px;
+  color: blue;
+  text-decoration: underline;
+}

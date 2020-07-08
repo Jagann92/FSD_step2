@@ -5,7 +5,21 @@ block styles
 	link(rel="stylesheet" href="index.css")
 
 block body
-	+expandable-list('UI-Kit','pagesList')
-		li
-			a(href='pages/UI-Kit/form-elements/form-elements.html') Form elements
-	+expandable-list('UI-Kit','pagesList')
+	.container
+		+expandable-list('UI-Kit','pagesList')
+			li
+				a.exist(href='pages/UI-Kit/form-elements/form-elements.html') Form elements
+			li
+				a.exist(href='pages/UI-Kit/colors-types/colors-types.html') Colors&types
+			li
+				a.exist(href='pages/UI-Kit/headers-footers/headers-footers.html') Headers&footers
+			li
+				a.null(href='#') Cards ...in process
+		+expandable-list('Pages','pagesList')
+			- var i=1;
+			while i<10
+				li
+					a.null(href='#')='Page №'+i+' ...in process'
+					- i++;
+	.copyright Проект Михаила Трунина для 
+		a(href='http://fullstack-development.com') FSD

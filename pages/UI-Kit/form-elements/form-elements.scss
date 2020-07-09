@@ -1,12 +1,9 @@
 @import "../../../library/templates/base";
 @import "../../../library/nullstyle/nullstyle.scss";
 @import "../../../src/fonts/fonts";
-
-@import "../../../library/blocks/form/form";
 @import "../../../library/plugins/item-quantity-dropdown/css/item-quantity-dropdown.min";
 @import "../../../library/plugins/ionrangeSlider/css/irs";
 @import "../../../library/plugins/air-datepicker/css/datepicker";
-
 @import "../../../library/blocks/page/page";
 
 .page {
@@ -171,8 +168,7 @@
         float: right;
     }
 
-    &__body {
-    }
+    &__body {}
 
     &__head {
         display: flex;

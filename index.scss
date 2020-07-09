@@ -1,56 +1,65 @@
-@import "/library/templates/base";
-@import "/library/nullstyle/nullstyle.scss";
-@import "/src/fonts/fonts";
-@import "/library/blocks/expandable-list/expandable-list";
+@import "library/templates/base";
+@import "library/nullstyle/nullstyle.scss";
+@import "src/fonts/fonts";
+@import "library/blocks/expandable-list/expandable-list";
+
 body {
-	font: $body;
+    font: $body;
 }
+
 .container {
-	display: grid;
-	justify-content: center;
-	align-content: center;
-	margin-top: 40vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40vh;
 }
+
 .expandable-list {
-	& summary {
-		align-self: center;
-		margin-right: auto;
-		margin-left: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		justify-items: center;
-		font: $h1;
-		&::after {
-			right: -20px;
-			top: 5px;
-		}
-	}
-	& ul {
-		margin-top: 15px;
-		& li {
-			margin-bottom: 15px;
-		}
-	}
+    & summary {
+        align-self: center;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        justify-items: center;
+        font: $h1;
+
+        &::after {
+            right: -20px;
+            top: 5px;
+        }
+    }
+
+    & ul {
+        margin-top: 15px;
+
+        & li {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .exist {
-	text-decoration: underline;
+    text-decoration: underline;
 }
+
 .null {
-	color: $grey25;
-	cursor: none;
+    color: $grey25;
+    cursor: none;
 }
+
 .copyright {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	bottom: 0;
-	& a {
-		display: block;
-		padding-left: 5px;
-		color: blue;
-		text-decoration: underline;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+
+    & a {
+        display: block;
+        padding-left: 5px;
+        color: blue;
+        text-decoration: underline;
+    }
 }

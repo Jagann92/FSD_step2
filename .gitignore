@@ -1,0 +1,4 @@
+*.map
+settings.json
+/.vscode/*
+/node_modules/*

@@ -156,8 +156,7 @@ h6 {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
-  -webkit-font-feature-settings: "liga";
-          font-feature-settings: "liga";
+  font-feature-settings: "liga";
 }
 
 /* -------------- */
@@ -190,8 +189,7 @@ h6 {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
-  -webkit-font-feature-settings: "liga";
-          font-feature-settings: "liga";
+  font-feature-settings: "liga";
   content: "keyboard_arrow_down";
   color: rgba(31, 32, 65, 0.5);
   width: 22px;
@@ -221,8 +219,7 @@ h6 {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
-  -webkit-font-feature-settings: "liga";
-          font-feature-settings: "liga";
+  font-feature-settings: "liga";
   content: "keyboard_arrow_up";
 }
 
@@ -231,29 +228,19 @@ body {
 }
 
 .container {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   margin-top: 40vh;
 }
 
 .expandable-list summary {
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   margin-right: auto;
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
   justify-items: center;
   font: 700 24px/30px "Quicksand", sans-serif;
 }
@@ -281,15 +268,9 @@ body {
 }
 
 .copyright {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 0;
 }

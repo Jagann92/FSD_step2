@@ -4,49 +4,49 @@
   font-family: "Montserrat";
   font-weight: 700;
   font-style: normal;
-  src: local("Montserrat"), url("/src/fonts/Montserrat-Bold.woff") format("woff"), url("/src/fonts/Montserrat-Bold.ttf") format("truetype"), url("/src/fonts/Montserrat-Bold.svg") format("svg");
+  src: local("Montserrat"), url("../../../src/fonts/Montserrat-Bold.woff") format("woff"), url("../../../src/fonts/Montserrat-Bold.ttf") format("truetype"), url("../../../src/fonts/Montserrat-Bold.svg") format("svg");
 }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
   font-style: normal;
-  src: local("Montserrat"), url("/src/fonts/Montserrat-Regular.woff") format("woff"), url("/src/fonts/Montserrat-Regular.ttf") format("truetype"), url("/src/fonts/Montserrat-Regular.svg") format("svg");
+  src: local("Montserrat"), url("../../../src/fonts/Montserrat-Regular.woff") format("woff"), url("../../../src/fonts/Montserrat-Regular.ttf") format("truetype"), url("../../../src/fonts/Montserrat-Regular.svg") format("svg");
 }
 
 @font-face {
   font-family: "Quicksand";
   font-weight: 700;
   font-style: normal;
-  src: local("Quicksand"), url("/src/fonts/Quicksand-Bold.woff") format("woff"), url("/src/fonts/Quicksand-Bold.ttf") format("truetype"), url("/src/fonts/Quicksand-Bold.svg") format("svg");
+  src: local("Quicksand"), url("../../../src/fonts/Quicksand-Bold.woff") format("woff"), url("../../../src/fonts/Quicksand-Bold.ttf") format("truetype"), url("../../../src/fonts/Quicksand-Bold.svg") format("svg");
 }
 
 @font-face {
   font-family: "Quicksand";
   font-weight: 400;
   font-style: normal;
-  src: local("Quicksand"), url("/src/fonts/Quicksand-Regular.woff") format("woff"), url("/src/fonts/Quicksand-Regular.ttf") format("truetype"), url("/src/fonts/Quicksand-Regular.svg") format("svg");
+  src: local("Quicksand"), url("../../../src/fonts/Quicksand-Regular.woff") format("woff"), url("../../../src/fonts/Quicksand-Regular.ttf") format("truetype"), url("../../../src/fonts/Quicksand-Regular.svg") format("svg");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
   font-style: normal;
-  src: local("Open Sans"), url("/src/fonts/OpenSans-Regular.svg") format("svg"), url("/src/fonts/opensans.woff") format("woff"), url("/src/fonts/opensans.ttf") format("truetype");
+  src: local("Open Sans"), url("../../../src/fonts/OpenSans-Regular.svg") format("svg"), url("../../../src/fonts/opensans.woff") format("woff"), url("../../../src/fonts/opensans.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-weight: 700;
   font-style: normal;
-  src: local("Open Sans"), url("/src/fonts/OpenSans-Bold.svg") format("svg"), url("/src/fonts/opensansbold.woff") format("woff"), url("/src/fonts/opensansbold.ttf") format("truetype");
+  src: local("Open Sans"), url("../../../src/fonts/OpenSans-Bold.svg") format("svg"), url("../../../src/fonts/opensansbold.woff") format("woff"), url("../../../src/fonts/opensansbold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("/src/fonts/MaterialIcons-Regular.svg") format("svg"), url("/src/fonts/MaterialIcons-Regular.woff") format("woff"), url("/src/fonts/MaterialIcons-Regular.ttf") format("truetype");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../../../src/fonts/MaterialIcons-Regular.svg") format("svg"), url("../../../src/fonts/MaterialIcons-Regular.woff") format("woff"), url("../../../src/fonts/MaterialIcons-Regular.ttf") format("truetype");
 }
 
 .material-icons {

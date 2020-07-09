@@ -11,37 +11,20 @@
     height: 100%;
 
     &__container {
-        $container-width: $width - 141px * 2;
         display: grid;
-        margin: 141px / $width * 100%;
-        margin-top: 144px / $width * 100%;
-        margin-bottom: 130px / $width * 100%;
-        grid-template-columns: 320px / $container-width * 100% 266px / $container-width * 100% 320px / $container-width * 100%;
-        column-gap: 126px / $container-width * 100%;
+        margin: 9.72vw;
+        margin-bottom: 9.03vw;
+        grid-template-columns: minmax(min-content, 320px) minmax(min-content, 266px) minmax(min-content, 320px);
+        column-gap: 8.75vw;
 
         @media (max-width: 992px) {
-            $width: 992px;
-            $container-width: $width * 0.8;
-            margin: 10%;
-            grid-template-columns: repeat(2, 320px / $container-width * 100%);
-            column-gap: 155px / $container-width * 100%;
+            grid-template-columns: repeat(2, minmax(min-content, 320px));
             row-gap: 20px;
         }
 
-        @media (max-width: 680px) {
-            $width: 680px;
-            max-width: 320px;
-            margin: 20% auto auto auto;
-            grid-template-columns: 100%;
-            column-gap: normal;
-        }
-
-        @media (max-width: 350px) {
-            $width: 350px;
-            max-width: 266px;
-            margin: 20% auto auto auto;
-            grid-template-columns: 100%;
-            column-gap: normal;
+        @media (max-width: 600px) {
+            grid-template-columns: minmax(min-content, 320px);
+            justify-content: center;
         }
     }
 

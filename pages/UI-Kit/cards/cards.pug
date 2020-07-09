@@ -1,0 +1,23 @@
+extends ../../../library/templates/base.pug
+block title
+	title "UI Kit: Cards"
+block styles
+	link(rel="stylesheet" href="cards.css")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+block body
+	+page()
+		.column
+			.card.search-card
+				p.card__title Найдём номера под ваши пожелания
+				+date()(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+
+			.card.register-card
+		.column
+			.card.reservation-card
+			.card.login-card
+		.column
+			.card.calendar
+			.card.suit-card
+			.card.suit-card
+	script(src="../../../library/plugins/air-datepicker/js/datepicker.js")
+	script(src="cards.js")

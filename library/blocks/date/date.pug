@@ -1,4 +1,4 @@
-mixin date()
-	.date.textfield
+mixin date(addClass)
+	.date.textfield(class='element__body '+addClass)
 		input.date__input.datepicker-here&attributes(attributes)
 		button.date__arrow

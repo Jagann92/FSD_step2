@@ -1,10 +1,17 @@
 .radio {
+  font: 400 14px/24px "Montserrat", sans-serif;
   line-height: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .radio__input {
@@ -78,7 +85,6 @@
 
 .radio__input + label {
   max-width: 230px;
-  display: inline-block;
   vertical-align: top;
   padding-top: 2px;
   cursor: pointer;

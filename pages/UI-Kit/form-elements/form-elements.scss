@@ -6,6 +6,7 @@
 @import "../../../library/plugins/air-datepicker/css/datepicker";
 @import "../../../library/blocks/page/page";
 
+
 .page {
     min-height: 1853px;
     height: 100%;
@@ -151,8 +152,7 @@
         float: right;
     }
 
-    &__body {
-    }
+    &__body {}
 
     &__head {
         display: flex;
@@ -176,12 +176,6 @@
 
 @import "../../../library/blocks/textfield/textfield";
 
-.textfield {
-    &.iqdropdown {
-        min-width: 210px;
-    }
-}
-
 @import "../../../library/blocks/date/date";
 
 @import "../../../library/blocks/subscribe/subscribe";
@@ -204,11 +198,7 @@
     }
 }
 
-@import "../../../library/blocks/radio/radio";
 
-.radio {
-    display: inline-flex;
-}
 
 @import "../../../library/blocks/switch/switch";
 

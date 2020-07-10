@@ -1,9 +1,10 @@
 @import "../../../library/templates/base";
 
 .checkbox {
-    line-height: 18px;
     display: flex;
     flex-wrap: nowrap;
+    font: $body;
+    line-height: 18px;
 
     &__input {
         -webkit-appearance: none;

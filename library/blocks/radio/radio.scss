@@ -1,9 +1,13 @@
 @import "../../../library/templates/base";
 
 .radio {
+    font: $body;
     line-height: 18px;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: min-content;
+
 
     &__input {
         -webkit-appearance: none;
@@ -71,7 +75,6 @@
 
         &+label {
             max-width: 230px;
-            display: inline-block;
             vertical-align: top;
             padding-top: 2px;
             cursor: pointer;

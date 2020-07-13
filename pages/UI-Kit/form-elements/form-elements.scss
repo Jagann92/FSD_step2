@@ -5,8 +5,7 @@
 @import "../../../library/plugins/ionrangeSlider/css/irs";
 @import "../../../library/plugins/air-datepicker/css/datepicker";
 @import "../../../library/blocks/page/page";
-
-
+@import "../../../library/blocks/switch/switch";
 .page {
     min-height: 1853px;
     height: 100%;
@@ -152,7 +151,8 @@
         float: right;
     }
 
-    &__body {}
+    &__body {
+    }
 
     &__head {
         display: flex;
@@ -197,8 +197,6 @@
         }
     }
 }
-
-
 
 @import "../../../library/blocks/switch/switch";
 

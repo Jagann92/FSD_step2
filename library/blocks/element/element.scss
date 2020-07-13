@@ -1,0 +1,78 @@
+@import "../../../library/templates/base";
+
+.element {
+    width: 100%;
+    max-width: 320px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-content: start;
+    row-gap: 5px;
+
+
+
+    &__subgrid {
+        display: flex;
+        margin: -15px -10px -1px -10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        &_inner {
+            margin: 15px 10px;
+        }
+    }
+
+    &_largegap {
+        row-gap: 16px;
+    }
+
+    &__title {
+        font: $h3;
+        text-transform: uppercase;
+        color: $grey;
+        justify-self: start;
+    }
+
+    &__subtitle {
+        font: $h3;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $grey50;
+        justify-self: end;
+    }
+
+    &__body {
+        grid-column: 1/3;
+    }
+
+    &_short {
+        max-width: 266px;
+
+        & .line {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        }
+    }
+
+    &_shorter {
+        max-width: 220px;
+
+        & .line {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+
+    }
+
+    &_large {
+        width: 120%;
+
+        @media (max-width: 350px) {
+            width: 100%;
+        }
+    }
+}

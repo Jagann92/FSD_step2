@@ -1,29 +1,56 @@
 @import "../../../library/templates/base";
+@import "../../../library/blocks/element/element";
 
 .expandable-list {
+    position: relative;
 
-    & summary {
-        display: block;
-        position: relative;
-
-        &::-webkit-details-marker {
-            display: none;
-        }
-
-        &::after {
-            @include material-icon;
-            content: "keyboard_arrow_down";
-            color: $grey50;
-            width: 22px;
-            height: 22px;
-            position: absolute;
-            right: 12px;
-            top: -4px;
-        }
+    &::after {
+        @include material-icon;
+        content: "keyboard_arrow_down";
+        color: $grey50;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        right: -84px;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    &[open]>summary::after {
-        @include material-icon;
+    &.float::after {
+        right: -10px;
+    }
+
+    &.open::after {
         content: "keyboard_arrow_up";
+    }
+
+    &+ul,
+    &.float ul {
+        display: none;
+    }
+
+    &.open+ul,
+    &.open.float ul,
+    &.lock+ul {
+        display: grid;
+    }
+
+    &.float ul {
+        position: absolute;
+        top: 100%;
+        right: -10%;
+        width: max-content;
+        z-index: 10;
+        color: $grey;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        background: #fff;
+        border: 1px solid $grey25;
+        border-radius: 4px;
+        padding: 5px;
     }
 }

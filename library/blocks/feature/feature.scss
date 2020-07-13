@@ -7,7 +7,7 @@
     border-bottom: 1px solid $grey10;
     width: 100%;
     max-width: 280px;
-    margin-bottom: 22px;
+
     &:before {
         position: absolute;
         @include material-icon;
@@ -21,6 +21,7 @@
         left: 0;
         font-size: 48px;
     }
+
     &_smile:before {
         content: "sentiment_very_satisfied";
     }

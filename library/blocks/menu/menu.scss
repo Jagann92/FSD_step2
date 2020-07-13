@@ -1,8 +1,9 @@
 @import "../../../library/templates/base";
+@import "../../../library/blocks/expandable-list/expandable-list";
 
 .menu {
 
-    &__f-submenu {
+    /*&__f-submenu {
         & .menu__elem {
             margin-bottom: 20px;
         }
@@ -10,36 +11,7 @@
         @media (max-width:550px) {
             display: none;
         }
-    }
-
-    &__submenu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: max-content;
-        z-index: 10;
-        -webkit-transition: 0.5s ease-in-out;
-        -moz-transition: 0.5s ease-in-out;
-        -o-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-out;
-        background: $grey10;
-
-        border-radius: 4px;
-
-        & .menu__elem {
-            margin: 5px;
-            padding-bottom: 5px;
-            border-bottom: solid 1px $grey25;
-            color: $grey75;
-        }
-
-        @media (max-width: 767px) {
-            background: none;
-            top: 20%;
-            left: -25%;
-        }
-    }
+    }*/
 
     &__elem {
         font: $body;
@@ -51,41 +23,22 @@
             color: $grey75;
         }
 
-        &_title {
+        &_spoiler {
+            padding-right: 10px;
+
+            & .menu__elem {
+                margin: 5px;
+                padding-bottom: 5px;
+                border-bottom: solid 1px $grey25;
+                color: $grey75;
+            }
+        }
+
+        /*&_title {
             font: $h3;
             text-transform: uppercase;
             color: $grey;
-        }
+        }*/
 
-        &_spoiler {
-            padding-right: 20px;
-            position: relative;
-
-
-            &:hover {
-                @media (max-width: 767px) {
-                    padding-bottom: 90px;
-                }
-
-                & ul.menu__submenu {
-                    display: block;
-
-                    & .menu__elem {
-                        font-size: 14px;
-                    }
-                }
-            }
-
-            &::after {
-                @include material-icon;
-                content: "keyboard_arrow_down";
-                position: absolute;
-                color: $grey50;
-                width: 22px;
-                height: 22px;
-                right: -2px;
-                top: -3px;
-            }
-        }
     }
 }

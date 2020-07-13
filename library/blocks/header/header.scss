@@ -69,7 +69,8 @@
             }
 
             &:hover .header__buttons,
-            &:active .header__buttons, &:focus .header__buttons {
+            &:active .header__buttons,
+            &:focus .header__buttons {
                 display: grid;
                 grid-template-columns: auto;
                 justify-items: center;
@@ -204,25 +205,26 @@
 
     .header__menu {
         position: absolute;
-        top: 0;
+        top: 100%;
         display: none;
         right: 0;
         width: 100%;
         overflow: auto;
         transition: all 0.3s ease 0s;
-        background-color: $grey10;
-        padding: 70px 20px 20px 10px;
+        background-color: #fff;
+        padding: 20px 20px 20px 10px;
         justify-content: end;
         grid-template-columns: 100%;
         column-gap: 0;
         row-gap: 20px;
+        z-index: 4;
 
         & .menu__elem {
             font-size: 20px;
         }
     }
 
-    .header__menu.active {
+    .header__burger.active+.header__menu {
         display: grid;
     }
 

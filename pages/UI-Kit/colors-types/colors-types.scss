@@ -1,6 +1,123 @@
 @import "../../../library/templates/base";
 @import "../../../library/nullstyle/nullstyle.scss";
 @import "../../../src/fonts/fonts";
-@import "../../../library/blocks/page/page";
-@import "blocks/page/page";
-@import "blocks/container/container";
+
+body {
+    min-height: 900px;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "column-1 column-2";
+    margin-top: 10.069vw;
+    margin-left: 10.398vw;
+    margin-right: 13.263vw;
+    margin-bottom: 10.069vw;
+    grid-template-columns: 19.1vw 27.99vw;
+    column-gap: 29.65vw;
+
+    @media (max-width: 500px) {
+        grid-template-areas:
+            "column-1"
+            "column-2";
+        grid-template-columns: 100%;
+        row-gap: 80px;
+        margin-right: 10.398vw;
+
+    }
+}
+
+.column-1 {
+    grid-area: column-1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto-fill, max-content);
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.column-2 {
+    grid-area: column-2;
+    display: grid;
+    grid-template-rows: repeat(4, minmax(min-content, max-content));
+    row-gap: 50px;
+}
+
+.color-sample {
+    display: grid;
+    grid-template-areas:
+        "color text"
+        "color code";
+    grid-template-columns: 70px minmax(min-content, 165px);
+    column-gap: 40px;
+    font: $h2;
+    line-height: 29px;
+
+    $i: 2;
+
+    @each $var in $grey75,
+    $grey50,
+    $grey25,
+    $grey05,
+    $purple,
+    $green {
+        &:nth-child(#{$i}) .color-sample__color {
+            background-color: $var;
+        }
+
+        $i: $i+1;
+    }
+
+    &__color {
+        grid-area: color;
+        display: flex;
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+        background-color: $grey;
+    }
+
+    &__text {
+        grid-area: text;
+        align-self: center;
+    }
+
+    &__code {
+        grid-area: code;
+        font-weight: 400;
+        align-self: center;
+    }
+}
+
+.type-sample {
+    display: grid;
+    grid-template-columns: 37px minmax(min-content, max-content);
+    column-gap: 30px;
+
+    &_H1 {
+        font: $h1;
+    }
+
+    &_H2 {
+        font: $h2;
+    }
+
+    &_H3 {
+        font: $h3;
+        text-transform: uppercase;
+    }
+
+    &_Body {
+        font: $body;
+    }
+
+    &__title {
+        font-family: Montserrat;
+        margin: 0 0 auto auto;
+        opacity: 0.25;
+        font-weight: 400;
+    }
+
+    &__text {}
+}

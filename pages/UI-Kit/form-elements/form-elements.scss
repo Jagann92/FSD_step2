@@ -20,21 +20,6 @@
 @import "../../../library/blocks/review/review";
 @import "../../../library/blocks/element/element";
 
-body {
-    max-width: $width;
-    width: 100%;
-    margin: auto;
-    padding: 0.1px;
-    background-color: white;
-    font: $body;
-    color: $grey75;
-    background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
-
-    @media (max-width: 767px) {
-        background-image: none;
-    }
-}
-
 .container {
     display: grid;
     grid-template-columns: 320fr 260fr 320fr;

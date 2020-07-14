@@ -3,16 +3,6 @@
 
 .menu {
 
-    /*&__f-submenu {
-        & .menu__elem {
-            margin-bottom: 20px;
-        }
-
-        @media (max-width:550px) {
-            display: none;
-        }
-    }*/
-
     &__elem {
         font: $body;
         line-height: 17px;
@@ -26,6 +16,13 @@
         &_spoiler {
             padding-right: 10px;
 
+            & .element__title {
+                font: $body;
+                line-height: 17px;
+                color: $grey50;
+                text-transform: none;
+            }
+
             & .menu__elem {
                 margin: 5px;
                 padding-bottom: 5px;
@@ -33,12 +30,5 @@
                 color: $grey75;
             }
         }
-
-        /*&_title {
-            font: $h3;
-            text-transform: uppercase;
-            color: $grey;
-        }*/
-
     }
 }

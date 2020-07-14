@@ -1760,6 +1760,7 @@ h6 {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  margin-bottom: 4px;
 }
 
 .switch__input {
@@ -3494,6 +3495,7 @@ h6 {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  margin-bottom: 4px;
 }
 
 .switch__input {
@@ -3862,16 +3864,106 @@ h6 {
   color: #fff;
 }
 
-.expandable-list summary {
-  display: block;
+.element {
+  width: 100%;
+  max-width: 320px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr max-content;
+      grid-template-columns: 1fr -webkit-max-content;
+      grid-template-columns: 1fr max-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  row-gap: 5px;
+}
+
+.element__subgrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -15px -10px -1px -10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.element__subgrid_inner {
+  margin: 15px 10px;
+}
+
+.element_largegap {
+  row-gap: 16px;
+}
+
+.element__title {
+  font: 700 12px/15px "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #1f2041;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.element__subtitle {
+  font: 700 12px/15px "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.element__body {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.element_short {
+  max-width: 266px;
+}
+
+.element_short .line {
+  -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.element_shorter {
+  max-width: 220px;
+}
+
+.element_shorter .line {
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.element__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.element_large {
+  width: 120%;
+}
+
+@media (max-width: 350px) {
+  .element_large {
+    width: 100%;
+  }
+}
+
+.expandable-list {
   position: relative;
 }
 
-.expandable-list summary::-webkit-details-marker {
-  display: none;
-}
-
-.expandable-list summary::after {
+.expandable-list::after {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -3898,33 +3990,54 @@ h6 {
   width: 22px;
   height: 22px;
   position: absolute;
-  right: 12px;
-  top: -4px;
+  right: -84px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.expandable-list[open] > summary::after {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: "liga";
-          font-feature-settings: "liga";
+.expandable-list.float::after {
+  right: -10px;
+}
+
+.expandable-list.open::after {
   content: "keyboard_arrow_up";
+}
+
+.expandable-list + ul,
+.expandable-list.float ul {
+  display: none;
+}
+
+.expandable-list.open + ul,
+.expandable-list.open.float ul,
+.expandable-list.lock + ul {
+  display: -ms-grid;
+  display: grid;
+}
+
+.expandable-list.float ul {
+  position: absolute;
+  top: 100%;
+  right: -10%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 10;
+  color: #1f2041;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  background: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding: 5px;
 }
 
 .expandable-list {
@@ -3950,7 +4063,6 @@ h6 {
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   width: 100%;
   max-width: 280px;
-  margin-bottom: 22px;
 }
 
 .feature:before {

@@ -666,7 +666,15 @@ h6 {
 
 .footer__menu .expandable-list::after,
 .footer__menu .expandable-list.open::after {
-  content: "";
+  left: -25px;
+  top: -3px;
+}
+
+@media (min-width: 550px) {
+  .footer__menu .expandable-list::after,
+  .footer__menu .expandable-list.open::after {
+    content: "";
+  }
 }
 
 .footer__menu .element__body {
@@ -933,7 +941,7 @@ h6 {
   height: 22px;
   position: absolute;
   right: -84px;
-  top: 0;
+  top: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -982,27 +990,10 @@ h6 {
   padding: 5px;
 }
 
-.menu {
-  /*&__f-submenu {
-        & .menu__elem {
-            margin-bottom: 20px;
-        }
-
-        @media (max-width:550px) {
-            display: none;
-        }
-    }*/
-}
-
 .menu__elem {
   font: 400 14px/24px "Montserrat", sans-serif;
   line-height: 17px;
   color: rgba(31, 32, 65, 0.5);
-  /*&_title {
-            font: $h3;
-            text-transform: uppercase;
-            color: $grey;
-        }*/
 }
 
 .menu__elem_current {
@@ -1012,6 +1003,13 @@ h6 {
 
 .menu__elem_spoiler {
   padding-right: 10px;
+}
+
+.menu__elem_spoiler .element__title {
+  font: 400 14px/24px "Montserrat", sans-serif;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+  text-transform: none;
 }
 
 .menu__elem_spoiler .menu__elem {

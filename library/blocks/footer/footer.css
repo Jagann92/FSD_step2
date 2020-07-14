@@ -98,7 +98,15 @@
 
 .footer__menu .expandable-list::after,
 .footer__menu .expandable-list.open::after {
-  content: "";
+  left: -25px;
+  top: -3px;
+}
+
+@media (min-width: 550px) {
+  .footer__menu .expandable-list::after,
+  .footer__menu .expandable-list.open::after {
+    content: "";
+  }
 }
 
 .footer__menu .element__body {

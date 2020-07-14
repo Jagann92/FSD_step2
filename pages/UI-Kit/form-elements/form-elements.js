@@ -118,6 +118,7 @@ $(document).ready(() => {
 		}
 	});
 });
+
 var datepickers = document.querySelectorAll('.date');
 datepickers.forEach(function clickListener(element, index) {
 	let calendar = $('#date-' + (index + 1)).datepicker({

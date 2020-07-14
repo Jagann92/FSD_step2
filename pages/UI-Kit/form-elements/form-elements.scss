@@ -3,270 +3,99 @@
 @import "../../../src/fonts/fonts";
 @import "../../../library/plugins/item-quantity-dropdown/css/item-quantity-dropdown.min";
 @import "../../../library/plugins/ionrangeSlider/css/irs";
-@import "../../../library/plugins/air-datepicker/css/datepicker";
 @import "../../../library/blocks/page/page";
+@import "../../../library/blocks/textfield/textfield";
+@import "../../../library/blocks/date/date";
+@import "../../../library/blocks/subscribe/subscribe";
+@import "../../../library/blocks/checkbox/checkbox";
+@import "../../../library/blocks/radio/radio";
 @import "../../../library/blocks/switch/switch";
-.page {
-    min-height: 1853px;
-    height: 100%;
+@import "../../../library/blocks/like/like";
+@import "../../../library/blocks/rate/rate";
+@import "../../../library/blocks/button/button";
+@import "../../../library/blocks/pagination/paginaion";
+@import "../../../library/blocks/expandable-list/expandable-list";
+@import "../../../library/blocks/bullet-list/bullet-list";
+@import "../../../library/blocks/feature/feature";
+@import "../../../library/blocks/review/review";
+@import "../../../library/blocks/element/element";
 
-    &__container {
-        display: grid;
-        margin: 9.72vw;
-        margin-bottom: 9.03vw;
-        grid-template-columns: minmax(min-content, 320px) minmax(min-content, 266px) minmax(min-content, 320px);
-        column-gap: 8.75vw;
+body {
+    max-width: $width;
+    width: 100%;
+    margin: auto;
+    padding: 0.1px;
+    background-color: white;
+    font: $body;
+    color: $grey75;
+    background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 
-        @media (max-width: 992px) {
-            grid-template-columns: repeat(2, minmax(min-content, 320px));
-            row-gap: 20px;
+    @media (max-width: 767px) {
+        background-image: none;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 320fr 260fr 320fr;
+    column-gap: 8.75vw;
+    row-gap: 6.97vw;
+    margin: 9.72vw;
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, minmax(min-content, 320px));
+        row-gap: 40px;
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: minmax(min-content, 320px);
+        justify-content: center;
+
+    }
+}
+
+.column {
+    display: grid;
+    row-gap: 20px;
+
+
+    align-content: start;
+
+    &_small {
+        max-height: 221px;
+    }
+
+    &_largegap {
+        row-gap: 40px;
+    }
+
+    &_double {
+        grid-column-end: span 2;
+
+        & .element {
+            max-width: 710px;
         }
 
         @media (max-width: 600px) {
-            grid-template-columns: minmax(min-content, 320px);
-            justify-content: center;
+            grid-column-end: span 1;
+
         }
     }
 
-    &__block {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-items: flex-start;
-        width: 100%;
-
-        &:last-child {
-            grid-column: 2/4;
-
-            @media (max-width: 992px) {
-                grid-column: 2/3;
-            }
-
-            @media (max-width: 680px) {
-                grid-column: 1/2;
-            }
-        }
-
-        &:first-child {
-            margin-bottom: 75px;
-        }
-
-        &:nth-child(4) {
-            margin-bottom: 32px;
-        }
-
-        &:nth-child(7) {
-            margin-bottom: 50px;
-        }
+    &__subgrid {
+        padding-top: 20px;
+        display: grid;
     }
+
 }
 
-.element {
-    width: 100%;
-    margin-bottom: 22px;
-
-    &_short {
-        max-width: 266px;
-    }
-
-    &_vshort {
-        max-width: 222px;
-    }
-
-    &_large {
-        width: 120%;
-
-        @media (max-width: 350px) {
-            width: 100%;
-        }
-    }
-
-    &__date,
-    &__subscribe {
-        margin-top: 20px;
-    }
-
-    &__masked-textfield {
-        margin-bottom: 20px;
-    }
-
-    &__buttons,
-    &__pagination {
-        margin-top: 15px;
-    }
-
-    &__checkbox {
-        margin-bottom: 10px;
-    }
-
-    &__radio {
-        margin-right: 20px;
-        margin-top: 11px;
-        margin-bottom: 20px;
-    }
-
-    &__switch {
-        margin-bottom: 14px;
-    }
-
-    &__like {
-        margin: 10px 10px 20px 0;
-    }
-
-    &__list {
-        margin-top: 16.5px;
-        margin-bottom: 20px;
-    }
-
-    &__rate {
-        margin-top: 10px;
-
-        &:first-of-type {
-            margin-right: 20px;
-        }
-    }
-
-    &_inline {
-        display: inline-flex;
-        flex-wrap: wrap;
-        max-width: 150px;
-    }
-
-    &__title {
-        font: $h3;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        text-align: left;
-        color: $grey;
-    }
-
-    &__subtitle {
-        font: $h3;
-        text-transform: uppercase;
-        font-weight: 400;
-        color: $grey50;
-        float: right;
-    }
-
-    &__body {
-    }
-
-    &__head {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 5px;
-    }
-
-    &__range {
-        margin-top: 10px;
-        margin-bottom: 12px;
-    }
-
-    &__line {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-    }
+#list-1 {
+    margin-bottom: 10px;
 }
 
-@import "../../../library/blocks/textfield/textfield";
-
-@import "../../../library/blocks/date/date";
-
-@import "../../../library/blocks/subscribe/subscribe";
-
-.subscribe {
-    max-width: 266px;
-}
-
-@import "../../../library/blocks/arrow/arrow";
-
-@import "../../../library/blocks/checkbox/checkbox";
-
-.checkbox {
-    &_rich {
-        margin-top: 10px;
-
-        &:first-of-type {
-            margin-top: 16px;
-        }
-    }
-}
-
-@import "../../../library/blocks/switch/switch";
-
-@import "../../../library/blocks/like/like";
-
-@import "../../../library/blocks/rate/rate";
-
-@import "../../../library/blocks/button/button";
-
-.button {
-    &_demo {
-        margin-right: 20px;
-        margin-bottom: 30px;
-
-        &:last-of-type {
-            margin-bottom: 20px;
-        }
-    }
-
-    &_text {
-        margin-right: 15px;
-    }
-
-    &_white {
-        &.button_demo {
-            margin-bottom: 26px;
-        }
-
-        &.button_hover::after {
-            background: $gradient50;
-        }
-    }
-
-    &_purple {
-        &.button_hover {
-            opacity: 0.5;
-        }
-    }
-}
-
-@import "../../../library/blocks/pagination/paginaion";
-
-@import "../../../library/blocks/expandable-list/expandable-list";
-
-.expandable-list {
-    margin-bottom: 28px;
-
-    &__checkbox {
-        margin-bottom: 10px;
-
-        &:first-of-type {
-            margin-top: 18px;
-        }
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
-}
-
-@import "../../../library/blocks/feature/feature";
-
-@import "../../../library/blocks/review/review";
-
-@import "../../../library/blocks/bullet-list/bullet-list";
-
-.bullet-list {
-    margin-top: 15px;
-
-    &__elem {
-        margin-bottom: 10px;
-    }
+.line {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    row-gap: 10px;
+    column-gap: 20px;
 }

@@ -6,124 +6,99 @@ block styles
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 
 block body
-	+page()
-		.page__block
+	.container
+		.column
 			.element
-				.element__head
-					span.element__title text field
-					span.element__subtitle Default
-				.element__body
-					input.textfield(type="email" placeholder="Email")
+				span.element__title text field
+				span.element__subtitle Default
+				input.textfield.element__body(type="email" placeholder="Email")
 			.element
-				.element__head
-					span.element__title text field
-					span.element__subtitle Hover / Focus
-				.element__body
-					input.textfield.textfield_focus(type="text" value="This is a pretty awesome" placeholder="Text")
+				span.element__title text field
+				span.element__subtitle Hover / Focus
+				input.textfield.textfield_focus.element__body(type="text" value="This is a pretty awesome" placeholder="Text")
 			.element
-				.element__head
-					span.element__title dropdown
-					span.element__subtitle Default
-				.element__body
-					.iqdropdown.people.no-buttons.textfield
-						p.iqdropdown-selection
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="adults")
-								div
-									p.iqdropdown-item Взрослые
-							.iqdropdown-menu-option(data-id="childs")
-								div
-									p.iqdropdown-item Дети
-							.iqdropdown-menu-option(data-id="babies")
-								div
-									p.iqdropdown-item Младенцы
+				span.element__title dropdown
+				span.element__subtitle Default
+				.iqdropdown.people.no-buttons.textfield.element__body
+					p.iqdropdown-selection
+					.iqdropdown-menu
+						.iqdropdown-menu-option(data-id="adults")
+							div
+								p.iqdropdown-item Взрослые
+						.iqdropdown-menu-option(data-id="childs")
+							div
+								p.iqdropdown-item Дети
+						.iqdropdown-menu-option(data-id="babies")
+							div
+								p.iqdropdown-item Младенцы
 			.element
-				.element__head
-					span.element__title Masked text field
-					span.element__subtitle Default
-				.element__body.element__masked-textfield
-					input.textfield.textfield_masked(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ")
-			.element__line
-				.element.element_inline
-					.element__head
+				span.element__title Masked text field
+				span.element__subtitle Default
+				input.textfield.textfield_masked.element__body(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ")
+			.column__subgrid.column_largegap
+				.line
+					.element
 						span.element__title date dropdown
-					.element__body
 						+date()(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
-				.element.element_inline
-					.element__head
+					.element
 						span.element__title date dropdown
-					.element__body
 						+date()(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
-			.element.element_short.element__date
-				.element__head
+				.element.element_short
 					span.element__title filter date dropdown
-				.element__body
 					+date()(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
-			.element.element_short.element__subscribe
-				.element__head
+				.element.element_short
 					span.element__title subscription text field
-				.element__body
-					+subscribe()(id="email1")
-		.page__block
-			.element
-				.element__head
-					span.element__title checkbox buttons
-				ul.element__body.element__list.element_vshort
-					+checkbox('li','Можно курить')(class="element__checkbox" id="c1")
-					+checkbox('li','Можно с питомцами')(class="element__checkbox" id="c2" checked)
-					+checkbox('li','Можно пригласить гостей (до 10 человек)')(class="element__checkbox" id="c3" checked)
-			.element
-				.element__head
-					span.element__title radio buttons
-				.element__body
-					+radio('Мужчина')(class='element__radio' name='gender' id='r1' checked)
-					+radio('Женщина')(class='element__radio' name='gender' id='r2')
-			.element
-				.element__head
-					span.element__title toggle
+					+subscribe()(class="element__body" id="email1")
+		.column.column_largegap
+			.element.element_shorter.element_largegap
+				span.element__title checkbox buttons
+				ul.element__body.element__list.element_shorter
+					+checkbox('li','Можно курить')( id="c1")
+					+checkbox('li','Можно с питомцами')( id="c2" checked)
+					+checkbox('li','Можно пригласить гостей (до 10 человек)')( id="c3" checked)
+			.element.element_shorter.element_largegap
+				span.element__title radio buttons
+				.element__body.line
+					+radio('Мужчина')( name='gender' id='r1' checked)
+					+radio('Женщина')( name='gender' id='r2')
+			.element.element_largegap
+				span.element__title toggle
 				ul.element__body.element__list
-					+switch('li','Получать спецпредложения')(class="element__switch" id="sw1" checked)
-					+switch('li','Получать спецпредложения')(class="element__switch" id="sw2")
-			.element
-				.element__head
-					span.element__title like button
+					+switch('li','Получать спецпредложения')(id="sw1" checked)
+					+switch('li','Получать спецпредложения')(id="sw2")
+			.element.element_largegap
+				span.element__title like button
 				.element__body
-					+like(2)(id="like-1" class="element__like")
-					+like(12)(id="like-2" class="like_liked element__like")
-			.element
-				.element__head
-					span.element__title rate button
+					+like(2)(id="like-1" )
+					+like(12)(id="like-2" class="like_liked")
+			.element.element_largegap.element_short
+				span.element__title rate button
+				.element__body.line
+					+rate(4)(name="stars")
+					+rate(5)(name="stars2")
+		.column.column_largegap
+			.element.element_short.range.element_largegap
+				span.element__title range slider
+				span.element__subtitle.range__value 5 000Р-10 000р
 				.element__body
-					+rate(4)(class='element_rate' name="stars")
-					+rate(5)(class='element_rate' name="stars2")
-		.page__block
-			.element.element_short.range
-				.element__head
-					span.element__title range slider
-					span.element__subtitle.range__value 5 000Р-10 000р
-				.element__body.element__range
 					input(type="text" name="my_range" value="").js-range-slider.range__input
+			.element.element_largegap
+				span.element__title buttons
+				.element__body.element__subgrid.element_short
+					+button('Click me','purple','normal',0)(class="element__subgrid_inner")
+					+button('Click me','purple','normal',0)(class='element__subgrid_inner button_hover')
+					+button('Click me','white','normal',0)(class="element__subgrid_inner")
+					+button('Click me','white','normal',0)(class='button_hover element__subgrid_inner')
+					+button('Click me','text','normal',0)(class="element__subgrid_inner")
+					+button('Click me','text-grey','normal',0)(class="element__subgrid_inner")
+				+button('Перейти к оплате','purple','wide',1)()
 			.element
-				.element__head
-					span.element__title buttons
-				.element__body.element__buttons
-					+button('Click me','purple','normal',0)(class='button_demo')
-					+button('Click me','purple','normal',0)(class='button_demo button_hover')
-					+button('Click me','white','normal',0)(class='button_demo')
-					+button('Click me','white','normal',0)(class='button_hover button_demo')
-					br
-					+button('Click me','text','normal',0)(class='button_demo')
-					+button('Click me','text-grey','normal',0)(class='button_demo')
-					+button('Перейти к оплате','purple','wide',1)(class='button_demo')
-			.element
-				.element__head
-					span.element__title Pagination
-				+pagination(1,15,'last','1 – 12 из 100+ вариантов аренды','1','2','3')(class="element__body element__pagination")
-		.page__block
+				span.element__title Pagination
+				+pagination(1,15,'last','1 – 12 из 100+ вариантов аренды','1','2','3')(class="element__body")
+		.column.column_small
 			.element.element_short
-				.element__head
-					span.element__title dropdown
-					span.element__subtitle Default
+				span.element__title dropdown
+				span.element__subtitle Default
 				.element__body
 					.iqdropdown.beds.textfield
 						p.iqdropdown-selection
@@ -138,9 +113,8 @@ block body
 								div
 									p.iqdropdown-item Ванные комнаты
 			.element.element_short
-				.element__head
-					span.element__title dropdown
-					span.element__subtitle Expanded
+				span.element__title dropdown
+				span.element__subtitle Expanded
 				.element__body
 					.iqdropdown.beds.textfield
 						p.iqdropdown-selection(data-inline="true")
@@ -154,10 +128,9 @@ block body
 							.iqdropdown-menu-option(data-id="bathrooms")
 								div
 									p.iqdropdown-item Ванные комнаты
-		.page__block
+		.column
 			.element.element_large
-				.element__head
-					span.element__title dropdown
+				span.element__title dropdown
 				.element__body
 					.iqdropdown.people.textfield
 						p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true")
@@ -171,10 +144,9 @@ block body
 							.iqdropdown-menu-option(data-id="babies")
 								div
 									p.iqdropdown-item Младенцы
-		.page__block
+		.column
 			.element
-				.element__head
-					span.element__title dropdown
+				span.element__title dropdown
 				.element__body
 					.iqdropdown.people.textfield
 						p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true")
@@ -188,44 +160,46 @@ block body
 							.iqdropdown-menu-option(data-id="babies")
 								div
 									p.iqdropdown-item Младенцы
-		.page__block
-			.element.element_short
-				+expandable-list('expandable checkbox list','element__title')
+		.column.column_largegap
+			.element.element_short.element_largegap
+				+expandable-list('expandable checkbox list')(id="list-1")
 					+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec11")
 					+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec12" checked)
 					+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec13" checked)
 					+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec14" checked)
 					+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec15")
 					+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec16")
-			.element.element_short
-				+expandable-list('expandable checkbox list','element__title')(open)
+			.element.element_short.element_largegap
+				+expandable-list('expandable checkbox list',1)(id="list-2")
 					+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec21")
 					+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec22" checked)
 					+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec23" checked)
 					+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec24" checked)
 					+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec25")
 					+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec26")
-		.page__block
-			.element
-				.element__head
-					span.element__title rich checkbox buttons
-				.element__body
+		.column
+			.element.element_largegap
+				span.element__title rich checkbox buttons
+				.element__body.element__list
 					+checkbox('div','Широкий коридор',1,'Ширина коридоров в номере не менее 91см.')(id="rc1")
 					+checkbox('div','Помощник для инвалидов',1,'На 1 этаже вас встретит специалист и проводит до номера.')(id="rc2")
-		.page__block
-			.element
-				.element__head
-					span.element__title Bullet list
-				+bullet-list('Нельзя с питомцами', 'Без вечеринок и меропритий', 'Время прибытия - после 13:00, а выезд до 12:00')
-		.page__block
+		.column
+			.element.element_largegap
+				span.element__title Bullet list
+				.element__body
+					+bullet-list('Нельзя с питомцами', 'Без вечеринок и меропритий', 'Время прибытия - после 13:00, а выезд до 12:00')(class="element__list")
+		.column
 			.element
 				+feature('smile','Комфорт','Шумопоглощающие стены')
+			.element
 				+feature('apartment','Удобство','Окно в каждой из спален')
-		.page__block
+		.column.column_double
 			.element
 				+review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',12,1)
+
 	script(src="../../../library/plugins/ionRangeSlider/js/ion.rangeSlider.min.js")
 	script(src="../../../library/plugins/item-quantity-dropdown/js/item-quantity-dropdown.min.js")
 	script(src="../../../library/plugins/inputmask/jquery.inputmask.js")
 	script(src="../../../library/plugins/air-datepicker/js/datepicker.js")
+	script(src="../../../library/blocks/expandable-list/expandable-list.js")
 	script(src="form-elements.js")

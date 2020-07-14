@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initital-scale=1.0">
@@ -9,27 +9,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="page">
-      <div class="page__container">
-        <div class="column">
-          <div class="card search-card">
-            <p class="card__title">Найдём номера под ваши пожелания</p>
-            <div class="date textfield">
-              <input class="date__input datepicker-here" type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
-              <button class="date__arrow"></button>
-            </div>
+    <div class="container">
+      <div class="column">
+        <div class="card search-card">
+          <p class="card__title">Найдём номера под ваши пожелания</p>
+          <div class="date textfield element__body undefined">
+            <input class="date__input datepicker-here" type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+            <button class="date__arrow"></button>
           </div>
-          <div class="card register-card"></div>
         </div>
-        <div class="column">
-          <div class="card reservation-card"></div>
-          <div class="card login-card"></div>
-        </div>
-        <div class="column">
-          <div class="card calendar"></div>
-          <div class="card suit-card"></div>
-          <div class="card suit-card"></div>
-        </div>
+        <div class="card register-card"></div>
+      </div>
+      <div class="column">
+        <div class="card reservation-card"></div>
+        <div class="card login-card"></div>
+      </div>
+      <div class="column">
+        <div class="card calendar"></div>
+        <div class="card suit-card"></div>
+        <div class="card suit-card"></div>
       </div>
     </div>
     <script src="../../../library/plugins/air-datepicker/js/datepicker.js"></script>

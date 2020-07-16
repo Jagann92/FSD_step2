@@ -16,6 +16,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 /*Обнуление*/
 * {
   padding: 0;
@@ -752,38 +756,8 @@ body {
   }
 }
 
-.page {
-  max-width: 1440px;
-  width: 100%;
-  margin: auto;
-  padding: 0.1px;
-  background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
-  color: rgba(31, 32, 65, 0.75);
-  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
-}
-
-@media (max-width: 767px) {
-  .page {
-    background-image: none;
-  }
-}
-
-body {
-  max-width: 1440px;
-  width: 100%;
-  margin: auto;
-  padding: 0.1px;
-  background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
-  color: rgba(31, 32, 65, 0.75);
-  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
-}
-
-@media (max-width: 767px) {
-  body {
-    background-image: none;
-  }
+body.lock {
+  overflow: hidden;
 }
 
 .textfield {
@@ -864,6 +838,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 body {
   max-width: 1440px;
   width: 100%;
@@ -879,6 +857,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .textfield {
@@ -957,6 +939,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .datepicker--cell-day.-other-month-,
@@ -2065,6 +2051,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 body {
   max-width: 1440px;
   width: 100%;
@@ -2080,6 +2070,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .textfield {
@@ -2177,6 +2171,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .checkbox {
@@ -2317,6 +2315,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .radio {
   font: 400 14px/24px "Montserrat", sans-serif;
   line-height: 18px;
@@ -2428,6 +2430,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .switch {
   line-height: 18px;
   display: -webkit-box;
@@ -2532,6 +2538,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .like {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2625,6 +2635,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .rate {
   position: relative;
   display: -webkit-box;
@@ -2681,6 +2695,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .button {
@@ -2793,6 +2811,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .pagination {
   display: -ms-grid;
   display: grid;
@@ -2863,6 +2885,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 body {
   max-width: 1440px;
   width: 100%;
@@ -2880,6 +2906,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .element {
   width: 100%;
   max-width: 320px;
@@ -2893,7 +2923,7 @@ body {
           justify-content: space-between;
   -ms-flex-line-pack: start;
       align-content: start;
-  row-gap: 5px;
+  row-gap: 16px;
 }
 
 .element__subgrid {
@@ -2912,8 +2942,8 @@ body {
   margin: 15px 10px;
 }
 
-.element_largegap {
-  row-gap: 16px;
+.element_lowgap {
+  row-gap: 5px;
 }
 
 .element__title {
@@ -3073,6 +3103,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .bullet-list {
   font: 400 14px/24px "Montserrat", sans-serif;
   color: rgba(31, 32, 65, 0.75);
@@ -3109,6 +3143,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .feature {
@@ -3190,6 +3228,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .review {
   display: -ms-grid;
   display: grid;
@@ -3257,6 +3299,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .element {
   width: 100%;
   max-width: 320px;
@@ -3270,7 +3316,7 @@ body {
           justify-content: space-between;
   -ms-flex-line-pack: start;
       align-content: start;
-  row-gap: 5px;
+  row-gap: 16px;
 }
 
 .element__subgrid {
@@ -3289,8 +3335,8 @@ body {
   margin: 15px 10px;
 }
 
-.element_largegap {
-  row-gap: 16px;
+.element_lowgap {
+  row-gap: 5px;
 }
 
 .element__title {
@@ -3386,7 +3432,7 @@ body {
 .column {
   display: -ms-grid;
   display: grid;
-  row-gap: 20px;
+  row-gap: 40px;
   -ms-flex-line-pack: start;
       align-content: start;
 }
@@ -3395,8 +3441,8 @@ body {
   max-height: 221px;
 }
 
-.column_largegap {
-  row-gap: 40px;
+.column_lowgap {
+  row-gap: 20px;
 }
 
 .column_double {
@@ -3416,7 +3462,6 @@ body {
 }
 
 .column__subgrid {
-  padding-top: 20px;
   display: -ms-grid;
   display: grid;
 }
@@ -3428,8 +3473,8 @@ body {
 .line {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(140px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   row-gap: 10px;
   -webkit-column-gap: 20px;
           column-gap: 20px;

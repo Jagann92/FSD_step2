@@ -1,4 +1,20 @@
-mixin date(addClass)
-	.date.textfield(class='element__body '+addClass)
-		input.date__input.datepicker-here&attributes(attributes)
-		button.date__arrow
+mixin date(title,subtitle,mainClasses='',type)
+	if type=='double'
+		.line
+			.element(class=mainClasses)
+				span.element__title=title
+				.date.textfield.element__body
+					input.date__input.datepicker-here(type="text")&attributes(attributes)
+					button.date__arrow
+			.element(class=mainClasses)
+				span.element__title=subtitle
+				.date.textfield.element__body
+					input.date__input.datepicker-here(type="text")&attributes(attributes)
+					button.date__arrow
+	if type=='default'
+		.element(class=mainClasses)
+			span.element__title=title
+			span.element__subtitle=subtitle
+			.date.textfield.element__body
+				input.date__input.datepicker-here(type="text")&attributes(attributes) 
+				button.date__arrow

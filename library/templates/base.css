@@ -14,3 +14,7 @@ body {
     background-image: none;
   }
 }
+
+body.lock {
+  overflow: hidden;
+}

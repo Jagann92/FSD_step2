@@ -1,0 +1,19 @@
+mixin dropdown(title,subtitile,mainClasses="",type,defaultCount)
+	-var ids=[];
+	-var items=[];
+	if type=="people"
+		-ids=['adults','childs','babies'];
+		-items=['Взролые','Дети','Младенцы'];
+	else if type=="beds"
+		-ids=['bedrooms','beds','bathrooms'];
+		-items=['Спальни','Кровати','Ванные комнаты'];
+	.element(class=mainClasses)
+		span.element__title=title
+		span.element__subtitle=subtitile
+		.iqdropdown.textfield.element__body(class=type)
+			p.iqdropdown-selection&attributes(attributes)
+			.iqdropdown-menu
+				each val in [0,1,2]
+					.iqdropdown-menu-option(data-id=ids[val] data-defaultcount=defaultCount[val])
+						div
+							p.iqdropdown-item=items[val]

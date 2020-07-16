@@ -3,7 +3,6 @@
 @import "../../../src/fonts/fonts";
 @import "../../../library/plugins/item-quantity-dropdown/css/item-quantity-dropdown.min";
 @import "../../../library/plugins/ionrangeSlider/css/irs";
-@import "../../../library/blocks/page/page";
 @import "../../../library/blocks/textfield/textfield";
 @import "../../../library/blocks/date/date";
 @import "../../../library/blocks/subscribe/subscribe";
@@ -41,7 +40,7 @@
 
 .column {
     display: grid;
-    row-gap: 20px;
+    row-gap: 40px;
 
 
     align-content: start;
@@ -50,8 +49,8 @@
         max-height: 221px;
     }
 
-    &_largegap {
-        row-gap: 40px;
+    &_lowgap {
+        row-gap: 20px;
     }
 
     &_double {
@@ -68,7 +67,6 @@
     }
 
     &__subgrid {
-        padding-top: 20px;
         display: grid;
     }
 
@@ -80,7 +78,7 @@
 
 .line {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     row-gap: 10px;
     column-gap: 20px;
 }

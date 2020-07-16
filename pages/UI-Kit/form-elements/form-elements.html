@@ -11,67 +11,67 @@
   <body>
     <div class="container">
       <div class="column">
-        <div class="element"><span class="element__title">text field</span><span class="element__subtitle">Default</span>
-          <input class="textfield element__body" type="email" placeholder="Email">
-        </div>
-        <div class="element"><span class="element__title">text field</span><span class="element__subtitle">Hover / Focus</span>
-          <input class="textfield textfield_focus element__body" type="text" value="This is a pretty awesome" placeholder="Text">
-        </div>
-        <div class="element"><span class="element__title">dropdown</span><span class="element__subtitle">Default</span>
-          <div class="iqdropdown people no-buttons textfield element__body">
-            <p class="iqdropdown-selection"></p>
-            <div class="iqdropdown-menu">
-              <div class="iqdropdown-menu-option" data-id="adults">
-                <div>
-                  <p class="iqdropdown-item">Взрослые</p>
+        <div class="column__subgrid column_lowgap">
+          <div class="element element_lowgap"><span class="element__title">text field</span><span class="element__subtitle">default</span>
+            <input class="textfield element__body" type="email" placeholder="Email"/>
+          </div>
+          <div class="element element_lowgap"><span class="element__title">text field</span><span class="element__subtitle">hover/focus</span>
+            <input class="textfield element__body textfield_focus" type="text" placeholder="Text" value="This is a pretty awesome"/>
+          </div>
+          <div class="element element_lowgap"><span class="element__title">dropdown</span><span class="element__subtitle">default</span>
+            <div class="iqdropdown textfield element__body people">
+              <p class="iqdropdown-selection"></p>
+              <div class="iqdropdown-menu">
+                <div class="iqdropdown-menu-option" data-id="adults">
+                  <div>
+                    <p class="iqdropdown-item">Взролые</p>
+                  </div>
                 </div>
-              </div>
-              <div class="iqdropdown-menu-option" data-id="childs">
-                <div>
-                  <p class="iqdropdown-item">Дети</p>
+                <div class="iqdropdown-menu-option" data-id="childs">
+                  <div>
+                    <p class="iqdropdown-item">Дети</p>
+                  </div>
                 </div>
-              </div>
-              <div class="iqdropdown-menu-option" data-id="babies">
-                <div>
-                  <p class="iqdropdown-item">Младенцы</p>
+                <div class="iqdropdown-menu-option" data-id="babies">
+                  <div>
+                    <p class="iqdropdown-item">Младенцы</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="element"><span class="element__title">Masked text field</span><span class="element__subtitle">Default</span>
-          <input class="textfield textfield_masked element__body" type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ">
-        </div>
-        <div class="column__subgrid column_largegap">
-          <div class="line">
-            <div class="element"><span class="element__title">date dropdown</span>
-              <div class="date textfield element__body undefined">
-                <input class="date__input datepicker-here" type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
-                <button class="date__arrow"></button>
-              </div>
-            </div>
-            <div class="element"><span class="element__title">date dropdown</span>
-              <div class="date textfield element__body undefined">
-                <input class="date__input datepicker-here" type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
-                <button class="date__arrow"></button>
-              </div>
-            </div>
+          <div class="element element_lowgap"><span class="element__title">masked text field</span><span class="element__subtitle">default</span>
+            <input class="textfield element__body textfield_masked" type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ"/>
           </div>
-          <div class="element element_short"><span class="element__title">filter date dropdown</span>
-            <div class="date textfield element__body undefined">
-              <input class="date__input datepicker-here" type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ"/>
+        </div>
+        <div class="line">
+          <div class="element element_lowgap"><span class="element__title">date dropdown</span>
+            <div class="date textfield element__body">
+              <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
               <button class="date__arrow"></button>
             </div>
           </div>
-          <div class="element element_short"><span class="element__title">subscription text field</span>
-            <div class="subscribe element__body">
-              <input class="textfield subscribe__input" type="email" placeholder="Email" id="email1"/>
-              <button class="arrow material-icons subscribe__arrow">arrow_forward</button>
+          <div class="element element_lowgap"><span class="element__title">date dropdown</span>
+            <div class="date textfield element__body">
+              <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+              <button class="date__arrow"></button>
             </div>
           </div>
         </div>
+        <div class="element element_short element_lowgap"><span class="element__title">filter date dropdown</span><span class="element__subtitle"></span>
+          <div class="date textfield element__body">
+            <input class="date__input datepicker-here" type="text" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ"/>
+            <button class="date__arrow"></button>
+          </div>
+        </div>
+        <div class="element element_short element_lowgap"><span class="element__title">subscription text field</span><span class="element__subtitle"></span>
+          <div class="subscribe element__body">
+            <input class="textfield subscribe__input" type="email" placeholder="Email"/>
+            <button class="arrow material-icons subscribe__arrow">arrow_forward</button>
+          </div>
+        </div>
       </div>
-      <div class="column column_largegap">
+      <div class="column">
         <div class="element element_shorter element_largegap"><span class="element__title">checkbox buttons</span>
           <ul class="element__body element__list element_shorter">
             <li class="checkbox">
@@ -147,7 +147,7 @@
           </div>
         </div>
       </div>
-      <div class="column column_largegap">
+      <div class="column">
         <div class="element element_short range element_largegap"><span class="element__title">range slider</span><span class="element__subtitle range__value">5 000Р-10 000р</span>
           <div class="element__body">
             <input class="js-range-slider range__input" type="text" name="my_range" value="">
@@ -178,24 +178,22 @@
       </div>
       <div class="column column_small">
         <div class="element element_short"><span class="element__title">dropdown</span><span class="element__subtitle">Default</span>
-          <div class="element__body">
-            <div class="iqdropdown beds textfield">
-              <p class="iqdropdown-selection"></p>
-              <div class="iqdropdown-menu">
-                <div class="iqdropdown-menu-option" data-id="bedrooms" data-defaultcount="2">
-                  <div>
-                    <p class="iqdropdown-item">Спальни</p>
-                  </div>
+          <div class="element__body iqdropdown beds textfield">
+            <p class="iqdropdown-selection"></p>
+            <div class="iqdropdown-menu">
+              <div class="iqdropdown-menu-option" data-id="bedrooms" data-defaultcount="2">
+                <div>
+                  <p class="iqdropdown-item">Спальни</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="beds" data-defaultcount="2">
-                  <div>
-                    <p class="iqdropdown-item">Кровати</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="beds" data-defaultcount="2">
+                <div>
+                  <p class="iqdropdown-item">Кровати</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="bathrooms">
-                  <div>
-                    <p class="iqdropdown-item">Ванные комнаты</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="bathrooms">
+                <div>
+                  <p class="iqdropdown-item">Ванные комнаты</p>
                 </div>
               </div>
             </div>
@@ -228,24 +226,22 @@
       </div>
       <div class="column">
         <div class="element element_large"><span class="element__title">dropdown</span>
-          <div class="element__body">
-            <div class="iqdropdown people textfield">
-              <p class="iqdropdown-selection" data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true"></p>
-              <div class="iqdropdown-menu">
-                <div class="iqdropdown-menu-option" data-id="adults">
-                  <div>
-                    <p class="iqdropdown-item">Взрослые</p>
-                  </div>
+          <div class="element__body iqdropdown people textfield">
+            <p class="iqdropdown-selection" data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true"></p>
+            <div class="iqdropdown-menu">
+              <div class="iqdropdown-menu-option" data-id="adults">
+                <div>
+                  <p class="iqdropdown-item">Взрослые</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="childs">
-                  <div>
-                    <p class="iqdropdown-item">Дети</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="childs">
+                <div>
+                  <p class="iqdropdown-item">Дети</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="babies">
-                  <div>
-                    <p class="iqdropdown-item">Младенцы</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="babies">
+                <div>
+                  <p class="iqdropdown-item">Младенцы</p>
                 </div>
               </div>
             </div>
@@ -254,31 +250,29 @@
       </div>
       <div class="column">
         <div class="element"><span class="element__title">dropdown</span>
-          <div class="element__body">
-            <div class="iqdropdown people textfield">
-              <p class="iqdropdown-selection" data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true"></p>
-              <div class="iqdropdown-menu">
-                <div class="iqdropdown-menu-option" data-id="adults">
-                  <div>
-                    <p class="iqdropdown-item">Взрослые</p>
-                  </div>
+          <div class="element__body iqdropdown people textfield">
+            <p class="iqdropdown-selection" data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true"></p>
+            <div class="iqdropdown-menu">
+              <div class="iqdropdown-menu-option" data-id="adults">
+                <div>
+                  <p class="iqdropdown-item">Взрослые</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="childs">
-                  <div>
-                    <p class="iqdropdown-item">Дети</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="childs">
+                <div>
+                  <p class="iqdropdown-item">Дети</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="babies">
-                  <div>
-                    <p class="iqdropdown-item">Младенцы</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="babies">
+                <div>
+                  <p class="iqdropdown-item">Младенцы</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="column column_largegap">
+      <div class="column">
         <div class="element element_short element_largegap"><span class="expandable-list inline element__title" id="list-1">expandable checkbox list</span>
           <ul class="element__body element__list">
             <li class="checkbox expandable-list__checkbox">

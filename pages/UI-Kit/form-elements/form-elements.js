@@ -119,29 +119,37 @@ $(document).ready(() => {
 	});
 });
 
-var datepickers = document.querySelectorAll('.date');
-datepickers.forEach(function clickListener(element, index) {
-	let calendar = $('#date-' + (index + 1)).datepicker({
+var $datepickers = $('.date');
+$.each($datepickers, function ($index, element) {
+	let $element = $datepickers.eq($index);
+	let $calendar = $element.find('.date__input').datepicker({
 		onHide: function (inst, animationCompleted) {
+			if (!animationCompleted) {
+				$('body').toggleClass('lock');
+			}
 			if (animationCompleted) {
-				element.classList.remove('date_open');
+				$element.removeClass('date_open');
+				$('body').removeClass('lock');
 			}
 		},
 		onShow: function (inst, animationCompleted) {
+			if (!animationCompleted) {
+				$('body').toggleClass('lock');
+			}
 			if (animationCompleted) {
-				element.classList.add('date_open');
+				$element.addClass('date_open');
 			}
 		},
 	}).data('datepicker');
 
-	let arrow = element.querySelector('.date__arrow');
-	arrow.onclick = function showHide() {
-		if (element.classList.contains('date_open')) {
-			element.classList.remove('date_open');
-			calendar.hide();
-		} else if (!element.classList.contains('date_open')) {
-			element.classList.add('date_open');
-			calendar.show();
+	let $arrow = $element.find('.date__arrow');
+	$arrow.on('click', function () {
+		if ($element.hasClass('date_open')) {
+			$element.removeClass('date_open');
+			$calendar.hide();
+		} else if (!$element.hasClass('date_open')) {
+			$element.addClass('date_open');
+			$calendar.show();
 		}
-	}
+	});
 });

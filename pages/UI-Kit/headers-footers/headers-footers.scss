@@ -1,7 +1,6 @@
 @import "../../../library/templates/base";
 @import "../../../library/nullstyle/nullstyle.scss";
 @import "../../../src/fonts/fonts";
-@import "../../../library/blocks/page/page";
 @import "../../../library/blocks/button/button";
 @import "../../../library/blocks/header/header";
 @import "../../../library/blocks/footer/footer";
@@ -11,8 +10,7 @@
 @import "../../../library/blocks/element/element";
 
 body {
-    background-color: #e5e5e5;
-    min-height: 1350px;
+    background-color: #e5e5e5;min-height: 1350px;
     height: 100%;
 }
 

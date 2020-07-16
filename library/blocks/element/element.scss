@@ -7,7 +7,7 @@
     grid-template-columns: 1fr max-content;
     justify-content: space-between;
     align-content: start;
-    row-gap: 5px;
+    row-gap: 16px;
 
 
 
@@ -22,8 +22,8 @@
         }
     }
 
-    &_largegap {
-        row-gap: 16px;
+    &_lowgap {
+        row-gap: 5px;
     }
 
     &__title {

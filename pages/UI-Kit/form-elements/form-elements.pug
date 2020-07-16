@@ -8,48 +8,15 @@ block styles
 block body
 	.container
 		.column
-			.element
-				span.element__title text field
-				span.element__subtitle Default
-				input.textfield.element__body(type="email" placeholder="Email")
-			.element
-				span.element__title text field
-				span.element__subtitle Hover / Focus
-				input.textfield.textfield_focus.element__body(type="text" value="This is a pretty awesome" placeholder="Text")
-			.element
-				span.element__title dropdown
-				span.element__subtitle Default
-				.iqdropdown.people.no-buttons.textfield.element__body
-					p.iqdropdown-selection
-					.iqdropdown-menu
-						.iqdropdown-menu-option(data-id="adults")
-							div
-								p.iqdropdown-item Взрослые
-						.iqdropdown-menu-option(data-id="childs")
-							div
-								p.iqdropdown-item Дети
-						.iqdropdown-menu-option(data-id="babies")
-							div
-								p.iqdropdown-item Младенцы
-			.element
-				span.element__title Masked text field
-				span.element__subtitle Default
-				input.textfield.textfield_masked.element__body(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ")
-			.column__subgrid.column_largegap
-				.line
-					.element
-						span.element__title date dropdown
-						+date()(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
-					.element
-						span.element__title date dropdown
-						+date()(type="text" id="date-2" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
-				.element.element_short
-					span.element__title filter date dropdown
-					+date()(type="text" id="date-3" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
-				.element.element_short
-					span.element__title subscription text field
-					+subscribe()(class="element__body" id="email1")
-		.column.column_largegap
+			.column__subgrid.column_lowgap
+				+textfield('text field','default','element_lowgap')(type='email' placeholder="Email")
+				+textfield('text field','hover/focus','element_lowgap')(type='text' placeholder="Text" value="This is a pretty awesome" class="textfield_focus")
+				+dropdown('dropdown','default','element_lowgap','people','')
+				+textfield('masked text field','default','element_lowgap')(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ" class="textfield_masked")
+			+date('date dropdown','date dropdown','element_lowgap','double')(data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+			+date('filter date dropdown','','element_short element_lowgap','default')(data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
+			+subscribe('subscription text field','','element_short element_lowgap')
+		.column
 			.element.element_shorter.element_largegap
 				span.element__title checkbox buttons
 				ul.element__body.element__list.element_shorter
@@ -76,7 +43,7 @@ block body
 				.element__body.line
 					+rate(4)(name="stars")
 					+rate(5)(name="stars2")
-		.column.column_largegap
+		.column
 			.element.element_short.range.element_largegap
 				span.element__title range slider
 				span.element__subtitle.range__value 5 000Р-10 000р
@@ -99,19 +66,18 @@ block body
 			.element.element_short
 				span.element__title dropdown
 				span.element__subtitle Default
-				.element__body
-					.iqdropdown.beds.textfield
-						p.iqdropdown-selection
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
-								div
-									p.iqdropdown-item Спальни
-							.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
-								div
-									p.iqdropdown-item Кровати
-							.iqdropdown-menu-option(data-id="bathrooms")
-								div
-									p.iqdropdown-item Ванные комнаты
+				.element__body.iqdropdown.beds.textfield
+					p.iqdropdown-selection
+					.iqdropdown-menu
+						.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
+							div
+								p.iqdropdown-item Спальни
+						.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
+							div
+								p.iqdropdown-item Кровати
+						.iqdropdown-menu-option(data-id="bathrooms")
+							div
+								p.iqdropdown-item Ванные комнаты
 			.element.element_short
 				span.element__title dropdown
 				span.element__subtitle Expanded
@@ -131,36 +97,34 @@ block body
 		.column
 			.element.element_large
 				span.element__title dropdown
-				.element__body
-					.iqdropdown.people.textfield
-						p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true")
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="adults")
-								div
-									p.iqdropdown-item Взрослые
-							.iqdropdown-menu-option(data-id="childs")
-								div
-									p.iqdropdown-item Дети
-							.iqdropdown-menu-option(data-id="babies")
-								div
-									p.iqdropdown-item Младенцы
+				.element__body.iqdropdown.people.textfield
+					p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true")
+					.iqdropdown-menu
+						.iqdropdown-menu-option(data-id="adults")
+							div
+								p.iqdropdown-item Взрослые
+						.iqdropdown-menu-option(data-id="childs")
+							div
+								p.iqdropdown-item Дети
+						.iqdropdown-menu-option(data-id="babies")
+							div
+								p.iqdropdown-item Младенцы
 		.column
 			.element
 				span.element__title dropdown
-				.element__body
-					.iqdropdown.people.textfield
-						p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true")
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="adults")
-								div
-									p.iqdropdown-item Взрослые
-							.iqdropdown-menu-option(data-id="childs")
-								div
-									p.iqdropdown-item Дети
-							.iqdropdown-menu-option(data-id="babies")
-								div
-									p.iqdropdown-item Младенцы
-		.column.column_largegap
+				.element__body.iqdropdown.people.textfield
+					p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true")
+					.iqdropdown-menu
+						.iqdropdown-menu-option(data-id="adults")
+							div
+								p.iqdropdown-item Взрослые
+						.iqdropdown-menu-option(data-id="childs")
+							div
+								p.iqdropdown-item Дети
+						.iqdropdown-menu-option(data-id="babies")
+							div
+								p.iqdropdown-item Младенцы
+		.column
 			.element.element_short.element_largegap
 				+expandable-list('expandable checkbox list')(id="list-1")
 					+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec11")

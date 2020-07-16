@@ -1,5 +1,8 @@
 include ../arrow/arrow.pug
-mixin subscribe()
-	.subscribe(class!=attributes.class)
-		input(type='email' placeholder='Email' id!=attributes.id).textfield.subscribe__input
-		+arrow('button','forward')(class='subscribe__arrow')
+mixin subscribe(title,subtitle,mainClasses='')
+	.element(class=mainClasses)
+		span.element__title=title
+		span.element__subtitle=subtitle
+		.subscribe.element__body
+			input.textfield.subscribe__input(type='email' placeholder='Email')&attributes(attributes)
+			+arrow('button','forward')(class='subscribe__arrow')

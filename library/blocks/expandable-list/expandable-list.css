@@ -15,6 +15,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 body {
   max-width: 1440px;
   width: 100%;
@@ -32,6 +36,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .element {
   width: 100%;
   max-width: 320px;
@@ -45,7 +53,7 @@ body {
           justify-content: space-between;
   -ms-flex-line-pack: start;
       align-content: start;
-  row-gap: 5px;
+  row-gap: 16px;
 }
 
 .element__subgrid {
@@ -64,8 +72,8 @@ body {
   margin: 15px 10px;
 }
 
-.element_largegap {
-  row-gap: 16px;
+.element_lowgap {
+  row-gap: 5px;
 }
 
 .element__title {
@@ -129,6 +137,10 @@ body {
 
 .expandable-list {
   position: relative;
+}
+
+.expandable-list__checkbox.element {
+  row-gap: 0;
 }
 
 .expandable-list::after {

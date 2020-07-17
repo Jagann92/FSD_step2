@@ -15,6 +15,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .like {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

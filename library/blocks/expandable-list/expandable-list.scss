@@ -4,6 +4,10 @@
 .expandable-list {
     position: relative;
 
+    &__checkbox.element {
+        row-gap: 0;
+    }
+
     &::after {
         @include material-icon;
         content: "keyboard_arrow_down";

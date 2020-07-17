@@ -15,6 +15,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;

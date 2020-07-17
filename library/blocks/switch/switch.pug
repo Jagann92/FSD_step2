@@ -1,4 +1,14 @@
-mixin switch(tag,label)
-	#{tag}.switch(class!=attributes.class)
-		input.switch__input(id!=attributes.id type="checkbox" checked!=attributes.checked)
-		label(for!=attributes.id).switch__label= label
+mixin switch(title,subtitle,mainClasses="", idPrefix, checked, ...labels)
+	.element(class=mainClasses)
+		span.element__title=title
+		span.element__subtitle=subtitle
+		ul.element__body.element__list
+			each val, index in labels
+				-var isChecked;
+				if checked[index]=='1'
+					-isChecked="checked"
+				else 
+					-isChecked=null
+				li.switch
+					input.switch__input(type="checkbox" id=idPrefix+ (index+1) checked=isChecked)
+					label(for=idPrefix+ (index+1)).switch__label= val

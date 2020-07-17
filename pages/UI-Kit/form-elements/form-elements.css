@@ -3009,6 +3009,10 @@ body.lock {
   position: relative;
 }
 
+.expandable-list__checkbox.element {
+  row-gap: 0;
+}
+
 .expandable-list::after {
   font-family: "Material Icons";
   font-weight: normal;
@@ -3464,10 +3468,6 @@ body.lock {
 .column__subgrid {
   display: -ms-grid;
   display: grid;
-}
-
-#list-1 {
-  margin-bottom: 10px;
 }
 
 .line {

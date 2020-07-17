@@ -15,6 +15,10 @@ body {
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 body {
   max-width: 1440px;
   width: 100%;
@@ -30,6 +34,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .textfield {
@@ -108,6 +116,10 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .datepicker--cell-day.-other-month-,

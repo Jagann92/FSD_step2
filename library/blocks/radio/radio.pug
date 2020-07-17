@@ -1,4 +1,14 @@
-mixin radio(text)
-	.radio(class!=attributes.class)
-		input.radio__input(name!=attributes.name id!=attributes.id type="radio" checked!=attributes.checked)
-		label(for!=attributes.id).radio__label= text
+mixin radio(title,subtitle,mainClasses="", idPrefix, radioName, checked, ...labels)
+	.element(class=mainClasses)
+		span.element__title=title
+		span.element__subtitle=subtitle
+		.element__body.line
+			each val, index in labels
+				-var isChecked;
+				if checked[index]=='1'
+					-isChecked="checked"
+				else 
+					-isChecked=null
+				.radio
+					input.radio__input(type="radio" name=radioName id=idPrefix+ (index+1) checked=isChecked)
+					label(for=idPrefix+ (index+1)).radio__label= val

@@ -15,21 +15,8 @@ body {
   }
 }
 
-body {
-  max-width: 1440px;
-  width: 100%;
-  margin: auto;
-  padding: 0.1px;
-  background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
-  color: rgba(31, 32, 65, 0.75);
-  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
-}
-
-@media (max-width: 767px) {
-  body {
-    background-image: none;
-  }
+body.lock {
+  overflow: hidden;
 }
 
 body {
@@ -47,6 +34,31 @@ body {
   body {
     background-image: none;
   }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .element {
@@ -62,7 +74,7 @@ body {
           justify-content: space-between;
   -ms-flex-line-pack: start;
       align-content: start;
-  row-gap: 5px;
+  row-gap: 16px;
 }
 
 .element__subgrid {
@@ -81,8 +93,8 @@ body {
   margin: 15px 10px;
 }
 
-.element_largegap {
-  row-gap: 16px;
+.element_lowgap {
+  row-gap: 5px;
 }
 
 .element__title {

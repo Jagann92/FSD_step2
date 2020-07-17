@@ -10,29 +10,21 @@ block body
 		.column
 			.column__subgrid.column_lowgap
 				+textfield('text field','default','element_lowgap')(type='email' placeholder="Email")
+
 				+textfield('text field','hover/focus','element_lowgap')(type='text' placeholder="Text" value="This is a pretty awesome" class="textfield_focus")
+
 				+dropdown('dropdown','default','element_lowgap','people','')
+
 				+textfield('masked text field','default','element_lowgap')(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ" class="textfield_masked")
+
 			+date('date dropdown','date dropdown','element_lowgap','double')(data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+
 			+date('filter date dropdown','','element_short element_lowgap','default')(data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
 			+subscribe('subscription text field','','element_short element_lowgap')
 		.column
-			.element.element_shorter.element_largegap
-				span.element__title checkbox buttons
-				ul.element__body.element__list.element_shorter
-					+checkbox('li','Можно курить')( id="c1")
-					+checkbox('li','Можно с питомцами')( id="c2" checked)
-					+checkbox('li','Можно пригласить гостей (до 10 человек)')( id="c3" checked)
-			.element.element_shorter.element_largegap
-				span.element__title radio buttons
-				.element__body.line
-					+radio('Мужчина')( name='gender' id='r1' checked)
-					+radio('Женщина')( name='gender' id='r2')
-			.element.element_largegap
-				span.element__title toggle
-				ul.element__body.element__list
-					+switch('li','Получать спецпредложения')(id="sw1" checked)
-					+switch('li','Получать спецпредложения')(id="sw2")
+			+checkbox('checkbox buttons','',"element_shorter",0,'c','101','Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)')
+			+radio('radio buttons','','element_shorter','r','gender','10','Мужчина','Женщина')
+			+switch('toggle','','','sw','10','Получать спецпредложения','Получать спецпредложения')
 			.element.element_largegap
 				span.element__title like button
 				.element__body
@@ -127,26 +119,27 @@ block body
 		.column
 			.element.element_short.element_largegap
 				+expandable-list('expandable checkbox list')(id="list-1")
-					+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec11")
-					+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec12" checked)
-					+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec13" checked)
-					+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec14" checked)
-					+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec15")
-					+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec16")
+					+checkbox('','','expandable-list__checkbox',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
 			.element.element_short.element_largegap
 				+expandable-list('expandable checkbox list',1)(id="list-2")
-					+checkbox('li','Завтрак')(class="expandable-list__checkbox" id="ec21")
-					+checkbox('li','Письменный стол')(class="expandable-list__checkbox" id="ec22" checked)
-					+checkbox('li','Стул для кормления')(class="expandable-list__checkbox" id="ec23" checked)
-					+checkbox('li','Кроватка')(class="expandable-list__checkbox" id="ec24" checked)
-					+checkbox('li','Телевизор')(class="expandable-list__checkbox" id="ec25")
-					+checkbox('li','Шампунь')(class="expandable-list__checkbox" id="ec26")
+					+checkbox('','','expandable-list__checkbox',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
+
+
+			//.element.element_short.element_largegap
+				+expandable-list('expandable checkbox list',1)(id="list-2")
+					+checkbox('li','')(class="expandable-list__checkbox" id="ec21")
+					+checkbox('li')(class="expandable-list__checkbox" id="ec22" checked)
+					+checkbox('li')(class="expandable-list__checkbox" id="ec23" checked)
+					+checkbox('li')(class="expandable-list__checkbox" id="ec24" checked)
+					+checkbox('li',)(class="expandable-list__checkbox" id="ec25")
+					+checkbox('li')(class="expandable-list__checkbox" id="ec26")
 		.column
-			.element.element_largegap
-				span.element__title rich checkbox buttons
+			+checkbox('rich checkbox buttons','','',1,'rc','00','Широкий коридор','Помощник для инвалидов')(data-subtext-1='Ширина коридоров в номере не менее 91см.' data-subtext-2='На 1 этаже вас встретит специалист и проводит до номера.')
+			//.element.element_largegap
+				span.element__title 
 				.element__body.element__list
-					+checkbox('div','Широкий коридор',1,'Ширина коридоров в номере не менее 91см.')(id="rc1")
-					+checkbox('div','Помощник для инвалидов',1,'На 1 этаже вас встретит специалист и проводит до номера.')(id="rc2")
+					+checkbox('div','',1,'')(id="rc1")
+					+checkbox('div',,1,'')(id="rc2")
 		.column
 			.element.element_largegap
 				span.element__title Bullet list

@@ -72,14 +72,14 @@
         </div>
       </div>
       <div class="column">
-        <div class="element element_shorter element_largegap"><span class="element__title">checkbox buttons</span>
-          <ul class="element__body element__list element_shorter">
+        <div class="element element_shorter"><span class="element__title">checkbox buttons</span><span class="element__subtitle"></span>
+          <ul class="element__body element__list">
             <li class="checkbox">
-              <input class="checkbox__input" type="checkbox" id="c1"/>
+              <input class="checkbox__input" type="checkbox" id="c1" checked="checked"/>
               <label class="checkbox__label" for="c1">Можно курить</label>
             </li>
             <li class="checkbox">
-              <input class="checkbox__input" type="checkbox" id="c2" checked="checked"/>
+              <input class="checkbox__input" type="checkbox" id="c2"/>
               <label class="checkbox__label" for="c2">Можно с питомцами</label>
             </li>
             <li class="checkbox">
@@ -88,26 +88,26 @@
             </li>
           </ul>
         </div>
-        <div class="element element_shorter element_largegap"><span class="element__title">radio buttons</span>
+        <div class="element element_shorter"><span class="element__title">radio buttons</span><span class="element__subtitle"></span>
           <div class="element__body line">
             <div class="radio">
-              <input class="radio__input" name="gender" id="r1" type="radio" checked="checked"/>
+              <input class="radio__input" type="radio" name="gender" id="r1" checked="checked"/>
               <label class="radio__label" for="r1">Мужчина</label>
             </div>
             <div class="radio">
-              <input class="radio__input" name="gender" id="r2" type="radio"/>
+              <input class="radio__input" type="radio" name="gender" id="r2"/>
               <label class="radio__label" for="r2">Женщина</label>
             </div>
           </div>
         </div>
-        <div class="element element_largegap"><span class="element__title">toggle</span>
+        <div class="element"><span class="element__title">toggle</span><span class="element__subtitle"></span>
           <ul class="element__body element__list">
             <li class="switch">
-              <input class="switch__input" id="sw1" type="checkbox" checked="checked"/>
+              <input class="switch__input" type="checkbox" id="sw1" checked="checked"/>
               <label class="switch__label" for="sw1">Получать спецпредложения</label>
             </li>
             <li class="switch">
-              <input class="switch__input" id="sw2" type="checkbox"/>
+              <input class="switch__input" type="checkbox" id="sw2"/>
               <label class="switch__label" for="sw2">Получать спецпредложения</label>
             </li>
           </ul>
@@ -275,74 +275,97 @@
       <div class="column">
         <div class="element element_short element_largegap"><span class="expandable-list inline element__title" id="list-1">expandable checkbox list</span>
           <ul class="element__body element__list">
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec11"/>
-              <label class="checkbox__label" for="ec11">Завтрак</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
-              <label class="checkbox__label" for="ec12">Письменный стол</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
-              <label class="checkbox__label" for="ec13">Стул для кормления</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
-              <label class="checkbox__label" for="ec14">Кроватка</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec15"/>
-              <label class="checkbox__label" for="ec15">Телевизор</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec16"/>
-              <label class="checkbox__label" for="ec16">Шампунь</label>
-            </li>
+            <div class="element expandable-list__checkbox"><span class="element__title"></span><span class="element__subtitle"></span>
+              <ul class="element__body element__list">
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec11"/>
+                  <label class="checkbox__label" for="ec11">Завтрак</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
+                  <label class="checkbox__label" for="ec12">Письменный стол</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
+                  <label class="checkbox__label" for="ec13">Стул для кормления</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
+                  <label class="checkbox__label" for="ec14">Кроватка</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec15"/>
+                  <label class="checkbox__label" for="ec15">Телевизор</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec16"/>
+                  <label class="checkbox__label" for="ec16">Шампунь</label>
+                </li>
+              </ul>
+            </div>
           </ul>
         </div>
         <div class="element element_short element_largegap"><span class="expandable-list open inline element__title" id="list-2">expandable checkbox list</span>
           <ul class="element__body element__list">
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec21"/>
-              <label class="checkbox__label" for="ec21">Завтрак</label>
+            <div class="element expandable-list__checkbox"><span class="element__title"></span><span class="element__subtitle"></span>
+              <ul class="element__body element__list">
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec11"/>
+                  <label class="checkbox__label" for="ec11">Завтрак</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
+                  <label class="checkbox__label" for="ec12">Письменный стол</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
+                  <label class="checkbox__label" for="ec13">Стул для кормления</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
+                  <label class="checkbox__label" for="ec14">Кроватка</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec15"/>
+                  <label class="checkbox__label" for="ec15">Телевизор</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec16"/>
+                  <label class="checkbox__label" for="ec16">Шампунь</label>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+        <!--.element.element_short.element_largegap
+        +expandable-list('expandable checkbox list',1)(id="list-2")
+        	+checkbox('li','')(class="expandable-list__checkbox" id="ec21")
+        	+checkbox('li')(class="expandable-list__checkbox" id="ec22" checked)
+        	+checkbox('li')(class="expandable-list__checkbox" id="ec23" checked)
+        	+checkbox('li')(class="expandable-list__checkbox" id="ec24" checked)
+        	+checkbox('li',)(class="expandable-list__checkbox" id="ec25")
+        	+checkbox('li')(class="expandable-list__checkbox" id="ec26")
+        -->
+      </div>
+      <div class="column">
+        <div class="element"><span class="element__title">rich checkbox buttons</span><span class="element__subtitle"></span>
+          <ul class="element__body element__list">
+            <li class="checkbox checkbox_rich">
+              <input class="checkbox__input" type="checkbox" id="rc1"/>
+              <label class="checkbox__label" for="rc1"><span class="checkbox__label_rich-title">Широкий коридор</span><span class="checkbox__label_rich-text">Ширина коридоров в номере не менее 91см.</span></label>
             </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec22" checked="checked"/>
-              <label class="checkbox__label" for="ec22">Письменный стол</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec23" checked="checked"/>
-              <label class="checkbox__label" for="ec23">Стул для кормления</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec24" checked="checked"/>
-              <label class="checkbox__label" for="ec24">Кроватка</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec25"/>
-              <label class="checkbox__label" for="ec25">Телевизор</label>
-            </li>
-            <li class="checkbox expandable-list__checkbox">
-              <input class="checkbox__input" type="checkbox" id="ec26"/>
-              <label class="checkbox__label" for="ec26">Шампунь</label>
+            <li class="checkbox checkbox_rich">
+              <input class="checkbox__input" type="checkbox" id="rc2"/>
+              <label class="checkbox__label" for="rc2"><span class="checkbox__label_rich-title">Помощник для инвалидов</span><span class="checkbox__label_rich-text">На 1 этаже вас встретит специалист и проводит до номера.</span></label>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="column">
-        <div class="element element_largegap"><span class="element__title">rich checkbox buttons</span>
-          <div class="element__body element__list">
-            <div class="checkbox checkbox_rich">
-              <input class="checkbox__input" type="checkbox" id="rc1"/>
-              <label class="checkbox__label checkbox__label_rich" for="rc1"><span class="checkbox__label_rich-title">Широкий коридор</span><span class="checkbox__label_rich-text">Ширина коридоров в номере не менее 91см.</span></label>
-            </div>
-            <div class="checkbox checkbox_rich">
-              <input class="checkbox__input" type="checkbox" id="rc2"/>
-              <label class="checkbox__label checkbox__label_rich" for="rc2"><span class="checkbox__label_rich-title">Помощник для инвалидов</span><span class="checkbox__label_rich-text">На 1 этаже вас встретит специалист и проводит до номера.</span></label>
-            </div>
-          </div>
-        </div>
+        <!--.element.element_largegap
+        span.element__title 
+        .element__body.element__list
+        	+checkbox('div','',1,'')(id="rc1")
+        	+checkbox('div',,1,'')(id="rc2")
+        -->
       </div>
       <div class="column">
         <div class="element element_largegap"><span class="element__title">Bullet list</span>

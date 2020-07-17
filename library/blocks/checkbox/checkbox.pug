@@ -1,11 +1,24 @@
-mixin checkbox(tag='div',label,rich='0',text)
-	if rich>0
-		#{tag}.checkbox.checkbox_rich(class!=attributes.class)
-			input.checkbox__input(type="checkbox" id!=attributes.id checked!=attributes.checked)
-			label.checkbox__label.checkbox__label_rich(for!=attributes.id)
-				span.checkbox__label_rich-title=label
-				span.checkbox__label_rich-text=text
-	else
-		#{tag}.checkbox(class!=attributes.class)
-			input.checkbox__input(type="checkbox" id!=attributes.id checked!=attributes.checked)
-			label.checkbox__label(for!=attributes.id)=label
+mixin checkbox(title,subtitle,mainClasses="", isRich=0, idPrefix, checked, ...labels)
+	-var boxClasses="checkbox";
+	if isRich
+		-boxClasses+=" checkbox_rich";
+	.element(class=mainClasses)
+		span.element__title=title
+		span.element__subtitle=subtitle
+		ul.element__body.element__list
+			each val, index in labels
+				-var isChecked;
+				if checked[index]=='1'
+					-isChecked="checked"
+				else 
+					-isChecked=null
+				li(class=boxClasses)
+					input.checkbox__input(type="checkbox" id=idPrefix+ (index+1) checked=isChecked)
+					if isRich
+						-var attrName='data-subtext-'+(index+1)
+						label.checkbox__label(for=idPrefix+(index+1))
+							span.checkbox__label_rich-title=val
+							span.checkbox__label_rich-text=attributes[attrName]
+					else
+						label.checkbox__label(for=idPrefix+(index+1))=val
+

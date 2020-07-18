@@ -1,4 +1,6 @@
-mixin switch(title,subtitle,mainClasses="", idPrefix, checked, ...labels)
+mixin switch(title='',subtitle='',mainClasses="", idPrefix, checked, ...labels)
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	.element(class=mainClasses)
 		span.element__title=title
 		span.element__subtitle=subtitle

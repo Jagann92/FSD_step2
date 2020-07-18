@@ -1,4 +1,5 @@
 @import "../../templates/base";
+@import "../../../library/blocks/element/element";
 @import "../../../library/blocks/textfield/textfield";
 
 .date {
@@ -7,6 +8,10 @@
     padding: 2px;
     min-width: 140px;
     width: 100%;
+
+    &.textfield {
+        padding-left: 15px;
+    }
 
     &__arrow {
         background: none;

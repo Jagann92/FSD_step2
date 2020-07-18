@@ -1,4 +1,6 @@
-mixin checkbox(title,subtitle,mainClasses="", isRich=0, idPrefix, checked, ...labels)
+mixin checkbox(title='',subtitle='',mainClasses="", isRich=0, idPrefix, checked, ...labels)
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	-var boxClasses="checkbox";
 	if isRich
 		-boxClasses+=" checkbox_rich";

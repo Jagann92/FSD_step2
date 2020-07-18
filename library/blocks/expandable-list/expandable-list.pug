@@ -1,4 +1,6 @@
-mixin expandable-list(title,mainClasses='',isOpen=0,isInline=1)
+mixin expandable-list(title='',mainClasses='',isOpen=0,isInline=1)
+	if title==""
+		- mainClasses+=' element_nullgap';
 	- mainClasses+=" expandable-list"
 	if isOpen
 		- mainClasses+=" open";

@@ -92,7 +92,7 @@ body.lock {
 .button__arrow {
   position: absolute;
   right: 14px;
-  bottom: 14px;
+  bottom: 10px;
   color: inherit;
 }
 

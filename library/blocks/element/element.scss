@@ -5,11 +5,10 @@
     max-width: 320px;
     display: grid;
     grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(auto-fit, max-content);
     justify-content: space-between;
     align-content: start;
     row-gap: 16px;
-
-
 
     &__subgrid {
         display: flex;
@@ -24,6 +23,10 @@
 
     &_lowgap {
         row-gap: 5px;
+    }
+
+    &_nullgap {
+        row-gap: 0;
     }
 
     &__title {
@@ -75,4 +78,11 @@
             width: 100%;
         }
     }
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    row-gap: 10px;
+    column-gap: 20px;
 }

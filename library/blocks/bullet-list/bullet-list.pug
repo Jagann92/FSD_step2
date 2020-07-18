@@ -1,4 +1,6 @@
-mixin bullet-list(title,subtitle,mainClasses,...items)
+mixin bullet-list(title='',subtitle='',mainClasses,...items)
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	.element(class=mainClasses)
 		span.element__title=title
 		span.element__subtitle=subtitle

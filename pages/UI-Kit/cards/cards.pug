@@ -5,19 +5,41 @@ block styles
 	link(rel="stylesheet" href="cards.css")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 block body
-	.container
-		.column
-			.card.search-card
-				p.card__title Найдём номера под ваши пожелания
-				+date()(type="text" id="date-1" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+	//.container
+	.card.search-card
+		p.card__title Найдём номера под ваши пожелания
+		+date('Прибытие','Выезд','element_lowgap','double')(type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+		+dropdown('Гости','','element_lowgap','people','')
+		+button('Подобрать номер','purple','wide',1)
 
-			.card.register-card
-		.column
+	.card.register-card
+		p.card__title Регистрация аккаунта
+		.card__block
+			+textfield()(placeholder='Имя')
+			+textfield()(placeholder='Фамилия')
+			+radio('','','','r','gender','10','Мужчина','Женщина')
+		+textfield('Дата рождения','','element_lowgap')(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ" class="textfield_masked")
+		.card__block
+			+textfield('Данные для входа в сервис','','element_lowgap')(placeholder='Email' type="email")
+			+textfield()(placeholder='Пароль' type="password")
+			+switch('','','','sw','0','Получать спецпредложения')
+		+button('перейти к оплате','purple','wide',1)
+		.card__line
+			span Уже есть аккаунт на Toxin
+			+button('Войти','white','normal',0)
+
+		//.column
+
+
+
+		//.column
 			.card.reservation-card
 			.card.login-card
-		.column
+		//.column
 			.card.calendar
 			.card.suit-card
 			.card.suit-card
-	script(src="../../../library/plugins/air-datepicker/js/datepicker.js")
+	script(src="../../../library/blocks/date/date.js")
+	script(src="../../../library/blocks/dropdown/dropdown.js")
+	script(src="../../../library/blocks/textfield/textfield.js")
 	script(src="cards.js")

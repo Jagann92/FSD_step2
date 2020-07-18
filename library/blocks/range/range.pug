@@ -1,4 +1,6 @@
-mixin range(title,subtitle,mainClasses='')
+mixin range(title='',subtitle='',mainClasses='')
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	.element.range(class=mainClasses)
 		span.element__title=title
 		span.element__subtitle.range__value=subtitle

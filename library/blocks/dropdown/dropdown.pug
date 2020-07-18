@@ -1,4 +1,6 @@
-mixin dropdown(title,subtitile,mainClasses="",type,defaultCount)
+mixin dropdown(title='',subtitle='',mainClasses="",type,defaultCount)
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	-var ids=[];
 	-var items=[];
 	if type=="people"

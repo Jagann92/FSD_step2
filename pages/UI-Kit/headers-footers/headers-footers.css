@@ -276,7 +276,7 @@ body.lock {
 .button__arrow {
   position: absolute;
   right: 14px;
-  bottom: 14px;
+  bottom: 10px;
   color: inherit;
 }
 
@@ -1038,6 +1038,16 @@ body.lock {
   }
 }
 
+.line {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  row-gap: 10px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
 .expandable-list {
   position: relative;
 }
@@ -1270,8 +1280,8 @@ body.lock {
 }
 
 .arrow {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   background: inherit;
 }
@@ -1402,6 +1412,16 @@ body.lock {
   .element_large {
     width: 100%;
   }
+}
+
+.line {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  row-gap: 10px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
 }
 
 body {

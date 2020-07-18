@@ -27,6 +27,9 @@ body.lock {
   -ms-grid-columns: 1fr max-content;
       grid-template-columns: 1fr -webkit-max-content;
       grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -53,6 +56,10 @@ body.lock {
 
 .element_lowgap {
   row-gap: 5px;
+}
+
+.element_nullgap {
+  row-gap: 0;
 }
 
 .element__title {
@@ -112,4 +119,14 @@ body.lock {
   .element_large {
     width: 100%;
   }
+}
+
+.line {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  row-gap: 10px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
 }

@@ -1,5 +1,7 @@
 include ../arrow/arrow.pug
-mixin subscribe(title,subtitle,mainClasses='')
+mixin subscribe(title='',subtitle='',mainClasses='')
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	.element(class=mainClasses)
 		span.element__title=title
 		span.element__subtitle=subtitle

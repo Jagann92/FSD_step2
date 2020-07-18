@@ -1,4 +1,6 @@
-mixin textfield(title,subtitle,mainClasses="")
+mixin textfield(title='',subtitle='',mainClasses="")
+	if title=='' && subtitle==''
+		- mainClasses+=' element_nullgap';
 	.element(class=mainClasses)
 		span.element__title=title
 		span.element__subtitle=subtitle

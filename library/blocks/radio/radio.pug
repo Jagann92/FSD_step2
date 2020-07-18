@@ -1,4 +1,6 @@
-mixin radio(title,subtitle,mainClasses="", idPrefix, radioName, checked, ...labels)
+mixin radio(title='',subtitle='',mainClasses="", idPrefix, radioName, checked, ...labels)
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	.element(class=mainClasses)
 		span.element__title=title
 		span.element__subtitle=subtitle

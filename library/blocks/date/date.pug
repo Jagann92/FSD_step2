@@ -1,4 +1,6 @@
-mixin date(title,subtitle,mainClasses='',type)
+mixin date(title='',subtitle='',mainClasses='',type)
+	if title=="" && subtitle==""
+		- mainClasses+=' element_nullgap';
 	if type=='double'
 		.line
 			.element(class=mainClasses)

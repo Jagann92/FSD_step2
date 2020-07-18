@@ -1,61 +1,84 @@
 @import "../../../library/templates/base";
 @import "../../../library/nullstyle/nullstyle.scss";
 @import "../../../src/fonts/fonts";
-@import "../../../library/blocks/page/page";
 @import "../../../library/blocks/date/date";
+@import "../../../library/blocks/dropdown/dropdown";
+@import "../../../library/blocks/button/button";
+@import "../../../library/blocks/radio/radio";
+@import "../../../library/blocks/textfield/textfield";
+@import "../../../library/blocks/switch/switch";
 
-.page {
-	background-color: #e5e5e5;
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    column-gap: 40px;
+    margin: 10.42vw 9.72vw 9.72vw 9.72vw;
 }
-.page__container {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(min-content, max-content));
-	column-gap: 40px;
-	margin: 10.42vw 9.72vw 9.72vw 9.72vw;
-}
+
 .column {
-	display: grid;
-	row-gap: 40px;
-	grid-template-rows: repeat(auto-fill, min-content);
-	align-content: start;
+    display: grid;
+    row-gap: 40px;
+    grid-template-rows: repeat(auto-fill, min-content);
+    align-content: start;
 }
+
 .card {
-	background: #ffffff;
-	border: 1px solid rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-	width: 100%;
-	max-width: 380px;
-	padding: 40px 30px 30px 30px;
-	&__title {
-		font: $h1;
-		color: $grey;
-	}
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 380px;
+    padding: 40px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+
+    &__title {
+        font: $h1;
+        color: $grey;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
+
 .search-card {
-	//width: 380px;
-	//height: 374px;
+    //width: 380px;
+    //height: 374px;
 }
 
 .register-card {
-	//width: 380px;
-	//height: 646px;
+    //width: 380px;
+    //height: 646px;
 }
 
 .reservation-card {
-	//width: 380px;
-	//height: 511px;
+    //width: 380px;
+    //height: 511px;
 }
+
 .login-card {
-	//width: 380px;
-	//height: 358px;
+    //width: 380px;
+    //height: 358px;
 }
+
 .calendar {
-	//width: 320px;
-	//height: 369px;
+    //width: 320px;
+    //height: 369px;
 }
+
 .suit-card {
-	//width: 270px;
-	//height: 257px;
+    //width: 270px;
+    //height: 257px;
 }

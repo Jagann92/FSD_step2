@@ -2283,6 +2283,7 @@ body.lock {
 }
 
 .card__line {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

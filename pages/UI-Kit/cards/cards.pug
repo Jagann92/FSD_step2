@@ -6,13 +6,13 @@ block styles
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 block body
 	//.container
-	.card.search-card
+	.card
 		p.card__title Найдём номера под ваши пожелания
 		+date('Прибытие','Выезд','element_lowgap','double')(type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
 		+dropdown('Гости','','element_lowgap','people','')
 		+button('Подобрать номер','purple','wide',1)
 
-	.card.register-card
+	.card
 		p.card__title Регистрация аккаунта
 		.card__block
 			+textfield()(placeholder='Имя')
@@ -27,7 +27,15 @@ block body
 		.card__line
 			span Уже есть аккаунт на Toxin
 			+button('Войти','white','normal',0)
-
+	.card
+		p.card__title Войти
+		.card__block
+			+textfield()(placeholder='Email' type="email")
+			+textfield()(placeholder='Пароль' type="password")
+		+button('Войти','purple','wide',1)
+		.card__line
+			span Нет аккаунта на Toxin?
+			+button('Создать','white','normal',0)
 		//.column
 
 

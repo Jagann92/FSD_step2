@@ -1,0 +1,6 @@
+mixin range(title,subtitle,mainClasses='')
+	.element.range(class=mainClasses)
+		span.element__title=title
+		span.element__subtitle.range__value=subtitle
+		.element__body
+			input(type="text" name="my_range" value="").js-range-slider.range__input

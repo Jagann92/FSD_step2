@@ -3009,7 +3009,7 @@ body.lock {
   position: relative;
 }
 
-.expandable-list__checkbox.element {
+.expandable-list__list.element {
   row-gap: 0;
 }
 
@@ -3040,7 +3040,7 @@ body.lock {
   width: 22px;
   height: 22px;
   position: absolute;
-  right: -84px;
+  right: 0;
   top: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3053,27 +3053,23 @@ body.lock {
           align-items: center;
 }
 
-.expandable-list.float::after {
-  right: -10px;
-}
-
 .expandable-list.open::after {
   content: "keyboard_arrow_up";
 }
 
-.expandable-list + ul,
-.expandable-list.float ul {
+.expandable-list .expandable-list__list,
+.expandable-list.float .expandable-list__list {
   display: none;
 }
 
-.expandable-list.open + ul,
-.expandable-list.open.float ul,
-.expandable-list.lock + ul {
+.expandable-list.open .expandable-list__list,
+.expandable-list.open.float .expandable-list__list,
+.expandable-list.lock .expandable-list__list {
   display: -ms-grid;
   display: grid;
 }
 
-.expandable-list.float ul {
+.expandable-list.float .expandable-list__list {
   position: absolute;
   top: 100%;
   right: -10%;

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-around;
 
-    &__title {
+    &__title span {
         max-width: 220px;
         font: $h3;
         color: $grey;
@@ -57,12 +57,14 @@
     &__menu {
         justify-self: center;
         display: grid;
-        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        grid-template-columns: 9.93vw 7.5vw 10.34vw;
         grid-template-rows: repeat(2, auto);
-        justify-content: space-between;
         column-gap: 4.16vw;
-        grid-auto-flow: column;
         row-gap: 20px;
+
+        @media(max-width:767px) {
+            grid-template-columns: repeat(3, minmax(min-content, max-content));
+        }
 
         & .expandable-list::after,
         & .expandable-list.open::after {
@@ -75,7 +77,7 @@
         }
 
         & .element__body {
-            grid-column: initial;
+            // grid-column: initial;
         }
 
         & .element__list {

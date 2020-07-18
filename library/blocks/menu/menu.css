@@ -160,6 +160,10 @@ body.lock {
   position: relative;
 }
 
+.expandable-list__list.element {
+  row-gap: 0;
+}
+
 .expandable-list::after {
   font-family: "Material Icons";
   font-weight: normal;

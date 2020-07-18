@@ -1,4 +1,7 @@
-mixin bullet-list (...items)
-	ul.bullet-list(class!=attributes.class)
-		each item in items
-			li.bullet-list__elem= item
+mixin bullet-list(title,subtitle,mainClasses,...items)
+	.element(class=mainClasses)
+		span.element__title=title
+		span.element__subtitle=subtitle
+		ul.bullet-list.element__body.element__list
+			each item in items
+				li.bullet-list__elem= item

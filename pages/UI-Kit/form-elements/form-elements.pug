@@ -23,25 +23,26 @@ block body
 			+subscribe('subscription text field','','element_short element_lowgap')
 		.column
 			+checkbox('checkbox buttons','',"element_shorter",0,'c','101','Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)')
+
 			+radio('radio buttons','','element_shorter','r','gender','10','Мужчина','Женщина')
+
 			+switch('toggle','','','sw','10','Получать спецпредложения','Получать спецпредложения')
-			.element.element_largegap
+
+			.element
 				span.element__title like button
 				.element__body
 					+like(2)(id="like-1" )
 					+like(12)(id="like-2" class="like_liked")
-			.element.element_largegap.element_short
+
+			.element.element_short
 				span.element__title rate button
 				.element__body.line
 					+rate(4)(name="stars")
 					+rate(5)(name="stars2")
 		.column
-			.element.element_short.range.element_largegap
-				span.element__title range slider
-				span.element__subtitle.range__value 5 000Р-10 000р
-				.element__body
-					input(type="text" name="my_range" value="").js-range-slider.range__input
-			.element.element_largegap
+			+range('range slider','5 000Р-10 000р','element_short')
+
+			.element
 				span.element__title buttons
 				.element__body.element__subgrid.element_short
 					+button('Click me','purple','normal',0)(class="element__subgrid_inner")
@@ -54,102 +55,31 @@ block body
 			.element
 				span.element__title Pagination
 				+pagination(1,15,'last','1 – 12 из 100+ вариантов аренды','1','2','3')(class="element__body")
-		.column.column_small
-			.element.element_short
-				span.element__title dropdown
-				span.element__subtitle Default
-				.element__body.iqdropdown.beds.textfield
-					p.iqdropdown-selection
-					.iqdropdown-menu
-						.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
-							div
-								p.iqdropdown-item Спальни
-						.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
-							div
-								p.iqdropdown-item Кровати
-						.iqdropdown-menu-option(data-id="bathrooms")
-							div
-								p.iqdropdown-item Ванные комнаты
-			.element.element_short
-				span.element__title dropdown
-				span.element__subtitle Expanded
-				.element__body
-					.iqdropdown.beds.textfield
-						p.iqdropdown-selection(data-inline="true")
-						.iqdropdown-menu
-							.iqdropdown-menu-option(data-id="bedrooms" data-defaultcount="2")
-								div
-									p.iqdropdown-item Спальни
-							.iqdropdown-menu-option(data-id="beds" data-defaultcount="2")
-								div
-									p.iqdropdown-item Кровати
-							.iqdropdown-menu-option(data-id="bathrooms")
-								div
-									p.iqdropdown-item Ванные комнаты
-		.column
-			.element.element_large
-				span.element__title dropdown
-				.element__body.iqdropdown.people.textfield
-					p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true")
-					.iqdropdown-menu
-						.iqdropdown-menu-option(data-id="adults")
-							div
-								p.iqdropdown-item Взрослые
-						.iqdropdown-menu-option(data-id="childs")
-							div
-								p.iqdropdown-item Дети
-						.iqdropdown-menu-option(data-id="babies")
-							div
-								p.iqdropdown-item Младенцы
-		.column
-			.element
-				span.element__title dropdown
-				.element__body.iqdropdown.people.textfield
-					p.iqdropdown-selection(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true")
-					.iqdropdown-menu
-						.iqdropdown-menu-option(data-id="adults")
-							div
-								p.iqdropdown-item Взрослые
-						.iqdropdown-menu-option(data-id="childs")
-							div
-								p.iqdropdown-item Дети
-						.iqdropdown-menu-option(data-id="babies")
-							div
-								p.iqdropdown-item Младенцы
-		.column
-			.element.element_short.element_largegap
-				+expandable-list('expandable checkbox list')(id="list-1")
-					+checkbox('','','expandable-list__checkbox',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
-			.element.element_short.element_largegap
-				+expandable-list('expandable checkbox list',1)(id="list-2")
-					+checkbox('','','expandable-list__checkbox',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
+		.column.column_small.column_lowgap
+			+dropdown('dropdown','default','element_short element_lowgap','beds','220')
 
+			+dropdown('dropdown','expanded','element_short element_lowgap','beds','220')(data-inline='true')
+		.column
+			+dropdown('dropdown','','element_large element_lowgap','people','')(data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true")
 
-			//.element.element_short.element_largegap
-				+expandable-list('expandable checkbox list',1)(id="list-2")
-					+checkbox('li','')(class="expandable-list__checkbox" id="ec21")
-					+checkbox('li')(class="expandable-list__checkbox" id="ec22" checked)
-					+checkbox('li')(class="expandable-list__checkbox" id="ec23" checked)
-					+checkbox('li')(class="expandable-list__checkbox" id="ec24" checked)
-					+checkbox('li',)(class="expandable-list__checkbox" id="ec25")
-					+checkbox('li')(class="expandable-list__checkbox" id="ec26")
+		.column
+			+dropdown('dropdown','','element_lowgap','people','210')(data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true")
+
+		.column
+			+expandable-list('expandable checkbox list','element_short')(id="list-1")
+				+checkbox('','','expandable-list__list element__body',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
+
+			+expandable-list('expandable checkbox list','element_short',1)(id="list-2")
+				+checkbox('','','expandable-list__list element__body',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
+
 		.column
 			+checkbox('rich checkbox buttons','','',1,'rc','00','Широкий коридор','Помощник для инвалидов')(data-subtext-1='Ширина коридоров в номере не менее 91см.' data-subtext-2='На 1 этаже вас встретит специалист и проводит до номера.')
-			//.element.element_largegap
-				span.element__title 
-				.element__body.element__list
-					+checkbox('div','',1,'')(id="rc1")
-					+checkbox('div',,1,'')(id="rc2")
 		.column
-			.element.element_largegap
-				span.element__title Bullet list
-				.element__body
-					+bullet-list('Нельзя с питомцами', 'Без вечеринок и меропритий', 'Время прибытия - после 13:00, а выезд до 12:00')(class="element__list")
+			+bullet-list('Bullet list','','','Нельзя с питомцами', 'Без вечеринок и меропритий', 'Время прибытия - после 13:00, а выезд до 12:00')
+
 		.column
-			.element
-				+feature('smile','Комфорт','Шумопоглощающие стены')
-			.element
-				+feature('apartment','Удобство','Окно в каждой из спален')
+			+feature('Комфорт','Шумопоглощающие стены','','smile')
+			+feature('Удобство','Окно в каждой из спален','','apartment')
 		.column.column_double
 			.element
 				+review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',12,1)

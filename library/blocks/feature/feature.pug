@@ -1,4 +1,5 @@
-mixin feature(pic, title, text)
-	.feature(class="feature_"+pic)
-		span.feature__title= title
-		span.feature__text= text
+mixin feature(title, text, mainClasses="", pic)
+	.element(class=mainClasses)
+		.feature(class="feature_"+pic)
+			span.feature__title= title
+			span.feature__text= text

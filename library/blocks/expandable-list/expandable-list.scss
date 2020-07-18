@@ -4,7 +4,7 @@
 .expandable-list {
     position: relative;
 
-    &__checkbox.element {
+    &__list.element {
         row-gap: 0;
     }
 
@@ -15,7 +15,7 @@
         width: 22px;
         height: 22px;
         position: absolute;
-        right: -84px;
+        right: 0;
         top: -2px;
         display: flex;
         justify-content: center;
@@ -30,18 +30,18 @@
         content: "keyboard_arrow_up";
     }
 
-    &+ul,
-    &.float ul {
+    & .expandable-list__list,
+    &.float .expandable-list__list {
         display: none;
     }
 
-    &.open+ul,
-    &.open.float ul,
-    &.lock+ul {
+    &.open .expandable-list__list,
+    &.open.float .expandable-list__list,
+    &.lock .expandable-list__list {
         display: grid;
     }
 
-    &.float ul {
+    &.float .expandable-list__list {
         position: absolute;
         top: 100%;
         right: -10%;

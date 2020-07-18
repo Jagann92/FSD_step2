@@ -31,7 +31,7 @@ body.lock {
       justify-content: space-around;
 }
 
-.footer__title {
+.footer__title span {
   max-width: 220px;
   font: 700 12px/15px "Montserrat", sans-serif;
   color: #1f2041;
@@ -103,18 +103,21 @@ body.lock {
       justify-self: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(min-content, max-content))[3];
-      grid-template-columns: repeat(3, minmax(-webkit-min-content, -webkit-max-content));
-      grid-template-columns: repeat(3, minmax(min-content, max-content));
+  -ms-grid-columns: 9.93vw 7.5vw 10.34vw;
+      grid-template-columns: 9.93vw 7.5vw 10.34vw;
   -ms-grid-rows: (auto)[2];
       grid-template-rows: repeat(2, auto);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-column-gap: 4.16vw;
           column-gap: 4.16vw;
-  grid-auto-flow: column;
   row-gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer__menu {
+    -ms-grid-columns: (minmax(min-content, max-content))[3];
+        grid-template-columns: repeat(3, minmax(-webkit-min-content, -webkit-max-content));
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+  }
 }
 
 .footer__menu .expandable-list::after,
@@ -128,10 +131,6 @@ body.lock {
   .footer__menu .expandable-list.open::after {
     content: "";
   }
-}
-
-.footer__menu .element__body {
-  grid-column: initial;
 }
 
 .footer__menu .element__list {

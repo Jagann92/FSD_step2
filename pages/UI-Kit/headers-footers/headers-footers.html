@@ -15,8 +15,8 @@
           <div class="header__burger"><span></span></div>
           <nav class="menu header__menu">
             <div class="menu__elem menu__elem_current"><a href="#">О нас</a></div>
-            <div class="expandable-list float menu__elem menu__elem_spoiler"><span class="element__title">Услуги</span>
-              <ul class="element__list">
+            <div class="element menu__elem menu__elem_spoiler expandable-list float"><span class="element__title">Услуги</span>
+              <ul class="expandable-list__list">
                 <li class="menu__elem"><a href="#">Услуга 1</a></li>
                 <li class="menu__elem"><a href="#">Услуга 2</a></li>
                 <li class="menu__elem"><a href="#">Услуга 3</a></li>
@@ -24,8 +24,8 @@
             </div>
             <div class="menu__elem"><a href="#">Вакансии</a></div>
             <div class="menu__elem"><a href="#">Новости</a></div>
-            <div class="expandable-list float menu__elem menu__elem_spoiler"><span class="element__title">Соглашения</span>
-              <ul class="element__list">
+            <div class="element menu__elem menu__elem_spoiler expandable-list float"><span class="element__title">Соглашения</span>
+              <ul class="expandable-list__list">
                 <li class="menu__elem"><a href="#">Соглашение 1</a></li>
                 <li class="menu__elem"><a href="#">Соглашение 2</a></li>
                 <li class="menu__elem"><a href="#">Соглашение 3</a></li>
@@ -46,8 +46,8 @@
           <div class="header__burger"><span></span></div>
           <nav class="menu header__menu">
             <div class="menu__elem menu__elem_current"><a href="#">О нас</a></div>
-            <div class="expandable-list float menu__elem menu__elem_spoiler"><span class="element__title">Услуги</span>
-              <ul class="element__list">
+            <div class="element menu__elem menu__elem_spoiler expandable-list float"><span class="element__title">Услуги</span>
+              <ul class="expandable-list__list">
                 <li class="menu__elem"><a href="#">Услуга 1</a></li>
                 <li class="menu__elem"><a href="#">Услуга 2</a></li>
                 <li class="menu__elem"><a href="#">Услуга 3</a></li>
@@ -55,8 +55,8 @@
             </div>
             <div class="menu__elem"><a href="#">Вакансии</a></div>
             <div class="menu__elem"><a href="#">Новости</a></div>
-            <div class="expandable-list float menu__elem menu__elem_spoiler"><span class="element__title">Соглашения</span>
-              <ul class="element__list">
+            <div class="element menu__elem menu__elem_spoiler expandable-list float"><span class="element__title">Соглашения</span>
+              <ul class="expandable-list__list">
                 <li class="menu__elem"><a href="#">Соглашение 1</a></li>
                 <li class="menu__elem"><a href="#">Соглашение 2</a></li>
                 <li class="menu__elem"><a href="#">Соглашение 3</a></li>
@@ -70,36 +70,38 @@
           <div class="footer__logoandtext footer__logoandtext_start"><img src="../../../src/img/logo_and_title.svg"/>
             <p class="footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
           </div>
-          <nav class="menu footer__menu"><span class="expandable-list open inline element__title footer__title lock">Навигация</span>
-            <ul class="element__body element__list">
-              <!--a.menu__elem.menu__elem_title(href=val.href)= val.name-->
-              <!--ul.menu__f-submenu-->
-              <li class="menu__elem"><a href="#">О нас</a></li>
-              <li class="menu__elem"><a href="#">Новости</a></li>
-              <li class="menu__elem"><a href="#">Служба поддержки</a></li>
-              <li class="menu__elem"><a href="#">Услуги</a></li>
-            </ul><span class="expandable-list open inline element__title footer__title lock">О нас</span>
-            <ul class="element__body element__list">
-              <!--a.menu__elem.menu__elem_title(href=val.href)= val.name-->
-              <!--ul.menu__f-submenu-->
-              <li class="menu__elem"><a href="#">О сервисе</a></li>
-              <li class="menu__elem"><a href="#">Наша команда</a></li>
-              <li class="menu__elem"><a href="#">Вакансии</a></li>
-              <li class="menu__elem"><a href="#">Инвесторы</a></li>
-            </ul><span class="expandable-list open inline element__title footer__title lock">Служба поддержки</span>
-            <ul class="element__body element__list">
-              <!--a.menu__elem.menu__elem_title(href=val.href)= val.name-->
-              <!--ul.menu__f-submenu-->
-              <li class="menu__elem"><a href="#">Соглашения</a></li>
-              <li class="menu__elem"><a href="#">Сообщества</a></li>
-              <li class="menu__elem"><a href="#">Связь с нами</a></li>
-            </ul>
+          <nav class="menu footer__menu">
+            <div class="element footer__title lock expandable-list open"><span class="element__title">Навигация</span>
+              <ul class="expandable-list__list element__body element__list">
+                <li class="menu__elem"><a href="#">О нас</a></li>
+                <li class="menu__elem"><a href="#">Новости</a></li>
+                <li class="menu__elem"><a href="#">Служба поддержки</a></li>
+                <li class="menu__elem"><a href="#">Услуги</a></li>
+              </ul>
+            </div>
+            <div class="element footer__title lock expandable-list open"><span class="element__title">О нас</span>
+              <ul class="expandable-list__list element__body element__list">
+                <li class="menu__elem"><a href="#">О сервисе</a></li>
+                <li class="menu__elem"><a href="#">Наша команда</a></li>
+                <li class="menu__elem"><a href="#">Вакансии</a></li>
+                <li class="menu__elem"><a href="#">Инвесторы</a></li>
+              </ul>
+            </div>
+            <div class="element footer__title lock expandable-list open"><span class="element__title">Служба поддержки</span>
+              <ul class="expandable-list__list element__body element__list">
+                <li class="menu__elem"><a href="#">Соглашения</a></li>
+                <li class="menu__elem"><a href="#">Сообщества</a></li>
+                <li class="menu__elem"><a href="#">Связь с нами</a></li>
+              </ul>
+            </div>
           </nav>
           <div class="footer__form"><span class="footer__title">Подписка</span>
             <p class="footer__text">Получайте специальные предложения и новости сервиса</p>
-            <div class="subscribe">
-              <input class="textfield subscribe__input" type="email" placeholder="Email" id="Email"/>
-              <button class="arrow material-icons subscribe__arrow">arrow_forward</button>
+            <div class="element"><span class="element__title"></span><span class="element__subtitle"></span>
+              <div class="subscribe element__body">
+                <input class="textfield subscribe__input" type="email" placeholder="Email" id="Email"/>
+                <button class="arrow material-icons subscribe__arrow">arrow_forward</button>
+              </div>
             </div>
           </div>
           <div class="footer__copyright"> 

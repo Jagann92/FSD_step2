@@ -24,7 +24,7 @@
               <div class="iqdropdown-menu">
                 <div class="iqdropdown-menu-option" data-id="adults">
                   <div>
-                    <p class="iqdropdown-item">Взролые</p>
+                    <p class="iqdropdown-item">Взроcлые</p>
                   </div>
                 </div>
                 <div class="iqdropdown-menu-option" data-id="childs">
@@ -112,13 +112,13 @@
             </li>
           </ul>
         </div>
-        <div class="element element_largegap"><span class="element__title">like button</span>
+        <div class="element"><span class="element__title">like button</span>
           <div class="element__body">
             <button class="like" id="like-1"><span class="material-icons like__heart"></span><span class="like__count">2</span></button>
             <button class="like like_liked" id="like-2"><span class="material-icons like__heart"></span><span class="like__count">12</span></button>
           </div>
         </div>
-        <div class="element element_largegap element_short"><span class="element__title">rate button</span>
+        <div class="element element_short"><span class="element__title">rate button</span>
           <div class="element__body line">
             <div class="rate">
               <input class="rate__input" id="stars5" type="radio" name="stars"/>
@@ -148,12 +148,12 @@
         </div>
       </div>
       <div class="column">
-        <div class="element element_short range element_largegap"><span class="element__title">range slider</span><span class="element__subtitle range__value">5 000Р-10 000р</span>
+        <div class="element range element_short"><span class="element__title">range slider</span><span class="element__subtitle range__value">5 000Р-10 000р</span>
           <div class="element__body">
-            <input class="js-range-slider range__input" type="text" name="my_range" value="">
+            <input class="js-range-slider range__input" type="text" name="my_range" value=""/>
           </div>
         </div>
-        <div class="element element_largegap"><span class="element__title">buttons</span>
+        <div class="element"><span class="element__title">buttons</span>
           <div class="element__body element__subgrid element_short">
             <button class="button button_purple element__subgrid_inner">Click me
             </button>
@@ -176,9 +176,9 @@
           </div>
         </div>
       </div>
-      <div class="column column_small">
-        <div class="element element_short"><span class="element__title">dropdown</span><span class="element__subtitle">Default</span>
-          <div class="element__body iqdropdown beds textfield">
+      <div class="column column_small column_lowgap">
+        <div class="element element_short element_lowgap"><span class="element__title">dropdown</span><span class="element__subtitle">default</span>
+          <div class="iqdropdown textfield element__body beds">
             <p class="iqdropdown-selection"></p>
             <div class="iqdropdown-menu">
               <div class="iqdropdown-menu-option" data-id="bedrooms" data-defaultcount="2">
@@ -191,7 +191,7 @@
                   <p class="iqdropdown-item">Кровати</p>
                 </div>
               </div>
-              <div class="iqdropdown-menu-option" data-id="bathrooms">
+              <div class="iqdropdown-menu-option" data-id="bathrooms" data-defaultcount="0">
                 <div>
                   <p class="iqdropdown-item">Ванные комнаты</p>
                 </div>
@@ -199,25 +199,23 @@
             </div>
           </div>
         </div>
-        <div class="element element_short"><span class="element__title">dropdown</span><span class="element__subtitle">Expanded</span>
-          <div class="element__body">
-            <div class="iqdropdown beds textfield">
-              <p class="iqdropdown-selection" data-inline="true"></p>
-              <div class="iqdropdown-menu">
-                <div class="iqdropdown-menu-option" data-id="bedrooms" data-defaultcount="2">
-                  <div>
-                    <p class="iqdropdown-item">Спальни</p>
-                  </div>
+        <div class="element element_short element_lowgap"><span class="element__title">dropdown</span><span class="element__subtitle">expanded</span>
+          <div class="iqdropdown textfield element__body beds">
+            <p class="iqdropdown-selection" data-inline="true"></p>
+            <div class="iqdropdown-menu">
+              <div class="iqdropdown-menu-option" data-id="bedrooms" data-defaultcount="2">
+                <div>
+                  <p class="iqdropdown-item">Спальни</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="beds" data-defaultcount="2">
-                  <div>
-                    <p class="iqdropdown-item">Кровати</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="beds" data-defaultcount="2">
+                <div>
+                  <p class="iqdropdown-item">Кровати</p>
                 </div>
-                <div class="iqdropdown-menu-option" data-id="bathrooms">
-                  <div>
-                    <p class="iqdropdown-item">Ванные комнаты</p>
-                  </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="bathrooms" data-defaultcount="0">
+                <div>
+                  <p class="iqdropdown-item">Ванные комнаты</p>
                 </div>
               </div>
             </div>
@@ -225,13 +223,13 @@
         </div>
       </div>
       <div class="column">
-        <div class="element element_large"><span class="element__title">dropdown</span>
-          <div class="element__body iqdropdown people textfield">
+        <div class="element element_large element_lowgap"><span class="element__title">dropdown</span><span class="element__subtitle"></span>
+          <div class="iqdropdown textfield element__body people">
             <p class="iqdropdown-selection" data-is-apply-btn="true" data-apply-btn-content="Применить" data-inline="true"></p>
             <div class="iqdropdown-menu">
               <div class="iqdropdown-menu-option" data-id="adults">
                 <div>
-                  <p class="iqdropdown-item">Взрослые</p>
+                  <p class="iqdropdown-item">Взроcлые</p>
                 </div>
               </div>
               <div class="iqdropdown-menu-option" data-id="childs">
@@ -249,21 +247,21 @@
         </div>
       </div>
       <div class="column">
-        <div class="element"><span class="element__title">dropdown</span>
-          <div class="element__body iqdropdown people textfield">
+        <div class="element element_lowgap"><span class="element__title">dropdown</span><span class="element__subtitle"></span>
+          <div class="iqdropdown textfield element__body people">
             <p class="iqdropdown-selection" data-is-apply-btn="true" data-apply-btn-content="Применить" data-is-clear-btn="true" data-clear-btn-content="Очистить" data-inline="true"></p>
             <div class="iqdropdown-menu">
-              <div class="iqdropdown-menu-option" data-id="adults">
+              <div class="iqdropdown-menu-option" data-id="adults" data-defaultcount="2">
                 <div>
-                  <p class="iqdropdown-item">Взрослые</p>
+                  <p class="iqdropdown-item">Взроcлые</p>
                 </div>
               </div>
-              <div class="iqdropdown-menu-option" data-id="childs">
+              <div class="iqdropdown-menu-option" data-id="childs" data-defaultcount="1">
                 <div>
                   <p class="iqdropdown-item">Дети</p>
                 </div>
               </div>
-              <div class="iqdropdown-menu-option" data-id="babies">
+              <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0">
                 <div>
                   <p class="iqdropdown-item">Младенцы</p>
                 </div>
@@ -273,79 +271,66 @@
         </div>
       </div>
       <div class="column">
-        <div class="element element_short element_largegap"><span class="expandable-list inline element__title" id="list-1">expandable checkbox list</span>
-          <ul class="element__body element__list">
-            <div class="element expandable-list__checkbox"><span class="element__title"></span><span class="element__subtitle"></span>
-              <ul class="element__body element__list">
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec11"/>
-                  <label class="checkbox__label" for="ec11">Завтрак</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
-                  <label class="checkbox__label" for="ec12">Письменный стол</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
-                  <label class="checkbox__label" for="ec13">Стул для кормления</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
-                  <label class="checkbox__label" for="ec14">Кроватка</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec15"/>
-                  <label class="checkbox__label" for="ec15">Телевизор</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec16"/>
-                  <label class="checkbox__label" for="ec16">Шампунь</label>
-                </li>
-              </ul>
-            </div>
-          </ul>
+        <div class="element element_short expandable-list" id="list-1"><span class="element__title">expandable checkbox list</span>
+          <div class="element expandable-list__list element__body"><span class="element__title"></span><span class="element__subtitle"></span>
+            <ul class="element__body element__list">
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec11"/>
+                <label class="checkbox__label" for="ec11">Завтрак</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
+                <label class="checkbox__label" for="ec12">Письменный стол</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
+                <label class="checkbox__label" for="ec13">Стул для кормления</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
+                <label class="checkbox__label" for="ec14">Кроватка</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec15"/>
+                <label class="checkbox__label" for="ec15">Телевизор</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec16"/>
+                <label class="checkbox__label" for="ec16">Шампунь</label>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="element element_short element_largegap"><span class="expandable-list open inline element__title" id="list-2">expandable checkbox list</span>
-          <ul class="element__body element__list">
-            <div class="element expandable-list__checkbox"><span class="element__title"></span><span class="element__subtitle"></span>
-              <ul class="element__body element__list">
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec11"/>
-                  <label class="checkbox__label" for="ec11">Завтрак</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
-                  <label class="checkbox__label" for="ec12">Письменный стол</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
-                  <label class="checkbox__label" for="ec13">Стул для кормления</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
-                  <label class="checkbox__label" for="ec14">Кроватка</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec15"/>
-                  <label class="checkbox__label" for="ec15">Телевизор</label>
-                </li>
-                <li class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="ec16"/>
-                  <label class="checkbox__label" for="ec16">Шампунь</label>
-                </li>
-              </ul>
-            </div>
-          </ul>
+        <div class="element element_short expandable-list open" id="list-2"><span class="element__title">expandable checkbox list</span>
+          <div class="element expandable-list__list element__body"><span class="element__title"></span><span class="element__subtitle"></span>
+            <ul class="element__body element__list">
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec11"/>
+                <label class="checkbox__label" for="ec11">Завтрак</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
+                <label class="checkbox__label" for="ec12">Письменный стол</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
+                <label class="checkbox__label" for="ec13">Стул для кормления</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
+                <label class="checkbox__label" for="ec14">Кроватка</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec15"/>
+                <label class="checkbox__label" for="ec15">Телевизор</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="ec16"/>
+                <label class="checkbox__label" for="ec16">Шампунь</label>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!--.element.element_short.element_largegap
-        +expandable-list('expandable checkbox list',1)(id="list-2")
-        	+checkbox('li','')(class="expandable-list__checkbox" id="ec21")
-        	+checkbox('li')(class="expandable-list__checkbox" id="ec22" checked)
-        	+checkbox('li')(class="expandable-list__checkbox" id="ec23" checked)
-        	+checkbox('li')(class="expandable-list__checkbox" id="ec24" checked)
-        	+checkbox('li',)(class="expandable-list__checkbox" id="ec25")
-        	+checkbox('li')(class="expandable-list__checkbox" id="ec26")
-        -->
       </div>
       <div class="column">
         <div class="element"><span class="element__title">rich checkbox buttons</span><span class="element__subtitle"></span>
@@ -360,22 +345,14 @@
             </li>
           </ul>
         </div>
-        <!--.element.element_largegap
-        span.element__title 
-        .element__body.element__list
-        	+checkbox('div','',1,'')(id="rc1")
-        	+checkbox('div',,1,'')(id="rc2")
-        -->
       </div>
       <div class="column">
-        <div class="element element_largegap"><span class="element__title">Bullet list</span>
-          <div class="element__body">
-            <ul class="bullet-list element__list">
-              <li class="bullet-list__elem">Нельзя с питомцами</li>
-              <li class="bullet-list__elem">Без вечеринок и меропритий</li>
-              <li class="bullet-list__elem">Время прибытия - после 13:00, а выезд до 12:00</li>
-            </ul>
-          </div>
+        <div class="element"><span class="element__title">Bullet list</span><span class="element__subtitle"></span>
+          <ul class="bullet-list element__body element__list">
+            <li class="bullet-list__elem">Нельзя с питомцами</li>
+            <li class="bullet-list__elem">Без вечеринок и меропритий</li>
+            <li class="bullet-list__elem">Время прибытия - после 13:00, а выезд до 12:00</li>
+          </ul>
         </div>
       </div>
       <div class="column">

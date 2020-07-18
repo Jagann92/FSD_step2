@@ -12,7 +12,7 @@ expandableLists.forEach(function (element, index) {
 });
 document.addEventListener('click', function (e) {
 	expandableLists.forEach(function (el, i) {
-		if ((el != e.target) && !(el.contains(e.target))) {
+		if ((el != e.target) && !(el.contains(e.target)) && (el.classList.contains('float'))) {
 			el.classList.remove('open');
 		}
 	});

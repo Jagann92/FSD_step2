@@ -1,15 +1,14 @@
-mixin expandable-list(title,isOpen,isInline=1)
-	- var  classList="expandable-list";
+mixin expandable-list(title,mainClasses='',isOpen=0,isInline=1)
+	- mainClasses+=" expandable-list"
 	if isOpen
-		- classList+=" open";
+		- mainClasses+=" open";
 	if !isInline
-		- classList+=" float";
-		div(class=classList)&attributes(attributes)
+		- mainClasses+=" float";
+		.element(class=mainClasses)&attributes(attributes)
 			span.element__title= title
-			ul.element__list
-				block
+			block
 	else
 		- classList+=" inline element__title";
-		span(class=classList)&attributes(attributes)= title
-		ul.element__body.element__list
+		.element(class=mainClasses)&attributes(attributes)
+			span.element__title= title
 			block

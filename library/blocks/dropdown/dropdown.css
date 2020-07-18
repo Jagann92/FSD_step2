@@ -103,11 +103,7 @@ body.lock {
 
 .iqdropdown .iqdropdown-menu-close {
   color: rgba(31, 32, 65, 0.5);
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font: 400 14px/24px "Montserrat", sans-serif;
   height: 20px;
   margin: 20px 0;
   padding: 0 15px;
@@ -135,21 +131,13 @@ body.lock {
 }
 
 .iqdropdown-item {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
 }
 
 .iqdropdown p.iqdropdown-description {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   margin-top: 5px;
@@ -164,11 +152,7 @@ body.lock {
 }
 
 .iqdropdown .iqdropdown-item-controls .counter {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   padding: 20px;
@@ -225,11 +209,7 @@ body.lock {
 }
 
 .iqdropdown .iqdropdown-selection {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font: 400 14px/24px "Montserrat", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -303,11 +283,7 @@ body.lock {
 
 .iqdropdown-clear-content {
   text-transform: uppercase;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   color: rgba(31, 32, 65, 0.5);
 }
 
@@ -316,11 +292,7 @@ body.lock {
 }
 
 .iqdropdown-apply-content {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #bc9cff;
 }

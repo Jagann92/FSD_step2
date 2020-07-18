@@ -287,11 +287,7 @@ body.lock {
 
 .iqdropdown .iqdropdown-menu-close {
   color: rgba(31, 32, 65, 0.5);
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font: 400 14px/24px "Montserrat", sans-serif;
   height: 20px;
   margin: 20px 0;
   padding: 0 15px;
@@ -319,21 +315,13 @@ body.lock {
 }
 
 .iqdropdown-item {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
 }
 
 .iqdropdown p.iqdropdown-description {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   margin-top: 5px;
@@ -348,11 +336,7 @@ body.lock {
 }
 
 .iqdropdown .iqdropdown-item-controls .counter {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   padding: 20px;
@@ -409,11 +393,7 @@ body.lock {
 }
 
 .iqdropdown .iqdropdown-selection {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font: 400 14px/24px "Montserrat", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -487,11 +467,7 @@ body.lock {
 
 .iqdropdown-clear-content {
   text-transform: uppercase;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   color: rgba(31, 32, 65, 0.5);
 }
 
@@ -500,11 +476,7 @@ body.lock {
 }
 
 .iqdropdown-apply-content {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font: 700 12px/15px "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #bc9cff;
 }
@@ -539,7 +511,7 @@ body.lock {
   -ms-user-select: none;
   user-select: none;
   font-size: 12px;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .irs-line {
@@ -701,8 +673,8 @@ body.lock {
 .irs--round .irs-bar {
   top: 10px;
   height: 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#66d2ea));
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 }
 
 .irs--round .irs-bar--single {
@@ -719,8 +691,8 @@ body.lock {
   width: 17px;
   height: 17px;
   border: 2px solid #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#66d2ea));
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   border-radius: 17px;
 }
 

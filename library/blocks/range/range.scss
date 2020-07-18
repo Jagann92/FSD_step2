@@ -10,7 +10,7 @@
     -ms-user-select: none;
     user-select: none;
     font-size: 12px;
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .irs-line {
@@ -165,14 +165,14 @@
     height: 5px;
     background-color: #fff;
     border: 1px solid;
-    border-color: rgba(31, 32, 65, 0.25);
+    border-color: $grey25;
     border-radius: 2.5px;
 }
 
 .irs--round .irs-bar {
     top: 10px;
     height: 5px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $gradient-green;
 }
 
 .irs--round .irs-bar--single {
@@ -189,13 +189,13 @@
     width: 17px;
     height: 17px;
     border: 2px solid #fff;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $gradient-green;
     border-radius: 17px;
 }
 
 .irs--round .irs-handle.state_hover,
 .irs--round .irs-handle:hover {
-    background-color: #6fcf97;
+    background-color: $green;
 }
 
 .irs--round .irs-min,
@@ -216,7 +216,7 @@
     line-height: 1;
     text-shadow: none;
     padding: 3px 5px;
-    background-color: #6fcf97;
+    background-color: $green;
     color: white;
     border-radius: 5px;
 }
@@ -234,7 +234,7 @@
     margin-left: -3px;
     overflow: hidden;
     border: 3px solid transparent;
-    border-top-color: #6fcf97;
+    border-top-color: $green;
 }
 
 .irs--round .irs-grid {

@@ -1,8 +1,8 @@
 @import "../../../library/templates/base";
 @import "../../../library/nullstyle/nullstyle.scss";
 @import "../../../src/fonts/fonts";
-@import "../../../library/plugins/item-quantity-dropdown/css/item-quantity-dropdown.min";
-@import "../../../library/plugins/ionrangeSlider/css/irs";
+@import "../../../library/blocks/dropdown/dropdown";
+@import "../../../library/blocks/range/range";
 @import "../../../library/blocks/textfield/textfield";
 @import "../../../library/blocks/date/date";
 @import "../../../library/blocks/subscribe/subscribe";

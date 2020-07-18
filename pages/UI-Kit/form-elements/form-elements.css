@@ -182,6 +182,27 @@ h6 {
 }
 
 /* -------------- */
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
 .iqdropdown .icon-decrement,
 .iqdropdown .icon-increment {
   display: inline-block;
@@ -486,6 +507,27 @@ h6 {
   line-height: 15px;
   text-transform: uppercase;
   color: #bc9cff;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .irs {
@@ -924,25 +966,75 @@ body.lock {
   color: rgba(31, 32, 65, 0.75);
 }
 
-body {
-  max-width: 1440px;
+.date {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  min-width: 140px;
   width: 100%;
-  margin: auto;
-  padding: 0.1px;
-  background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+}
+
+.date__arrow {
+  background: none;
+  border: none;
+}
+
+.date__arrow::after {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+  content: "keyboard_arrow_down";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
   color: rgba(31, 32, 65, 0.75);
-  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
 
-@media (max-width: 767px) {
-  body {
-    background-image: none;
-  }
+.date_open .date__arrow::after {
+  content: "keyboard_arrow_up";
 }
 
-body.lock {
-  overflow: hidden;
+.date__input {
+  font: 400 14px/24px "Montserrat", sans-serif;
+  width: 100%;
+}
+
+.date__input::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.date__input:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.date__input::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.date__input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
 }
 
 .datepicker--cell-day.-other-month-,
@@ -1963,77 +2055,6 @@ body.lock {
   border: none;
 }
 
-.date {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 2px;
-  min-width: 140px;
-  width: 100%;
-}
-
-.date__arrow {
-  background: none;
-  border: none;
-}
-
-.date__arrow::after {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: "liga";
-          font-feature-settings: "liga";
-  content: "keyboard_arrow_down";
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 10px;
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.date_open .date__arrow::after {
-  content: "keyboard_arrow_up";
-}
-
-.date__input {
-  font: 400 14px/24px "Montserrat", sans-serif;
-  width: 100%;
-}
-
-.date__input::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.date__input:-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.date__input::-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.date__input::placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
 body {
   max-width: 1440px;
   width: 100%;
@@ -3051,6 +3072,10 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.expandable-list.float::after {
+  right: -10px;
 }
 
 .expandable-list.open::after {

@@ -74,12 +74,12 @@ body.lock {
   text-align: left;
 }
 
-.like:hover, .like:focus {
+.like:hover {
   color: #bc9cff;
   border-color: #bc9cff;
 }
 
-.like:hover .like__heart:after, .like:focus .like__heart:after {
+.like:hover .like__heart:after {
   content: "favorite";
 }
 

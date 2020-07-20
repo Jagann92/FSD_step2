@@ -3,6 +3,7 @@
 
 .expandable-list {
     position: relative;
+    margin-right: 10px;
 
     &__list.element {
         row-gap: 0;
@@ -23,7 +24,7 @@
     }
 
     &.float::after {
-        right: -10px;
+        right: -20px;
     }
 
     &.open::after {

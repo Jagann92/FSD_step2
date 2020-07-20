@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initital-scale=1.0">
@@ -9,18 +9,16 @@
   </head>
   <body>
     <div class="container">
-      <details class="expandable-list">
-        <summary class="pagesList">UI-Kit</summary>
-        <ul>
+      <div class="element  expandable-list float"><span class="element__title">UI-Kit</span>
+        <ul class="expandable-list__list element__body">
           <li><a class="exist" href="pages/UI-Kit/form-elements/form-elements.html">Form elements</a></li>
           <li><a class="exist" href="pages/UI-Kit/colors-types/colors-types.html">Colors&types</a></li>
           <li><a class="exist" href="pages/UI-Kit/headers-footers/headers-footers.html">Headers&footers</a></li>
           <li><a class="exist" href="pages/UI-Kit/cards/cards.html">Cards</a></li>
         </ul>
-      </details>
-      <details class="expandable-list">
-        <summary class="pagesList">Pages</summary>
-        <ul>
+      </div>
+      <div class="element  expandable-list float"><span class="element__title">Pages</span>
+        <ul class="expandable-list__list element__body">
           <li><a class="null" href="#">Page №1 ...in process</a>
           </li>
           <li><a class="null" href="#">Page №2 ...in process</a>
@@ -40,8 +38,9 @@
           <li><a class="null" href="#">Page №9 ...in process</a>
           </li>
         </ul>
-      </details>
+      </div>
     </div>
     <div class="copyright">Проект Михаила Трунина для <a href="http://fullstack-development.com">FSD</a></div>
+    <script src="../../../library/blocks/expandable-list/expandable-list.js"></script>
   </body>
 </html>

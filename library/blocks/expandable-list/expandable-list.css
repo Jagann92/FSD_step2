@@ -154,6 +154,7 @@ body.lock {
 
 .expandable-list {
   position: relative;
+  margin-right: 10px;
 }
 
 .expandable-list__list.element {
@@ -201,7 +202,7 @@ body.lock {
 }
 
 .expandable-list.float::after {
-  right: -10px;
+  right: -20px;
 }
 
 .expandable-list.open::after {

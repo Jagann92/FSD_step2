@@ -263,6 +263,7 @@ body.lock {
 
 .expandable-list {
   position: relative;
+  margin-right: 10px;
 }
 
 .expandable-list__list.element {
@@ -310,7 +311,7 @@ body.lock {
 }
 
 .expandable-list.float::after {
-  right: -10px;
+  right: -20px;
 }
 
 .expandable-list.open::after {
@@ -359,36 +360,7 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   margin-top: 40vh;
-}
-
-.expandable-list summary {
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin-right: auto;
-  margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  justify-items: center;
-  font: 700 24px/30px "Quicksand", sans-serif;
-}
-
-.expandable-list summary::after {
-  right: -20px;
-  top: 5px;
-}
-
-.expandable-list ul {
-  margin-top: 15px;
-}
-
-.expandable-list ul li {
-  margin-bottom: 15px;
+  row-gap: 10px;
 }
 
 .exist {

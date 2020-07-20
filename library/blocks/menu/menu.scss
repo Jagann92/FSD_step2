@@ -14,13 +14,15 @@
         }
 
         &_spoiler {
-            padding-right: 10px;
+
 
             & .element__title {
                 font: $body;
                 line-height: 17px;
                 color: $grey50;
                 text-transform: none;
+                justify-self: end;
+
             }
 
             & .menu__elem {

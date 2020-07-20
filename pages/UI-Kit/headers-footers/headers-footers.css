@@ -951,6 +951,9 @@ body.lock {
   -ms-grid-columns: 1fr max-content;
       grid-template-columns: 1fr -webkit-max-content;
       grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -977,6 +980,10 @@ body.lock {
 
 .element_lowgap {
   row-gap: 5px;
+}
+
+.element_nullgap {
+  row-gap: 0;
 }
 
 .element__title {
@@ -1327,6 +1334,9 @@ body.lock {
   -ms-grid-columns: 1fr max-content;
       grid-template-columns: 1fr -webkit-max-content;
       grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1353,6 +1363,10 @@ body.lock {
 
 .element_lowgap {
   row-gap: 5px;
+}
+
+.element_nullgap {
+  row-gap: 0;
 }
 
 .element__title {

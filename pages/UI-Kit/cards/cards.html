@@ -9,123 +9,240 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
-    <!--.container-->
-    <div class="card">
-      <p class="card__title">Найдём номера под ваши пожелания</p>
-      <div class="line">
-        <div class="element element_lowgap"><span class="element__title">Прибытие</span>
-          <div class="date textfield element__body">
-            <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
-            <button class="date__arrow"></button>
-          </div>
-        </div>
-        <div class="element element_lowgap"><span class="element__title">Выезд</span>
-          <div class="date textfield element__body">
-            <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
-            <button class="date__arrow"></button>
-          </div>
-        </div>
-      </div>
-      <div class="element element_lowgap"><span class="element__title">Гости</span><span class="element__subtitle"></span>
-        <div class="iqdropdown textfield element__body people">
-          <p class="iqdropdown-selection"></p>
-          <div class="iqdropdown-menu">
-            <div class="iqdropdown-menu-option" data-id="adults">
-              <div>
-                <p class="iqdropdown-item">Взроcлые</p>
+    <div class="container">
+      <div class="column">
+        <div class="card">
+          <p class="card__title">Найдём номера под ваши пожелания</p>
+          <div class="line">
+            <div class="element element_lowgap"><span class="element__title">Прибытие</span>
+              <div class="date textfield element__body">
+                <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+                <button class="date__arrow"></button>
               </div>
             </div>
-            <div class="iqdropdown-menu-option" data-id="childs">
-              <div>
-                <p class="iqdropdown-item">Дети</p>
-              </div>
-            </div>
-            <div class="iqdropdown-menu-option" data-id="babies">
-              <div>
-                <p class="iqdropdown-item">Младенцы</p>
+            <div class="element element_lowgap"><span class="element__title">Выезд</span>
+              <div class="date textfield element__body">
+                <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+                <button class="date__arrow"></button>
               </div>
             </div>
           </div>
+          <div class="element element_lowgap"><span class="element__title">Гости</span><span class="element__subtitle"></span>
+            <div class="iqdropdown textfield element__body people">
+              <p class="iqdropdown-selection"></p>
+              <div class="iqdropdown-menu">
+                <div class="iqdropdown-menu-option" data-id="adults">
+                  <div>
+                    <p class="iqdropdown-item">Взроcлые</p>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="childs">
+                  <div>
+                    <p class="iqdropdown-item">Дети</p>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="babies">
+                  <div>
+                    <p class="iqdropdown-item">Младенцы</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_extraspace">
+            <button class="button button_purple button_wide button_arrowed undefined">Подобрать номер
+              <span class="arrow material-icons button__arrow">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card__title">Регистрация аккаунта</p>
+          <div class="card__block">
+            <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <input class="textfield element__body" placeholder="Имя"/>
+            </div>
+            <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <input class="textfield element__body" placeholder="Фамилия"/>
+            </div>
+            <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <div class="element__body line">
+                <div class="radio">
+                  <input class="radio__input" type="radio" name="gender" id="r1" checked="checked"/>
+                  <label class="radio__label" for="r1">Мужчина</label>
+                </div>
+                <div class="radio">
+                  <input class="radio__input" type="radio" name="gender" id="r2"/>
+                  <label class="radio__label" for="r2">Женщина</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="element element_lowgap"><span class="element__title">Дата рождения</span><span class="element__subtitle"></span>
+            <input class="textfield element__body textfield_masked" type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ"/>
+          </div>
+          <div class="card__block">
+            <div class="element element_lowgap"><span class="element__title">Данные для входа в сервис</span><span class="element__subtitle"></span>
+              <input class="textfield element__body" placeholder="Email" type="email"/>
+            </div>
+            <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <input class="textfield element__body" placeholder="Пароль" type="password"/>
+            </div>
+            <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <ul class="element__body element__list">
+                <li class="switch">
+                  <input class="switch__input" type="checkbox" id="sw1"/>
+                  <label class="switch__label" for="sw1">Получать спецпредложения</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="button button_purple button_wide button_arrowed undefined">перейти к оплате
+            <span class="arrow material-icons button__arrow">arrow_forward</span>
+          </button>
+          <div class="card__line card_extraspace"><span>Уже есть аккаунт на Toxin</span>
+            <button class="button button_white undefined"><span class="button__inner">Войти</span></button>
+          </div>
         </div>
       </div>
-      <button class="button button_purple button_wide button_arrowed undefined">Подобрать номер
-        <span class="arrow material-icons button__arrow">arrow_forward</span>
-      </button>
-    </div>
-    <div class="card">
-      <p class="card__title">Регистрация аккаунта</p>
-      <div class="card__block">
-        <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
-          <input class="textfield element__body" placeholder="Имя"/>
-        </div>
-        <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
-          <input class="textfield element__body" placeholder="Фамилия"/>
-        </div>
-        <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
-          <div class="element__body line">
-            <div class="radio">
-              <input class="radio__input" type="radio" name="gender" id="r1" checked="checked"/>
-              <label class="radio__label" for="r1">Мужчина</label>
+      <div class="column">
+        <div class="card">
+          <div class="roomTitle">
+            <p class="roomTitle__room">№<span class="roomTitle__number">888</span><span class="roomTitle__type">Люкс</span></p>
+            <p class="roomTitle__cost"><span class="roomTitle__price">9900₽</span>
+              в сутки
+            </p>
+          </div>
+          <div class="line">
+            <div class="element element_lowgap"><span class="element__title">Прибытие</span>
+              <div class="date textfield element__body">
+                <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+                <button class="date__arrow"></button>
+              </div>
             </div>
-            <div class="radio">
-              <input class="radio__input" type="radio" name="gender" id="r2"/>
-              <label class="radio__label" for="r2">Женщина</label>
+            <div class="element element_lowgap"><span class="element__title">Выезд</span>
+              <div class="date textfield element__body">
+                <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+                <button class="date__arrow"></button>
+              </div>
+            </div>
+          </div>
+          <div class="element element_lowgap"><span class="element__title">Гости</span><span class="element__subtitle"></span>
+            <div class="iqdropdown textfield element__body people">
+              <p class="iqdropdown-selection"></p>
+              <div class="iqdropdown-menu">
+                <div class="iqdropdown-menu-option" data-id="adults" data-defaultcount="2">
+                  <div>
+                    <p class="iqdropdown-item">Взроcлые</p>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="childs" data-defaultcount="1">
+                  <div>
+                    <p class="iqdropdown-item">Дети</p>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0">
+                  <div>
+                    <p class="iqdropdown-item">Младенцы</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__block">
+            <p class="cost"><span>9 990₽ х 4 суток</span><span class="cost__sum">39 960₽</span></p>
+            <p class="cost"><span>Сбор за услуги: скидка 2 179₽</span><span class="cost__info">i</span><span class="cost__sum">0₽</span></p>
+            <p class="cost"><span>Сбор за дополнительные услуги</span><span class="cost__info">i</span><span class="cost__sum">300₽</span></p>
+          </div>
+          <p class="cost cost_total card_extraspace"><span>Итого</span><span class="cost__space"></span><span class="cost__sum">38 081₽</span></p>
+          <button class="button button_purple button_wide button_arrowed undefined">Забронировать
+            <span class="arrow material-icons button__arrow">arrow_forward</span>
+          </button>
+        </div>
+        <div class="card">
+          <p class="card__title">Войти</p>
+          <div class="card__block">
+            <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <input class="textfield element__body" placeholder="Email" type="email"/>
+            </div>
+            <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <input class="textfield element__body" placeholder="Пароль" type="password"/>
+            </div>
+          </div>
+          <button class="button button_purple button_wide button_arrowed undefined">Войти
+            <span class="arrow material-icons button__arrow">arrow_forward</span>
+          </button>
+          <div class="card__line card_extraspace"><span>Нет аккаунта на Toxin?</span>
+            <button class="button button_white undefined"><span class="button__inner">Создать</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="calendar">
+          <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+            <div class="date textfield element__body">
+              <input class="date__input datepicker-here" type="text" data-inline="true" data-clear-button="true" data-apply-button="true"/>
+              <button class="date__arrow"></button>
+            </div>
+          </div>
+        </div>
+        <div class="card card_room"><img class="card__image" src="../../../src/img/888.jpg">
+          <div class="card__block">
+            <div class="roomTitle">
+              <p class="roomTitle__room">№<span class="roomTitle__number">888</span><span class="roomTitle__type">Люкс</span></p>
+              <p class="roomTitle__cost"><span class="roomTitle__price">9900₽</span>
+                в сутки
+              </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card__line">
+              <div class="rate">
+                <input class="rate__input" id="roomrate5" type="radio" name="roomrate" checked="checked"/>
+                <label class="material-icons rate__label" for="roomrate5"></label>
+                <input class="rate__input" id="roomrate4" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate4"></label>
+                <input class="rate__input" id="roomrate3" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate3"></label>
+                <input class="rate__input" id="roomrate2" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate2"></label>
+                <input class="rate__input" id="roomrate1" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate1"></label>
+              </div>
+              <p class="reviewsCount"><span>145</span>
+                отзывов
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card card_room"><img class="card__image" src="../../../src/img/840.jpg">
+          <div class="card__block">
+            <div class="roomTitle">
+              <p class="roomTitle__room">№<span class="roomTitle__number">840</span><span class="roomTitle__type"></span></p>
+              <p class="roomTitle__cost"><span class="roomTitle__price">9900₽</span>
+                в сутки
+              </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card__line">
+              <div class="rate">
+                <input class="rate__input" id="roomrate5" type="radio" name="roomrate" checked="checked"/>
+                <label class="material-icons rate__label" for="roomrate5"></label>
+                <input class="rate__input" id="roomrate4" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate4"></label>
+                <input class="rate__input" id="roomrate3" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate3"></label>
+                <input class="rate__input" id="roomrate2" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate2"></label>
+                <input class="rate__input" id="roomrate1" type="radio" name="roomrate"/>
+                <label class="material-icons rate__label" for="roomrate1"></label>
+              </div>
+              <p class="reviewsCount"><span>65</span>
+                отзывов
+                
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="element element_lowgap"><span class="element__title">Дата рождения</span><span class="element__subtitle"></span>
-        <input class="textfield element__body textfield_masked" type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ"/>
-      </div>
-      <div class="card__block">
-        <div class="element element_lowgap"><span class="element__title">Данные для входа в сервис</span><span class="element__subtitle"></span>
-          <input class="textfield element__body" placeholder="Email" type="email"/>
-        </div>
-        <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
-          <input class="textfield element__body" placeholder="Пароль" type="password"/>
-        </div>
-        <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
-          <ul class="element__body element__list">
-            <li class="switch">
-              <input class="switch__input" type="checkbox" id="sw1"/>
-              <label class="switch__label" for="sw1">Получать спецпредложения</label>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <button class="button button_purple button_wide button_arrowed undefined">перейти к оплате
-        <span class="arrow material-icons button__arrow">arrow_forward</span>
-      </button>
-      <div class="card__line"><span>Уже есть аккаунт на Toxin</span>
-        <button class="button button_white undefined"><span class="button__inner">Войти</span></button>
-      </div>
-    </div>
-    <div class="card">
-      <p class="card__title">Войти</p>
-      <div class="card__block">
-        <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
-          <input class="textfield element__body" placeholder="Email" type="email"/>
-        </div>
-        <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
-          <input class="textfield element__body" placeholder="Пароль" type="password"/>
-        </div>
-      </div>
-      <button class="button button_purple button_wide button_arrowed undefined">Войти
-        <span class="arrow material-icons button__arrow">arrow_forward</span>
-      </button>
-      <div class="card__line"><span>Нет аккаунта на Toxin?</span>
-        <button class="button button_white undefined"><span class="button__inner">Создать</span></button>
-      </div>
-      <!--.column-->
-      <!--.column
-      .card.reservation-card
-      .card.login-card
-      -->
-      <!--.column
-      .card.calendar
-      .card.suit-card
-      .card.suit-card
-      -->
     </div>
     <script src="../../../library/blocks/date/date.js"></script>
     <script src="../../../library/blocks/dropdown/dropdown.js"></script>

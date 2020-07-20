@@ -2229,6 +2229,147 @@ body.lock {
   color: rgba(31, 32, 65, 0.75);
 }
 
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.roomTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 380px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.roomTitle__room {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  font: 700 14px/17px "Quicksand", sans-serif;
+  color: #1f2041;
+  -ms-grid-columns: (min-content)[3];
+      grid-template-columns: repeat(3, -webkit-min-content);
+      grid-template-columns: repeat(3, min-content);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.roomTitle__number {
+  font-size: 24px;
+}
+
+.roomTitle__type {
+  font: 700 12px/15px "Montserrat", sans-serif;
+  color: #bc9cff;
+  text-transform: uppercase;
+}
+
+.roomTitle__cost {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.roomTitle__price {
+  font-weight: bold;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.rate {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.rate__input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.rate__label:before {
+  content: "star_border";
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  font-size: 24px;
+  line-height: 20px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.rate__input:checked ~ .rate__label::before,
+.rate__input:hover ~ .rate__label::before {
+  content: "star";
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -2238,6 +2379,28 @@ body.lock {
   -webkit-column-gap: 40px;
           column-gap: 40px;
   margin: 10.42vw 9.72vw 9.72vw 9.72vw;
+}
+
+.calendar {
+  display: -ms-grid;
+  display: grid;
+  width: 320px;
+  height: 335px;
+  -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.calendar .datepicker {
+  background-color: white;
+}
+
+.calendar .date {
+  border: none;
+  padding: 0;
+}
+
+.calendar .date__input, .calendar .date__arrow {
+  display: none;
 }
 
 .column {
@@ -2269,6 +2432,22 @@ body.lock {
   row-gap: 20px;
 }
 
+.card__image {
+  height: 150px;
+  width: 268px;
+  background-clip: border-box;
+}
+
+.card_room {
+  max-width: 270px;
+  padding: 0;
+}
+
+.card_room .card__block {
+  padding: 20px;
+  padding-top: 0;
+}
+
 .card__title {
   font: 700 24px/30px "Quicksand", sans-serif;
   color: #1f2041;
@@ -2282,8 +2461,15 @@ body.lock {
   row-gap: 10px;
 }
 
-.card__line {
+.card_extraspace {
   margin-top: 10px;
+}
+
+.card_lowerspace {
+  margin-top: -10px;
+}
+
+.card__line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2293,4 +2479,79 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(31, 32, 65, 0.1);
+}
+
+.cost {
+  font: 400 14px/24px "Montserrat", sans-serif;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 68% 20px auto;
+      grid-template-columns: 68% 20px auto;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.cost__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  font: 700 12px/15px "Montserrat", sans-serif;
+  line-height: 14px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.cost__sum {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.cost_total {
+  font: 700 19px/24px "Quicksand", sans-serif;
+  -ms-grid-columns: max-content auto max-content;
+      grid-template-columns: -webkit-max-content auto -webkit-max-content;
+      grid-template-columns: max-content auto max-content;
+}
+
+.cost__space {
+  border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+}
+
+.reviewsCount {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.reviewsCount span {
+  font-weight: bold;
 }

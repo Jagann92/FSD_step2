@@ -5,48 +5,85 @@ block styles
 	link(rel="stylesheet" href="cards.css")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 block body
-	//.container
-	.card
-		p.card__title Найдём номера под ваши пожелания
-		+date('Прибытие','Выезд','element_lowgap','double')(type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
-		+dropdown('Гости','','element_lowgap','people','')
-		+button('Подобрать номер','purple','wide',1)
+	-var price=9900;
+	.container
+		.column
+			.card
+				p.card__title Найдём номера под ваши пожелания
+				+date('Прибытие','Выезд','element_lowgap','double')(type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+				+dropdown('Гости','','element_lowgap','people','')
+				.card_extraspace
+					+button('Подобрать номер','purple','wide',1)
+			.card
+				p.card__title Регистрация аккаунта
+				.card__block
+					+textfield()(placeholder='Имя')
+					+textfield()(placeholder='Фамилия')
+					+radio('','','','r','gender','10','Мужчина','Женщина')
+				+textfield('Дата рождения','','element_lowgap')(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ" class="textfield_masked")
+				.card__block
+					+textfield('Данные для входа в сервис','','element_lowgap')(placeholder='Email' type="email")
+					+textfield()(placeholder='Пароль' type="password")
+					+switch('','','','sw','0','Получать спецпредложения')
+				+button('перейти к оплате','purple','wide',1)
+				.card__line.card_extraspace
+					span Уже есть аккаунт на Toxin
+					+button('Войти','white','normal',0)
+		.column
+			.card
+				+roomTitle('','888','Люкс',price)
+				+date('Прибытие','Выезд','element_lowgap','double')(type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+				+dropdown('Гости','','element_lowgap','people','210')
+				.card__block
+					p.cost
+						span 9 990₽ х 4 суток
+						span.cost__sum 39 960₽
+					p.cost
+						span Сбор за услуги: скидка 2 179₽
+						span.cost__info i
+						span.cost__sum 0₽
+					p.cost
+						span Сбор за дополнительные услуги
+						span.cost__info i
+						span.cost__sum 300₽
+				p.cost.cost_total.card_extraspace
+					span Итого
+					span.cost__space
+					span.cost__sum 38 081₽
+				+button('Забронировать','purple','wide',1)
+			.card
+				p.card__title Войти
+				.card__block
+					+textfield()(placeholder='Email' type="email")
+					+textfield()(placeholder='Пароль' type="password")
+				+button('Войти','purple','wide',1)
+				.card__line.card_extraspace
+					span Нет аккаунта на Toxin?
+					+button('Создать','white','normal',0)
+		.column
+			.calendar
+				+date('','','','default')(data-inline="true" data-clear-button="true" data-apply-button="true")
+			.card.card_room
+				img.card__image(src='../../../src/img/888.jpg')
+				.card__block
+					+roomTitle('','888','Люкс',price)
+					.separator
+					.card__line
+						+rate(5)(name="roomrate" id="room")
+						p.reviewsCount.
+							#[span 145]
+							отзывов
+			.card.card_room
+				img.card__image(src='../../../src/img/840.jpg')
+				.card__block
+					+roomTitle('','840','',price)
+					.separator
+					.card__line
+						+rate(5)(name="roomrate" id="room")
+						p.reviewsCount.
+							#[span 65]
+							отзывов
 
-	.card
-		p.card__title Регистрация аккаунта
-		.card__block
-			+textfield()(placeholder='Имя')
-			+textfield()(placeholder='Фамилия')
-			+radio('','','','r','gender','10','Мужчина','Женщина')
-		+textfield('Дата рождения','','element_lowgap')(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ" class="textfield_masked")
-		.card__block
-			+textfield('Данные для входа в сервис','','element_lowgap')(placeholder='Email' type="email")
-			+textfield()(placeholder='Пароль' type="password")
-			+switch('','','','sw','0','Получать спецпредложения')
-		+button('перейти к оплате','purple','wide',1)
-		.card__line
-			span Уже есть аккаунт на Toxin
-			+button('Войти','white','normal',0)
-	.card
-		p.card__title Войти
-		.card__block
-			+textfield()(placeholder='Email' type="email")
-			+textfield()(placeholder='Пароль' type="password")
-		+button('Войти','purple','wide',1)
-		.card__line
-			span Нет аккаунта на Toxin?
-			+button('Создать','white','normal',0)
-		//.column
-
-
-
-		//.column
-			.card.reservation-card
-			.card.login-card
-		//.column
-			.card.calendar
-			.card.suit-card
-			.card.suit-card
 	script(src="../../../library/blocks/date/date.js")
 	script(src="../../../library/blocks/dropdown/dropdown.js")
 	script(src="../../../library/blocks/textfield/textfield.js")

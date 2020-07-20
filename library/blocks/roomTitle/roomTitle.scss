@@ -1,0 +1,42 @@
+@import "../../../library/templates/base";
+
+.roomTitle {
+    display: flex;
+    max-width: 380px;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &__room {
+        display: grid;
+        column-gap: 5px;
+        font: 700 14px/17px "Quicksand", sans-serif;
+        color: $grey;
+        grid-template-columns: repeat(3, min-content);
+        align-items: baseline;
+    }
+
+    &__number {
+        font-size: 24px;
+    }
+
+    &__type {
+        font: $h3;
+        color: $purple;
+        text-transform: uppercase;
+    }
+
+    &__cost {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 5px;
+        font: $body;
+        line-height: 18px;
+        color: $grey50;
+        align-items: baseline;
+
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+}

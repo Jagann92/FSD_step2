@@ -1,0 +1,8 @@
+mixin roomTitle(mainClasses='',number,type,price)
+	.roomTitle&attributes(attributes)
+		p.roomTitle__room №
+			span.roomTitle__number=number
+			span.roomTitle__type=type
+		p.roomTitle__cost.
+			#[span.roomTitle__price=price+'₽']
+			в сутки

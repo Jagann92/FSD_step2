@@ -7,12 +7,35 @@
 @import "../../../library/blocks/radio/radio";
 @import "../../../library/blocks/textfield/textfield";
 @import "../../../library/blocks/switch/switch";
+@import "../../../library/blocks/roomTitle/roomTitle";
+@import "../../../library/blocks/rate/rate";
 
 .container {
     display: grid;
     grid-template-columns: repeat(3, minmax(min-content, max-content));
     column-gap: 40px;
     margin: 10.42vw 9.72vw 9.72vw 9.72vw;
+}
+
+.calendar {
+    display: grid;
+    width: 320px;
+    height: 335px;
+    box-shadow: 0px 10px 20px $grey05;
+
+    & .datepicker {
+        background-color: white;
+    }
+
+    & .date {
+        border: none;
+        padding: 0;
+
+        &__input,
+        &__arrow {
+            display: none;
+        }
+    }
 }
 
 .column {
@@ -35,6 +58,22 @@
     grid-template-columns: 1fr;
     row-gap: 20px;
 
+    &__image {
+        height: 150px;
+        width: 268px;
+        background-clip: border-box;
+    }
+
+    &_room {
+        max-width: 270px;
+        padding: 0;
+
+        & .card__block {
+            padding: 20px;
+            padding-top: 0;
+        }
+    }
+
     &__title {
         font: $h1;
         color: $grey;
@@ -46,40 +85,74 @@
         row-gap: 10px;
     }
 
-    &__line {
+    &_extraspace {
         margin-top: 10px;
+    }
+
+    &_lowerspace {
+        margin-top: -10px;
+    }
+
+    &__line {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 }
 
-.search-card {
-    //width: 380px;
-    //height: 374px;
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: $grey10;
 }
 
-.register-card {
-    //width: 380px;
-    //height: 646px;
+.cost {
+    font: $body;
+    line-height: 18px;
+    color: $grey75;
+    display: grid;
+    grid-template-columns: 68% 20px auto;
+    column-gap: 5px;
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $grey25;
+        border-radius: 50%;
+        font: $h3;
+        line-height: 14px;
+        color: $grey25;
+    }
+
+    &__sum {
+        grid-column-start: 3;
+        justify-self: end;
+    }
+
+    &_total {
+        font: $h2;
+        grid-template-columns: max-content auto max-content;
+    }
+
+    &__space {
+        border-bottom: 1px dashed $grey25;
+    }
 }
 
-.reservation-card {
-    //width: 380px;
-    //height: 511px;
-}
+.reviewsCount {
 
-.login-card {
-    //width: 380px;
-    //height: 358px;
-}
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 5px;
+    font: $body;
+    line-height: 18px;
+    color: $grey50;
+    align-items: baseline;
 
-.calendar {
-    //width: 320px;
-    //height: 369px;
-}
-
-.suit-card {
-    //width: 270px;
-    //height: 257px;
+    & span {
+        font-weight: bold;
+    }
 }

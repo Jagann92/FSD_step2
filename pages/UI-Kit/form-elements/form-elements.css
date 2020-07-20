@@ -877,88 +877,6 @@ body.lock {
   overflow: hidden;
 }
 
-.textfield {
-  max-width: 320px;
-  width: 100%;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
-  font: 400 14px/24px "Montserrat", sans-serif;
-  padding-left: 15px;
-}
-
-.textfield.iqdropdown {
-  min-width: 210px;
-}
-
-.textfield::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.textfield:-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.textfield::-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.textfield::placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.textfield:focus, .textfield:hover, .textfield_focus {
-  border-color: rgba(31, 32, 65, 0.5);
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.textfield:focus::-webkit-input-placeholder, .textfield:hover::-webkit-input-placeholder, .textfield_focus::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.textfield:focus:-ms-input-placeholder, .textfield:hover:-ms-input-placeholder, .textfield_focus:-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.textfield:focus::-ms-input-placeholder, .textfield:hover::-ms-input-placeholder, .textfield_focus::-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.textfield:focus::placeholder, .textfield:hover::placeholder, .textfield_focus::placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.textfield_masked {
-  color: rgba(31, 32, 65, 0.25);
-}
-
-.textfield_masked:active {
-  color: rgba(31, 32, 65, 0.75);
-}
-
-body {
-  max-width: 1440px;
-  width: 100%;
-  margin: auto;
-  padding: 0.1px;
-  background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
-  color: rgba(31, 32, 65, 0.75);
-  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
-}
-
-@media (max-width: 767px) {
-  body {
-    background-image: none;
-  }
-}
-
-body.lock {
-  overflow: hidden;
-}
-
 .element {
   width: 100%;
   max-width: 320px;
@@ -967,6 +885,9 @@ body.lock {
   -ms-grid-columns: 1fr max-content;
       grid-template-columns: 1fr -webkit-max-content;
       grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -993,6 +914,10 @@ body.lock {
 
 .element_lowgap {
   row-gap: 5px;
+}
+
+.element_nullgap {
+  row-gap: 0;
 }
 
 .element__title {
@@ -1064,6 +989,88 @@ body.lock {
           column-gap: 20px;
 }
 
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.textfield {
+  max-width: 320px;
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  padding-left: 15px;
+}
+
+.textfield.iqdropdown {
+  min-width: 210px;
+}
+
+.textfield::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.textfield:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.textfield::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.textfield::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.textfield:focus, .textfield:hover, .textfield_focus {
+  border-color: rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus::-webkit-input-placeholder, .textfield:hover::-webkit-input-placeholder, .textfield_focus::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus:-ms-input-placeholder, .textfield:hover:-ms-input-placeholder, .textfield_focus:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus::-ms-input-placeholder, .textfield:hover::-ms-input-placeholder, .textfield_focus::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield:focus::placeholder, .textfield:hover::placeholder, .textfield_focus::placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.textfield_masked {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.textfield_masked:active {
+  color: rgba(31, 32, 65, 0.75);
+}
+
 .date {
   position: relative;
   display: -webkit-box;
@@ -1072,6 +1079,10 @@ body.lock {
   padding: 2px;
   min-width: 140px;
   width: 100%;
+}
+
+.date.textfield {
+  padding-left: 15px;
 }
 
 .date__arrow {
@@ -3037,6 +3048,9 @@ body.lock {
   -ms-grid-columns: 1fr max-content;
       grid-template-columns: 1fr -webkit-max-content;
       grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3063,6 +3077,10 @@ body.lock {
 
 .element_lowgap {
   row-gap: 5px;
+}
+
+.element_nullgap {
+  row-gap: 0;
 }
 
 .element__title {
@@ -3444,6 +3462,9 @@ body.lock {
   -ms-grid-columns: 1fr max-content;
       grid-template-columns: 1fr -webkit-max-content;
       grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3470,6 +3491,10 @@ body.lock {
 
 .element_lowgap {
   row-gap: 5px;
+}
+
+.element_nullgap {
+  row-gap: 0;
 }
 
 .element__title {

@@ -1,0 +1,78 @@
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.roomTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 380px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.roomTitle__room {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  font: 700 14px/17px "Quicksand", sans-serif;
+  color: #1f2041;
+  -ms-grid-columns: (min-content)[3];
+      grid-template-columns: repeat(3, -webkit-min-content);
+      grid-template-columns: repeat(3, min-content);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.roomTitle__number {
+  font-size: 24px;
+}
+
+.roomTitle__type {
+  font: 700 12px/15px "Montserrat", sans-serif;
+  color: #bc9cff;
+  text-transform: uppercase;
+}
+
+.roomTitle__cost {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  font: 400 14px/24px "Montserrat", sans-serif;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.roomTitle__price {
+  font-weight: bold;
+}

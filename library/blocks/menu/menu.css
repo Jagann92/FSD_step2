@@ -69,6 +69,9 @@ body.lock {
   -ms-grid-columns: 1fr max-content;
       grid-template-columns: 1fr -webkit-max-content;
       grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -95,6 +98,10 @@ body.lock {
 
 .element_lowgap {
   row-gap: 5px;
+}
+
+.element_nullgap {
+  row-gap: 0;
 }
 
 .element__title {
@@ -156,6 +163,16 @@ body.lock {
   }
 }
 
+.line {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  row-gap: 10px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
 .expandable-list {
   position: relative;
 }
@@ -191,7 +208,7 @@ body.lock {
   width: 22px;
   height: 22px;
   position: absolute;
-  right: -84px;
+  right: 0;
   top: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,19 +229,19 @@ body.lock {
   content: "keyboard_arrow_up";
 }
 
-.expandable-list + ul,
-.expandable-list.float ul {
+.expandable-list .expandable-list__list,
+.expandable-list.float .expandable-list__list {
   display: none;
 }
 
-.expandable-list.open + ul,
-.expandable-list.open.float ul,
-.expandable-list.lock + ul {
+.expandable-list.open .expandable-list__list,
+.expandable-list.open.float .expandable-list__list,
+.expandable-list.lock .expandable-list__list {
   display: -ms-grid;
   display: grid;
 }
 
-.expandable-list.float ul {
+.expandable-list.float .expandable-list__list {
   position: absolute;
   top: 100%;
   right: -10%;

@@ -5,9 +5,9 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
-  background: left 30px top 30px no-repeat url("../../src/img/logo.svg");
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
 
 @media (max-width: 767px) {
@@ -27,9 +27,7 @@ body.lock {
   border: 0;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -40,15 +38,12 @@ body.lock {
   outline: none;
 }
 
-a,
-a:visited,
-a:hover {
+a, a:visited, a:hover {
   text-decoration: none;
   color: inherit;
 }
 
-a:focus,
-a:active {
+a:focus, a:active {
   outline: none;
 }
 
@@ -118,7 +113,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -139,7 +134,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -160,16 +155,16 @@ body.lock {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr max-content;
-  grid-template-columns: 1fr -webkit-max-content;
-  grid-template-columns: 1fr max-content;
-  -ms-grid-rows: (max-content) [auto-fit];
-  grid-template-rows: repeat(auto-fit, -webkit-max-content);
-  grid-template-rows: repeat(auto-fit, max-content);
+      grid-template-columns: 1fr -webkit-max-content;
+      grid-template-columns: 1fr max-content;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-line-pack: start;
-  align-content: start;
+      align-content: start;
   row-gap: 16px;
 }
 
@@ -179,10 +174,10 @@ body.lock {
   display: flex;
   margin: -15px -10px -1px -10px;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .element__subgrid_inner {
@@ -198,20 +193,20 @@ body.lock {
 }
 
 .element__title {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   -ms-grid-column-align: start;
-  justify-self: start;
+      justify-self: start;
 }
 
 .element__subtitle {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   color: rgba(31, 32, 65, 0.5);
   -ms-grid-column-align: end;
-  justify-self: end;
+      justify-self: end;
 }
 
 .element__body {
@@ -225,8 +220,8 @@ body.lock {
 }
 
 .element_short .line {
-  -ms-grid-columns: (minmax(120px, 1fr)) [auto-fill];
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
 .element_shorter {
@@ -234,15 +229,15 @@ body.lock {
 }
 
 .element_shorter .line {
-  -ms-grid-columns: (minmax(100px, 1fr)) [auto-fill];
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 
 .element__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   row-gap: 10px;
 }
 
@@ -259,11 +254,11 @@ body.lock {
 .line {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(130px, 1fr)) [auto-fill];
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   row-gap: 10px;
   -webkit-column-gap: 20px;
-  column-gap: 20px;
+          column-gap: 20px;
 }
 
 .expandable-list {
@@ -296,7 +291,7 @@ body.lock {
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
   -webkit-font-feature-settings: "liga";
-  font-feature-settings: "liga";
+          font-feature-settings: "liga";
   content: "keyboard_arrow_down";
   color: rgba(31, 32, 65, 0.5);
   width: 22px;
@@ -308,11 +303,11 @@ body.lock {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .expandable-list.float::after {
@@ -353,17 +348,17 @@ body.lock {
 }
 
 body {
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
 }
 
 .container {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   margin-top: 40vh;
   row-gap: 10px;
 }
@@ -382,11 +377,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   bottom: 0;
 }
@@ -403,57 +398,49 @@ body {
   font-family: "Montserrat";
   font-weight: 700;
   font-style: normal;
-  src: local("Montserrat"), url("src/fonts/Montserrat-Bold.woff") format("woff"),
-    url("src/fonts/Montserrat-Bold.ttf") format("truetype"), url("src/fonts/Montserrat-Bold.svg") format("svg");
+  src: local("Montserrat"), url("src/fonts/Montserrat-Bold.woff") format("woff"), url("src/fonts/Montserrat-Bold.ttf") format("truetype"), url("src/fonts/Montserrat-Bold.svg") format("svg");
 }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
   font-style: normal;
-  src: local("Montserrat"), url("src/fonts/Montserrat-Regular.woff") format("woff"),
-    url("src/fonts/Montserrat-Regular.ttf") format("truetype"), url("src/fonts/Montserrat-Regular.svg") format("svg");
+  src: local("Montserrat"), url("src/fonts/Montserrat-Regular.woff") format("woff"), url("src/fonts/Montserrat-Regular.ttf") format("truetype"), url("src/fonts/Montserrat-Regular.svg") format("svg");
 }
 
 @font-face {
   font-family: "Quicksand";
   font-weight: 700;
   font-style: normal;
-  src: local("Quicksand"), url("src/fonts/Quicksand-Bold.woff") format("woff"),
-    url("src/fonts/Quicksand-Bold.ttf") format("truetype"), url("src/fonts/Quicksand-Bold.svg") format("svg");
+  src: local("Quicksand"), url("src/fonts/Quicksand-Bold.woff") format("woff"), url("src/fonts/Quicksand-Bold.ttf") format("truetype"), url("src/fonts/Quicksand-Bold.svg") format("svg");
 }
 
 @font-face {
   font-family: "Quicksand";
   font-weight: 400;
   font-style: normal;
-  src: local("Quicksand"), url("src/fonts/Quicksand-Regular.woff") format("woff"),
-    url("src/fonts/Quicksand-Regular.ttf") format("truetype"), url("src/fonts/Quicksand-Regular.svg") format("svg");
+  src: local("Quicksand"), url("src/fonts/Quicksand-Regular.woff") format("woff"), url("src/fonts/Quicksand-Regular.ttf") format("truetype"), url("src/fonts/Quicksand-Regular.svg") format("svg");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
   font-style: normal;
-  src: local("Open Sans"), url("src/fonts/OpenSans-Regular.svg") format("svg"),
-    url("src/fonts/opensans.woff") format("woff"), url("src/fonts/opensans.ttf") format("truetype");
+  src: local("Open Sans"), url("src/fonts/OpenSans-Regular.svg") format("svg"), url("src/fonts/opensans.woff") format("woff"), url("src/fonts/opensans.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-weight: 700;
   font-style: normal;
-  src: local("Open Sans"), url("src/fonts/OpenSans-Bold.svg") format("svg"),
-    url("src/fonts/opensansbold.woff") format("woff"), url("src/fonts/opensansbold.ttf") format("truetype");
+  src: local("Open Sans"), url("src/fonts/OpenSans-Bold.svg") format("svg"), url("src/fonts/opensansbold.woff") format("woff"), url("src/fonts/opensansbold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("src/fonts/MaterialIcons-Regular.svg") format("svg"),
-    url("src/fonts/MaterialIcons-Regular.woff") format("woff"),
-    url("src/fonts/MaterialIcons-Regular.ttf") format("truetype");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("src/fonts/MaterialIcons-Regular.svg") format("svg"), url("src/fonts/MaterialIcons-Regular.woff") format("woff"), url("src/fonts/MaterialIcons-Regular.ttf") format("truetype");
 }
 
 .material-icons {
@@ -477,7 +464,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
   -webkit-font-feature-settings: "liga";
-  font-feature-settings: "liga";
+          font-feature-settings: "liga";
 }
 
 /* -------------- */

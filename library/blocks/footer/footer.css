@@ -4,7 +4,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -33,7 +33,7 @@ body.lock {
 
 .footer__title span {
   max-width: 220px;
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   color: #1f2041;
   text-transform: uppercase;
 }
@@ -95,7 +95,7 @@ body.lock {
 }
 
 .footer__text {
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
 }
 
 .footer__menu {
@@ -220,7 +220,7 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
 }
 
 @media (max-width: 767px) {

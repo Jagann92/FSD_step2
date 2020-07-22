@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <div class="column">
-        <div class="card">
+        <div class="card card_search">
           <p class="card__title">Найдём номера под ваши пожелания</p>
           <div class="line">
             <div class="element element_lowgap"><span class="element__title">Прибытие</span>
@@ -55,7 +55,7 @@
             </button>
           </div>
         </div>
-        <div class="card">
+        <div class="card card_register">
           <p class="card__title">Регистрация аккаунта</p>
           <div class="card__block">
             <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
@@ -108,7 +108,7 @@
         <div class="card">
           <div class="roomTitle">
             <p class="roomTitle__room">№<span class="roomTitle__number">888</span><span class="roomTitle__type">Люкс</span></p>
-            <p class="roomTitle__cost"><span class="roomTitle__price">9900₽</span>
+            <p class="roomTitle__cost"><span class="roomTitle__price">9 990₽</span>
               в сутки
             </p>
           </div>
@@ -149,11 +149,11 @@
             </div>
           </div>
           <div class="card__block">
-            <p class="cost"><span>9 990₽ х 4 суток</span><span class="cost__sum">39 960₽</span></p>
-            <p class="cost"><span>Сбор за услуги: скидка 2 179₽</span><span class="cost__info">i</span><span class="cost__sum">0₽</span></p>
-            <p class="cost"><span>Сбор за дополнительные услуги</span><span class="cost__info">i</span><span class="cost__sum">300₽</span></p>
+            <p class="card__cost"><span>9 990₽ х 4 суток</span><span class="card__sum">39 960₽</span></p>
+            <p class="card__cost"><span>Сбор за услуги: скидка 2 179₽</span><span class="card__info">i</span><span class="card__sum">0₽</span></p>
+            <p class="card__cost"><span>Сбор за дополнительные услуги</span><span class="card__info">i</span><span class="card__sum">300₽</span></p>
           </div>
-          <p class="cost cost_total card_extraspace"><span>Итого</span><span class="cost__space"></span><span class="cost__sum">38 081₽</span></p>
+          <p class="card__cost card__cost_total card_extraspace"><span>Итого</span><span class="card__space"></span><span class="card__sum">38 081₽</span></p>
           <button class="button button_purple button_wide button_arrowed undefined">Забронировать
             <span class="arrow material-icons button__arrow">arrow_forward</span>
           </button>
@@ -185,15 +185,18 @@
             </div>
           </div>
         </div>
-        <div class="card card_room"><img class="card__image" src="../../../src/img/888.jpg">
+        <div class="card card_room">
+          <div class="card__image"><img src="../../../src/img/888.jpg"/>
+            <div class="card__circles"><span></span><span></span><span></span><span></span></div>
+          </div>
           <div class="card__block">
             <div class="roomTitle">
               <p class="roomTitle__room">№<span class="roomTitle__number">888</span><span class="roomTitle__type">Люкс</span></p>
-              <p class="roomTitle__cost"><span class="roomTitle__price">9900₽</span>
+              <p class="roomTitle__cost"><span class="roomTitle__price">9 990₽</span>
                 в сутки
               </p>
             </div>
-            <div class="separator"></div>
+            <div class="card__separator"></div>
             <div class="card__line">
               <div class="rate">
                 <input class="rate__input" id="roomrate5" type="radio" name="roomrate" checked="checked"/>
@@ -207,21 +210,24 @@
                 <input class="rate__input" id="roomrate1" type="radio" name="roomrate"/>
                 <label class="material-icons rate__label" for="roomrate1"></label>
               </div>
-              <p class="reviewsCount"><span>145</span>
+              <p class="card__reviewsCount"><span>145</span>
                 отзывов
               </p>
             </div>
           </div>
         </div>
-        <div class="card card_room"><img class="card__image" src="../../../src/img/840.jpg">
+        <div class="card card_room">
+          <div class="card__image"><img src="../../../src/img/840.jpg"/>
+            <div class="card__circles"><span></span><span></span><span></span><span></span></div>
+          </div>
           <div class="card__block">
             <div class="roomTitle">
               <p class="roomTitle__room">№<span class="roomTitle__number">840</span><span class="roomTitle__type"></span></p>
-              <p class="roomTitle__cost"><span class="roomTitle__price">9900₽</span>
+              <p class="roomTitle__cost"><span class="roomTitle__price">9 990₽</span>
                 в сутки
               </p>
             </div>
-            <div class="separator"></div>
+            <div class="card__separator"></div>
             <div class="card__line">
               <div class="rate">
                 <input class="rate__input" id="roomrate5" type="radio" name="roomrate" checked="checked"/>
@@ -235,9 +241,8 @@
                 <input class="rate__input" id="roomrate1" type="radio" name="roomrate"/>
                 <label class="material-icons rate__label" for="roomrate1"></label>
               </div>
-              <p class="reviewsCount"><span>65</span>
+              <p class="card__reviewsCount"><span>65</span>
                 отзывов
-                
               </p>
             </div>
           </div>

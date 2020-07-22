@@ -4,7 +4,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -103,7 +103,7 @@ body.lock {
 
 .iqdropdown .iqdropdown-menu-close {
   color: rgba(31, 32, 65, 0.5);
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   height: 20px;
   margin: 20px 0;
   padding: 0 15px;
@@ -131,13 +131,13 @@ body.lock {
 }
 
 .iqdropdown-item {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
 }
 
 .iqdropdown p.iqdropdown-description {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   margin-top: 5px;
@@ -152,7 +152,7 @@ body.lock {
 }
 
 .iqdropdown .iqdropdown-item-controls .counter {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   padding: 20px;
@@ -209,7 +209,7 @@ body.lock {
 }
 
 .iqdropdown .iqdropdown-selection {
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -283,7 +283,7 @@ body.lock {
 
 .iqdropdown-clear-content {
   text-transform: uppercase;
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.5);
 }
 
@@ -292,7 +292,7 @@ body.lock {
 }
 
 .iqdropdown-apply-content {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   color: #bc9cff;
 }

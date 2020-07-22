@@ -5,7 +5,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -329,12 +329,12 @@ body {
 }
 
 .type-sample_H3 {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
 }
 
 .type-sample_Body {
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
 }
 
 .type-sample__title {

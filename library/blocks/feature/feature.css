@@ -4,7 +4,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -73,10 +73,10 @@ body.lock {
 
 .feature__title {
   display: block;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   font-weight: bold;
 }
 
 .feature__text {
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
 }

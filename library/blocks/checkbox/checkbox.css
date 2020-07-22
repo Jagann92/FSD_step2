@@ -4,7 +4,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -25,7 +25,7 @@ body.lock {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   line-height: 18px;
 }
 
@@ -123,7 +123,7 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   font-weight: 700;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
@@ -134,7 +134,7 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   font-size: 12px;
   line-height: 14px;
   color: rgba(31, 32, 65, 0.5);

@@ -1,0 +1,73 @@
+mixin card(title,mainClasses="",type)
+	if type=='search'
+		.card.card_search
+			p.card__title=title
+			+date('Прибытие','Выезд','element_lowgap','double')(type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+			+dropdown('Гости','','element_lowgap','people','')
+			.card_extraspace
+				+button('Подобрать номер','purple','wide',1)
+	if type=="signin"
+		.card.card_register
+			p.card__title Регистрация аккаунта
+			.card__block
+				+textfield()(placeholder='Имя')
+				+textfield()(placeholder='Фамилия')
+				+radio('','','','r','gender','10','Мужчина','Женщина')
+			+textfield('Дата рождения','','element_lowgap')(type="text" data-inputmask="'alias': 'datetime'" data-inputmask-inputFormat="dd/mm/yyyy" data-inputmask-clearmaskonlostfocus="false" data-inputmask-placeholder="ДД.ММ.ГГГГ" class="textfield_masked")
+			.card__block
+				+textfield('Данные для входа в сервис','','element_lowgap')(placeholder='Email' type="email")
+				+textfield()(placeholder='Пароль' type="password")
+				+switch('','','','sw','0','Получать спецпредложения')
+			+button('перейти к оплате','purple','wide',1)
+			.card__line.card_extraspace
+				span Уже есть аккаунт на Toxin
+				+button('Войти','white','normal',0)
+	if type=="booking"
+		.card
+			+roomTitle('',attributes.roomNumber,attributes.roomType,attributes.roomPrice)
+			+date('Прибытие','Выезд','element_lowgap','double')(type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true"  placeholder="ДД.ММ.ГГГГ")
+			+dropdown('Гости','','element_lowgap','people','210')
+			.card__block
+				p.card__cost
+					span 9 990₽ х 4 суток
+					span.card__sum 39 960₽
+				p.card__cost
+					span Сбор за услуги: скидка 2 179₽
+					span.card__info i
+					span.card__sum 0₽
+				p.card__cost
+					span Сбор за дополнительные услуги
+					span.card__info i
+					span.card__sum 300₽
+			p.card__cost.card__cost_total.card_extraspace
+				span Итого
+				span.card__space
+				span.card__sum 38 081₽
+			+button('Забронировать','purple','wide',1)
+	if type=="login"
+		.card
+			p.card__title Войти
+			.card__block
+				+textfield()(placeholder='Email' type="email")
+				+textfield()(placeholder='Пароль' type="password")
+			+button('Войти','purple','wide',1)
+			.card__line.card_extraspace
+				span Нет аккаунта на Toxin?
+				+button('Создать','white','normal',0)
+	if type=="room"
+		.card.card_room
+			.card__image
+				img(src=attributes.imgSrc)
+				.card__circles
+					span
+					span
+					span
+					span
+			.card__block
+				+roomTitle('',attributes.roomNumber,attributes.roomType,attributes.roomPrice)
+				.card__separator
+				.card__line
+					+rate(5)(name="roomrate" id="room")
+					p.card__reviewsCount.
+						#[span #{attributes.reviewsCount}]
+						отзывов

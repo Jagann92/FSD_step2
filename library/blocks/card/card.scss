@@ -1,0 +1,179 @@
+@import "../../../library/templates/base";
+@import "../../../library/blocks/date/date";
+@import "../../../library/blocks/dropdown/dropdown";
+@import "../../../library/blocks/button/button";
+@import "../../../library/blocks/radio/radio";
+@import "../../../library/blocks/textfield/textfield";
+@import "../../../library/blocks/switch/switch";
+@import "../../../library/blocks/roomTitle/roomTitle";
+@import "../../../library/blocks/rate/rate";
+
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 380px;
+    padding: 40px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+
+    &__circles {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        display: flex;
+        width: 41.25px;
+        justify-content: space-between;
+
+        & span {
+            width: 7.5px;
+            height: 7.5px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+
+            &:nth-child(1) {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        height: 150px;
+
+        &::before,
+        &::after {
+            @include material-icon;
+            content: "keyboard_arrow_left";
+            height: 100%;
+            width: 42px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            border-radius: 4px 4px 0 0;
+        }
+    }
+
+    &_room {
+        max-width: 270px;
+        padding: 0;
+
+        & .card__block {
+            padding: 20px;
+            padding-top: 0;
+        }
+    }
+
+    &__title {
+        font: $h1;
+        color: $grey;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+
+    &_extraspace {
+        margin-top: 10px;
+    }
+
+    &_lowerspace {
+        margin-top: -10px;
+    }
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__cost {
+        font: $body;
+        line-height: 18px;
+        color: $grey75;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 71% 20px auto;
+        column-gap: 5px;
+
+        &_total {
+            font: $h2;
+            grid-template-columns: max-content auto max-content;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $grey25;
+        border-radius: 50%;
+        font: $h3;
+        line-height: 14px;
+        color: $grey25;
+    }
+
+    &__sum {
+        grid-column-start: 3;
+        justify-self: end;
+    }
+
+    &__space {
+        border-bottom: 1px dashed $grey25;
+    }
+
+
+
+    &__separator {
+        width: 100%;
+        height: 1px;
+        background-color: $grey10;
+    }
+
+
+
+    &__reviewsCount {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 5px;
+        font: $body;
+        line-height: 18px;
+        color: $grey50;
+        align-items: baseline;
+
+        & span {
+            font-weight: bold;
+        }
+    }
+}

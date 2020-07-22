@@ -1,20 +1,23 @@
 @import "../../../library/templates/base";
 @import "../../../library/nullstyle/nullstyle.scss";
 @import "../../../src/fonts/fonts";
-@import "../../../library/blocks/date/date";
-@import "../../../library/blocks/dropdown/dropdown";
-@import "../../../library/blocks/button/button";
-@import "../../../library/blocks/radio/radio";
-@import "../../../library/blocks/textfield/textfield";
-@import "../../../library/blocks/switch/switch";
-@import "../../../library/blocks/roomTitle/roomTitle";
-@import "../../../library/blocks/rate/rate";
+@import "../../../library/blocks/card/card";
+
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-template-columns: 380fr 380fr 320fr;
     column-gap: 40px;
     margin: 10.42vw 9.72vw 9.72vw 9.72vw;
+
+    @media (max-width:1150px) {
+        grid-template-columns: 380fr 380fr;
+        row-gap: 40px;
+    }
+
+    @media (max-width:768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .calendar {
@@ -42,117 +45,6 @@
     display: grid;
     row-gap: 40px;
     grid-template-rows: repeat(auto-fill, min-content);
+    justify-content: center;
     align-content: start;
-}
-
-.card {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    width: 100%;
-    max-width: 380px;
-    padding: 40px 30px 30px 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-
-    &__image {
-        height: 150px;
-        width: 268px;
-        background-clip: border-box;
-    }
-
-    &_room {
-        max-width: 270px;
-        padding: 0;
-
-        & .card__block {
-            padding: 20px;
-            padding-top: 0;
-        }
-    }
-
-    &__title {
-        font: $h1;
-        color: $grey;
-    }
-
-    &__block {
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 10px;
-    }
-
-    &_extraspace {
-        margin-top: 10px;
-    }
-
-    &_lowerspace {
-        margin-top: -10px;
-    }
-
-    &__line {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.separator {
-    width: 100%;
-    height: 1px;
-    background-color: $grey10;
-}
-
-.cost {
-    font: $body;
-    line-height: 18px;
-    color: $grey75;
-    display: grid;
-    grid-template-columns: 68% 20px auto;
-    column-gap: 5px;
-
-    &__info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        border: 1px solid $grey25;
-        border-radius: 50%;
-        font: $h3;
-        line-height: 14px;
-        color: $grey25;
-    }
-
-    &__sum {
-        grid-column-start: 3;
-        justify-self: end;
-    }
-
-    &_total {
-        font: $h2;
-        grid-template-columns: max-content auto max-content;
-    }
-
-    &__space {
-        border-bottom: 1px dashed $grey25;
-    }
-}
-
-.reviewsCount {
-
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    column-gap: 5px;
-    font: $body;
-    line-height: 18px;
-    color: $grey50;
-    align-items: baseline;
-
-    & span {
-        font-weight: bold;
-    }
 }

@@ -4,7 +4,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -25,7 +25,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -46,7 +46,7 @@ body {
   margin: auto;
   padding: 0.1px;
   background-color: white;
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -105,7 +105,7 @@ body.lock {
 }
 
 .element__title {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   color: #1f2041;
   -ms-grid-column-align: start;
@@ -113,7 +113,7 @@ body.lock {
 }
 
 .element__subtitle {
-  font: 700 12px/15px "Montserrat", sans-serif;
+  font: 700 12px/15px "Montserrat", "Open sans", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   color: rgba(31, 32, 65, 0.5);
@@ -260,7 +260,7 @@ body.lock {
 }
 
 .menu__elem {
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   line-height: 17px;
   color: rgba(31, 32, 65, 0.5);
 }
@@ -271,7 +271,7 @@ body.lock {
 }
 
 .menu__elem_spoiler .element__title {
-  font: 400 14px/24px "Montserrat", sans-serif;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   line-height: 17px;
   color: rgba(31, 32, 65, 0.5);
   text-transform: none;

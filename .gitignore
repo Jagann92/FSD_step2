@@ -3,3 +3,4 @@ settings.json
 /.vscode/*
 /node_modules/*
 /pages/Ui-kit/test/*
+/library/**/*.css

@@ -3968,15 +3968,30 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
   padding-left: 9.72222%;
   padding-right: 9.72222%;
-  padding: 20px 0;
-  background: url("../../../src/img/image 4.jpg") no-repeat center;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background: url("../../../src/img/image 3.jpg") no-repeat center;
+}
+
+.mainScreen .card {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.mainScreen > p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  max-width: 280px;
+  text-align: end;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
 }

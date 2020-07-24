@@ -1,4 +1,6 @@
 @import "../../../library/templates/base";
+@import "../../../library/blocks/menu/menu";
+@import "../../../library/blocks/button/button";
 
 .header {
     width: 100%;
@@ -19,10 +21,10 @@
         grid-template-columns: 106px auto minmax(min-content, max-content);
         align-items: center;
         column-gap: 20px;
-        padding-left: 140px/$width*100%;
-        padding-right: 140px/$width*100%;
+        padding-left: 140px / $width * 100%;
+        padding-right: 140px / $width * 100%;
 
-        @media (max-width:767px) {
+        @media (max-width: 767px) {
             max-width: 100%;
             padding: 0.1px;
             column-gap: 0;
@@ -61,7 +63,7 @@
 
         @media (max-width: 1118px) {
             &::after {
-                content: 'logout';
+                content: "logout";
             }
 
             & .header__buttons {
@@ -87,7 +89,6 @@
                     width: 100%;
                 }
             }
-
         }
 
         @media (max-width: 767px) {
@@ -123,7 +124,6 @@
         display: grid;
         grid-template-columns: repeat(2, max-content);
         column-gap: 20px;
-
     }
 
     &__link {
@@ -138,7 +138,7 @@
     }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
     body.lock {
         overflow: hidden;
     }
@@ -172,7 +172,7 @@
 
     .header__burger:before,
     .header__burger:after {
-        content: '';
+        content: "";
         background: $gradient;
         position: absolute;
         width: 100%;
@@ -219,7 +219,8 @@
         row-gap: 20px;
         z-index: 4;
 
-        & .menu__elem {
+        & .menu__elem,
+        & .menu__elem .element__title {
             font-size: 20px;
         }
     }

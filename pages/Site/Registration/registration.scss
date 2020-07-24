@@ -1,0 +1,17 @@
+@import "../../../library/templates/base";
+@import "../../../library/nullstyle/nullstyle.scss";
+@import "../../../library/blocks/header/header";
+@import "../../../library/blocks/card/card";
+@import "../../../library/blocks/footer/footer";
+
+body {
+    background: none;
+}
+
+.mainScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: url('../../../src/img/image\ 4.jpg') no-repeat center;
+}

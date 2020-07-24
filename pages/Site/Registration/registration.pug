@@ -1,0 +1,15 @@
+extends ../../../library/templates/base.pug
+block title
+	title "Site: registration"
+block styles
+	link(rel="stylesheet" href="registration.css")
+block body
+	+header('1')
+	.mainScreen
+		+card('Регистрация аккаунта','','signin')
+	+footer('1')
+
+
+	script(src="../../../library/blocks/expandable-list/expandable-list.js")
+	script(src="../../../library/blocks/menu/menu.js")
+	script(src="registration.js")

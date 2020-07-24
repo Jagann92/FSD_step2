@@ -20,8 +20,10 @@ block body
 		+expandable-list('Pages','','',0)
 			ul.expandable-list__list.element__body
 				li
-					a.exist(href="pages/Site/registration/registration.html") Registration page
-				- var i=2;
+					a.exist(href="pages/Site/Registration/registration.html") Registration page
+				li
+					a.exist(href="pages/Site/signin/signin.html") Sign in page
+				- var i=3;
 				while i<10
 					li
 						a.null(href='#')='Page №'+i+' ...in process'

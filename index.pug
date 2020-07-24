@@ -23,7 +23,15 @@ block body
 					a.exist(href="pages/Site/Registration/registration.html") Registration page
 				li
 					a.exist(href="pages/Site/signin/signin.html") Sign in page
-				- var i=3;
+				li
+					a.exist(href="pages/Site/landing/landing.html") Landing page
+				li
+					a.exist(href="pages/Site/landing-date/landing.html") Landing page with date dropdown
+				li
+					a.exist(href="pages/Site/landing-guest/landing.html") Landing page with guest dropdown
+				li
+					a.exist(href="pages/Site/search/search.html") Search/Filter page
+				- var i=7;
 				while i<10
 					li
 						a.null(href='#')='Page №'+i+' ...in process'

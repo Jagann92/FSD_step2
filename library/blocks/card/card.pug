@@ -67,7 +67,7 @@ mixin card(title,mainClasses="",type)
 				+roomTitle('',attributes.roomNumber,attributes.roomType,attributes.roomPrice)
 				.card__separator
 				.card__line
-					+rate(5)(name="roomrate" id="room")
+					+rate(attributes.rate)(name='rate_'+attributes.roomNumber id="room"+attributes.roomNumber)
 					p.card__reviewsCount.
 						#[span #{attributes.reviewsCount}]
 						отзывов

@@ -1,0 +1,59 @@
+@import "../../../library/templates/base";
+@import "../../../src/fonts/fonts";
+@import "../../../library/nullstyle/nullstyle.scss";
+@import "../../../library/blocks/header/header";
+@import "../../../library/blocks/card/card";
+@import "../../../library/blocks/footer/footer";
+@import "../../../library/blocks/range/range";
+@import "../../../library/blocks/checkbox/checkbox";
+@import "../../../library/blocks/pagination/paginaion";
+
+body {
+    background: none;
+}
+
+.mainScreen {
+    display: grid;
+    padding: 30px 9.72%;
+    grid-template-columns: 270fr 846fr;
+    column-gap: 60px;
+    justify-content: space-between;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    align-content: start;
+
+    & .element:first-child {
+        margin-bottom: -10px;
+    }
+}
+
+.content {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 270px);
+    gap: 12px;
+    justify-content: center;
+
+    &__title {
+        grid-column: 1/4;
+        font: $h1;
+        color: $grey;
+    }
+}
+
+.range__description {
+    margin-top: -20px;
+    color: $grey50;
+    font: $body;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.pagination {
+    grid-column: 1/4;
+    justify-self: center;
+}

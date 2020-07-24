@@ -1,6 +1,6 @@
 extends ../../../library/templates/base.pug
 block title
-	title "Site: Search/Filter"
+	title "Site: Search/Filter/Expandable list"
 block styles
 	link(rel="stylesheet" href="search.css")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
@@ -15,7 +15,7 @@ block body
 			+checkbox('checkbox buttons','',"",0,'c','101','Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)')
 			+checkbox('Доступность','','',1,'rc','00','Широкий коридор','Помощник для инвалидов')(data-subtext-1='Ширина коридоров в номере не менее 91см.' data-subtext-2='На 1 этаже вас встретит специалист и проводит до номера.')
 			+dropdown('Удобства номера','',' element_lowgap','beds','220')
-			+expandable-list('Дополнительные удобства','')(id="list-1")
+			+expandable-list('Дополнительные удобства','',1)(id="list-1")
 				+checkbox('','','expandable-list__list element__body',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
 		.content
 			p.content__title Номера, которые мы для вас подобрали

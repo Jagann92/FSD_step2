@@ -1,4 +1,4 @@
-mixin dropdown(title='',subtitle='',mainClasses="",type,defaultCount)
+mixin dropdown(title='',subtitle='',mainClasses="",type,defaultCount,isOpen=null)
 	if title=="" && subtitle==""
 		- mainClasses+=' element_nullgap';
 	-var ids=[];
@@ -12,6 +12,8 @@ mixin dropdown(title='',subtitle='',mainClasses="",type,defaultCount)
 	.element(class=mainClasses)
 		span.element__title=title
 		span.element__subtitle=subtitile
+		if isOpen
+			-type+=' menu-open'
 		.iqdropdown.textfield.element__body(class=type)
 			p.iqdropdown-selection&attributes(attributes)
 			.iqdropdown-menu

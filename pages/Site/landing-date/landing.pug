@@ -1,0 +1,18 @@
+extends ../../../library/templates/base.pug
+block title
+	title "Site: Landing page/Date dropdown"
+block styles
+	link(rel="stylesheet" href="landing.css")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+block body
+	+header('1')
+	.mainScreen
+		+card('Найдем номера под ваши пожелания','','search')
+		p Лучшие номера для вашей работы, отдыха и просто вдохновения
+	+footer('1')
+
+
+	script(src="../../../library/blocks/expandable-list/expandable-list.js")
+	script(src="../../../library/blocks/dropdown/dropdown.js")
+	script(src="../../../library/blocks/date/date.js")
+	script(src="../../../library/blocks/menu/menu.js")

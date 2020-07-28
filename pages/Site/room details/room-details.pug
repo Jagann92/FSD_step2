@@ -1,0 +1,49 @@
+extends ../../../library/templates/base.pug
+block title
+	title "Site: Room details"
+block styles
+	link(rel="stylesheet" href="room-details.css")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+block body
+	+header('1')
+	.gallery
+		img(src="../../../src/img/image5.jpg")
+		img(src="../../../src/img/image 2 (1).jpg")
+		img(src="../../../src/img/image 3 (1).jpg")
+
+	.container
+		.features.container__block
+			span.container__title Сведения о номере
+			+feature('Комфорт','Шумопоглощающие стены','','smile')
+			+feature('Удобство','Окно в каждой из спален','','apartment')
+			+feature('Уют','Номер оснащен камином','','whatshot')
+		.impressions.container__block
+			span.container__title Впечатления от номера
+			.impressions__chart
+				.impressions__pie
+					.impressions__inner
+						p 260
+						p голосов
+				ul.impressions__note
+					li Великолепно
+					li Хорошо
+					li Удовлетворительно
+					li Разочарован
+		+card('','','booking')(roomNumber="888" roomType="Люкс" roomPrice="9 990")
+		.reviews.container__block
+			.reviews__title
+				span.container__title Отзывы посетителей номера
+				span.container__subtitle 2 отзыва
+			+review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',12,1)(src="../../../src/img/avatar_1.png")
+			+review('Патрисия Стёклышкова','Неделю назад','Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',2,0)
+		+bullet-list('Правила','','container__block','Нельзя с питомцами', 'Без вечеринок и меропритий', 'Время прибытия - после 13:00, а выезд до 12:00')
+		.cancel.container__block
+			span.container__title Отмена
+			p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+	+footer('1')
+
+
+	script(src="../../../library/blocks/expandable-list/expandable-list.js")
+	script(src="../../../library/blocks/dropdown/dropdown.js")
+	script(src="../../../library/blocks/date/date.js")
+	script(src="../../../library/blocks/menu/menu.js")

@@ -30,6 +30,10 @@
         content: "location_city";
     }
 
+    &_whatshot:before {
+        content: "whatshot";
+    }
+
     &__title {
         display: block;
         font: $body;

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initital-scale=1.0">
+    <title>"Site: Room details"</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="room-details.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <header class="header__wrapper"><img class="header__logo" src="../../../src/img/logo_and_title.svg"/>
+        <div class="header__burger"><span></span></div>
+        <nav class="menu header__menu">
+          <div class="menu__elem menu__elem_current"><a href="#">О нас</a></div>
+          <div class="element menu__elem menu__elem_spoiler expandable-list float"><span class="element__title">Услуги</span>
+            <ul class="expandable-list__list">
+              <li class="menu__elem"><a href="#">Услуга 1</a></li>
+              <li class="menu__elem"><a href="#">Услуга 2</a></li>
+              <li class="menu__elem"><a href="#">Услуга 3</a></li>
+            </ul>
+          </div>
+          <div class="menu__elem"><a href="#">Вакансии</a></div>
+          <div class="menu__elem"><a href="#">Новости</a></div>
+          <div class="element menu__elem menu__elem_spoiler expandable-list float"><span class="element__title">Соглашения</span>
+            <ul class="expandable-list__list">
+              <li class="menu__elem"><a href="#">Соглашение 1</a></li>
+              <li class="menu__elem"><a href="#">Соглашение 2</a></li>
+              <li class="menu__elem"><a href="#">Соглашение 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__login">
+          <div class="header__buttons">
+            <button class="button button_white undefined"><span class="button__inner">Войти</span></button>
+            <button class="button button_purple button_wide undefined">Зарегистрироваться
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="gallery"><img src="../../../src/img/image5.jpg"><img src="../../../src/img/image 2 (1).jpg"><img src="../../../src/img/image 3 (1).jpg"></div>
+    <div class="container">
+      <div class="features container__block"><span class="container__title">Сведения о номере</span>
+        <div class="element">
+          <div class="feature feature_smile"><span class="feature__title">Комфорт</span><span class="feature__text">Шумопоглощающие стены</span></div>
+        </div>
+        <div class="element">
+          <div class="feature feature_apartment"><span class="feature__title">Удобство</span><span class="feature__text">Окно в каждой из спален</span></div>
+        </div>
+        <div class="element">
+          <div class="feature feature_whatshot"><span class="feature__title">Уют</span><span class="feature__text">Номер оснащен камином</span></div>
+        </div>
+      </div>
+      <div class="impressions container__block"><span class="container__title">Впечатления от номера</span>
+        <div class="impressions__chart">
+          <div class="impressions__pie">
+            <div class="impressions__inner">
+              <p>260</p>
+              <p>голосов</p>
+            </div>
+          </div>
+          <ul class="impressions__note">
+            <li>Великолепно</li>
+            <li>Хорошо</li>
+            <li>Удовлетворительно</li>
+            <li>Разочарован</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="roomTitle">
+          <p class="roomTitle__room">№<span class="roomTitle__number">888</span><span class="roomTitle__type">Люкс</span></p>
+          <p class="roomTitle__cost"><span class="roomTitle__price">9 990₽</span>
+            в сутки
+          </p>
+        </div>
+        <div class="line">
+          <div class="element element_lowgap"><span class="element__title">Прибытие</span>
+            <div class="date textfield element__body">
+              <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+              <button class="date__arrow"></button>
+            </div>
+          </div>
+          <div class="element element_lowgap"><span class="element__title">Выезд</span>
+            <div class="date textfield element__body">
+              <input class="date__input datepicker-here" type="text" data-date-format="dd/mm/yyyy" data-clear-button="true" data-apply-button="true" placeholder="ДД.ММ.ГГГГ"/>
+              <button class="date__arrow"></button>
+            </div>
+          </div>
+        </div>
+        <div class="element element_lowgap"><span class="element__title">Гости</span><span class="element__subtitle"></span>
+          <div class="iqdropdown textfield element__body people">
+            <p class="iqdropdown-selection"></p>
+            <div class="iqdropdown-menu">
+              <div class="iqdropdown-menu-option" data-id="adults" data-defaultcount="2">
+                <div>
+                  <p class="iqdropdown-item">Взроcлые</p>
+                </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="childs" data-defaultcount="1">
+                <div>
+                  <p class="iqdropdown-item">Дети</p>
+                </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0">
+                <div>
+                  <p class="iqdropdown-item">Младенцы</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__block">
+          <p class="card__cost"><span>9 990₽ х 4 суток</span><span class="card__sum">39 960₽</span></p>
+          <p class="card__cost"><span>Сбор за услуги: скидка 2 179₽</span><span class="card__info">i</span><span class="card__sum">0₽</span></p>
+          <p class="card__cost"><span>Сбор за дополнительные услуги</span><span class="card__info">i</span><span class="card__sum">300₽</span></p>
+        </div>
+        <p class="card__cost card__cost_total card_extraspace"><span>Итого</span><span class="card__space"></span><span class="card__sum">38 081₽</span></p>
+        <button class="button button_purple button_wide button_arrowed undefined">Забронировать
+          <span class="arrow material-icons button__arrow">arrow_forward</span>
+        </button>
+      </div>
+      <div class="reviews container__block">
+        <div class="reviews__title"><span class="container__title">Отзывы посетителей номера</span><span class="container__subtitle">2 отзыва</span></div>
+        <div class="review"><img class="review__foto" src="../../../src/img/avatar_1.png" width="48" height="48"/>
+          <div class="review__title"><span class="review__person">Мурад Сарафанов</span><span class="review__date">5 дней назад</span></div>
+          <button class="like like_liked review__like" id="Мурад Сарафанов"><span class="material-icons like__heart"></span><span class="like__count">12</span></button>
+          <p class="review__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+        </div>
+        <div class="review"><img class="review__foto" width="48" height="48"/>
+          <div class="review__title"><span class="review__person">Патрисия Стёклышкова</span><span class="review__date">Неделю назад</span></div>
+          <button class="like review__like" id="Патрисия Стёклышкова"><span class="material-icons like__heart"></span><span class="like__count">2</span></button>
+          <p class="review__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</p>
+        </div>
+      </div>
+      <div class="element container__block"><span class="element__title">Правила</span><span class="element__subtitle"></span>
+        <ul class="bullet-list element__body element__list">
+          <li class="bullet-list__elem">Нельзя с питомцами</li>
+          <li class="bullet-list__elem">Без вечеринок и меропритий</li>
+          <li class="bullet-list__elem">Время прибытия - после 13:00, а выезд до 12:00</li>
+        </ul>
+      </div>
+      <div class="cancel container__block"><span class="container__title">Отмена</span>
+        <p>Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <footer class="footer__wrapper footer_full">
+        <div class="footer__logoandtext footer__logoandtext_start"><img src="../../../src/img/logo_and_title.svg"/>
+          <p class="footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+        </div>
+        <nav class="menu footer__menu">
+          <div class="element footer__title lock expandable-list open"><span class="element__title">Навигация</span>
+            <ul class="expandable-list__list element__body element__list">
+              <li class="menu__elem"><a href="#">О нас</a></li>
+              <li class="menu__elem"><a href="#">Новости</a></li>
+              <li class="menu__elem"><a href="#">Служба поддержки</a></li>
+              <li class="menu__elem"><a href="#">Услуги</a></li>
+            </ul>
+          </div>
+          <div class="element footer__title lock expandable-list open"><span class="element__title">О нас</span>
+            <ul class="expandable-list__list element__body element__list">
+              <li class="menu__elem"><a href="#">О сервисе</a></li>
+              <li class="menu__elem"><a href="#">Наша команда</a></li>
+              <li class="menu__elem"><a href="#">Вакансии</a></li>
+              <li class="menu__elem"><a href="#">Инвесторы</a></li>
+            </ul>
+          </div>
+          <div class="element footer__title lock expandable-list open"><span class="element__title">Служба поддержки</span>
+            <ul class="expandable-list__list element__body element__list">
+              <li class="menu__elem"><a href="#">Соглашения</a></li>
+              <li class="menu__elem"><a href="#">Сообщества</a></li>
+              <li class="menu__elem"><a href="#">Связь с нами</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footer__form"><span class="footer__title">Подписка</span>
+          <p class="footer__text">Получайте специальные предложения и новости сервиса</p>
+          <div class="element  element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+            <div class="subscribe element__body">
+              <input class="textfield subscribe__input" type="email" placeholder="Email" id="Email"/>
+              <button class="arrow material-icons subscribe__arrow">arrow_forward</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright"> 
+          <p>Copyright © 2018 Toxin отель. Все права зачищены.</p>
+          <div class="social"><img src="../../../src/img/twitter.svg"/><img src="../../../src/img/facebook.svg"/><img src="../../../src/img/instagram.svg"/></div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../../library/blocks/expandable-list/expandable-list.js"></script>
+    <script src="../../../library/blocks/dropdown/dropdown.js"></script>
+    <script src="../../../library/blocks/date/date.js"></script>
+    <script src="../../../library/blocks/menu/menu.js"></script>
+  </body>
+</html>

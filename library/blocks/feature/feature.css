@@ -71,6 +71,10 @@ body.lock {
   content: "location_city";
 }
 
+.feature_whatshot:before {
+  content: "whatshot";
+}
+
 .feature__title {
   display: block;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;

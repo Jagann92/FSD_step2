@@ -208,6 +208,8 @@ body.lock {
   -ms-flex-line-pack: start;
       align-content: start;
   row-gap: 16px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .element__subgrid {
@@ -906,6 +908,8 @@ body.lock {
   -ms-flex-line-pack: start;
       align-content: start;
   row-gap: 16px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .element__subgrid {
@@ -3505,6 +3509,8 @@ body.lock {
   -ms-flex-line-pack: start;
       align-content: start;
   row-gap: 16px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .element__subgrid {

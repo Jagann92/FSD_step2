@@ -5,8 +5,8 @@ mixin review(name, date, text, count, liked)
 		- likeClass='like_liked review__like';
 	else
 		- likeClass='review__like';
-	.review&attributes(attributes)
-		.review__foto
+	.review
+		img.review__foto(src=attributes.src width="48" height="48")
 		.review__title
 			span.review__person= name
 			span.review__date= date

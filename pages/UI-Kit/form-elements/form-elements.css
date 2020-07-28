@@ -894,6 +894,8 @@ body.lock {
   -ms-flex-line-pack: start;
       align-content: start;
   row-gap: 16px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .element__subgrid {
@@ -3057,6 +3059,8 @@ body.lock {
   -ms-flex-line-pack: start;
       align-content: start;
   row-gap: 16px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .element__subgrid {
@@ -3353,6 +3357,10 @@ body.lock {
   content: "location_city";
 }
 
+.feature_whatshot:before {
+  content: "whatshot";
+}
+
 .feature__title {
   display: block;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
@@ -3382,6 +3390,103 @@ body {
 
 body.lock {
   overflow: hidden;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0.1px;
+  background-color: white;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.like {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 40px;
+  min-width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background-color: #fff;
+  color: rgba(31, 32, 65, 0.25);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.like_liked {
+  color: #bc9cff;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-clip: padding-box;
+  border: solid 1px transparent;
+}
+
+.like_liked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.like_liked .like__heart:after {
+  content: "favorite";
+}
+
+.like__count {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: inherit;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: left;
+}
+
+.like:hover {
+  color: #bc9cff;
+  border-color: #bc9cff;
+}
+
+.like:hover .like__heart:after {
+  content: "favorite";
+}
+
+.like__heart {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 10px;
+  line-height: 9px;
+}
+
+.like__heart::after {
+  content: "favorite_outline";
 }
 
 .review {
@@ -3472,6 +3577,8 @@ body.lock {
   -ms-flex-line-pack: start;
       align-content: start;
   row-gap: 16px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .element__subgrid {

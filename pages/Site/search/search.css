@@ -3918,6 +3918,7 @@ body.lock {
 
 .footer__text {
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer__menu {
@@ -4565,6 +4566,7 @@ body.lock {
   grid-column: 1/7;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   padding-left: 5px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .pagination__elem_current {
@@ -4589,9 +4591,9 @@ body {
 .mainScreen {
   display: -ms-grid;
   display: grid;
-  padding: 30px 9.72%;
-  -ms-grid-columns: 270fr 846fr;
-      grid-template-columns: 270fr 846fr;
+  padding: 30px 9.71%;
+  -ms-grid-columns: minmax(210px, 22.93%) 1fr;
+      grid-template-columns: minmax(210px, 22.93%) 1fr;
   -webkit-column-gap: 60px;
           column-gap: 60px;
   -webkit-box-pack: justify;
@@ -4599,11 +4601,18 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 670px) {
+  .mainScreen {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .sidebar {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   row-gap: 30px;
   -ms-flex-line-pack: start;
       align-content: start;
@@ -4613,23 +4622,35 @@ body {
   margin-bottom: -10px;
 }
 
+@media (max-width: 670px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (270px)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 270px);
-  gap: 12px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .content__title {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
   font: 700 24px/30px "Quicksand", sans-serif;
   color: #1f2041;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(270px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 12px;
+  justify-items: center;
 }
 
 .range__description {
@@ -4641,9 +4662,6 @@ body {
 }
 
 .pagination {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
   -ms-grid-column-align: center;
       justify-self: center;
 }

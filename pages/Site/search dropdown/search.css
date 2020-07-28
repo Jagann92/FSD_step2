@@ -3918,6 +3918,7 @@ body.lock {
 
 .footer__text {
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer__menu {
@@ -4565,6 +4566,7 @@ body.lock {
   grid-column: 1/7;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
   padding-left: 5px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .pagination__elem_current {

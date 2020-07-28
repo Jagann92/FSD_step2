@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 380fr 380fr 320fr;
     column-gap: 40px;
-    margin: 10.42vw 9.72vw 9.72vw 9.72vw;
+    padding: 10.42% 9.72% 9.72% 9.72%;
 
     @media (max-width:1150px) {
         grid-template-columns: 380fr 380fr;

@@ -2,11 +2,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -15,21 +19,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -38,10 +42,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .element {
@@ -162,11 +162,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -175,10 +179,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .textfield {

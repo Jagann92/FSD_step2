@@ -56,6 +56,7 @@
 
     &__text {
         font: $body;
+        color: $grey75;
     }
 
     &__menu {
@@ -78,10 +79,6 @@
             @media (min-width: 550px) {
                 content: "";
             }
-        }
-
-        & .element__body {
-            // grid-column: initial;
         }
 
         & .element__list {
@@ -109,7 +106,7 @@
                     top: -5px;
                 }
 
-                &:hover + ul.menu__f-submenu {
+                &:hover+ul.menu__f-submenu {
                     display: block;
                 }
             }

@@ -7,8 +7,6 @@
 @import "../../../library/blocks/feature/feature";
 @import "../../../library/blocks/review/review";
 @import "../../../library/blocks/bullet-list/bullet-list";
-//@import "../../../library/blocks/element/element"
-;
 
 body {
     background: none;
@@ -17,22 +15,60 @@ body {
 .gallery {
     display: grid;
     grid-template-columns: 981fr 461fr;
+    justify-content: space-around;
+
+    @media (max-width:812px) {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 460px));
+    }
+
+    & img {
+        justify-self: start;
+        max-width: 100%;
+        object-fit: fill;
+    }
 
     & img:nth-child(1) {
         grid-row: 1/3;
+        justify-self: end;
     }
 }
 
 .container {
+    background-image: none;
     padding: 70px 9.72% 70px 9.72%;
     display: grid;
     gap: 70px;
+
+    grid-template-areas:
+        "features impressions card"
+        "reviews reviews card"
+        "rules cancel .";
     grid-template-columns: 292fr 350fr 380fr;
 
+    @media (max-width: 1170px) {
+        grid-template-areas:
+            "features card"
+            "impressions card"
+            "reviews reviews"
+            "rules cancel";
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width:812px) {
+        grid-template-areas:
+            "card"
+            "card"
+            "features"
+            "impressions"
+            "reviews"
+            "rules"
+            "cancel";
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
     & .card {
-        grid-row: 1/3;
-        grid-column: 3/4;
-        max-height: 511px;
+        align-self: start;
     }
 
     &__block {
@@ -55,6 +91,8 @@ body {
 }
 
 .impressions {
+    grid-area: impressions;
+
     &__chart {
         display: grid;
         grid-template-columns: 120fr 160fr;
@@ -167,10 +205,27 @@ body {
 }
 
 .reviews {
-    grid-column: 1/3;
+    grid-area: reviews;
 
     &__title {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.features {
+    grid-area: features;
+}
+
+.card {
+    grid-area: card;
+}
+
+.rules {
+    grid-area: rules;
+    max-width: none;
+}
+
+.cancel {
+    grid-area: cancel;
 }

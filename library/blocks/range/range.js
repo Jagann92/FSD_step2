@@ -2448,13 +2448,6 @@
 
 }));
 
-function changeRangeValue(data) {
-	let rangeFrom = data.from_pretty;
-	let rangeTo = data.to_pretty;
-	let rangeValue = $(".range__value");
-	rangeValue.text(rangeFrom + '₽ - ' + rangeTo + '₽');
-}
-
 $(".js-range-slider").ionRangeSlider({
 	type: "double",
 	min: 400,

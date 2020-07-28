@@ -1,12 +1,18 @@
 @import "../variables/variables";
 
 body {
+    background-color: #fff;
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.container {
     max-width: $width;
     width: 100%;
-    margin: auto;
-    padding: 0.1px;
-    background-color: white;
     font: $body;
+    margin: 0 auto;
     color: $grey75;
     background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 
@@ -14,9 +20,7 @@ body {
         background-image: none;
     }
 
-    &.lock {
-        overflow: hidden;
-    }
+
 }
 
 @mixin shadow {

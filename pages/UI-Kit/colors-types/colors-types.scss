@@ -2,29 +2,27 @@
 @import "../../../library/nullstyle/nullstyle.scss";
 @import "../../../src/fonts/fonts";
 
-body {
-    min-height: 900px;
-    height: 100%;
-}
-
 .container {
     display: grid;
     grid-template-areas: "column-1 column-2";
-    margin-top: 10.069vw;
-    margin-left: 10.398vw;
-    margin-right: 13.263vw;
-    margin-bottom: 10.069vw;
-    grid-template-columns: 19.1vw 27.99vw;
-    column-gap: 29.65vw;
 
-    @media (max-width: 500px) {
+    padding: {
+        top: 10.069vw;
+        left: 10.398vw;
+        right: 13.263vw;
+        bottom: 10.069vw;
+    }
+
+    grid-template-columns: 270fr 403fr;
+    column-gap: 29.65%;
+
+    @media (max-width: 768px) {
         grid-template-areas:
             "column-1"
             "column-2";
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         row-gap: 80px;
         margin-right: 10.398vw;
-
     }
 }
 

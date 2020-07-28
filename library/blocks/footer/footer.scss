@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-around;
 
+    span.footer__title,
     &__title span {
         max-width: 220px;
         font: $h3;
@@ -21,8 +22,8 @@
         background-color: white;
         display: grid;
         width: 100%;
-        padding-left: 140px/$width*100%;
-        padding-right: 140px/$width*100%;
+        padding-left: 140px / $width * 100%;
+        padding-right: 140px / $width * 100%;
     }
 
     &_full {
@@ -34,7 +35,7 @@
         row-gap: 100px;
         padding-top: 100px;
 
-        @media (max-width:767px) {
+        @media (max-width: 767px) {
             justify-items: center;
             grid-template-columns: 100%;
             grid-template-rows: repeat(4, minmax(min-content, 100%));
@@ -65,7 +66,7 @@
         column-gap: 4.16vw;
         row-gap: 20px;
 
-        @media(max-width:767px) {
+        @media (max-width: 767px) {
             grid-template-columns: repeat(3, minmax(min-content, max-content));
         }
 
@@ -88,7 +89,7 @@
             grid-template-rows: repeat(4, min-content);
         }
 
-        @media (max-width:550px) {
+        @media (max-width: 550px) {
             height: auto;
             grid-template-columns: 100%;
             grid-auto-flow: column;
@@ -108,7 +109,7 @@
                     top: -5px;
                 }
 
-                &:hover+ul.menu__f-submenu {
+                &:hover + ul.menu__f-submenu {
                     display: block;
                 }
             }
@@ -137,7 +138,7 @@
         align-items: center;
         font: $body;
 
-        @media (max-width:767px) {
+        @media (max-width: 767px) {
             grid-row-start: 4;
             grid-row-end: auto;
             grid-column-start: auto;
@@ -154,7 +155,7 @@
             grid-template-columns: minmax(min-content, 260px);
             height: 168px;
 
-            @media (max-width:767px) {
+            @media (max-width: 767px) {
                 grid-template-columns: minmax(min-content, max-content);
                 justify-items: center;
                 height: 100%;

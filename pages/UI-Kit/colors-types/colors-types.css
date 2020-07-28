@@ -1,23 +1,25 @@
 @charset "UTF-8";
 body {
+  background-color: #fff;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
-  padding: 0.1px;
-  background-color: white;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
 
 @media (max-width: 767px) {
-  body {
+  .container {
     background-image: none;
   }
-}
-
-body.lock {
-  overflow: hidden;
 }
 
 /*Обнуление*/
@@ -182,30 +184,25 @@ h6 {
 }
 
 /* -------------- */
-body {
-  min-height: 900px;
-  height: 100%;
-}
-
 .container {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "column-1 column-2";
-  margin-top: 10.069vw;
-  margin-left: 10.398vw;
-  margin-right: 13.263vw;
-  margin-bottom: 10.069vw;
-  -ms-grid-columns: 19.1vw 27.99vw;
-      grid-template-columns: 19.1vw 27.99vw;
-  -webkit-column-gap: 29.65vw;
-          column-gap: 29.65vw;
+  padding-top: 10.069vw;
+  padding-left: 10.398vw;
+  padding-right: 13.263vw;
+  padding-bottom: 10.069vw;
+  -ms-grid-columns: 270fr 403fr;
+      grid-template-columns: 270fr 403fr;
+  -webkit-column-gap: 29.65%;
+          column-gap: 29.65%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .container {
         grid-template-areas: "column-1" "column-2";
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     row-gap: 80px;
     margin-right: 10.398vw;
   }

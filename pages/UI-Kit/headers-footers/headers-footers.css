@@ -3,11 +3,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -16,10 +20,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 /*Обнуление*/
@@ -188,11 +188,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -201,10 +205,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .button {
@@ -304,11 +304,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -317,21 +321,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -340,21 +344,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -363,21 +367,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -386,10 +390,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .element {
@@ -623,11 +623,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -636,10 +640,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .button {
@@ -1035,11 +1035,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1048,21 +1052,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1071,21 +1075,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1094,10 +1098,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .textfield {
@@ -1198,11 +1198,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1211,21 +1215,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1234,21 +1238,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1257,10 +1261,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .element {
@@ -1742,11 +1742,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1755,21 +1759,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1778,21 +1782,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -1801,10 +1805,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .element {
@@ -2052,11 +2052,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -2065,21 +2069,21 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -2088,10 +2092,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .textfield {
@@ -2178,11 +2178,15 @@ body {
   background-color: #fff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  margin: 0 auto;
   color: rgba(31, 32, 65, 0.75);
   background: left 30px top 30px no-repeat url("../../../src/img/logo.svg");
 }
@@ -2191,10 +2195,6 @@ body {
   .container {
     background-image: none;
   }
-}
-
-.container.lock {
-  overflow: hidden;
 }
 
 .element {
@@ -2313,15 +2313,13 @@ body {
 
 body {
   background-color: #e5e5e5;
-  min-height: 1350px;
-  height: 100%;
 }
 
 .container {
   display: -ms-grid;
   display: grid;
-  margin-top: 11.11111%;
-  margin-bottom: 9.62963%;
+  padding-top: 11.11111%;
+  padding-bottom: 9.62963%;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   -ms-grid-rows: (max-content)[4];

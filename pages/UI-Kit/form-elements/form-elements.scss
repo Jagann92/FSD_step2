@@ -3,7 +3,8 @@
 @import "../../../src/fonts/fonts";
 @import "../../../library/blocks/dropdown/dropdown";
 @import "../../../library/blocks/range/range";
-@import "../../../library/blocks/textfield/textfield";@import "../../../library/blocks/date/date";
+@import "../../../library/blocks/textfield/textfield";
+@import "../../../library/blocks/date/date";
 @import "../../../library/blocks/subscribe/subscribe";
 @import "../../../library/blocks/checkbox/checkbox";
 @import "../../../library/blocks/radio/radio";
@@ -19,18 +20,19 @@
 @import "../../../library/blocks/element/element";
 
 .container {
+    padding: 9.72%;
+    padding-bottom: 9.03%;
     display: grid;
     grid-template-columns: 320fr 260fr 320fr;
-    column-gap: 8.75vw;
-    row-gap: 6.97vw;
-    margin: 9.72vw;
+    column-gap: 8.75%;
+    row-gap: 6.97%;
 
     @media (max-width: 992px) {
         grid-template-columns: repeat(2, minmax(min-content, 320px));
         row-gap: 40px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         grid-template-columns: minmax(min-content, 320px);
         justify-content: center;
 
@@ -40,8 +42,6 @@
 .column {
     display: grid;
     row-gap: 40px;
-
-
     align-content: start;
 
     &_small {
@@ -59,7 +59,7 @@
             max-width: 710px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             grid-column-end: span 1;
 
         }

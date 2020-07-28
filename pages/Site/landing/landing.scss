@@ -1,5 +1,6 @@
 @import "../../../library/templates/base";
 @import "../../../library/nullstyle/nullstyle.scss";
+@import "../../../src/fonts/fonts";
 @import "../../../library/blocks/header/header";
 @import "../../../library/blocks/card/card";
 @import "../../../library/blocks/footer/footer";
@@ -10,15 +11,20 @@ body {
 
 .mainScreen {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 830px;
     padding-left: 140px/$width*100%;
     padding-right: 140px/$width*100%;
     padding-top: 70px;
     padding-bottom: 20px;
     background: url('../../../src/img/image\ 3.jpg') no-repeat center;
     background-size: cover;
+
+    @media (max-width:768px) {
+        justify-content: center;
+    }
 
     & .card {
         align-self: flex-start;

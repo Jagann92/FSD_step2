@@ -661,6 +661,7 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 @media (max-width: 767px) {

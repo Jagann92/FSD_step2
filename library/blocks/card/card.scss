@@ -21,6 +21,11 @@
     grid-template-columns: 1fr;
     row-gap: 20px;
 
+    & .card__line>span {
+        font: $body;
+        color: $grey75;
+    }
+
     &__circles {
         position: absolute;
         right: 15px;

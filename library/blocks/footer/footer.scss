@@ -134,6 +134,7 @@
         justify-content: space-between;
         align-items: center;
         font: $body;
+        color: $grey75;
 
         @media (max-width: 767px) {
             grid-row-start: 4;

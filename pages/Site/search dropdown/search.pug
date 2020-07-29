@@ -7,30 +7,33 @@ block styles
 block body
 	+header('1')
 	.mainScreen
-		.sidebar
-			+date('Даты пребывания в отеле','',' element_lowgap','default')(data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
-			+dropdown('Гости','','element_lowgap','people','')
-			+range('Диапазон цены','5 000Р-10 000р','')
-			p.range__description Стоимость за сутки пребывания в номере
-			+checkbox('checkbox buttons','',"",0,'c','101','Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)')
-			+checkbox('Доступность','','',1,'rc','00','Широкий коридор','Помощник для инвалидов')(data-subtext-1='Ширина коридоров в номере не менее 91см.' data-subtext-2='На 1 этаже вас встретит специалист и проводит до номера.')
-			+dropdown('Удобства номера','',' element_lowgap','beds','220',1)
-			+expandable-list('Дополнительные удобства','')(id="list-1")
-				+checkbox('','','expandable-list__list element__body',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
+		.filter
+			+button('Фильтры','white','wide',0)(class="filter__button")
+			.sidebar
+				+date('Даты пребывания в отеле','',' element_lowgap','default')(data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true"   data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
+				+dropdown('Гости','','element_lowgap','people','')
+				+range('Диапазон цены','5 000Р-10 000р','')
+				p.range__description Стоимость за сутки пребывания в номере
+				+checkbox('checkbox buttons','',"",0,'c','101','Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)')
+				+checkbox('Доступность','','',1,'rc','00','Широкий коридор','Помощник для инвалидов')(data-subtext-1='Ширина коридоров в номере не менее 91см.' data-subtext-2='На 1 этаже вас встретит специалист и проводит до номера.')
+				+dropdown('Удобства номера','',' element_lowgap','beds','220',1)
+				+expandable-list('Дополнительные удобства','')(id="list-1")
+					+checkbox('','','expandable-list__list element__body',0,'ec1','011100','Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь')
 		.content
 			p.content__title Номера, которые мы для вас подобрали
-			+card('','','room')(roomNumber="888" roomType="Люкс" roomPrice="9 990" reviewsCount="145" imgSrc="../../../src/img/888.jpg" rate=5)
-			+card('','','room')(roomNumber="840" roomType="" roomPrice="9 990" reviewsCount="145" imgSrc="../../../src/img/840.jpg" rate=4)
-			+card('','','room')(roomNumber="980" roomType="Люкс" roomPrice="8 500" reviewsCount="35" imgSrc="../../../src/img/980.jpg" rate=3)
-			+card('','','room')(roomNumber="856" roomType="" roomPrice="7 300" reviewsCount="19" imgSrc="../../../src/img/856.jpg" rate=5)
-			+card('','','room')(roomNumber="740" roomType="" roomPrice="6 000" reviewsCount="44" imgSrc="../../../src/img/740.jpg" rate=4)
-			+card('','','room')(roomNumber="982" roomType="" roomPrice="5 800" reviewsCount="56" imgSrc="../../../src/img/982.jpg" rate=3)
-			+card('','','room')(roomNumber="678" roomType="" roomPrice="5 500" reviewsCount="45" imgSrc="../../../src/img/678.jpg" rate=5)
-			+card('','','room')(roomNumber="450" roomType="" roomPrice="5 300" reviewsCount="39" imgSrc="../../../src/img/450.jpg" rate=4)
-			+card('','','room')(roomNumber="350" roomType="" roomPrice="5 000" reviewsCount="77" imgSrc="../../../src/img/350.jpg" rate=3)
-			+card('','','room')(roomNumber="666" roomType="" roomPrice="5 000" reviewsCount="25" imgSrc="../../../src/img/666.jpg" rate=5)
-			+card('','','room')(roomNumber="444" roomType="" roomPrice="5 000" reviewsCount="15" imgSrc="../../../src/img/444.jpg" rate=4)
-			+card('','','room')(roomNumber="352" roomType="" roomPrice="5 000" reviewsCount="55" imgSrc="../../../src/img/352.jpg" rate=3)
+			.cards
+				+card('','','room')(roomNumber="888" roomType="Люкс" roomPrice="9 990" reviewsCount="145" imgSrc="../../../src/img/888.jpg" rate=5)
+				+card('','','room')(roomNumber="840" roomType="" roomPrice="9 990" reviewsCount="145" imgSrc="../../../src/img/840.jpg" rate=4)
+				+card('','','room')(roomNumber="980" roomType="Люкс" roomPrice="8 500" reviewsCount="35" imgSrc="../../../src/img/980.jpg" rate=3)
+				+card('','','room')(roomNumber="856" roomType="" roomPrice="7 300" reviewsCount="19" imgSrc="../../../src/img/856.jpg" rate=5)
+				+card('','','room')(roomNumber="740" roomType="" roomPrice="6 000" reviewsCount="44" imgSrc="../../../src/img/740.jpg" rate=4)
+				+card('','','room')(roomNumber="982" roomType="" roomPrice="5 800" reviewsCount="56" imgSrc="../../../src/img/982.jpg" rate=3)
+				+card('','','room')(roomNumber="678" roomType="" roomPrice="5 500" reviewsCount="45" imgSrc="../../../src/img/678.jpg" rate=5)
+				+card('','','room')(roomNumber="450" roomType="" roomPrice="5 300" reviewsCount="39" imgSrc="../../../src/img/450.jpg" rate=4)
+				+card('','','room')(roomNumber="350" roomType="" roomPrice="5 000" reviewsCount="77" imgSrc="../../../src/img/350.jpg" rate=3)
+				+card('','','room')(roomNumber="666" roomType="" roomPrice="5 000" reviewsCount="25" imgSrc="../../../src/img/666.jpg" rate=5)
+				+card('','','room')(roomNumber="444" roomType="" roomPrice="5 000" reviewsCount="15" imgSrc="../../../src/img/444.jpg" rate=4)
+				+card('','','room')(roomNumber="352" roomType="" roomPrice="5 000" reviewsCount="55" imgSrc="../../../src/img/352.jpg" rate=3)
 			+pagination(1,15,'last','1 – 12 из 100+ вариантов аренды','1','2','3')
 	+footer('1')
 
@@ -40,3 +43,4 @@ block body
 	script(src="../../../library/blocks/range/range.js")
 	script(src="../../../library/blocks/date/date.js")
 	script(src="../../../library/blocks/menu/menu.js")
+	script(src="search.js")

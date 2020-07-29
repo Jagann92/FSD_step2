@@ -14,35 +14,91 @@ body {
 
 .mainScreen {
     display: grid;
-    padding: 30px 9.72%;
-    grid-template-columns: 270fr 846fr;
+    padding: 30px 9.71%;
+    grid-template-columns: minmax(210px, 22.93%) 1fr;
     column-gap: 60px;
     justify-content: space-between;
+
+    @media (max-width:670px) {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        position: relative;
+    }
+}
+
+.filter {
+    @media (max-width:670px) {
+        position: sticky;
+        z-index: 100;
+        left: 0;
+        top: 0;
+    }
+
+    &__button {
+        display: none;
+
+        @media (max-width:670px) {
+            display: block;
+            position: sticky;
+            z-index: 100;
+            width: 100%;
+
+        }
+    }
+
+    &.active .sidebar {
+        display: grid;
+    }
 }
 
 .sidebar {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     row-gap: 30px;
     align-content: start;
 
     & .element:first-child {
         margin-bottom: -10px;
     }
+
+    @media (max-width:670px) {
+        display: none;
+        position: absolute;
+        justify-items: center;
+        width: 100%;
+        height: 1000%;
+        background: #fff;
+        z-index: 100;
+        top: 45px;
+        left: 0;
+        padding: 20px;
+        border: solid 2px $grey25;
+        overflow-y: scroll;
+
+        & .element:last-child {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .content {
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, 270px);
-    gap: 12px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
     justify-content: center;
 
     &__title {
-        grid-column: 1/4;
         font: $h1;
         color: $grey;
     }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 12px;
+    justify-items: center;
 }
 
 .range__description {
@@ -54,6 +110,5 @@ body {
 }
 
 .pagination {
-    grid-column: 1/4;
     justify-self: center;
 }

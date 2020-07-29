@@ -41,119 +41,122 @@
       </header>
     </div>
     <div class="mainScreen">
-      <div class="sidebar">
-        <div class="element  element_lowgap"><span class="element__title">Даты пребывания в отеле</span><span class="element__subtitle"></span>
-          <div class="date textfield element__body">
-            <input class="date__input datepicker-here" type="text" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ"/>
-            <button class="date__arrow"></button>
+      <div class="filter">
+        <button class="button button_white button_wide filter__button"><span class="button__inner">Фильтры</span></button>
+        <div class="sidebar">
+          <div class="element  element_lowgap"><span class="element__title">Даты пребывания в отеле</span><span class="element__subtitle"></span>
+            <div class="date textfield element__body">
+              <input class="date__input datepicker-here" type="text" data-date-format="dd M" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ"/>
+              <button class="date__arrow"></button>
+            </div>
           </div>
-        </div>
-        <div class="element element_lowgap"><span class="element__title">Гости</span><span class="element__subtitle"></span>
-          <div class="iqdropdown textfield element__body people">
-            <p class="iqdropdown-selection"></p>
-            <div class="iqdropdown-menu">
-              <div class="iqdropdown-menu-option" data-id="adults">
-                <div>
-                  <p class="iqdropdown-item">Взроcлые</p>
+          <div class="element element_lowgap"><span class="element__title">Гости</span><span class="element__subtitle"></span>
+            <div class="iqdropdown textfield element__body people">
+              <p class="iqdropdown-selection"></p>
+              <div class="iqdropdown-menu">
+                <div class="iqdropdown-menu-option" data-id="adults">
+                  <div>
+                    <p class="iqdropdown-item">Взроcлые</p>
+                  </div>
                 </div>
-              </div>
-              <div class="iqdropdown-menu-option" data-id="childs">
-                <div>
-                  <p class="iqdropdown-item">Дети</p>
+                <div class="iqdropdown-menu-option" data-id="childs">
+                  <div>
+                    <p class="iqdropdown-item">Дети</p>
+                  </div>
                 </div>
-              </div>
-              <div class="iqdropdown-menu-option" data-id="babies">
-                <div>
-                  <p class="iqdropdown-item">Младенцы</p>
+                <div class="iqdropdown-menu-option" data-id="babies">
+                  <div>
+                    <p class="iqdropdown-item">Младенцы</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="element range"><span class="element__title">Диапазон цены</span><span class="element__subtitle range__value">5 000Р-10 000р</span>
-          <div class="element__body">
-            <input class="js-range-slider range__input" type="text" name="my_range" value=""/>
-          </div>
-        </div>
-        <p class="range__description">Стоимость за сутки пребывания в номере</p>
-        <div class="element"><span class="element__title">checkbox buttons</span><span class="element__subtitle"></span>
-          <ul class="element__body element__list">
-            <li class="checkbox">
-              <input class="checkbox__input" type="checkbox" id="c1" checked="checked"/>
-              <label class="checkbox__label" for="c1">Можно курить</label>
-            </li>
-            <li class="checkbox">
-              <input class="checkbox__input" type="checkbox" id="c2"/>
-              <label class="checkbox__label" for="c2">Можно с питомцами</label>
-            </li>
-            <li class="checkbox">
-              <input class="checkbox__input" type="checkbox" id="c3" checked="checked"/>
-              <label class="checkbox__label" for="c3">Можно пригласить гостей (до 10 человек)</label>
-            </li>
-          </ul>
-        </div>
-        <div class="element"><span class="element__title">Доступность</span><span class="element__subtitle"></span>
-          <ul class="element__body element__list">
-            <li class="checkbox checkbox_rich">
-              <input class="checkbox__input" type="checkbox" id="rc1"/>
-              <label class="checkbox__label" for="rc1"><span class="checkbox__label_rich-title">Широкий коридор</span><span class="checkbox__label_rich-text">Ширина коридоров в номере не менее 91см.</span></label>
-            </li>
-            <li class="checkbox checkbox_rich">
-              <input class="checkbox__input" type="checkbox" id="rc2"/>
-              <label class="checkbox__label" for="rc2"><span class="checkbox__label_rich-title">Помощник для инвалидов</span><span class="checkbox__label_rich-text">На 1 этаже вас встретит специалист и проводит до номера.</span></label>
-            </li>
-          </ul>
-        </div>
-        <div class="element  element_lowgap"><span class="element__title">Удобства номера</span><span class="element__subtitle"></span>
-          <div class="iqdropdown textfield element__body beds">
-            <p class="iqdropdown-selection"></p>
-            <div class="iqdropdown-menu">
-              <div class="iqdropdown-menu-option" data-id="bedrooms" data-defaultcount="2">
-                <div>
-                  <p class="iqdropdown-item">Спальни</p>
-                </div>
-              </div>
-              <div class="iqdropdown-menu-option" data-id="beds" data-defaultcount="2">
-                <div>
-                  <p class="iqdropdown-item">Кровати</p>
-                </div>
-              </div>
-              <div class="iqdropdown-menu-option" data-id="bathrooms" data-defaultcount="0">
-                <div>
-                  <p class="iqdropdown-item">Ванные комнаты</p>
-                </div>
-              </div>
+          <div class="element range"><span class="element__title">Диапазон цены</span><span class="element__subtitle range__value">5 000Р-10 000р</span>
+            <div class="element__body">
+              <input class="js-range-slider range__input" type="text" name="my_range" value=""/>
             </div>
           </div>
-        </div>
-        <div class="element  expandable-list" id="list-1"><span class="element__title">Дополнительные удобства</span>
-          <div class="element expandable-list__list element__body element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+          <p class="range__description">Стоимость за сутки пребывания в номере</p>
+          <div class="element"><span class="element__title">checkbox buttons</span><span class="element__subtitle"></span>
             <ul class="element__body element__list">
               <li class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="ec11"/>
-                <label class="checkbox__label" for="ec11">Завтрак</label>
+                <input class="checkbox__input" type="checkbox" id="c1" checked="checked"/>
+                <label class="checkbox__label" for="c1">Можно курить</label>
               </li>
               <li class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
-                <label class="checkbox__label" for="ec12">Письменный стол</label>
+                <input class="checkbox__input" type="checkbox" id="c2"/>
+                <label class="checkbox__label" for="c2">Можно с питомцами</label>
               </li>
               <li class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
-                <label class="checkbox__label" for="ec13">Стул для кормления</label>
-              </li>
-              <li class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
-                <label class="checkbox__label" for="ec14">Кроватка</label>
-              </li>
-              <li class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="ec15"/>
-                <label class="checkbox__label" for="ec15">Телевизор</label>
-              </li>
-              <li class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="ec16"/>
-                <label class="checkbox__label" for="ec16">Шампунь</label>
+                <input class="checkbox__input" type="checkbox" id="c3" checked="checked"/>
+                <label class="checkbox__label" for="c3">Можно пригласить гостей (до 10 человек)</label>
               </li>
             </ul>
+          </div>
+          <div class="element"><span class="element__title">Доступность</span><span class="element__subtitle"></span>
+            <ul class="element__body element__list">
+              <li class="checkbox checkbox_rich">
+                <input class="checkbox__input" type="checkbox" id="rc1"/>
+                <label class="checkbox__label" for="rc1"><span class="checkbox__label_rich-title">Широкий коридор</span><span class="checkbox__label_rich-text">Ширина коридоров в номере не менее 91см.</span></label>
+              </li>
+              <li class="checkbox checkbox_rich">
+                <input class="checkbox__input" type="checkbox" id="rc2"/>
+                <label class="checkbox__label" for="rc2"><span class="checkbox__label_rich-title">Помощник для инвалидов</span><span class="checkbox__label_rich-text">На 1 этаже вас встретит специалист и проводит до номера.</span></label>
+              </li>
+            </ul>
+          </div>
+          <div class="element  element_lowgap"><span class="element__title">Удобства номера</span><span class="element__subtitle"></span>
+            <div class="iqdropdown textfield element__body beds">
+              <p class="iqdropdown-selection"></p>
+              <div class="iqdropdown-menu">
+                <div class="iqdropdown-menu-option" data-id="bedrooms" data-defaultcount="2">
+                  <div>
+                    <p class="iqdropdown-item">Спальни</p>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="beds" data-defaultcount="2">
+                  <div>
+                    <p class="iqdropdown-item">Кровати</p>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="bathrooms" data-defaultcount="0">
+                  <div>
+                    <p class="iqdropdown-item">Ванные комнаты</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="element  expandable-list" id="list-1"><span class="element__title">Дополнительные удобства</span>
+            <div class="element expandable-list__list element__body element_nullgap"><span class="element__title"></span><span class="element__subtitle"></span>
+              <ul class="element__body element__list">
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec11"/>
+                  <label class="checkbox__label" for="ec11">Завтрак</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec12" checked="checked"/>
+                  <label class="checkbox__label" for="ec12">Письменный стол</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec13" checked="checked"/>
+                  <label class="checkbox__label" for="ec13">Стул для кормления</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec14" checked="checked"/>
+                  <label class="checkbox__label" for="ec14">Кроватка</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec15"/>
+                  <label class="checkbox__label" for="ec15">Телевизор</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="ec16"/>
+                  <label class="checkbox__label" for="ec16">Шампунь</label>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -588,5 +591,6 @@
     <script src="../../../library/blocks/range/range.js"></script>
     <script src="../../../library/blocks/date/date.js"></script>
     <script src="../../../library/blocks/menu/menu.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

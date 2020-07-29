@@ -813,9 +813,6 @@ body.lock {
 }
 
 @media (max-width: 767px) {
-  body.lock {
-    overflow: hidden;
-  }
   .header__wrapper {
     height: 50px;
   }
@@ -882,6 +879,7 @@ body.lock {
     display: none;
     right: 0;
     width: 100%;
+    height: 100vh;
     overflow: auto;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -892,10 +890,12 @@ body.lock {
             justify-content: end;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
+    -ms-flex-line-pack: start;
+        align-content: start;
     -webkit-column-gap: 0;
             column-gap: 0;
     row-gap: 20px;
-    z-index: 4;
+    z-index: 10000;
   }
   .header__menu .menu__elem,
   .header__menu .menu__elem .element__title {
@@ -3171,6 +3171,11 @@ body.lock {
   row-gap: 20px;
 }
 
+.card .card__line > span {
+  font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+}
+
 .card__circles {
   position: absolute;
   right: 15px;
@@ -4044,6 +4049,7 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   font: 400 14px/24px "Montserrat", "Open sans", sans-serif;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 @media (max-width: 767px) {
